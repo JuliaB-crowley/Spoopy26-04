@@ -388,6 +388,7 @@ namespace character
 
         void Interact()
         {
+            Debug.Log("input was done");
             if(!allInteractibleInRange.Count().Equals(0) && !isInRoll && !isInAttack && !isFlashing)
             {
                 if(allInteractibleInRange.Count().Equals(1))
@@ -411,6 +412,7 @@ namespace character
                             }
                         }
                         interactibleTarget.GetComponent<JUB_InteractibleBehavior>().interacted = true;
+                        Debug.Log(interactibleTarget.name);
                     }
                 }
             }
