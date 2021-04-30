@@ -9,10 +9,13 @@ TagManager:
   - Bonbon
   - HealthBoost
   - Door
-  - Puzzle Master
   - DamageDealer
   - Torche
   - Bouton
+  - PuzzleMasterA
+  - PuzzleMasterB
+  - PuzzleMasterC
+  - PuzzleMasterD
   layers:
   - Default
   - TransparentFX
