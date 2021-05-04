@@ -3830,6 +3830,9 @@ MonoBehaviour:
   roomCameraPoint: {fileID: 0}
   cameraSpeed: 0
   smoothSpeed: 0.125
+  indice: []
+  canvasIndice: {fileID: 0}
+  indiceText: {fileID: 0}
 --- !u!4 &452791923
 Transform:
   m_ObjectHideFlags: 0
@@ -14909,11 +14912,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5857361522451789452, guid: a4b6535be47ce4e4e8528f044324bf7d, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 15.1
+      value: -33.9
       objectReference: {fileID: 0}
     - target: {fileID: 5857361522451789452, guid: a4b6535be47ce4e4e8528f044324bf7d, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.1
+      value: 31.4
       objectReference: {fileID: 0}
     - target: {fileID: 5857361522451789452, guid: a4b6535be47ce4e4e8528f044324bf7d, type: 3}
       propertyPath: m_LocalPosition.z

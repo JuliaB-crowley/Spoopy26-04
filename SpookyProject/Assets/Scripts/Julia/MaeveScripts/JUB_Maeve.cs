@@ -425,14 +425,19 @@ namespace character
             {
                 pushable.GetComponent<JUB_PushableBehavior>().pushable = true;
             }
+            if(allPushableInRange.Length == 0)
+            {
+                isPushingObject = false;
+            }
         }
         void PushObjects()
         {
             if (!isFlashing && !isCrouching && !isInAttack && !isInRoll)
             {
-                isPushingObject = !isPushingObject;
-                if (!allPushableInRange.Count().Equals(0) && isPushingObject)
+                
+                if (!allPushableInRange.Count().Equals(0) && !isPushingObject)
                 {
+                    isPushingObject = true;
                     if (allPushableInRange.Count().Equals(1))
                     {
                         allPushableInRange[0].GetComponent<JUB_PushableBehavior>().pushed = true;
@@ -456,10 +461,11 @@ namespace character
                         pushableTarget.GetComponent<JUB_PushableBehavior>().ManagePushing();
                     }
                 }
-                else if (isPushingObject == false)
+                else if (isPushingObject == true)
                 {
                     foreach (Collider2D pushable in allPushableInRange)
                     {
+                        isPushingObject = false;
                         pushable.GetComponent<JUB_PushableBehavior>().pushed = false;
                         pushable.GetComponent<JUB_PushableBehavior>().ManagePushing();
                     }
@@ -540,6 +546,7 @@ namespace character
 
        private void OnTriggerEnter2D(Collider2D collision)
         {
+            Debug.LogWarning("touché" + collision.tag.ToString());
             if (collision.CompareTag("Heal"))
             {
                 Heal(collision.GetComponent<RPP_CollectibleScript>().collectibleValeur);
