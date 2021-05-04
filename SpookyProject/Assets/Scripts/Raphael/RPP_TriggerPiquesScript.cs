@@ -1,11 +1,12 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using character;
 
 public class RPP_TriggerPiquesScript : MonoBehaviour
 {
     [SerializeField] Material loopTrapMaterial;
-    [SerializeField] JUB_HUDManager hudManager;
+    [SerializeField] JUB_Maeve hudManager;
     [SerializeField] float timeToPrepare = 0.6f, activeTrapTime = 0.2f, timeToReset = 0.5f;
     [SerializeField] int damage = 3;
     bool trapIsStandby = true, trapIsActive = false, canDamage = true;
@@ -13,7 +14,7 @@ public class RPP_TriggerPiquesScript : MonoBehaviour
     void Start()
     {
         loopTrapMaterial.color = Color.white;
-        hudManager = GameObject.FindGameObjectWithTag("HUD").GetComponent<JUB_HUDManager>();
+        hudManager = GameObject.FindGameObjectWithTag("Player").GetComponent<JUB_Maeve>();
     }
 
     private void OnTriggerStay2D(Collider2D collision)
@@ -25,7 +26,7 @@ public class RPP_TriggerPiquesScript : MonoBehaviour
         else if (collision.CompareTag("Player") && trapIsActive && canDamage)
         {
             // Do Recoil
-            hudManager.currentLife -= damage;
+            hudManager.TakeDamages(damage);
             canDamage = false;
         }
     }

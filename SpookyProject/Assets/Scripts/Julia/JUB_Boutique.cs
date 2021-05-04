@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using character;
+using items;
 
 public class JUB_Boutique : MonoBehaviour
 {
@@ -17,6 +18,8 @@ public class JUB_Boutique : MonoBehaviour
     public int[] objectPrice;
     public Text[] objectPriceDisplay;
     public Text[] objectDescription;
+    public JUB_ItemBehavior[] items;
+  
 
     //confirmation
     public GameObject confirmationRescale;
@@ -34,9 +37,11 @@ public class JUB_Boutique : MonoBehaviour
         canvasRescale.GetComponent<Transform>().localScale = Vector3.zero;
         confirmationRescale.GetComponent<Transform>().localScale = Vector3.zero;
 
-        for(int i = 0; i < objectPrice.Length; i++) 
+        for(int i = 0; i < items.Length; i++) 
         {
-            objectPriceDisplay[i].text = objectPrice[i].ToString();
+            objectPriceDisplay[i].text = items[i].scriptableObject.itemPrice.ToString();
+            objectSlot[i].sprite = items[i].scriptableObject.itemSprite;
+            //objectDescription[i].text = items[i].scriptableObject.itemDescription;
         }
     }
 
@@ -61,15 +66,16 @@ public class JUB_Boutique : MonoBehaviour
 
     public void ConfirmationStart(int buttonNumberHit)
     {
-        confirmationRescale.GetComponent<Transform>().localScale = Vector3.zero;
-        confirmationText.text = "This item costs " + objectPrice[buttonNumberHit].ToString() + " sweets. Do you want to buy it ?";
+        Debug.LogWarning("button worked");
+        confirmationRescale.GetComponent<Transform>().localScale = Vector3.one;
+        confirmationText.text = "This item costs " + items[buttonNumberHit].scriptableObject.itemPrice.ToString() + " sweets. Do you want to buy it ?";
         buttonNumber = buttonNumberHit;
     }
 
     public void Buy()
     {
-        //gérer l'effet
-        maeve.Achat(objectPrice[buttonNumber]);
+        items[buttonNumber].ApplyEffect();
+        maeve.Achat(items[buttonNumber].scriptableObject.itemPrice);
         confirmationRescale.GetComponent<Transform>().localScale = Vector3.zero;
     }
 
