@@ -17,7 +17,6 @@ public class JUB_Boutique : MonoBehaviour
     public Image[] objectSlot;
     public int[] objectPrice;
     public Text[] objectPriceDisplay;
-    public Text[] objectDescription;
     public JUB_ItemBehavior[] items;
   
 
@@ -26,7 +25,6 @@ public class JUB_Boutique : MonoBehaviour
     public Text confirmationText;
 
     //buttons
-    public Button[] objectButtons;
     public int buttonNumber;
 
     // Start is called before the first frame update
@@ -66,7 +64,6 @@ public class JUB_Boutique : MonoBehaviour
 
     public void ConfirmationStart(int buttonNumberHit)
     {
-        Debug.LogWarning("button worked");
         confirmationRescale.GetComponent<Transform>().localScale = Vector3.one;
         confirmationText.text = "This item costs " + items[buttonNumberHit].scriptableObject.itemPrice.ToString() + " sweets. Do you want to buy it ?";
         buttonNumber = buttonNumberHit;
