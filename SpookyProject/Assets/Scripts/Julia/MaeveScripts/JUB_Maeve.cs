@@ -546,7 +546,7 @@ namespace character
 
        private void OnTriggerEnter2D(Collider2D collision)
         {
-            Debug.LogWarning("touché" + collision.tag.ToString());
+            //Debug.LogWarning("touché" + collision.tag.ToString());
             if (collision.CompareTag("Heal"))
             {
                 Heal(collision.GetComponent<RPP_CollectibleScript>().collectibleValeur);
