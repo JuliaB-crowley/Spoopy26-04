@@ -13,8 +13,8 @@ MonoBehaviour:
   m_Name: Strengh
   m_EditorClassIdentifier: 
   itemSprite: {fileID: 21300000, guid: e0238ee7557279b4eb17470bf64024ae, type: 3}
-  itemName: Strengh potion
-  itemDescription: Lets you hit harder
+  itemName: Potion de force
+  itemDescription: Vous permet de taper plus fort
   itemPrice: 25
   itemType: 3
   strengh: 0

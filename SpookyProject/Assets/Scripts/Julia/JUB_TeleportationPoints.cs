@@ -24,12 +24,12 @@ public class JUB_TeleportationPoints : MonoBehaviour
             pointBDesactivated = true;
             StartCoroutine(Reactivate());
         }
-        else if(Vector2.Distance(player.transform.position, pointB.position) < 1 && !pointBDesactivated)
+        /*else if(Vector2.Distance(player.transform.position, pointB.position) < 1 && !pointBDesactivated)
         {
             player.transform.position = pointA.transform.position;
             pointADesactivated = true;
             StartCoroutine(Reactivate());
-        }
+        }*/
     }
 
     IEnumerator Reactivate()

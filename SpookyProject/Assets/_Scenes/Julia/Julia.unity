@@ -1452,6 +1452,9 @@ MonoBehaviour:
   damageTrail: {fileID: 0}
   isAttacking: 0
   pauseTime: 0
+  stunTime: 0
+  flashManager: {fileID: 0}
+  hasBeenStunned: 0
 --- !u!95 &2045512774
 Animator:
   serializedVersion: 3

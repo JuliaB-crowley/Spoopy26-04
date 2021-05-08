@@ -54,6 +54,9 @@ namespace character
         public Sprite[] heartSprites;
         public Image heartsDisplay;
 
+        //dialogue
+        public bool isInDialogue;
+
         // Start is called before the first frame update
         void Start()
         {
@@ -67,7 +70,8 @@ namespace character
 
             currentLife = maxLife;
 
-            controller.MainController.Roll.performed += ctx => Roll();
+
+            controller.MainController.Roll.performed += ctx => Roll();  
             controller.MainController.Crouch.performed += ctx => Crouch();
             controller.MainController.Push.performed += ctx => PushObjects();
             controller.MainController.Interact.performed += ctx => Interact();
@@ -218,7 +222,7 @@ namespace character
 
         void Roll()
         {
-            if (!isInRecover && !isPushingObject && !isCrouching)
+            if (!isInRecover && !isPushingObject && !isCrouching && !isInDialogue)
             {
                 isInRoll = true;
                 isInImmunity = true;

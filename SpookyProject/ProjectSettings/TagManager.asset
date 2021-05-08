@@ -17,6 +17,7 @@ TagManager:
   - PuzzleMasterC
   - PuzzleMasterD
   - Puzzle Master
+  - DialogueManager
   layers:
   - Default
   - TransparentFX

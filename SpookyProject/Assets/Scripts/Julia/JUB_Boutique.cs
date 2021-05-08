@@ -65,7 +65,7 @@ public class JUB_Boutique : MonoBehaviour
     public void ConfirmationStart(int buttonNumberHit)
     {
         confirmationRescale.GetComponent<Transform>().localScale = Vector3.one;
-        confirmationText.text = "This item costs " + items[buttonNumberHit].scriptableObject.itemPrice.ToString() + " sweets. Do you want to buy it ?";
+        confirmationText.text = "Cet objet coûte " + items[buttonNumberHit].scriptableObject.itemPrice.ToString() + " bonbons. Voulez-vous l'acheter ?";
         buttonNumber = buttonNumberHit;
     }
 
