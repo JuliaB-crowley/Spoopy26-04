@@ -1835,8 +1835,8 @@ GameObject:
   - component: {fileID: 1904063100}
   - component: {fileID: 1904063099}
   - component: {fileID: 1904063098}
-  m_Layer: 7
-  m_Name: Cube (4)
+  m_Layer: 0
+  m_Name: DialogueTrigger
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

@@ -17,6 +17,7 @@ GameObject:
   - component: {fileID: 1556395513520290161}
   - component: {fileID: 1556395513520290162}
   - component: {fileID: 1556395513520290170}
+  - component: {fileID: 5626020860192697857}
   m_Layer: 7
   m_Name: Skeleton
   m_TagString: Untagged
@@ -236,8 +237,34 @@ MonoBehaviour:
   maxHealth: 4
   currentHealth: 0
   deathAnimationTime: 0.5
+  knockbackForce: 3
+  knockbackDuration: 0.5
+  playerTransform: {fileID: 0}
+  rb: {fileID: 0}
+  AIPath: {fileID: 0}
   hasLoot: 0
   possibleLoots: []
+--- !u!50 &5626020860192697857
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1556395513520290163}
+  m_BodyType: 0
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 0
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
 --- !u!1 &9073805397861030664
 GameObject:
   m_ObjectHideFlags: 0

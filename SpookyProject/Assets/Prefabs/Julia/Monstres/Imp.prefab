@@ -119,6 +119,7 @@ GameObject:
   - component: {fileID: 818388626860331262}
   - component: {fileID: 6014785153597361554}
   - component: {fileID: 8603929350840154592}
+  - component: {fileID: -4991572543638758646}
   m_Layer: 0
   m_Name: Imp
   m_TagString: Untagged
@@ -324,6 +325,11 @@ MonoBehaviour:
   maxHealth: 2
   currentHealth: 0
   deathAnimationTime: 0.2
+  knockbackForce: 0
+  knockbackDuration: 0
+  playerTransform: {fileID: 0}
+  rb: {fileID: 0}
+  AIPath: {fileID: 0}
   hasLoot: 0
   possibleLoots: []
 --- !u!58 &8603929350840154592
@@ -342,6 +348,27 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 0.5
+--- !u!50 &-4991572543638758646
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 818388626860331248}
+  m_BodyType: 0
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 1
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
 --- !u!1 &9147757163681270301
 GameObject:
   m_ObjectHideFlags: 0
