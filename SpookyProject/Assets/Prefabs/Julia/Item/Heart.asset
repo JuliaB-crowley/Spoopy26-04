@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e83fa3e7697855b4ab01af143e392193, type: 3}
   m_Name: Heart
   m_EditorClassIdentifier: 
-  itemSprite: {fileID: 21300000, guid: d4c3f8294e6baf844b183eb87f5c611e, type: 3}
+  itemSprite: {fileID: 21300000, guid: 3fe893bfe3cf18043817176ceb1d0446, type: 3}
   itemName: Coeur
   itemDescription: Rend un coeur
   itemPrice: 5

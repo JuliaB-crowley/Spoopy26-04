@@ -16,6 +16,9 @@ public class JUB_EnnemyDamage : MonoBehaviour
     public bool hasLoot;
     public List<GameObject> possibleLoots;
 
+    public Renderer rendererEnnemies;
+    public float timeRed;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -61,6 +64,7 @@ public class JUB_EnnemyDamage : MonoBehaviour
         AIPath.canMove = false;
         Vector2 direction = (playerTransform.position - this.transform.position).normalized;
         rb.velocity = (-direction * knockbackForce);
+        StartCoroutine(RedFrameCoroutine());
         StartCoroutine(KnockbackCoroutine());
     }
     IEnumerator KnockbackCoroutine()
@@ -69,5 +73,14 @@ public class JUB_EnnemyDamage : MonoBehaviour
         rb.velocity = Vector2.zero;
         AIPath.canMove = true;
         Debug.LogWarning("knockback was performed");
+    }
+
+    IEnumerator RedFrameCoroutine()
+    {
+        Color originalColor = this.rendererEnnemies.material.color;
+        this.rendererEnnemies.material.color = Color.Lerp(rendererEnnemies.material.color, Color.red, 0.8f);
+        yield return new WaitForSeconds(timeRed);
+        this.rendererEnnemies.material.color = originalColor;
+
     }
 }

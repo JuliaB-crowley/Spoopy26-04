@@ -42,7 +42,8 @@ namespace character
         public int attackDamage;
         public bool ennemyWasHitOnce;
         List<Collider2D> ennemiesHitLastTime = new List<Collider2D>();
-        public float immunityTime;
+        public float immunityTime, timeRed;
+        public Renderer rendererMaeve;
 
         //pousser des objets
         Collider2D[] allPushableInRange, allInteractibleInRange;
@@ -166,7 +167,7 @@ namespace character
             collisionTop = top.isCollision;
             collisionBottom = bottom.isCollision;
 
-            if (!isInRecoil && !isFlashing)
+            if (!isInRecoil && !isFlashing && !isInDialogue)
             {
                 currentSpeed.x = Mathf.SmoothDamp(currentSpeed.x, targetSpeed.x, ref xVelocity, accelerationTime);
                 currentSpeed.y = Mathf.SmoothDamp(currentSpeed.y, targetSpeed.y, ref yVelocity, accelerationTime);
@@ -499,6 +500,7 @@ namespace character
                     Die();
                 }
                 Immunity(immunityTime);
+                StartCoroutine(RedFrameCoroutine());
             }
         }
 
@@ -512,6 +514,15 @@ namespace character
             isInImmunity = true;
             yield return new WaitForSeconds(immuTime);
             isInImmunity = false;
+        }
+
+        IEnumerator RedFrameCoroutine()
+        {
+            Color originalColor = this.rendererMaeve.material.color;
+            this.rendererMaeve.material.color = Color.Lerp(rendererMaeve.material.color, Color.red, 0.8f);
+            yield return new WaitForSeconds(timeRed);
+            this.rendererMaeve.material.color = originalColor;
+
         }
 
         public void Heal(int heal)

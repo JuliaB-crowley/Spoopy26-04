@@ -134,4 +134,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   collectibleObject: {fileID: 0}
-  collectibleValeur: 10
+  collectibleValeur: 2
