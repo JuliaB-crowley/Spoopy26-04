@@ -72,15 +72,15 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 0}
+  m_Sprite: {fileID: 21300000, guid: 3627972dbf6663a4d9e7a32a76a51672, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 1, y: 1}
+  m_Size: {x: 1.0066667, y: 1.0066667}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 0
+  m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!95 &2499470756399686384
@@ -119,6 +119,7 @@ GameObject:
   - component: {fileID: 818388626860331262}
   - component: {fileID: 6014785153597361554}
   - component: {fileID: 8603929350840154592}
+  - component: {fileID: -4991572543638758646}
   m_Layer: 0
   m_Name: Imp
   m_TagString: Untagged
@@ -324,8 +325,15 @@ MonoBehaviour:
   maxHealth: 2
   currentHealth: 0
   deathAnimationTime: 0.2
+  knockbackForce: 4
+  knockbackDuration: 0.5
+  playerTransform: {fileID: 0}
+  rb: {fileID: 0}
+  AIPath: {fileID: 0}
   hasLoot: 0
   possibleLoots: []
+  rendererEnnemies: {fileID: 0}
+  timeRed: 0
 --- !u!58 &8603929350840154592
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -342,6 +350,27 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 0.5
+--- !u!50 &-4991572543638758646
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 818388626860331248}
+  m_BodyType: 0
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 5
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 0
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 4
 --- !u!1 &9147757163681270301
 GameObject:
   m_ObjectHideFlags: 0

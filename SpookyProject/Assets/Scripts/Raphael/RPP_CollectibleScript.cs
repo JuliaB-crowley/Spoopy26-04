@@ -7,7 +7,7 @@ public class RPP_CollectibleScript : MonoBehaviour
     public GameObject collectibleObject;
     public int collectibleValeur;
 
-    private void Start()
+    private void Awake()
     {
         collectibleObject = this.gameObject;
     }

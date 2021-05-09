@@ -7,11 +7,27 @@ public class RPP_KeysScript : MonoBehaviour
     public GameObject keyObject;
     [SerializeField] RPP_GeneralPuzzleMaster puzzleMaster;
     public bool isYellowKey, isBlueKey, isGreenKey, isVioletKey;
+    [SerializeField] bool needPzMnA = true, needPzMnB, needPzMnC, needPzMnD;
 
     void Start()
     {
         keyObject = this.gameObject;
-        puzzleMaster = GameObject.FindGameObjectWithTag("Puzzle Master").GetComponent<RPP_GeneralPuzzleMaster>();
+        if (needPzMnA)
+        {
+            puzzleMaster = GameObject.FindGameObjectWithTag("PuzzleMasterA").GetComponent<RPP_GeneralPuzzleMaster>();
+        }
+        else if (needPzMnB)
+        {
+            puzzleMaster = GameObject.FindGameObjectWithTag("PuzzleMasterB").GetComponent<RPP_GeneralPuzzleMaster>();
+        }
+        else if (needPzMnC)
+        {
+            puzzleMaster = GameObject.FindGameObjectWithTag("PuzzleMasterC").GetComponent<RPP_GeneralPuzzleMaster>();
+        }
+        else if (needPzMnD)
+        {
+            puzzleMaster = GameObject.FindGameObjectWithTag("PuzzleMasterD").GetComponent<RPP_GeneralPuzzleMaster>();
+        }
     }
 
     private void OnTriggerEnter2D(Collider2D collision)

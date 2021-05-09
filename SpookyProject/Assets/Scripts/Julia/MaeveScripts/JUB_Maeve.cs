@@ -42,7 +42,8 @@ namespace character
         public int attackDamage;
         public bool ennemyWasHitOnce;
         List<Collider2D> ennemiesHitLastTime = new List<Collider2D>();
-        public float immunityTime;
+        public float immunityTime, timeRed;
+        public Renderer rendererMaeve;
 
         //pousser des objets
         Collider2D[] allPushableInRange, allInteractibleInRange;
@@ -53,6 +54,9 @@ namespace character
         public Text displayLife, displayBonbons;
         public Sprite[] heartSprites;
         public Image heartsDisplay;
+
+        //dialogue
+        public bool isInDialogue;
 
         // Start is called before the first frame update
         void Start()
@@ -67,7 +71,8 @@ namespace character
 
             currentLife = maxLife;
 
-            controller.MainController.Roll.performed += ctx => Roll();
+
+            controller.MainController.Roll.performed += ctx => Roll();  
             controller.MainController.Crouch.performed += ctx => Crouch();
             controller.MainController.Push.performed += ctx => PushObjects();
             controller.MainController.Interact.performed += ctx => Interact();
@@ -162,7 +167,7 @@ namespace character
             collisionTop = top.isCollision;
             collisionBottom = bottom.isCollision;
 
-            if (!isInRecoil && !isFlashing)
+            if (!isInRecoil && !isFlashing && !isInDialogue)
             {
                 currentSpeed.x = Mathf.SmoothDamp(currentSpeed.x, targetSpeed.x, ref xVelocity, accelerationTime);
                 currentSpeed.y = Mathf.SmoothDamp(currentSpeed.y, targetSpeed.y, ref yVelocity, accelerationTime);
@@ -218,7 +223,7 @@ namespace character
 
         void Roll()
         {
-            if (!isInRecover && !isPushingObject && !isCrouching)
+            if (!isInRecover && !isPushingObject && !isCrouching && !isInDialogue)
             {
                 isInRoll = true;
                 isInImmunity = true;
@@ -388,6 +393,7 @@ namespace character
 
         void Interact()
         {
+            Debug.Log("input was done");
             if(!allInteractibleInRange.Count().Equals(0) && !isInRoll && !isInAttack && !isFlashing)
             {
                 if(allInteractibleInRange.Count().Equals(1))
@@ -411,6 +417,7 @@ namespace character
                             }
                         }
                         interactibleTarget.GetComponent<JUB_InteractibleBehavior>().interacted = true;
+                        Debug.Log(interactibleTarget.name);
                     }
                 }
             }
@@ -423,14 +430,19 @@ namespace character
             {
                 pushable.GetComponent<JUB_PushableBehavior>().pushable = true;
             }
+            if(allPushableInRange.Length == 0)
+            {
+                isPushingObject = false;
+            }
         }
         void PushObjects()
         {
             if (!isFlashing && !isCrouching && !isInAttack && !isInRoll)
             {
-                isPushingObject = !isPushingObject;
-                if (!allPushableInRange.Count().Equals(0) && isPushingObject)
+                
+                if (!allPushableInRange.Count().Equals(0) && !isPushingObject)
                 {
+                    isPushingObject = true;
                     if (allPushableInRange.Count().Equals(1))
                     {
                         allPushableInRange[0].GetComponent<JUB_PushableBehavior>().pushed = true;
@@ -454,10 +466,11 @@ namespace character
                         pushableTarget.GetComponent<JUB_PushableBehavior>().ManagePushing();
                     }
                 }
-                else if (isPushingObject == false)
+                else if (isPushingObject == true)
                 {
                     foreach (Collider2D pushable in allPushableInRange)
                     {
+                        isPushingObject = false;
                         pushable.GetComponent<JUB_PushableBehavior>().pushed = false;
                         pushable.GetComponent<JUB_PushableBehavior>().ManagePushing();
                     }
@@ -487,6 +500,7 @@ namespace character
                     Die();
                 }
                 Immunity(immunityTime);
+                StartCoroutine(RedFrameCoroutine());
             }
         }
 
@@ -500,6 +514,15 @@ namespace character
             isInImmunity = true;
             yield return new WaitForSeconds(immuTime);
             isInImmunity = false;
+        }
+
+        IEnumerator RedFrameCoroutine()
+        {
+            Color originalColor = this.rendererMaeve.material.color;
+            this.rendererMaeve.material.color = Color.Lerp(rendererMaeve.material.color, Color.red, 0.8f);
+            yield return new WaitForSeconds(timeRed);
+            this.rendererMaeve.material.color = originalColor;
+
         }
 
         public void Heal(int heal)
@@ -538,6 +561,7 @@ namespace character
 
        private void OnTriggerEnter2D(Collider2D collision)
         {
+            //Debug.LogWarning("touché" + collision.tag.ToString());
             if (collision.CompareTag("Heal"))
             {
                 Heal(collision.GetComponent<RPP_CollectibleScript>().collectibleValeur);

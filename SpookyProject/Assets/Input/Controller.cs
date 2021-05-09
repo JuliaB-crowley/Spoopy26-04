@@ -293,7 +293,7 @@ public class @Controller : IInputActionCollection, IDisposable
                 {
                     ""name"": """",
                     ""id"": ""db71c7df-5d52-4b82-988f-b851425157f4"",
-                    ""path"": ""<Keyboard>/t"",
+                    ""path"": ""<Keyboard>/y"",
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": """",

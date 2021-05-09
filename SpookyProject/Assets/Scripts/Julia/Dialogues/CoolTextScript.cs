@@ -85,7 +85,11 @@ public class CoolTextScript : MonoBehaviour
 
     IEnumerator CloseTextCoroutine()
     {
-        yield return new WaitForSeconds(2);
-        speakingCanvas.transform.localScale = Vector3.zero;
+        if(speakingCanvas != null)
+        {
+            yield return new WaitForSeconds(2);
+            speakingCanvas.transform.localScale = Vector3.zero;
+
+        }
     }
 }

@@ -1,17 +1,18 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using character;
 
 public class RPP_PiquesConstantsScript : MonoBehaviour
 {
-    [SerializeField] JUB_HUDManager hudManager;
+    [SerializeField] JUB_Maeve hudManager;
     [SerializeField] float timeTilNextDmg = 1f;
     [SerializeField] int damage = 3;
     bool hasDoneDamage = false;
 
     private void Start()
     {
-        hudManager = GameObject.FindGameObjectWithTag("HUD").GetComponent<JUB_HUDManager>();
+        hudManager = GameObject.FindGameObjectWithTag("Player").GetComponent<JUB_Maeve>();
     }
 
     private void OnTriggerStay2D(Collider2D collision)
@@ -26,7 +27,7 @@ public class RPP_PiquesConstantsScript : MonoBehaviour
     IEnumerator DoDamage()
     {
         hasDoneDamage = true;
-        hudManager.currentLife -= damage;
+        hudManager.TakeDamages(damage);
         yield return new WaitForSeconds(timeTilNextDmg);
         hasDoneDamage = false;
     }

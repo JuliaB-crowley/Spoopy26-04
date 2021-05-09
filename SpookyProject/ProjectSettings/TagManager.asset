@@ -9,10 +9,15 @@ TagManager:
   - Bonbon
   - HealthBoost
   - Door
-  - Puzzle Master
   - DamageDealer
   - Torche
   - Bouton
+  - PuzzleMasterA
+  - PuzzleMasterB
+  - PuzzleMasterC
+  - PuzzleMasterD
+  - Puzzle Master
+  - DialogueManager
   layers:
   - Default
   - TransparentFX
@@ -31,7 +36,7 @@ TagManager:
   - FlashableObjects
   - Zone
   - SpeakingEvent
-  - 
+  - Item
   - 
   - 
   - 
