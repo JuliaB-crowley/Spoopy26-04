@@ -38,7 +38,7 @@ namespace character
         public Transform attackPoint;
         public float attackRange, attackTime;
         public Vector2 quickAtkZone, heavyAtkZone;
-        public LayerMask ennemies, breakableObjects;
+        public LayerMask ennemies, breakableObjects, bossJewel;
         public int attackDamage;
         public bool ennemyWasHitOnce;
         List<Collider2D> ennemiesHitLastTime = new List<Collider2D>();
@@ -167,7 +167,7 @@ namespace character
             collisionTop = top.isCollision;
             collisionBottom = bottom.isCollision;
 
-            if (!isInRecoil && !isFlashing && !isInDialogue)
+            if (!isInRecoil && !isFlashing)
             {
                 currentSpeed.x = Mathf.SmoothDamp(currentSpeed.x, targetSpeed.x, ref xVelocity, accelerationTime);
                 currentSpeed.y = Mathf.SmoothDamp(currentSpeed.y, targetSpeed.y, ref yVelocity, accelerationTime);
@@ -288,6 +288,7 @@ namespace character
         {
             Collider2D[] hitEnnemies = Physics2D.OverlapCircleAll(transform.position, attackProfile.atkZone.x, ennemies);
             Collider2D[] hitObjects = Physics2D.OverlapCircleAll(transform.position, attackProfile.atkZone.x, breakableObjects);
+            Collider2D[] hitBoss = Physics2D.OverlapCircleAll(transform.position, attackProfile.atkZone.x, bossJewel);
 
             if (!ennemyWasHitOnce)
             {
@@ -323,6 +324,11 @@ namespace character
             foreach (Collider2D breakableObject in hitObjects)
             {
                 breakableObject.GetComponent<JUB_BreakableBehavior>().Breaking();
+            }
+
+            foreach(Collider2D jewel in hitBoss)
+            {
+                jewel.GetComponentInParent<JUB_BossBehavior>().TakeDamage();
             }
 
             yield return new WaitForSeconds(attackProfile.atkRecover);
