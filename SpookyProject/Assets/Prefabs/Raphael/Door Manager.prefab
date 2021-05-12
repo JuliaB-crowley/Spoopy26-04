@@ -175,7 +175,7 @@ BoxCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
@@ -231,11 +231,13 @@ MonoBehaviour:
   greenDoor: {fileID: 21300000, guid: d4090db236dd1814f9f60d4a08dadc20, type: 3}
   violetDoor: {fileID: 21300000, guid: f4d84a5df2ec0dd4caa8b116e246160e, type: 3}
   brokenDoor: {fileID: 21300000, guid: acaf3fd8d4515444c9f62f08c0493a61, type: 3}
+  openOneSide: {fileID: 21300000, guid: ff413f180ef10004897993ec89487526, type: 3}
   needBlueKey: 0
   needYellowKey: 0
   needGreenKey: 0
   needVioletKey: 0
   doorIsBroken: 0
+  opensOneSide: 0
   needPzMnA: 1
   needPzMnB: 0
   needPzMnC: 0
