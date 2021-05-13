@@ -10059,16 +10059,20 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isInterior: 0
   playerIsHere: 0
-  player: {fileID: 0}
   offSet: {x: 0, y: 0, z: -80}
   cameraTransform: {fileID: 0}
   playerTransform: {fileID: 0}
   roomCameraPoint: {fileID: 0}
-  cameraSpeed: 0
+  cameraSpeed: 2
   smoothSpeed: 0.125
+  modifiedCameraSize: 1
   indice: []
   canvasIndice: {fileID: 0}
+  mainCam: {fileID: 0}
   indiceText: {fileID: 0}
+  readHint: 0
+  hintOpen: 0
+  refSpeed: 5
 --- !u!4 &1145787215
 Transform:
   m_ObjectHideFlags: 0
