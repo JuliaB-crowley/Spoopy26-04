@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 2494827360010800031}
   m_Layer: 0
   m_Name: TrapBoss
-  m_TagString: Untagged
+  m_TagString: DamageDealer
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
