@@ -408,19 +408,23 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isInterior: 0
   playerIsHere: 0
-  player: {fileID: 0}
   offSet: {x: 0, y: 2, z: -10}
   cameraTransform: {fileID: 0}
   playerTransform: {fileID: 0}
   roomCameraPoint: {fileID: 0}
   cameraSpeed: 0
   smoothSpeed: 0.125
+  modifiedCameraSize: 1
   indice:
   - test
   - test1
   - test2
   canvasIndice: {fileID: 679166133}
+  mainCam: {fileID: 0}
   indiceText: {fileID: 2101562077}
+  readHint: 0
+  hintOpen: 0
+  refSpeed: 1
 --- !u!4 &791226053
 Transform:
   m_ObjectHideFlags: 0
@@ -515,16 +519,20 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isInterior: 1
   playerIsHere: 0
-  player: {fileID: 0}
   offSet: {x: 0, y: 2, z: -10}
   cameraTransform: {fileID: 0}
   playerTransform: {fileID: 0}
   roomCameraPoint: {fileID: 1499361718}
   cameraSpeed: 0
   smoothSpeed: 0.125
+  modifiedCameraSize: 1
   indice: []
   canvasIndice: {fileID: 679166133}
+  mainCam: {fileID: 0}
   indiceText: {fileID: 2101562077}
+  readHint: 0
+  hintOpen: 0
+  refSpeed: 1
 --- !u!4 &1082016480
 Transform:
   m_ObjectHideFlags: 0
@@ -1698,7 +1706,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5073029022732066277, guid: 99ca432830462b44aac8e28f6dea91e2, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5073029022732066278, guid: 99ca432830462b44aac8e28f6dea91e2, type: 3}
       propertyPath: m_RootOrder
@@ -1752,6 +1760,10 @@ PrefabInstance:
       propertyPath: m_Camera
       value: 
       objectReference: {fileID: 1651661855}
+    - target: {fileID: 5073029023960406357, guid: 99ca432830462b44aac8e28f6dea91e2, type: 3}
+      propertyPath: m_Name
+      value: Text1
+      objectReference: {fileID: 0}
     - target: {fileID: 5073029023975771338, guid: 99ca432830462b44aac8e28f6dea91e2, type: 3}
       propertyPath: m_Camera
       value: 
@@ -1989,7 +2001,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8027537267242445784, guid: bc8d45933dcfe374f9d5fbba20ed7403, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: bc8d45933dcfe374f9d5fbba20ed7403, type: 3}

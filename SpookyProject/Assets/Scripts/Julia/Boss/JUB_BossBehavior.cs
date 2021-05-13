@@ -50,7 +50,7 @@ public class JUB_BossBehavior : MonoBehaviour
 
         canBeFlashed = true;
 
-        centerOfArea = maeve.transform.position;
+        
     }
 
     // Update is called once per frame
