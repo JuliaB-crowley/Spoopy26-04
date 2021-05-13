@@ -34,6 +34,7 @@ public class JUB_DialogueManager : MonoBehaviour
 
     public void StartDialogue(JUB_Dialogue dialogue)
     {
+        Time.timeScale = 0f;
         maeve.isInDialogue = true;
         resizeCanvas.localScale = Vector3.one;
 
@@ -73,12 +74,13 @@ public class JUB_DialogueManager : MonoBehaviour
         foreach (char letter in sentence.ToCharArray())
         {
             text.text += letter;
-            yield return new WaitForSeconds(timeBetweenLetters);
+            yield return StartCoroutine(JUB_RealtimeCoroutine.WaitForRealSeconds(timeBetweenLetters));
         }
     }
 
     void EndDialogue()
     {
+        Time.timeScale = 1f;
         resizeCanvas.localScale = Vector3.zero;
     }
 }

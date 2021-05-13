@@ -71,25 +71,15 @@ public class CoolTextScript : MonoBehaviour
         {
             reading = true;
             //Si vous voulez émettre un son lorsqu'une lettre apparaît, ajoutez-le par ici !
-            yield return new WaitForSeconds(0.075f);
+            yield return StartCoroutine(JUB_RealtimeCoroutine.WaitForRealSeconds(0.075f));
             text.text += textToRead[currentChar];
             currentChar++;
             StartCoroutine(ReadCoroutine(textToRead));
         } else
         {
             reading = false;
-            StartCoroutine(CloseTextCoroutine());
         }
 
     }
 
-    IEnumerator CloseTextCoroutine()
-    {
-        if(speakingCanvas != null)
-        {
-            yield return new WaitForSeconds(2);
-            speakingCanvas.transform.localScale = Vector3.zero;
-
-        }
-    }
 }

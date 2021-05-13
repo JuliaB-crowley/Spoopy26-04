@@ -17,7 +17,7 @@ public class JUB_BossBehavior : MonoBehaviour
 
     //attack paw
     public Collider2D pawCollider, pawAttackZone; //paw attack zone doit être sur l'objet qui contient ce script //paw collider sur un enfant
-    public float pawAttackDuration, flashRecoveryTime;
+    public float flashRecoveryTime;
     public float buildupTime, recoveryTime, hitspanTime;
     public int pawDamages = 3;
 
@@ -49,6 +49,8 @@ public class JUB_BossBehavior : MonoBehaviour
         SMBanimator.GetBehaviour<BossSMB_SpawnObject>().boss = this;
 
         canBeFlashed = true;
+
+        centerOfArea = maeve.transform.position;
     }
 
     // Update is called once per frame

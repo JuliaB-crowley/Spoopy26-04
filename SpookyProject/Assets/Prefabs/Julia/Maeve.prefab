@@ -685,7 +685,7 @@ MonoBehaviour:
   collisionTop: 0
   collisionBottom: 0
   speed: 3
-  rollSpeed: 4
+  rollSpeed: 6
   rollDuration: 0.2
   rollRecover: 0.05
   crouchSpeed: 1.5
@@ -721,6 +721,9 @@ MonoBehaviour:
   breakableObjects:
     serializedVersion: 2
     m_Bits: 256
+  bossJewel:
+    serializedVersion: 2
+    m_Bits: 262144
   attackDamage: 10
   ennemyWasHitOnce: 0
   immunityTime: 0.5
