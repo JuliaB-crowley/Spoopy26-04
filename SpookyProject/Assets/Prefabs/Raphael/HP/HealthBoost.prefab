@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 4019977197619608249}
   - component: {fileID: 3869910321976463055}
   - component: {fileID: 6893181008114043492}
-  m_Layer: 0
+  m_Layer: 17
   m_Name: HealthBoost
   m_TagString: HealthBoost
   m_Icon: {fileID: 0}
@@ -134,4 +134,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   collectibleObject: {fileID: 0}
-  collectibleValeur: 10
+  collectibleValeur: 2

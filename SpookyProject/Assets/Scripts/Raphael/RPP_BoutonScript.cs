@@ -7,13 +7,13 @@ public class RPP_BoutonScript : MonoBehaviour
     [SerializeField] SpriteRenderer spriteRenderer; // Je modifie le sprite pour avoir du feedback visuel  
     [SerializeField] JUB_FlashManager flashManager; //flash manager à mettre sur layer flashable
     [SerializeField] Sprite boutonActivé, boutonDésactivé; //différents sprites du bouton
-    [SerializeField] RPP_ButtonsPuzzleManager buttonsManager;
+    [SerializeField] RPP_SubPuzzleManager buttonsManager;
 
     public bool hasBeenFlashed = false;
 
     void Start()
     {
-        buttonsManager = GetComponentInParent<RPP_ButtonsPuzzleManager>();
+        buttonsManager = GetComponentInParent<RPP_SubPuzzleManager>();
         spriteRenderer =GetComponent<SpriteRenderer>();
         flashManager = GetComponentInChildren<JUB_FlashManager>();
         spriteRenderer.sprite = boutonDésactivé;
@@ -35,10 +35,10 @@ public class RPP_BoutonScript : MonoBehaviour
     {
         spriteRenderer.sprite = boutonActivé;
         hasBeenFlashed = true;
-        buttonsManager.buttonsActive++;
+        buttonsManager.successesAchieved++;
         yield return new WaitForSeconds(flashManager.flashTime);
         spriteRenderer.sprite = boutonDésactivé;
         hasBeenFlashed = false;
-        buttonsManager.buttonsActive--;
+        buttonsManager.successesAchieved--;
     }
 }
