@@ -1,0 +1,396 @@
+fileFormatVersion: 2
+guid: 099aede845340fc4db8b70da4f2e32cc
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -4956170531258712680
+    second: spritesheet_Diablotin_walk_left_0
+  - first:
+      213: 5853155518558392481
+    second: spritesheet_Diablotin_walk_left_1
+  - first:
+      213: 5291219950601056656
+    second: spritesheet_Diablotin_walk_left_2
+  - first:
+      213: -5442922140521980435
+    second: spritesheet_Diablotin_walk_left_3
+  - first:
+      213: 7530828918984461065
+    second: spritesheet_Diablotin_walk_left_4
+  - first:
+      213: -5778294086670509732
+    second: spritesheet_Diablotin_walk_left_5
+  - first:
+      213: 2428720783879763233
+    second: spritesheet_Diablotin_walk_left_6
+  - first:
+      213: -7205026778789490689
+    second: spritesheet_Diablotin_walk_left_7
+  - first:
+      213: -455113614680552733
+    second: spritesheet_Diablotin_walk_left_8
+  - first:
+      213: -9005607679541239936
+    second: spritesheet_Diablotin_walk_left_9
+  - first:
+      213: 2888736806909762831
+    second: spritesheet_Diablotin_walk_left_10
+  - first:
+      213: -16246626117422797
+    second: spritesheet_Diablotin_walk_left_11
+  externalObjects: {}
+  serializedVersion: 11
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: -1
+    mipBias: -100
+    wrapU: 1
+    wrapV: 1
+    wrapW: -1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 32
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: spritesheet_Diablotin_walk_left_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1618
+        width: 952
+        height: 809
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 89db0162925283bb0800000000000000
+      internalID: -4956170531258712680
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spritesheet_Diablotin_walk_left_1
+      rect:
+        serializedVersion: 2
+        x: 952
+        y: 1618
+        width: 952
+        height: 809
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1a05acacee59a3150800000000000000
+      internalID: 5853155518558392481
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spritesheet_Diablotin_walk_left_2
+      rect:
+        serializedVersion: 2
+        x: 1904
+        y: 1618
+        width: 952
+        height: 809
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0913900d2803e6940800000000000000
+      internalID: 5291219950601056656
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spritesheet_Diablotin_walk_left_3
+      rect:
+        serializedVersion: 2
+        x: 2856
+        y: 1618
+        width: 952
+        height: 809
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ded141aa62bd674b0800000000000000
+      internalID: -5442922140521980435
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spritesheet_Diablotin_walk_left_4
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 809
+        width: 952
+        height: 809
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 90bce447001e28860800000000000000
+      internalID: 7530828918984461065
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spritesheet_Diablotin_walk_left_5
+      rect:
+        serializedVersion: 2
+        x: 952
+        y: 809
+        width: 952
+        height: 809
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c59934494206fcfa0800000000000000
+      internalID: -5778294086670509732
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spritesheet_Diablotin_walk_left_6
+      rect:
+        serializedVersion: 2
+        x: 1904
+        y: 809
+        width: 952
+        height: 809
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 125f2cd5fac84b120800000000000000
+      internalID: 2428720783879763233
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spritesheet_Diablotin_walk_left_7
+      rect:
+        serializedVersion: 2
+        x: 2856
+        y: 809
+        width: 952
+        height: 809
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fff431d815a920c90800000000000000
+      internalID: -7205026778789490689
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spritesheet_Diablotin_walk_left_8
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 952
+        height: 809
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3ea8588249c1fa9f0800000000000000
+      internalID: -455113614680552733
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spritesheet_Diablotin_walk_left_9
+      rect:
+        serializedVersion: 2
+        x: 952
+        y: 0
+        width: 952
+        height: 809
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 08f1a6a7787a50380800000000000000
+      internalID: -9005607679541239936
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spritesheet_Diablotin_walk_left_10
+      rect:
+        serializedVersion: 2
+        x: 1904
+        y: 0
+        width: 952
+        height: 809
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f0dd37912dad61820800000000000000
+      internalID: 2888736806909762831
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spritesheet_Diablotin_walk_left_11
+      rect:
+        serializedVersion: 2
+        x: 2856
+        y: 0
+        width: 952
+        height: 809
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 331f87597c746cff0800000000000000
+      internalID: -16246626117422797
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 9bcefd82c5cecc840bcc272f20f7549f
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
