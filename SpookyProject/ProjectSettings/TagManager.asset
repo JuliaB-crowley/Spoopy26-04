@@ -18,6 +18,7 @@ TagManager:
   - PuzzleMasterD
   - Puzzle Master
   - DialogueManager
+  - Hint Canvas
   layers:
   - Default
   - TransparentFX

@@ -45,6 +45,10 @@ namespace character
         public float immunityTime, timeRed;
         public Renderer rendererMaeve;
 
+        //ded
+        public Transform actualCheckpoint;
+        public float deathAnimDuration;
+
         //pousser des objets
         Collider2D[] allPushableInRange, allInteractibleInRange;
         public float interactAndPushableRange;
@@ -400,7 +404,7 @@ namespace character
         void Interact()
         {
             Debug.Log("input was done");
-            if(!allInteractibleInRange.Count().Equals(0) && !isInRoll && !isInAttack && !isFlashing)
+            if(!allInteractibleInRange.Count().Equals(0) && !isInRoll && !isInAttack && !isFlashing && !isInDialogue)
             {
                 if(allInteractibleInRange.Count().Equals(1))
                 {
@@ -550,7 +554,16 @@ namespace character
         {
             //RIP
             //anim mort
+            StartCoroutine(DeathCoroutine());
             //respawn checkpoint
+        }
+
+        IEnumerator DeathCoroutine()
+        {
+            yield return new WaitForSeconds(deathAnimDuration);
+            this.gameObject.transform.position = actualCheckpoint.position;
+            Heal(maxLife);
+            Immunity(immunityTime);
         }
 
         public void GainBonbons(int bonbons)

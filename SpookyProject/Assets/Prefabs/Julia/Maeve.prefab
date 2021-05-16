@@ -684,7 +684,7 @@ MonoBehaviour:
   collisionRight: 0
   collisionTop: 0
   collisionBottom: 0
-  speed: 3
+  speed: 4
   rollSpeed: 6
   rollDuration: 0.2
   rollRecover: 0.05
@@ -729,6 +729,8 @@ MonoBehaviour:
   immunityTime: 0.5
   timeRed: 0.5
   rendererMaeve: {fileID: 5701466241730403767}
+  actualCheckpoint: {fileID: 0}
+  deathAnimDuration: 0
   interactAndPushableRange: 1.2
   maxLife: 6
   currentLife: 0

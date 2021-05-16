@@ -434,7 +434,7 @@ GameObject:
   - component: {fileID: 3317245800566644384}
   m_Layer: 5
   m_Name: HintRescale
-  m_TagString: Untagged
+  m_TagString: Hint Canvas
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
