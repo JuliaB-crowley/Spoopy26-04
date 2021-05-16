@@ -10,8 +10,8 @@ public class RPP_DoorScript : MonoBehaviour
     public int minPuzzlesSolved;
     [SerializeField] RPP_GeneralPuzzleMaster puzzleMaster;
     public SpriteRenderer doorSprite;
-    public Sprite doorOpen, doorLocked, blueDoor, yellowDoor, greenDoor, violetDoor, brokenDoor;
-    [SerializeField] bool needBlueKey, needYellowKey, needGreenKey, needVioletKey, doorIsBroken, needPzMnA = true, needPzMnB, needPzMnC, needPzMnD;
+    public Sprite doorOpen, doorLocked, blueDoor, yellowDoor, greenDoor, violetDoor, brokenDoor, openOneSide;
+    [SerializeField] bool needBlueKey, needYellowKey, needGreenKey, needVioletKey, doorIsBroken, opensOneSide, needPzMnA = true, needPzMnB, needPzMnC, needPzMnD;
 
     void Start()
     {
@@ -31,10 +31,21 @@ public class RPP_DoorScript : MonoBehaviour
         {
             if (!needBlueKey && !needYellowKey && !needGreenKey && !needVioletKey)
             {
-                if (minPuzzlesSolved <= puzzleMaster.puzzlesSolved)
+                if (minPuzzlesSolved <= puzzleMaster.puzzlesSolved && !opensOneSide)
                 {
                     doorSprite.sprite = doorOpen;
 
+                    if (!doorManager.interacted)
+                    {
+                        doorObject.SetActive(true);
+                    }
+                    else
+                    {
+                        doorObject.SetActive(false);
+                    }
+                }
+                else if(minPuzzlesSolved <= puzzleMaster.puzzlesSolved && opensOneSide)
+                {
                     if (!doorManager.interacted)
                     {
                         doorObject.SetActive(true);
@@ -152,14 +163,6 @@ public class RPP_DoorScript : MonoBehaviour
         }
     }
 
-    private void OnTriggerExit2D(Collider2D collision)
-    {
-        if (collision.CompareTag("Player"))
-        {
-            doorManager.interacted = false;
-        }
-    }
-
     void PuzzleManagerCheck()
     {
         if (needPzMnA)
@@ -201,6 +204,10 @@ public class RPP_DoorScript : MonoBehaviour
         else if (doorIsBroken)
         {
             doorSprite.sprite = brokenDoor;
+        }
+        if (opensOneSide)
+        {
+            doorSprite.sprite = openOneSide;
         }
     }
 }

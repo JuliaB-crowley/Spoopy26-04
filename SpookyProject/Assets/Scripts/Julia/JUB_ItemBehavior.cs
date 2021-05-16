@@ -19,6 +19,7 @@ namespace items
         }
         public void ApplyEffect()
         {
+            Debug.Log(scriptableObject.itemType);
             switch(scriptableObject.itemType)
             {
                 case ItemType.Flash:

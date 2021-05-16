@@ -18,13 +18,14 @@ public class BossSMB_SpawnObject : StateMachineBehaviour
     override public void OnStateUpdate(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
         timeBetweenTraps += Time.deltaTime;
+        boss.centerOfArea = boss.maeve.transform.position;
 
-        if(boss.bossHitNumber == 0)
+        if (boss.bossHitNumber == 0)
         {
             if (timeBetweenTraps >= boss.timeBetweenTwo && numberAlreadySpawned <= boss.numberTrapPhase1)
             {
                 timeBetweenTraps = 0;
-                Vector2 pos = boss.centerOfArea + new Vector2(Random.Range(-boss.sizeOfArea.x / 2, boss.sizeOfArea.x / 2), Random.Range(-boss.sizeOfArea.y / 2, -boss.sizeOfArea.y / 2));
+                Vector2 pos = boss.centerOfArea + new Vector2(Random.Range(-boss.sizeOfArea.x / 2, boss.sizeOfArea.x / 2), Random.Range(-boss.sizeOfArea.y / 2, boss.sizeOfArea.y / 2));
                 Instantiate(boss.spawningTrap, pos, Quaternion.identity);
                 numberAlreadySpawned++;
 
@@ -40,7 +41,7 @@ public class BossSMB_SpawnObject : StateMachineBehaviour
             if (timeBetweenTraps >= boss.timeBetweenTwo && numberAlreadySpawned <= boss.numberTrapPhase2)
             {
                 timeBetweenTraps = 0;
-                Vector2 pos = boss.centerOfArea + new Vector2(Random.Range(-boss.sizeOfArea.x / 2, boss.sizeOfArea.x / 2), Random.Range(-boss.sizeOfArea.y / 2, -boss.sizeOfArea.y / 2));
+                Vector2 pos = boss.centerOfArea + new Vector2(Random.Range(-boss.sizeOfArea.x / 2, boss.sizeOfArea.x / 2), Random.Range(-boss.sizeOfArea.y / 2, boss.sizeOfArea.y / 2));
                 Instantiate(boss.spawningTrap, pos, Quaternion.identity);
                 numberAlreadySpawned++;
             }
@@ -55,7 +56,7 @@ public class BossSMB_SpawnObject : StateMachineBehaviour
             if (timeBetweenTraps >= boss.timeBetweenTwo && numberAlreadySpawned <= boss.numberTrapPhase3)
             {
                 timeBetweenTraps = 0;
-                Vector2 pos = boss.centerOfArea + new Vector2(Random.Range(-boss.sizeOfArea.x / 2, boss.sizeOfArea.x / 2), Random.Range(-boss.sizeOfArea.y / 2, -boss.sizeOfArea.y / 2));
+                Vector2 pos = boss.centerOfArea + new Vector2(Random.Range(-boss.sizeOfArea.x / 2, boss.sizeOfArea.x / 2), Random.Range(-boss.sizeOfArea.y / 2, boss.sizeOfArea.y / 2));
                 Instantiate(boss.spawningTrap, pos, Quaternion.identity);
                 numberAlreadySpawned++;
 

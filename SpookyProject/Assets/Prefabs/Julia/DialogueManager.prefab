@@ -67,7 +67,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_FontData:
-    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
+    m_Font: {fileID: 12800000, guid: 74110ff52b55d2947b51850ffc9e22f1, type: 3}
     m_FontSize: 20
     m_FontStyle: 0
     m_BestFit: 0
@@ -387,7 +387,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   text: {fileID: 8027537266035362752}
-  faceImage: {fileID: 8027537267668963323}
+  faceImage: {fileID: 8027537267705248938}
   resizeCanvas: {fileID: 8027537266328191580}
   timeBetweenLetters: 0.05
 --- !u!1 &8027537267668963325

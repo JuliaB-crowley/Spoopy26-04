@@ -12,6 +12,7 @@ public class JUB_Boutique : MonoBehaviour
     public GameObject canvasRescale;
     public bool isOpen;
     public JUB_Maeve maeve;
+    public JUB_Flash flash;
 
     //objets
     public Image[] objectSlot;
@@ -23,15 +24,19 @@ public class JUB_Boutique : MonoBehaviour
     //confirmation
     public GameObject confirmationRescale;
     public Text confirmationText;
+    Color confirmationColor;
 
     //buttons
-    public int buttonNumber;
+    int buttonNumber;
+    public GameObject[] soldText;
+    public Button[] buttons;
 
     // Start is called before the first frame update
     void Start()
     {
         interactibleBehavior = GetComponentInChildren<JUB_InteractibleBehavior>();
         maeve = GameObject.FindGameObjectWithTag("Player").GetComponent<JUB_Maeve>();
+        flash = GameObject.FindGameObjectWithTag("Player").GetComponent<JUB_Flash>();
         canvasRescale.GetComponent<Transform>().localScale = Vector3.zero;
         confirmationRescale.GetComponent<Transform>().localScale = Vector3.zero;
 
@@ -40,7 +45,10 @@ public class JUB_Boutique : MonoBehaviour
             objectPriceDisplay[i].text = items[i].scriptableObject.itemPrice.ToString();
             objectSlot[i].sprite = items[i].scriptableObject.itemSprite;
             //objectDescription[i].text = items[i].scriptableObject.itemDescription;
+            soldText[i].SetActive(false);
         }
+
+        confirmationColor = confirmationText.color;
     }
 
     // Update is called once per frame
@@ -65,15 +73,51 @@ public class JUB_Boutique : MonoBehaviour
     public void ConfirmationStart(int buttonNumberHit)
     {
         confirmationRescale.GetComponent<Transform>().localScale = Vector3.one;
+        confirmationText.color = confirmationColor;
         confirmationText.text = "Cet objet coûte " + items[buttonNumberHit].scriptableObject.itemPrice.ToString() + " bonbons. Voulez-vous l'acheter ?";
         buttonNumber = buttonNumberHit;
     }
 
     public void Buy()
     {
-        items[buttonNumber].ApplyEffect();
-        maeve.Achat(items[buttonNumber].scriptableObject.itemPrice);
-        confirmationRescale.GetComponent<Transform>().localScale = Vector3.zero;
+        if(maeve.currentBonbons > items[buttonNumber].scriptableObject.itemPrice)
+        {
+            maeve.Achat(items[buttonNumber].scriptableObject.itemPrice);
+            Debug.Log(items[buttonNumber].scriptableObject.itemType);
+            ApplyEffect();
+            soldText[buttonNumber].SetActive(true);
+            buttons[buttonNumber].enabled = false;
+            confirmationRescale.GetComponent<Transform>().localScale = Vector3.zero;
+
+        }
+        else
+        {
+            confirmationText.color = Color.red;
+        }
+
+    }
+
+    public void ApplyEffect()
+    {
+        //Debug.Log(items[buttonNumber].scriptableObject.itemType);
+        switch (items[buttonNumber].scriptableObject.itemType)
+        {
+            case ItemType.Flash:
+                flash.flashTime *= 2;
+                break;
+
+            case ItemType.Heal:
+                maeve.Heal(items[buttonNumber].scriptableObject.strengh);
+                break;
+
+            case ItemType.MaxPlus:
+                maeve.MaxUpgrades(items[buttonNumber].scriptableObject.strengh);
+                break;
+
+            case ItemType.Strengh:
+                maeve.attackDamage += 1;
+                break;
+        }
     }
 
     public void Cancel()

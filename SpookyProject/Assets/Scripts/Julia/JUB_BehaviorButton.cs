@@ -10,7 +10,7 @@ public class JUB_BehaviorButton : MonoBehaviour
     public Vector3 scale;
     public bool mouseOnButton;
     public int buttonNumber;
-    public Text descriptionText;
+    public Text descriptionText, nameText;
     public GameObject resizeDescriptionCanvas;
     public JUB_Boutique scriptBoutique;
 
@@ -26,6 +26,7 @@ public class JUB_BehaviorButton : MonoBehaviour
     public void Hover()
     {
         descriptionText.text = scriptBoutique.items[buttonNumber].scriptableObject.itemDescription;
+        nameText.text = scriptBoutique.items[buttonNumber].scriptableObject.itemName;
         resizeDescriptionCanvas.transform.localScale = Vector3.one;
         size.localScale = scale * 1.1f;
     }
