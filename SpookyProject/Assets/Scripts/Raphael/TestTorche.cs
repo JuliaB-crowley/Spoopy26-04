@@ -9,10 +9,11 @@ public class TestTorche : MonoBehaviour
     public SpriteRenderer spriteRenderer; //Sprite Renderer de la torche
     public Sprite litTorch, unlitTorch; //Possibles Sprites que la torche peux avoir
     [SerializeField] RPP_SubPuzzleManager torchesManager; //Script qui gère les puzzles des torches
+    public bool isPartOfAPuzzle = false;
 
-    //C'est Pierre qui à fait ça
+    /*C'est Pierre qui à fait ça
     public UnityEvent wasUnlit = new UnityEvent();
-    List<Collider2D> litObjects = new List<Collider2D>();
+    List<Collider2D> litObjects = new List<Collider2D>();*/
 
     //flash manager à mettre en enfant et sur layer flashable
     public JUB_FlashManager flashManager;
@@ -47,15 +48,19 @@ public class TestTorche : MonoBehaviour
         //GetComponent<CircleCollider2D>().radius = 2;
         isLit = true;
         spriteRenderer.sprite = litTorch;
-        torchesManager.successesAchieved++;
         Debug.Log("torche allumée");
+        if (!isPartOfAPuzzle)
+        {
+            torchesManager.successesAchieved++;
+        }
     }
 
-    void UnlitTorch()
+    public void UnlitTorch()
     {
         spriteRenderer.sprite = unlitTorch;
         isLit = false;
-        wasUnlit.Invoke();
+        hasBeenBurned = false;
+        //wasUnlit.Invoke();
     }
 
     //Cette méthode fau=it que quand la torche s'éteint lorsqu'un object est en train d'intéragir avec, cet objet s'étein aussi

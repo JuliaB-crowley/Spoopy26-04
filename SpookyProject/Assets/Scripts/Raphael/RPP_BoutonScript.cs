@@ -9,7 +9,7 @@ public class RPP_BoutonScript : MonoBehaviour
     [SerializeField] Sprite boutonActivé, boutonDésactivé; //différents sprites du bouton
     [SerializeField] RPP_SubPuzzleManager buttonsManager;
 
-    public bool hasBeenFlashed = false;
+    public bool hasBeenFlashed = false, isPartOfAPuzzle = false;
 
     void Start()
     {
@@ -23,7 +23,15 @@ public class RPP_BoutonScript : MonoBehaviour
     {
         if (flashManager.flashed && !hasBeenFlashed && !buttonsManager.puzzleSolved)
         {
-            StartCoroutine(ActivateButton());
+            if (!isPartOfAPuzzle)
+            {
+                StartCoroutine(ActivateButton());
+            }
+            else
+            {
+                spriteRenderer.sprite = boutonActivé;
+                hasBeenFlashed = true;
+            }
         }
         if (buttonsManager.puzzleSolved)
         {
@@ -40,5 +48,11 @@ public class RPP_BoutonScript : MonoBehaviour
         spriteRenderer.sprite = boutonDésactivé;
         hasBeenFlashed = false;
         buttonsManager.successesAchieved--;
+    }
+
+    public void ResetButton()
+    {
+        spriteRenderer.sprite = boutonDésactivé;
+        hasBeenFlashed = false;
     }
 }
