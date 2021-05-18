@@ -31,6 +31,7 @@ public class JUB_ZoneScript : MonoBehaviour
     {
         mainCam = GameObject.FindGameObjectWithTag("MainCamera").GetComponent<Camera>();
         canvasIndice = GameObject.FindGameObjectWithTag("Hint Canvas");
+        indiceText = GameObject.FindGameObjectWithTag("Hint Canvas").GetComponentInChildren<Text>();
         controller = new Controller();
         controller.Enable();
         playerTransform = GameObject.FindGameObjectWithTag("Player").transform;
