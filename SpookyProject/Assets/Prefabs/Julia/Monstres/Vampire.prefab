@@ -100,7 +100,7 @@ GameObject:
   - component: {fileID: 5562259911019479688}
   - component: {fileID: 5562259911019479689}
   - component: {fileID: 3519918886384133659}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Vampire
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -323,15 +323,17 @@ MonoBehaviour:
   maxHealth: 3
   currentHealth: 0
   deathAnimationTime: 0.5
-  knockbackForce: 4
-  knockbackDuration: 0.5
-  playerTransform: {fileID: 0}
-  rb: {fileID: 0}
-  AIPath: {fileID: 0}
-  hasLoot: 0
-  possibleLoots: []
-  rendererEnnemies: {fileID: 0}
-  timeRed: 0
+  knockbackForce: 3
+  knockbackDuration: 2
+  hasLoot: 1
+  possibleLoots:
+  - {fileID: 2654147877702478415, guid: 8805ecfdead8b2b43a5f0a2ccdefd8de, type: 3}
+  - {fileID: 2962616450383077693, guid: 1b450b43b8138c949994c42200bc4ea4, type: 3}
+  - {fileID: 4058683843120401103, guid: 5b4ba125498b83349bfee32b037a879f, type: 3}
+  - {fileID: 4058683843120401103, guid: 5b4ba125498b83349bfee32b037a879f, type: 3}
+  - {fileID: 6492889625563825800, guid: f9797014ba71f2c45957985106394ac6, type: 3}
+  rendererEnnemies: {fileID: 5932053849976724420}
+  timeRed: 0.3
 --- !u!50 &3519918886384133659
 Rigidbody2D:
   serializedVersion: 4

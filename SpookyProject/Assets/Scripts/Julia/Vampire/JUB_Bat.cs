@@ -17,7 +17,7 @@ public class JUB_Bat : MonoBehaviour
         destinationSetter.target = player.transform;
     }
 
-    private void Update()
+    /*private void Update()
     {
         Vector3 decalage = Vector3.zero;
         Collider2D[] hitEnnemies = Physics2D.OverlapCircleAll(transform.position, 0.2f, ennemies);
@@ -31,6 +31,6 @@ public class JUB_Bat : MonoBehaviour
         decalage.z = 0;
         transform.position += decalage*Time.deltaTime;
 
-    }
+    }*/
 
 }

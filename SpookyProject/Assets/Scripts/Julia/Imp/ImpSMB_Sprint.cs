@@ -40,16 +40,16 @@ public class ImpSMB_Sprint : StateMachineBehaviour
         if (Vector3.Distance((imp.transform.position), imp.pathfinder.destination) < 1)
         {
             imp.isAttacking = false;
-            Debug.LogWarning("Bidule a fini son sprint");
             animator.Play("Pause");
         }
     }
 
     // OnStateExit is called when a transition ends and the state machine finishes evaluating this state
-    //override public void OnStateExit(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
-    //{
-    //    
-    //}
+    override public void OnStateExit(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
+    {
+        imp.isAttacking = false;
+        Debug.LogWarning("supposed to change state");
+    }
 
     // OnStateMove is called right after Animator.OnAnimatorMove()
     //override public void OnStateMove(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
