@@ -28,7 +28,7 @@ public class JUB_DialogueManager : MonoBehaviour
         maeve = GameObject.FindGameObjectWithTag("Player").GetComponent<JUB_Maeve>();
         resizeCanvas.localScale = Vector3.zero;
 
-        controller.MainController.Roll.performed += ctx => DisplayNextSentence();
+        controller.MainController.Interact.performed += ctx => DisplayNextSentence();
         
     }
 
@@ -81,6 +81,7 @@ public class JUB_DialogueManager : MonoBehaviour
     void EndDialogue()
     {
         Time.timeScale = 1f;
+        maeve.isInDialogue = false;
         resizeCanvas.localScale = Vector3.zero;
     }
 }

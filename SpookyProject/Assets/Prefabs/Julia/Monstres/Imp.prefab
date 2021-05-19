@@ -120,7 +120,7 @@ GameObject:
   - component: {fileID: 6014785153597361554}
   - component: {fileID: 8603929350840154592}
   - component: {fileID: -4991572543638758646}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Imp
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -330,10 +330,13 @@ MonoBehaviour:
   playerTransform: {fileID: 0}
   rb: {fileID: 0}
   AIPath: {fileID: 0}
-  hasLoot: 0
-  possibleLoots: []
-  rendererEnnemies: {fileID: 0}
-  timeRed: 0
+  hasLoot: 1
+  possibleLoots:
+  - {fileID: 4505395667627260979, guid: 91faeb50ada8aba4ca6ee776d61820f6, type: 3}
+  - {fileID: 2654147877702478415, guid: 8805ecfdead8b2b43a5f0a2ccdefd8de, type: 3}
+  - {fileID: 2962616450383077693, guid: 1b450b43b8138c949994c42200bc4ea4, type: 3}
+  rendererEnnemies: {fileID: 2379143486348672844}
+  timeRed: 0.3
 --- !u!58 &8603929350840154592
 CircleCollider2D:
   m_ObjectHideFlags: 0

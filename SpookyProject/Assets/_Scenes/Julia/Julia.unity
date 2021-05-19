@@ -357,7 +357,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!61 &141540384
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -1016,6 +1016,10 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 1556395513520290162, guid: 3f042cb5bbefe6d4eaee9c589d1ef702, type: 3}
+      propertyPath: cyclicPatrol
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1556395513520290162, guid: 3f042cb5bbefe6d4eaee9c589d1ef702, type: 3}
       propertyPath: patrolTargets.Array.data[0]
       value: 
       objectReference: {fileID: 255388715}
@@ -1034,6 +1038,10 @@ PrefabInstance:
     - target: {fileID: 1556395513520290163, guid: 3f042cb5bbefe6d4eaee9c589d1ef702, type: 3}
       propertyPath: m_Name
       value: Skeleton (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1556395513520290163, guid: 3f042cb5bbefe6d4eaee9c589d1ef702, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1556395513520290171, guid: 3f042cb5bbefe6d4eaee9c589d1ef702, type: 3}
       propertyPath: m_RootOrder
@@ -2365,7 +2373,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2809584976226621181, guid: e79b9aabf5a330a47b70f696eaa25cf2, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0
+      value: -4.03
       objectReference: {fileID: 0}
     - target: {fileID: 2809584976226621181, guid: e79b9aabf5a330a47b70f696eaa25cf2, type: 3}
       propertyPath: m_LocalPosition.y
@@ -2489,21 +2497,13 @@ PrefabInstance:
       propertyPath: patrolTargets.Array.data[3]
       value: 
       objectReference: {fileID: 642158977}
-    - target: {fileID: 5562259911019479689, guid: 2e426e78f91c6a94081663b8180a5697, type: 3}
-      propertyPath: knockbackForce
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 5562259911019479689, guid: 2e426e78f91c6a94081663b8180a5697, type: 3}
-      propertyPath: knockbackDuration
-      value: 2
-      objectReference: {fileID: 0}
     - target: {fileID: 5562259911019479694, guid: 2e426e78f91c6a94081663b8180a5697, type: 3}
       propertyPath: m_Name
       value: Vampire
       objectReference: {fileID: 0}
     - target: {fileID: 5562259911019479694, guid: 2e426e78f91c6a94081663b8180a5697, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5562259911019479729, guid: 2e426e78f91c6a94081663b8180a5697, type: 3}
       propertyPath: m_RootOrder
@@ -2515,7 +2515,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5562259911019479729, guid: 2e426e78f91c6a94081663b8180a5697, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -4.03
+      value: -3.72
       objectReference: {fileID: 0}
     - target: {fileID: 5562259911019479729, guid: 2e426e78f91c6a94081663b8180a5697, type: 3}
       propertyPath: m_LocalPosition.z
@@ -2551,7 +2551,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5562259911019479732, guid: 2e426e78f91c6a94081663b8180a5697, type: 3}
       propertyPath: canMove
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2e426e78f91c6a94081663b8180a5697, type: 3}
@@ -2568,7 +2568,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7262659720714772078, guid: 59582711c36cc194c81e285703886e40, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0
+      value: 2.02
       objectReference: {fileID: 0}
     - target: {fileID: 7262659720714772078, guid: 59582711c36cc194c81e285703886e40, type: 3}
       propertyPath: m_LocalPosition.y

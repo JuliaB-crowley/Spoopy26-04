@@ -80,7 +80,7 @@ public class JUB_Flash : MonoBehaviour
 
     IEnumerator EndFlash()
     {
-        yield return new WaitForSeconds(flashTime);
+        yield return new WaitForEndOfFrame();
         maeve.isFlashing = false;
         Debug.Log("fin de flash");
     }

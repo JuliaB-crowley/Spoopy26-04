@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using character;
 
 public class JUB_ZoneScript : MonoBehaviour
 {
@@ -11,6 +12,9 @@ public class JUB_ZoneScript : MonoBehaviour
     public Transform cameraTransform, playerTransform, roomCameraPoint;
     public float cameraSpeed, smoothSpeed = 0.125f, modifiedCameraSize = 1;
     float baseCameraSize;
+    public Transform checkpoint;
+    public JUB_Maeve player;
+    
     //système d'indices 
     Controller controller;
     [SerializeField]
@@ -26,11 +30,15 @@ public class JUB_ZoneScript : MonoBehaviour
     void Start()
     {
         mainCam = GameObject.FindGameObjectWithTag("MainCamera").GetComponent<Camera>();
+        canvasIndice = GameObject.FindGameObjectWithTag("Hint Canvas");
+        indiceText = GameObject.FindGameObjectWithTag("Hint Canvas").GetComponentInChildren<Text>();
         controller = new Controller();
         controller.Enable();
         playerTransform = GameObject.FindGameObjectWithTag("Player").transform;
+        player = GameObject.FindGameObjectWithTag("Player").GetComponent<JUB_Maeve>();
         cameraTransform = mainCam.transform;
         //glisser déposer le roomCameraPoint si isInterior
+        
 
         canvasIndice.GetComponent<Transform>().localScale = Vector3.zero;
 
@@ -63,6 +71,7 @@ public class JUB_ZoneScript : MonoBehaviour
         //Debug.Log("is in zone !" + isInterior.ToString());
 
         playerIsHere = true;
+        player.actualCheckpoint = checkpoint;
         if (isInterior == true && playerIsHere)
         {
             StartCoroutine(ZoomCoroutine(baseCameraSize * roomCameraPoint.localScale.z));
