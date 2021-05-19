@@ -806,6 +806,8 @@ MonoBehaviour:
   cameraSpeed: 0
   smoothSpeed: 0.125
   modifiedCameraSize: 1
+  checkpoint: {fileID: 0}
+  player: {fileID: 0}
   indice:
   - test
   - test1
@@ -1364,6 +1366,8 @@ MonoBehaviour:
   cameraSpeed: 0
   smoothSpeed: 0.125
   modifiedCameraSize: 1
+  checkpoint: {fileID: 0}
+  player: {fileID: 0}
   indice: []
   canvasIndice: {fileID: 679166133}
   mainCam: {fileID: 0}
@@ -2314,9 +2318,6 @@ MonoBehaviour:
   deathAnimationTime: 0
   knockbackForce: 0
   knockbackDuration: 0
-  playerTransform: {fileID: 0}
-  rb: {fileID: 0}
-  AIPath: {fileID: 0}
   hasLoot: 0
   possibleLoots: []
   rendererEnnemies: {fileID: 0}
@@ -3163,7 +3164,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5073029022732066277, guid: 99ca432830462b44aac8e28f6dea91e2, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5073029022732066278, guid: 99ca432830462b44aac8e28f6dea91e2, type: 3}
       propertyPath: m_RootOrder
@@ -3231,7 +3232,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5073029024244769804, guid: 99ca432830462b44aac8e28f6dea91e2, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -92.18933
+      value: -92.189316
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 99ca432830462b44aac8e28f6dea91e2, type: 3}

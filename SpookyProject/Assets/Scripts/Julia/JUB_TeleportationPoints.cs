@@ -8,11 +8,13 @@ public class JUB_TeleportationPoints : MonoBehaviour
     public GameObject player;
     public float cooldown = 1;
     public bool pointADesactivated, pointBDesactivated;
+    public JUB_Fondu fonduScript;
 
     // Start is called before the first frame update
     void Start()
     {
         player = GameObject.FindGameObjectWithTag("Player");
+        fonduScript = FindObjectOfType<JUB_Fondu>().GetComponent<JUB_Fondu>();
     }
 
     // Update is called once per frame
@@ -22,6 +24,7 @@ public class JUB_TeleportationPoints : MonoBehaviour
         {
             player.transform.position = pointB.transform.position;
             pointBDesactivated = true;
+            fonduScript.FadeIn();
             StartCoroutine(Reactivate());
         }
         /*else if(Vector2.Distance(player.transform.position, pointB.position) < 1 && !pointBDesactivated)
