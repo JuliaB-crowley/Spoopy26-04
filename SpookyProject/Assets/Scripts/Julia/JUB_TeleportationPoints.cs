@@ -22,9 +22,9 @@ public class JUB_TeleportationPoints : MonoBehaviour
     {
         if(Vector2.Distance(player.transform.position, pointA.position) < 1 && !pointADesactivated)
         {
-            player.transform.position = pointB.transform.position;
-            pointBDesactivated = true;
+
             fonduScript.FadeIn();
+            StartCoroutine(Teleport());
             StartCoroutine(Reactivate());
         }
         /*else if(Vector2.Distance(player.transform.position, pointB.position) < 1 && !pointBDesactivated)
@@ -35,6 +35,12 @@ public class JUB_TeleportationPoints : MonoBehaviour
         }*/
     }
 
+    IEnumerator Teleport()
+    {
+        yield return new WaitForSeconds(0.2f);
+        player.transform.position = pointB.transform.position;
+        pointBDesactivated = true;
+    }
     IEnumerator Reactivate()
     {
         yield return new WaitForSeconds(cooldown);
