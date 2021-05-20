@@ -8,7 +8,7 @@ public class RPP_FusiblesScript : MonoBehaviour
 
     [SerializeField] SpriteRenderer blueFuse, yellowFuse, greenFuse, violetFuse;
     [SerializeField] Sprite activeBlueFuse, inactiveBlueFuse, activeYellowFuse, inactiveYellowFuse, activeGreenFuse, inactiveGreenFuse, activeVioletFuse, inactiveVioletFuse;
-    public bool needsBlueFuse, needsYellowFuse, needsGreenFuse, needsVioletFuse;
+    public bool needsBlueFuse, needsYellowFuse, needsGreenFuse, needsVioletFuse, linkedToADoor = false;
     bool blueFuseActive = false, yellowFuseActive = false, greenFuseActive = false, violetFuseActive = false, retrievedFuse = false;
     [SerializeField] static bool puzzleSolved = false;
     public int totalFusesRequired, fusesAcquired;
@@ -29,7 +29,7 @@ public class RPP_FusiblesScript : MonoBehaviour
                 FusesCheck();
                 interactionManager.interacted = false;
             }
-            if(fusesAcquired == totalFusesRequired && !puzzleSolved)
+            if(fusesAcquired == totalFusesRequired && !puzzleSolved && !linkedToADoor)
             {
                 puzzleMaster.puzzlesSolved++;
                 puzzleSolved = true;
@@ -146,7 +146,7 @@ public class RPP_FusiblesScript : MonoBehaviour
             puzzleSolved = false;
             retrievedFuse = true;
         }
-        if (retrievedFuse && !puzzleSolved)
+        if (retrievedFuse && !puzzleSolved && !linkedToADoor)
         {
             puzzleMaster.puzzlesSolved--;
             retrievedFuse = false;

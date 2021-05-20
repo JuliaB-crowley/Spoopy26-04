@@ -8006,7 +8006,7 @@ Transform:
   m_LocalScale: {x: 3, y: 0.5000002, z: 1}
   m_Children: []
   m_Father: {fileID: 144154095725372773}
-  m_RootOrder: 7
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!50 &560787467
 Rigidbody2D:
@@ -12982,7 +12982,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 144154095725372773}
-  m_RootOrder: 10
+  m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &835574350
 MonoBehaviour:
@@ -13486,7 +13486,7 @@ Transform:
   m_LocalScale: {x: 4, y: 0.5000002, z: 1}
   m_Children: []
   m_Father: {fileID: 144154095725372773}
-  m_RootOrder: 6
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!50 &844506106
 Rigidbody2D:
@@ -14131,7 +14131,7 @@ Transform:
   m_LocalScale: {x: 0.5, y: 2.500001, z: 1}
   m_Children: []
   m_Father: {fileID: 144154095725372773}
-  m_RootOrder: 8
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!50 &875669273
 Rigidbody2D:
@@ -18767,7 +18767,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 144154095725372773}
-  m_RootOrder: 11
+  m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1160459885
 PrefabInstance:
@@ -21872,7 +21872,7 @@ Transform:
   m_LocalScale: {x: 0.5, y: 2.500001, z: 1}
   m_Children: []
   m_Father: {fileID: 144154095725372773}
-  m_RootOrder: 4
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!50 &1370437755
 Rigidbody2D:
@@ -22853,8 +22853,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1467939243}
   m_LocalRotation: {x: 0.7071068, y: -0, z: -0, w: 0.7071068}
-  m_LocalPosition: {x: -4.8382, y: 0, z: 1.908}
-  m_LocalScale: {x: 0.5, y: 14.076806, z: 1}
+  m_LocalPosition: {x: -4.8382, y: -0, z: 2.4907}
+  m_LocalScale: {x: 0.5, y: 15.242366, z: 1}
   m_Children: []
   m_Father: {fileID: 732843905}
   m_RootOrder: 1
@@ -24234,7 +24234,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -5.212311, y: 0}
+  m_AnchoredPosition: {x: -5.212158, y: 0}
   m_SizeDelta: {x: 27.7987, y: 34.7484}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!4 &1553061562 stripped
@@ -24643,7 +24643,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4761173365980838774, guid: 03ce9b00c557d824dbb24fc7c01471ce, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -178.88678
+      value: -500
       objectReference: {fileID: 0}
     - target: {fileID: 4761173365980838774, guid: 03ce9b00c557d824dbb24fc7c01471ce, type: 3}
       propertyPath: m_LocalRotation.w
@@ -27745,7 +27745,7 @@ Transform:
   m_LocalScale: {x: 4, y: 0.5000002, z: 1}
   m_Children: []
   m_Father: {fileID: 144154095725372773}
-  m_RootOrder: 5
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!50 &1746731879
 Rigidbody2D:
@@ -31070,7 +31070,7 @@ Transform:
   - {fileID: 1530391096}
   - {fileID: 407161776}
   m_Father: {fileID: 1913702893101593243}
-  m_RootOrder: 9
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &2002163266
 PrefabInstance:
@@ -33085,7 +33085,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4761173365980838774, guid: 03ce9b00c557d824dbb24fc7c01471ce, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -178.88678
+      value: -500
       objectReference: {fileID: 0}
     - target: {fileID: 4761173365980838774, guid: 03ce9b00c557d824dbb24fc7c01471ce, type: 3}
       propertyPath: m_LocalRotation.w
@@ -33606,6 +33606,7 @@ MonoBehaviour:
   doorObject: {fileID: 108081845616779825}
   minPuzzlesSolved: 0
   puzzleMaster: {fileID: 0}
+  fusiblesScript: {fileID: 0}
   doorSprite: {fileID: 8015566269259296693}
   doorOpen: {fileID: 21300000, guid: 73c14b6c53942f440a56190ddd143e6c, type: 3}
   doorLocked: {fileID: 21300000, guid: 4977cd5b0bdf09d489543fa4f3919380, type: 3}
@@ -33625,6 +33626,7 @@ MonoBehaviour:
   needPzMnB: 0
   needPzMnC: 0
   needPzMnD: 0
+  dependsOnFusebox: 0
 --- !u!1 &108081845943592423
 GameObject:
   m_ObjectHideFlags: 0
@@ -33759,6 +33761,7 @@ MonoBehaviour:
   doorObject: {fileID: 108081845210881665}
   minPuzzlesSolved: 0
   puzzleMaster: {fileID: 0}
+  fusiblesScript: {fileID: 0}
   doorSprite: {fileID: 8015566268307542789}
   doorOpen: {fileID: 21300000, guid: 73c14b6c53942f440a56190ddd143e6c, type: 3}
   doorLocked: {fileID: 21300000, guid: 4977cd5b0bdf09d489543fa4f3919380, type: 3}
@@ -33778,6 +33781,7 @@ MonoBehaviour:
   needPzMnB: 0
   needPzMnC: 0
   needPzMnD: 0
+  dependsOnFusebox: 0
 --- !u!1 &108081846897367383
 GameObject:
   m_ObjectHideFlags: 0
@@ -33813,6 +33817,7 @@ MonoBehaviour:
   doorObject: {fileID: 108081845159904720}
   minPuzzlesSolved: 0
   puzzleMaster: {fileID: 0}
+  fusiblesScript: {fileID: 0}
   doorSprite: {fileID: 8015566268390787156}
   doorOpen: {fileID: 21300000, guid: 73c14b6c53942f440a56190ddd143e6c, type: 3}
   doorLocked: {fileID: 21300000, guid: 4977cd5b0bdf09d489543fa4f3919380, type: 3}
@@ -33832,6 +33837,7 @@ MonoBehaviour:
   needPzMnB: 0
   needPzMnC: 0
   needPzMnD: 0
+  dependsOnFusebox: 0
 --- !u!4 &108081846979789317
 Transform:
   m_ObjectHideFlags: 0
@@ -34122,7 +34128,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 144154094091813421}
   m_LocalRotation: {x: 0.7071068, y: -0, z: -0, w: 0.7071068}
-  m_LocalPosition: {x: 4.99, y: 0, z: 5.0816}
+  m_LocalPosition: {x: -5, y: -0, z: 5.08}
   m_LocalScale: {x: 0.5, y: 20.237532, z: 1}
   m_Children: []
   m_Father: {fileID: 144154095803800741}
@@ -37776,7 +37782,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 144154094485971624}
   m_LocalRotation: {x: 0.7071068, y: -0, z: -0, w: 0.7071068}
-  m_LocalPosition: {x: -4.89, y: -0, z: 0.1801}
+  m_LocalPosition: {x: 4.91, y: 0, z: 0.18}
   m_LocalScale: {x: 0.5, y: 10.307304, z: 1}
   m_Children: []
   m_Father: {fileID: 144154095803800741}
@@ -41263,136 +41269,6 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
---- !u!1 &144154095153004808
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 144154095153004815}
-  - component: {fileID: 144154095153004819}
-  - component: {fileID: 144154095153004812}
-  - component: {fileID: 144154095153004813}
-  - component: {fileID: 144154095153004814}
-  m_Layer: 6
-  m_Name: Wall (5)
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!23 &144154095153004812
-MeshRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 144154095153004808}
-  m_Enabled: 1
-  m_CastShadows: 1
-  m_ReceiveShadows: 1
-  m_DynamicOccludee: 1
-  m_MotionVectors: 1
-  m_LightProbeUsage: 1
-  m_ReflectionProbeUsage: 1
-  m_RayTracingMode: 2
-  m_RayTraceProcedural: 0
-  m_RenderingLayerMask: 1
-  m_RendererPriority: 0
-  m_Materials:
-  - {fileID: 2100000, guid: 72e4fe7326b246a46b92c58dd55e0038, type: 2}
-  m_StaticBatchInfo:
-    firstSubMesh: 0
-    subMeshCount: 0
-  m_StaticBatchRoot: {fileID: 0}
-  m_ProbeAnchor: {fileID: 0}
-  m_LightProbeVolumeOverride: {fileID: 0}
-  m_ScaleInLightmap: 1
-  m_ReceiveGI: 1
-  m_PreserveUVs: 0
-  m_IgnoreNormalsForChartDetection: 0
-  m_ImportantGI: 0
-  m_StitchLightmapSeams: 1
-  m_SelectedEditorRenderState: 3
-  m_MinimumChartSize: 4
-  m_AutoUVMaxDistance: 0.5
-  m_AutoUVMaxAngle: 89
-  m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
-  m_SortingOrder: 0
-  m_AdditionalVertexStreams: {fileID: 0}
---- !u!61 &144154095153004813
-BoxCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 144154095153004808}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0.0000009536743}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0, y: 0}
-    oldSize: {x: 0, y: 0}
-    newSize: {x: 0, y: 0}
-    adaptiveTilingThreshold: 0
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 1, y: 1.0000005}
-  m_EdgeRadius: 0
---- !u!50 &144154095153004814
-Rigidbody2D:
-  serializedVersion: 4
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 144154095153004808}
-  m_BodyType: 2
-  m_Simulated: 1
-  m_UseFullKinematicContacts: 0
-  m_UseAutoMass: 0
-  m_Mass: 1
-  m_LinearDrag: 0
-  m_AngularDrag: 0.05
-  m_GravityScale: 1
-  m_Material: {fileID: 0}
-  m_Interpolate: 0
-  m_SleepingMode: 1
-  m_CollisionDetection: 0
-  m_Constraints: 0
---- !u!4 &144154095153004815
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 144154095153004808}
-  m_LocalRotation: {x: 0.7071068, y: -0, z: -0, w: 0.7071068}
-  m_LocalPosition: {x: 7.56, y: 0, z: 5.13}
-  m_LocalScale: {x: 0.5, y: 20.202316, z: 1}
-  m_Children: []
-  m_Father: {fileID: 144154095725372773}
-  m_RootOrder: 3
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!33 &144154095153004819
-MeshFilter:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 144154095153004808}
-  m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!61 &144154095189562888
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -43822,8 +43698,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 144154095567071926}
   m_LocalRotation: {x: 0.7071068, y: -0, z: -0, w: 0.7071068}
-  m_LocalPosition: {x: -0.0372, y: -0.42, z: 5}
-  m_LocalScale: {x: 16.576376, y: 1, z: 1}
+  m_LocalPosition: {x: -6.4891, y: -0.42, z: 5}
+  m_LocalScale: {x: 29.479425, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 144154094911779047}
   m_RootOrder: 0
@@ -44429,8 +44305,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 144154095616614984}
   m_LocalRotation: {x: 0.7071068, y: -0, z: -0, w: 0.7071068}
-  m_LocalPosition: {x: -4.89, y: 0, z: 5.1275}
-  m_LocalScale: {x: 0.5, y: 20.202316, z: 1}
+  m_LocalPosition: {x: -4.89, y: 0, z: 0.1789}
+  m_LocalScale: {x: 0.5, y: 10.305202, z: 1}
   m_Children: []
   m_Father: {fileID: 144154095725372773}
   m_RootOrder: 1
@@ -44992,8 +44868,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 144154095724137543}
   m_LocalRotation: {x: 0.7071068, y: -0, z: -0, w: 0.7071068}
-  m_LocalPosition: {x: 4.99, y: -0, z: 0.1941}
-  m_LocalScale: {x: 0.5, y: 10.323986, z: 1}
+  m_LocalPosition: {x: 4.99, y: -0, z: 5.1092}
+  m_LocalScale: {x: 0.5, y: 20.154486, z: 1}
   m_Children: []
   m_Father: {fileID: 144154095725372773}
   m_RootOrder: 0
@@ -45089,13 +44965,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 144154095725372774}
   m_LocalRotation: {x: -0, y: 0.0000000059271774, z: 0.0000086974005, w: 1}
-  m_LocalPosition: {x: 2.468, y: -0.42, z: 14.459998}
+  m_LocalPosition: {x: -2.46, y: -0.42, z: 14.459998}
   m_LocalScale: {x: 0.33333334, y: 1, z: 2}
   m_Children:
   - {fileID: 144154095724137542}
   - {fileID: 144154095616614991}
   - {fileID: 144154095613952613}
-  - {fileID: 144154095153004815}
   - {fileID: 1370437754}
   - {fileID: 1746731878}
   - {fileID: 844506105}
@@ -45327,7 +45202,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 144154095803800742}
   m_LocalRotation: {x: -0, y: 0.0000000059271774, z: 0.0000086974005, w: 1}
-  m_LocalPosition: {x: -2.48, y: -0.42, z: 14.459998}
+  m_LocalPosition: {x: 2.53, y: -0.42, z: 14.459998}
   m_LocalScale: {x: 0.33333334, y: 1, z: 2}
   m_Children:
   - {fileID: 144154094091813420}
@@ -47268,6 +47143,7 @@ MonoBehaviour:
   doorObject: {fileID: 252158421141742105}
   minPuzzlesSolved: 0
   puzzleMaster: {fileID: 0}
+  fusiblesScript: {fileID: 0}
   doorSprite: {fileID: 7871483386590883741}
   doorOpen: {fileID: 21300000, guid: 73c14b6c53942f440a56190ddd143e6c, type: 3}
   doorLocked: {fileID: 21300000, guid: 4977cd5b0bdf09d489543fa4f3919380, type: 3}
@@ -47287,6 +47163,7 @@ MonoBehaviour:
   needPzMnB: 0
   needPzMnC: 0
   needPzMnD: 0
+  dependsOnFusebox: 0
 --- !u!1 &252158419338536399
 GameObject:
   m_ObjectHideFlags: 0
@@ -47463,6 +47340,7 @@ MonoBehaviour:
   doorObject: {fileID: 252158420965093782}
   minPuzzlesSolved: 0
   puzzleMaster: {fileID: 0}
+  fusiblesScript: {fileID: 0}
   doorSprite: {fileID: 7871483386485472274}
   doorOpen: {fileID: 21300000, guid: 73c14b6c53942f440a56190ddd143e6c, type: 3}
   doorLocked: {fileID: 21300000, guid: 4977cd5b0bdf09d489543fa4f3919380, type: 3}
@@ -47482,6 +47360,7 @@ MonoBehaviour:
   needPzMnB: 0
   needPzMnC: 0
   needPzMnD: 0
+  dependsOnFusebox: 0
 --- !u!4 &252158419412563523
 Transform:
   m_ObjectHideFlags: 0
@@ -47734,6 +47613,7 @@ MonoBehaviour:
   doorObject: {fileID: 252158420946136854}
   minPuzzlesSolved: 0
   puzzleMaster: {fileID: 0}
+  fusiblesScript: {fileID: 0}
   doorSprite: {fileID: 7871483386537943698}
   doorOpen: {fileID: 21300000, guid: 73c14b6c53942f440a56190ddd143e6c, type: 3}
   doorLocked: {fileID: 21300000, guid: 4977cd5b0bdf09d489543fa4f3919380, type: 3}
@@ -47753,6 +47633,7 @@ MonoBehaviour:
   needPzMnB: 0
   needPzMnC: 0
   needPzMnD: 0
+  dependsOnFusebox: 0
 --- !u!4 &252158419527854275
 Transform:
   m_ObjectHideFlags: 0
@@ -47841,6 +47722,7 @@ MonoBehaviour:
   doorObject: {fileID: 252158420936715441}
   minPuzzlesSolved: 0
   puzzleMaster: {fileID: 0}
+  fusiblesScript: {fileID: 0}
   doorSprite: {fileID: 7871483386528522549}
   doorOpen: {fileID: 21300000, guid: 73c14b6c53942f440a56190ddd143e6c, type: 3}
   doorLocked: {fileID: 21300000, guid: 4977cd5b0bdf09d489543fa4f3919380, type: 3}
@@ -47860,6 +47742,7 @@ MonoBehaviour:
   needPzMnB: 0
   needPzMnC: 0
   needPzMnD: 0
+  dependsOnFusebox: 0
 --- !u!1 &252158419535178599
 GameObject:
   m_ObjectHideFlags: 0
@@ -48013,6 +47896,7 @@ MonoBehaviour:
   doorObject: {fileID: 252158420326438763}
   minPuzzlesSolved: 0
   puzzleMaster: {fileID: 0}
+  fusiblesScript: {fileID: 0}
   doorSprite: {fileID: 7871483386316708591}
   doorOpen: {fileID: 21300000, guid: 73c14b6c53942f440a56190ddd143e6c, type: 3}
   doorLocked: {fileID: 21300000, guid: 4977cd5b0bdf09d489543fa4f3919380, type: 3}
@@ -48032,6 +47916,7 @@ MonoBehaviour:
   needPzMnB: 0
   needPzMnC: 0
   needPzMnD: 0
+  dependsOnFusebox: 0
 --- !u!50 &252158419583292592
 Rigidbody2D:
   serializedVersion: 4
@@ -48349,6 +48234,7 @@ MonoBehaviour:
   doorObject: {fileID: 252158420526362766}
   minPuzzlesSolved: 0
   puzzleMaster: {fileID: 0}
+  fusiblesScript: {fileID: 0}
   doorSprite: {fileID: 7871483386118634762}
   doorOpen: {fileID: 21300000, guid: 73c14b6c53942f440a56190ddd143e6c, type: 3}
   doorLocked: {fileID: 21300000, guid: 4977cd5b0bdf09d489543fa4f3919380, type: 3}
@@ -48368,6 +48254,7 @@ MonoBehaviour:
   needPzMnB: 0
   needPzMnC: 0
   needPzMnD: 0
+  dependsOnFusebox: 0
 --- !u!4 &252158419913553755
 Transform:
   m_ObjectHideFlags: 0
@@ -48494,6 +48381,7 @@ MonoBehaviour:
   doorObject: {fileID: 252158419583292597}
   minPuzzlesSolved: 0
   puzzleMaster: {fileID: 0}
+  fusiblesScript: {fileID: 0}
   doorSprite: {fileID: 7871483385699850545}
   doorOpen: {fileID: 21300000, guid: 73c14b6c53942f440a56190ddd143e6c, type: 3}
   doorLocked: {fileID: 21300000, guid: 4977cd5b0bdf09d489543fa4f3919380, type: 3}
@@ -48513,6 +48401,7 @@ MonoBehaviour:
   needPzMnB: 0
   needPzMnC: 0
   needPzMnD: 0
+  dependsOnFusebox: 0
 --- !u!1 &252158420330222435
 GameObject:
   m_ObjectHideFlags: 0
@@ -48624,6 +48513,7 @@ MonoBehaviour:
   doorObject: {fileID: 252158419879014427}
   minPuzzlesSolved: 0
   puzzleMaster: {fileID: 0}
+  fusiblesScript: {fileID: 0}
   doorSprite: {fileID: 7871483385404112287}
   doorOpen: {fileID: 21300000, guid: 73c14b6c53942f440a56190ddd143e6c, type: 3}
   doorLocked: {fileID: 21300000, guid: 4977cd5b0bdf09d489543fa4f3919380, type: 3}
@@ -48643,6 +48533,7 @@ MonoBehaviour:
   needPzMnB: 0
   needPzMnC: 0
   needPzMnD: 0
+  dependsOnFusebox: 0
 --- !u!114 &252158420491827152
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -48781,6 +48672,7 @@ MonoBehaviour:
   doorObject: {fileID: 252158419849083060}
   minPuzzlesSolved: 0
   puzzleMaster: {fileID: 0}
+  fusiblesScript: {fileID: 0}
   doorSprite: {fileID: 7871483385437222192}
   doorOpen: {fileID: 21300000, guid: 73c14b6c53942f440a56190ddd143e6c, type: 3}
   doorLocked: {fileID: 21300000, guid: 4977cd5b0bdf09d489543fa4f3919380, type: 3}
@@ -48800,6 +48692,7 @@ MonoBehaviour:
   needPzMnB: 0
   needPzMnC: 0
   needPzMnD: 0
+  dependsOnFusebox: 0
 --- !u!4 &252158420595031905
 Transform:
   m_ObjectHideFlags: 0
@@ -48953,6 +48846,7 @@ MonoBehaviour:
   doorObject: {fileID: 252158419481358158}
   minPuzzlesSolved: 0
   puzzleMaster: {fileID: 0}
+  fusiblesScript: {fileID: 0}
   doorSprite: {fileID: 7871483384997536458}
   doorOpen: {fileID: 21300000, guid: 73c14b6c53942f440a56190ddd143e6c, type: 3}
   doorLocked: {fileID: 21300000, guid: 4977cd5b0bdf09d489543fa4f3919380, type: 3}
@@ -48972,6 +48866,7 @@ MonoBehaviour:
   needPzMnB: 0
   needPzMnC: 0
   needPzMnD: 0
+  dependsOnFusebox: 0
 --- !u!4 &252158420898392219
 Transform:
   m_ObjectHideFlags: 0
@@ -48980,7 +48875,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 252158420898392216}
   m_LocalRotation: {x: 0.7071068, y: 0, z: 0, w: 0.7071068}
-  m_LocalPosition: {x: -6.2, y: 0.44, z: -4.71}
+  m_LocalPosition: {x: 6.14, y: 0.44, z: -4.71}
   m_LocalScale: {x: 0.51865214, y: 0.38165623, z: 1}
   m_Children:
   - {fileID: 252158419481358153}
@@ -49045,6 +48940,7 @@ MonoBehaviour:
   doorObject: {fileID: 252158419515727244}
   minPuzzlesSolved: 0
   puzzleMaster: {fileID: 0}
+  fusiblesScript: {fileID: 0}
   doorSprite: {fileID: 7871483384965255176}
   doorOpen: {fileID: 21300000, guid: 73c14b6c53942f440a56190ddd143e6c, type: 3}
   doorLocked: {fileID: 21300000, guid: 4977cd5b0bdf09d489543fa4f3919380, type: 3}
@@ -49064,6 +48960,7 @@ MonoBehaviour:
   needPzMnB: 0
   needPzMnC: 0
   needPzMnD: 0
+  dependsOnFusebox: 0
 --- !u!4 &252158420932696665
 Transform:
   m_ObjectHideFlags: 0
@@ -49072,12 +48969,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 252158420932696666}
   m_LocalRotation: {x: 0.7071068, y: 0, z: 0, w: 0.7071068}
-  m_LocalPosition: {x: 6.19, y: 0.44, z: -4.71}
+  m_LocalPosition: {x: -6.3, y: 0.44, z: -4.71}
   m_LocalScale: {x: 0.495077, y: 0.5175, z: 1}
   m_Children:
   - {fileID: 252158419515727243}
   m_Father: {fileID: 144154095725372773}
-  m_RootOrder: 9
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 90, y: 0, z: 0}
 --- !u!1 &252158420932696666
 GameObject:
@@ -49388,6 +49285,7 @@ MonoBehaviour:
   doorObject: {fileID: 252158419399978675}
   minPuzzlesSolved: 0
   puzzleMaster: {fileID: 0}
+  fusiblesScript: {fileID: 0}
   doorSprite: {fileID: 7871483384844788535}
   doorOpen: {fileID: 21300000, guid: 73c14b6c53942f440a56190ddd143e6c, type: 3}
   doorLocked: {fileID: 21300000, guid: 4977cd5b0bdf09d489543fa4f3919380, type: 3}
@@ -49407,6 +49305,7 @@ MonoBehaviour:
   needPzMnB: 0
   needPzMnC: 0
   needPzMnD: 0
+  dependsOnFusebox: 0
 --- !u!114 &252158421086726520
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -49605,9 +49504,6 @@ Transform:
   - {fileID: 5149000098670848374}
   - {fileID: 5149000099191668408}
   - {fileID: 5149000099555925827}
-  - {fileID: 3857413181030553788}
-  - {fileID: 7347443681146291951}
-  - {fileID: 3046819405162115883}
   - {fileID: 5149000099834116008}
   - {fileID: 5149000099991308564}
   - {fileID: 1998709263}
@@ -50398,160 +50294,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!212 &3046819405162115880
-SpriteRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3046819405162115884}
-  m_Enabled: 1
-  m_CastShadows: 0
-  m_ReceiveShadows: 0
-  m_DynamicOccludee: 1
-  m_MotionVectors: 1
-  m_LightProbeUsage: 1
-  m_ReflectionProbeUsage: 1
-  m_RayTracingMode: 0
-  m_RayTraceProcedural: 0
-  m_RenderingLayerMask: 1
-  m_RendererPriority: 0
-  m_Materials:
-  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
-  m_StaticBatchInfo:
-    firstSubMesh: 0
-    subMeshCount: 0
-  m_StaticBatchRoot: {fileID: 0}
-  m_ProbeAnchor: {fileID: 0}
-  m_LightProbeVolumeOverride: {fileID: 0}
-  m_ScaleInLightmap: 1
-  m_ReceiveGI: 1
-  m_PreserveUVs: 0
-  m_IgnoreNormalsForChartDetection: 0
-  m_ImportantGI: 0
-  m_StitchLightmapSeams: 1
-  m_SelectedEditorRenderState: 0
-  m_MinimumChartSize: 4
-  m_AutoUVMaxDistance: 0.5
-  m_AutoUVMaxAngle: 89
-  m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
-  m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 3ea709d9e6b51b841add191522fdd3a8, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_FlipX: 0
-  m_FlipY: 0
-  m_DrawMode: 0
-  m_Size: {x: 1.08, y: 1}
-  m_AdaptiveModeThreshold: 0.5
-  m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
-  m_MaskInteraction: 0
-  m_SpriteSortPoint: 0
---- !u!61 &3046819405162115881
-BoxCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3046819405162115884}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0, y: -0.025474548}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1, y: 1}
-    newSize: {x: 1.08, y: 1}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 1, y: 0.6433563}
-  m_EdgeRadius: 0
---- !u!4 &3046819405162115883
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3046819405162115884}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -25.6, y: -17.2, z: -11.344113}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 1913702893101593243}
-  m_RootOrder: 6
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &3046819405162115884
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 3046819405162115883}
-  - component: {fileID: 3046819405162115880}
-  - component: {fileID: 3046819405162115881}
-  - component: {fileID: 3046819405162115886}
-  - component: {fileID: 3046819405162115887}
-  m_Layer: 0
-  m_Name: Fusible Vert
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!50 &3046819405162115886
-Rigidbody2D:
-  serializedVersion: 4
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3046819405162115884}
-  m_BodyType: 1
-  m_Simulated: 1
-  m_UseFullKinematicContacts: 0
-  m_UseAutoMass: 0
-  m_Mass: 1
-  m_LinearDrag: 0
-  m_AngularDrag: 0.05
-  m_GravityScale: 1
-  m_Material: {fileID: 0}
-  m_Interpolate: 0
-  m_SleepingMode: 1
-  m_CollisionDetection: 0
-  m_Constraints: 0
---- !u!114 &3046819405162115887
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3046819405162115884}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a6cf26d6103e11c4d87e61ff4edcb2d1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  keyObject: {fileID: 3046819405162115884}
-  puzzleMaster: {fileID: 0}
-  isYellowKey: 0
-  isBlueKey: 0
-  isGreenKey: 1
-  isVioletKey: 0
-  needPzMnA: 0
-  needPzMnB: 0
-  needPzMnC: 1
-  needPzMnD: 0
 --- !u!212 &3570442993884617383
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -50785,16 +50527,16 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3857413181030553791}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -18.4, y: -33.6, z: -1.4}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalRotation: {x: 0.7071068, y: -0, z: -0, w: 0.7071068}
+  m_LocalPosition: {x: 1.2625104, y: 1.4000001, z: -2.0199962}
+  m_LocalScale: {x: 0.2684194, y: 2, z: 1}
   m_Children:
   - {fileID: 3857413181615652308}
   - {fileID: 3857413180240087173}
   - {fileID: 3857413181196657375}
   - {fileID: 3857413181279631803}
-  m_Father: {fileID: 1913702893101593243}
-  m_RootOrder: 4
+  m_Father: {fileID: 5149000099834116008}
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &3857413181030553789
 SpriteRenderer:
@@ -50874,9 +50616,10 @@ MonoBehaviour:
   inactiveVioletFuse: {fileID: 21300000, guid: 524335016886c6a4285857cf8175bf68, type: 3}
   needsBlueFuse: 1
   needsYellowFuse: 0
-  needsGreenFuse: 1
+  needsGreenFuse: 0
   needsVioletFuse: 0
-  totalFusesRequired: 2
+  linkedToADoor: 0
+  totalFusesRequired: 1
   fusesAcquired: 0
   puzzleMaster: {fileID: 0}
   needPzMnA: 0
@@ -58706,6 +58449,7 @@ MonoBehaviour:
   doorObject: {fileID: 5047153726315911079}
   minPuzzlesSolved: 1
   puzzleMaster: {fileID: 0}
+  fusiblesScript: {fileID: 3857413181030553790}
   doorSprite: {fileID: 2903114504277383715}
   doorOpen: {fileID: 21300000, guid: 73c14b6c53942f440a56190ddd143e6c, type: 3}
   doorLocked: {fileID: 21300000, guid: 4977cd5b0bdf09d489543fa4f3919380, type: 3}
@@ -58725,6 +58469,7 @@ MonoBehaviour:
   needPzMnB: 0
   needPzMnC: 1
   needPzMnD: 0
+  dependsOnFusebox: 1
 --- !u!61 &5047153727227267846
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -58783,6 +58528,7 @@ MonoBehaviour:
   doorObject: {fileID: 5047153725423045836}
   minPuzzlesSolved: 1
   puzzleMaster: {fileID: 0}
+  fusiblesScript: {fileID: 0}
   doorSprite: {fileID: 2903114504059797832}
   doorOpen: {fileID: 21300000, guid: 73c14b6c53942f440a56190ddd143e6c, type: 3}
   doorLocked: {fileID: 21300000, guid: 4977cd5b0bdf09d489543fa4f3919380, type: 3}
@@ -58802,6 +58548,7 @@ MonoBehaviour:
   needPzMnB: 1
   needPzMnC: 0
   needPzMnD: 0
+  dependsOnFusebox: 0
 --- !u!4 &5047153727227267865
 Transform:
   m_ObjectHideFlags: 0
@@ -62684,8 +62431,10 @@ Transform:
   - {fileID: 540392400}
   - {fileID: 732843905}
   - {fileID: 1928541671}
+  - {fileID: 3857413181030553788}
+  - {fileID: 7347443681146291951}
   m_Father: {fileID: 1913702893101593243}
-  m_RootOrder: 7
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: -90, y: 0, z: 0}
 --- !u!1 &5149000099834116012
 GameObject:
@@ -62918,7 +62667,7 @@ Transform:
   - {fileID: 694443433}
   - {fileID: 588773328}
   m_Father: {fileID: 1913702893101593243}
-  m_RootOrder: 8
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: -90, y: 0, z: 0}
 --- !u!1 &5149000099991308568
 GameObject:
@@ -63639,12 +63388,12 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7347443681146291944}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -39.1, y: -17.1, z: -11.340004}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalRotation: {x: 0.7071068, y: -0, z: -0, w: 0.7071068}
+  m_LocalPosition: {x: -4.2937684, y: 11.340003, z: 30.979996}
+  m_LocalScale: {x: 0.2684194, y: 2, z: 1}
   m_Children: []
-  m_Father: {fileID: 1913702893101593243}
-  m_RootOrder: 5
+  m_Father: {fileID: 5149000099834116008}
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &7438920515377644997
 SpriteRenderer:
