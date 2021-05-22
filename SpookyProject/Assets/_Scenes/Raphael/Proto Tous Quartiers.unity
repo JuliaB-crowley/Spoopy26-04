@@ -19396,7 +19396,7 @@ MonoBehaviour:
   dialogue:
     sentences:
     - "Ah, Maeve ! Tu es r\xE9veill\xE9e ! Quand quelqu'un te parle tu peux passer
-      le dialogue avec la touche R ou le bouton X..."
+      le dialogue avec la touche Espace ou le bouton X..."
     - "A pr\xE9sent, essaie de t'approcher de la caisse avec Z, Q, S, D ou le stick
       gauche !"
     npcFaces:
