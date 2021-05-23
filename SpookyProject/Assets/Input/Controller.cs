@@ -377,6 +377,14 @@ public class @Controller : IInputActionCollection, IDisposable
                     ""expectedControlType"": ""Vector2"",
                     ""processors"": """",
                     ""interactions"": """"
+                },
+                {
+                    ""name"": ""Dialogues"",
+                    ""type"": ""Button"",
+                    ""id"": ""63d43058-a1cd-4380-b608-a3ba588dc699"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """"
                 }
             ],
             ""bindings"": [
@@ -388,6 +396,28 @@ public class @Controller : IInputActionCollection, IDisposable
                     ""processors"": """",
                     ""groups"": """",
                     ""action"": ""Menu"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""5519afc6-8e76-4ed7-8764-d616e465fe6c"",
+                    ""path"": ""<Keyboard>/space"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Dialogues"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""cb8864d9-6eac-4f97-9df1-9d59f8e0743d"",
+                    ""path"": ""<Gamepad>/buttonWest"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Dialogues"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
                 }
@@ -411,6 +441,7 @@ public class @Controller : IInputActionCollection, IDisposable
         // Menu
         m_Menu = asset.FindActionMap("Menu", throwIfNotFound: true);
         m_Menu_Menu = m_Menu.FindAction("Menu", throwIfNotFound: true);
+        m_Menu_Dialogues = m_Menu.FindAction("Dialogues", throwIfNotFound: true);
     }
 
     public void Dispose()
@@ -566,11 +597,13 @@ public class @Controller : IInputActionCollection, IDisposable
     private readonly InputActionMap m_Menu;
     private IMenuActions m_MenuActionsCallbackInterface;
     private readonly InputAction m_Menu_Menu;
+    private readonly InputAction m_Menu_Dialogues;
     public struct MenuActions
     {
         private @Controller m_Wrapper;
         public MenuActions(@Controller wrapper) { m_Wrapper = wrapper; }
         public InputAction @Menu => m_Wrapper.m_Menu_Menu;
+        public InputAction @Dialogues => m_Wrapper.m_Menu_Dialogues;
         public InputActionMap Get() { return m_Wrapper.m_Menu; }
         public void Enable() { Get().Enable(); }
         public void Disable() { Get().Disable(); }
@@ -583,6 +616,9 @@ public class @Controller : IInputActionCollection, IDisposable
                 @Menu.started -= m_Wrapper.m_MenuActionsCallbackInterface.OnMenu;
                 @Menu.performed -= m_Wrapper.m_MenuActionsCallbackInterface.OnMenu;
                 @Menu.canceled -= m_Wrapper.m_MenuActionsCallbackInterface.OnMenu;
+                @Dialogues.started -= m_Wrapper.m_MenuActionsCallbackInterface.OnDialogues;
+                @Dialogues.performed -= m_Wrapper.m_MenuActionsCallbackInterface.OnDialogues;
+                @Dialogues.canceled -= m_Wrapper.m_MenuActionsCallbackInterface.OnDialogues;
             }
             m_Wrapper.m_MenuActionsCallbackInterface = instance;
             if (instance != null)
@@ -590,6 +626,9 @@ public class @Controller : IInputActionCollection, IDisposable
                 @Menu.started += instance.OnMenu;
                 @Menu.performed += instance.OnMenu;
                 @Menu.canceled += instance.OnMenu;
+                @Dialogues.started += instance.OnDialogues;
+                @Dialogues.performed += instance.OnDialogues;
+                @Dialogues.canceled += instance.OnDialogues;
             }
         }
     }
@@ -610,5 +649,6 @@ public class @Controller : IInputActionCollection, IDisposable
     public interface IMenuActions
     {
         void OnMenu(InputAction.CallbackContext context);
+        void OnDialogues(InputAction.CallbackContext context);
     }
 }

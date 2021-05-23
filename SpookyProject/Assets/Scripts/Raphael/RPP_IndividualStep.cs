@@ -20,7 +20,7 @@ public class RPP_IndividualStep : MonoBehaviour
         //Change la couleur des Steps pour donner du feedback
         if (puzzleMaster.playerHasSucceeded)
         {
-            Debug.Log("steps are green");
+            //Debug.Log("steps are green");
             stepSprite.color = Color.green;
         }
         else if (puzzleMaster.playerHasFailed)

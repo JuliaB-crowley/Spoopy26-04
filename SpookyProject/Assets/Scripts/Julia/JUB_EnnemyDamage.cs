@@ -9,9 +9,9 @@ public class JUB_EnnemyDamage : MonoBehaviour
     public float currentHealth, deathAnimationTime;
 
     public float knockbackForce, knockbackDuration;
-    public Transform playerTransform;
-    public Rigidbody2D rb;
-    public AIPath AIPath;
+    Transform playerTransform;
+    Rigidbody2D rb;
+    AIPath AIPath;
 
     public bool hasLoot;
     public List<GameObject> possibleLoots;

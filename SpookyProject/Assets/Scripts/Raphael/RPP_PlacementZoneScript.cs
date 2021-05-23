@@ -16,12 +16,27 @@ public class RPP_PlacementZoneScript : MonoBehaviour
         if (collision.GetComponent<JUB_PushableBehavior>())
         {
             Debug.Log("A pushable object has been detected");
-            collision.gameObject.layer = 14; //The object must always be converted to the layer "Flashable Objects"
+            //collision.gameObject.layer = 14; //The object must always be converted to the layer "Flashable Objects"
             collision.GetComponent<JUB_PushableBehavior>().pushed = false;
             collision.gameObject.transform.position = successfulPositions[currentPositionValue].position;
             collision.gameObject.transform.SetParent(successfulPositions[currentPositionValue]);            
             currentPositionValue ++;
-            placementManager.successesAchieved++;
+            if (collision.CompareTag("Torche"))
+            {
+                if (collision.GetComponentInChildren<TestTorche>().isLit)
+                {
+                    Debug.Log("The torch has been lit inside the zone");
+                    placementManager.successesAchieved++;
+                }
+                else
+                {
+                    collision.GetComponentInChildren<TestTorche>().isPartOfAPuzzle = false;
+                }
+            }
+            else
+            {
+                placementManager.successesAchieved++;
+            }          
         }
     }
 }

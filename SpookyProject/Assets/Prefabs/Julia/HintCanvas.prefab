@@ -185,8 +185,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 82, y: -149}
-  m_SizeDelta: {x: 492.3933, y: 83.2563}
+  m_AnchoredPosition: {x: 52.638, y: -149}
+  m_SizeDelta: {x: 433.6622, y: 83.2563}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &3317245799675876553
 CanvasRenderer:
@@ -272,15 +272,15 @@ RectTransform:
   m_GameObject: {fileID: 3317245799685399668}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.15016197, y: 0.15016197, z: 0.9998809}
+  m_LocalScale: {x: 0.8, y: 0.8, z: 0.8}
   m_Children: []
   m_Father: {fileID: 3317245800566644385}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 300.59998, y: -185}
-  m_SizeDelta: {x: 468, y: 344}
+  m_AnchoredPosition: {x: 298.3, y: -189.3}
+  m_SizeDelta: {x: 107.4, y: 70}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &3317245799685399665
 CanvasRenderer:
@@ -310,7 +310,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 13062ee2d3680fe4d9a3c0ec5b4644b2, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 087a8b049bef63044837fce9aabed369, type: 3}
   m_Type: 0
   m_PreserveAspect: 1
   m_FillCenter: 1
@@ -434,7 +434,7 @@ GameObject:
   - component: {fileID: 3317245800566644384}
   m_Layer: 5
   m_Name: HintRescale
-  m_TagString: Untagged
+  m_TagString: Hint Canvas
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
