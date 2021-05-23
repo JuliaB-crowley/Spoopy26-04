@@ -15,6 +15,6 @@ MonoBehaviour:
   itemSprite: {fileID: 21300000, guid: 952bf133524ce344e9ad172250d33a31, type: 3}
   itemName: Potion de vie
   itemDescription: "Donne un coeur suppl\xE9mentaire"
-  itemPrice: 15
+  itemPrice: 40
   itemType: 1
   strengh: 2
