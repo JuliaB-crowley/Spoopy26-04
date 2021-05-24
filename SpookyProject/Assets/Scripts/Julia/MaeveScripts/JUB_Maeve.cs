@@ -11,6 +11,7 @@ using UnityEngine.UI;
 namespace character
 {
     public enum DirectionAngle {North, Est, South, West}
+    public enum DirectionObject { North, Est, South, West}
     public class JUB_Maeve : MonoBehaviour
     {
         //collisions
@@ -24,6 +25,7 @@ namespace character
         Vector2 rStick, lStick, lStickNormalised, lastDirection, rollDirection, targetSpeed, currentSpeed;
         public float lastAngle;
         public DirectionAngle dirAngle;
+        public DirectionObject dirObject;
 
 
         [SerializeField]
@@ -62,6 +64,10 @@ namespace character
         //dialogue
         public bool isInDialogue;
 
+        //anim
+        public int animationIndex; //-1 mort, 0 idle, 1 course, 2 attaque, 3 flash, 4 roulade, 5 accroupi, 6 déplacement objet, 7 accroupi iddle, 8 immunité
+        public Animator maeveAnimator;
+
         // Start is called before the first frame update
         void Start()
         {
@@ -70,8 +76,8 @@ namespace character
             controller.Enable();
             displayBonbons.text = currentBonbons.ToString();
 
-            AttackProfile quickAttack = new AttackProfile(1, new Vector2(1, 1), 0.1f, 0.2f, "quick");
-            AttackProfile heavyAttack = new AttackProfile(3, new Vector2(2, 1), 0, 0.8f, "heavy");
+            AttackProfile quickAttack = new AttackProfile(1, new Vector2(1, 1), 0.4f, 0.2f, "quick");
+            AttackProfile heavyAttack = new AttackProfile(3, new Vector2(2, 1), 0.4f, 0.8f, "heavy");
 
             currentLife = maxLife;
 
@@ -107,6 +113,8 @@ namespace character
             { 
                 heartsDisplay.sprite = heartSprites[currentLife - 1];
             }
+            
+            Anim();
         }
 
         void Inputs()
@@ -139,11 +147,11 @@ namespace character
                 //Debug.Log(lastAngle.ToString() + dirAngle.ToString());
 
 
-                //animation movement on
+                
             }
             else
             {
-                //animation movement off
+
             }
 
             if (!isInRoll)
@@ -159,10 +167,34 @@ namespace character
                 if (!isCrouching && !isPushingObject)
                 {
                     targetSpeed = Vector2.ClampMagnitude(lStick, 1) * speed;
+                    if(isInBuildup)
+                    {
+                        animationIndex = 2;
+                    }
+                    else if(isFlashing)
+                    {
+                        animationIndex = 3;
+                    }
+                    else if(isInImmunity)
+                    {
+                        animationIndex = 8;
+                    }
+                    else
+                    { 
+                        animationIndex = 1;
+                    }
                 }
                 else
                 {
                     targetSpeed = Vector2.ClampMagnitude(lStick, 1) * crouchSpeed;
+                    if(isCrouching)
+                    {
+                        animationIndex = 5;
+                    }
+                    else if (isPushingObject)
+                    {
+                        animationIndex = 6;
+                    }
                 }
             }
 
@@ -194,6 +226,30 @@ namespace character
             {
                 currentSpeed.y = 0;
             }
+            if(currentSpeed.magnitude < 0.05)
+            {
+                if (isInBuildup)
+                {
+                    animationIndex = 2;
+                }
+                else if (isFlashing)
+                {
+                    animationIndex = 3;
+                }
+                else if (!isCrouching)
+                {
+                    animationIndex = 0;
+
+                }
+                else if (isPushingObject)
+                {
+                    animationIndex = 9;
+                }
+                else
+                {
+                    animationIndex = 7;
+                }
+            }
             if(!isFlashing)
             {
                 rigidBody.velocity = currentSpeed;
@@ -202,7 +258,10 @@ namespace character
             else
             {
                 rigidBody.velocity = Vector2.zero;
+
             }
+
+            
 
         }
 
@@ -218,6 +277,7 @@ namespace character
                 {
                     Debug.Log("s Crouching !");
 
+                    animationIndex = 5;
                     //indique aux collisions détectors d'ignorer le layer crouchable 
                     //détection des ennemis baisse
 
@@ -232,6 +292,8 @@ namespace character
                 isInRoll = true;
                 isInImmunity = true;
                 isInRecover = true;
+
+                animationIndex = 4;
                 StartCoroutine(RollCoroutine());
             }
         }
@@ -254,6 +316,7 @@ namespace character
             if (!isInRecover && !isInBuildup && !isInRoll && !isCrouching && !isPushingObject && !isFlashing)
             {
                 ennemiesHitLastTime.Clear();
+                animationIndex = 2;
 
                 switch (dirAngle)
                 {
@@ -457,6 +520,23 @@ namespace character
                     {
                         allPushableInRange[0].GetComponent<JUB_PushableBehavior>().pushed = true;
                         allPushableInRange[0].GetComponent<JUB_PushableBehavior>().ManagePushing();
+                        Vector2 positionBox = (allPushableInRange[0].transform.position - transform.position).normalized;
+                        if(positionBox.x > 0.5)
+                        {
+                            dirObject = DirectionObject.Est;
+                        }
+                        else if(positionBox.x < -0.5)
+                        {
+                            dirObject = DirectionObject.West;
+                        }
+                        else if(positionBox.y > 0.5)
+                        {
+                            dirObject = DirectionObject.North;
+                        }
+                        else if(positionBox.y < -0.5)
+                        {
+                            dirObject = DirectionObject.South;
+                        }
                     }
                     else
                     {
@@ -474,6 +554,23 @@ namespace character
                         }
                         pushableTarget.GetComponent<JUB_PushableBehavior>().pushed = true;
                         pushableTarget.GetComponent<JUB_PushableBehavior>().ManagePushing();
+                        Vector2 positionBox = (pushableTarget.transform.position - transform.position).normalized;
+                        if (positionBox.x > 0.5)
+                        {
+                            dirObject = DirectionObject.Est;
+                        }
+                        else if (positionBox.x < -0.5)
+                        {
+                            dirObject = DirectionObject.West;
+                        }
+                        else if (positionBox.y > 0.5)
+                        {
+                            dirObject = DirectionObject.North;
+                        }
+                        else if (positionBox.y < -0.5)
+                        {
+                            dirObject = DirectionObject.South;
+                        }
                     }
                 }
                 else if (isPushingObject == true)
@@ -516,6 +613,7 @@ namespace character
 
         public void Immunity(float immuTime)
         {
+            animationIndex = 8;
             StartCoroutine(ImmunityCoroutine(immuTime));
         }
 
@@ -603,6 +701,230 @@ namespace character
             {
                 TakeDamages(collision.GetComponent<JUB_DamagingEvent>().damageAmount);
             }
+        }
+
+        public void Anim()
+        {
+            
+            if (!isPushingObject)
+            {
+                switch (dirAngle)
+                {
+                    case DirectionAngle.North:
+                        animationIndex += 100;
+                        break;
+
+                    case DirectionAngle.Est:
+                        animationIndex += 200;
+                        break;
+
+                    case DirectionAngle.South:
+                        animationIndex += 300;
+                        break;
+
+                    case DirectionAngle.West:
+                        animationIndex += 400;
+                        break;
+                }
+            }
+            else
+            {
+                switch(dirObject)
+                {
+                    case DirectionObject.North:
+                        animationIndex += 100;
+                        break;
+
+                    case DirectionObject.Est:
+                        animationIndex += 200;
+                        break;
+
+                    case DirectionObject.West:
+                        animationIndex += 400;
+                        break;
+
+                    case DirectionObject.South:
+                        animationIndex += 300;
+                        break;
+                }
+            }
+
+            switch(animationIndex)
+            {
+                //-1 mort, 0 idle, 1 course, 2 attaque, 3 flash, 4 roulade, 5 accroupi, 6 déplacement objet, 7 accroupi iddle, 8 immunité, 9 pushIdle
+
+                //idle
+                case 100:
+                    maeveAnimator.Play("Maeve_idle_back");
+                    break;
+
+                case 200:
+                    maeveAnimator.Play("Maeve_idle_right");
+                    break;
+
+                case 300:
+                    maeveAnimator.Play("Maeve_idle_front");
+                    break;
+
+                case 400:
+                    maeveAnimator.Play("Maeve_idle_left");
+                    break;
+
+                //run
+                case 101:
+                    maeveAnimator.Play("Maeve_run_back");
+                    break;
+
+                case 201:
+                    maeveAnimator.Play("Maeve_run_right");
+                    break;
+
+                case 301:
+                    maeveAnimator.Play("Maeve_run_front");
+                    break;
+
+                case 401:
+                    maeveAnimator.Play("Maeve_run_left");
+                    break;
+
+                //attack
+                case 102:
+                    maeveAnimator.Play("Maeve_attack_back");
+                    break;
+
+                case 202:
+                    maeveAnimator.Play("Maeve_attack_right");
+                    break;
+
+                case 302:
+                    maeveAnimator.Play("Maeve_attack_front");
+                    break;
+
+                case 402:
+                    maeveAnimator.Play("Maeve_attack_left");
+                    break;
+
+                //flash
+                case 103:
+                    maeveAnimator.Play("Maeve_burnflash_back");
+                    break;
+
+                case 203:
+                    maeveAnimator.Play("Maeve_burnflash_right");
+                    break;
+
+                case 303:
+                    maeveAnimator.Play("Maeve_burnflash_front");
+                    break;
+
+                case 403:
+                    maeveAnimator.Play("Maeve_burnflash_left");
+                    break;
+
+                //roulade
+                case 104:
+                    maeveAnimator.Play("Maeve_roulade_back");
+                    break;
+
+                case 204:
+                    maeveAnimator.Play("Maeve_roulade_right");
+                    break;
+
+                case 304:
+                    maeveAnimator.Play("Maeve_roulade_front");
+                    break;
+
+                case 404:
+                    maeveAnimator.Play("Maeve_roulade_left");
+                    break;
+
+                //accroupi
+                case 105:
+                    maeveAnimator.Play("Maeve_accroupie_back");
+                    break;
+
+                case 205:
+                    maeveAnimator.Play("Maeve_accroupie_right");
+                    break;
+
+                case 305:
+                    maeveAnimator.Play("Maeve_accroupie_front");
+                    break;
+
+                case 405:
+                    maeveAnimator.Play("Maeve_accroupie_left");
+                    break;
+
+                //déplacement objet
+                case 106:
+                    maeveAnimator.Play("Maeve_obj_back");
+                    break;
+
+                case 206:
+                    maeveAnimator.Play("Maeve_obj_right");
+                    break;
+
+                case 306:
+                    maeveAnimator.Play("Maeve_obj_front");
+                    break;
+
+                case 406:
+                    maeveAnimator.Play("Maeve_obj_left");
+                    break;
+
+                //accroupi idle
+                case 107:
+                    maeveAnimator.Play("Maeve_accroupieIdle_back");
+                    break;
+
+                case 207:
+                    maeveAnimator.Play("Maeve_accroupieIdle_right");
+                    break;
+
+                case 307:
+                    maeveAnimator.Play("Maeve_accroupieIdle_front");
+                    break;
+
+                case 407:
+                    maeveAnimator.Play("Maeve_accroupieIdle_left");
+                    break;
+
+                //immunité
+                case 108:
+                    maeveAnimator.Play("Maeve_hurt_back");
+                    break;
+
+                case 208:
+                    maeveAnimator.Play("Maeve_hurt_right");
+                    break;
+
+                case 308:
+                    maeveAnimator.Play("Maeve_hurt_front");
+                    break;
+
+                case 408:
+                    maeveAnimator.Play("Maeve_hurt_left");
+                    break;
+
+                //push idle
+                case 109:
+                    maeveAnimator.Play("Maeve_objIdle_back");
+                    break;
+
+                case 209:
+                    maeveAnimator.Play("Maeve_objIdle_right");
+                    break;
+
+                case 309:
+                    maeveAnimator.Play("Maeve_objIdle_front");
+                    break;
+
+                case 409:
+                    maeveAnimator.Play("Maeve_objIdle_left");
+                    break;
+
+            }
+                
         }
     }
 }
