@@ -6,13 +6,17 @@ public class RPP_DeterminedOrderMaster : MonoBehaviour
 {
     [SerializeField] RPP_DeterminedOrderSon[] orderChildren;
     [SerializeField] RPP_SubPuzzleManager orderPuzzeManager;
-    [SerializeField] bool firstIsActive, secondIsActive, thirdIsActive, fourthIsActive;
+    [SerializeField] bool firstIsActive, secondIsActive, thirdIsActive, fourthIsActive, fithIsActive, sixthIsActive, seventhIsActive, eightIsActive;
     bool puzzleCompleted = false;
-    [SerializeField] int tries = 0, successes = 0, successesNeeded = 4;
+    [SerializeField] int tries = 0, successes = 0, successesNeeded = 0;
 
     private void Start()
     {
         orderPuzzeManager = GetComponentInParent<RPP_SubPuzzleManager>();
+        foreach  (RPP_DeterminedOrderSon item in orderChildren)
+        {
+            successesNeeded++;
+        }
     }
 
     void Update()
@@ -34,7 +38,7 @@ public class RPP_DeterminedOrderMaster : MonoBehaviour
 
     public void CheckFirst()
     {
-        if(!firstIsActive && !secondIsActive && !thirdIsActive && !fourthIsActive)
+        if(!firstIsActive && !secondIsActive && !thirdIsActive && !fourthIsActive && !fithIsActive && !sixthIsActive && !seventhIsActive && !eightIsActive) 
         {
             firstIsActive = true;
             successes++;
@@ -48,7 +52,7 @@ public class RPP_DeterminedOrderMaster : MonoBehaviour
 
     public void CheckSecond()
     {
-        if (firstIsActive && !secondIsActive && !thirdIsActive && !fourthIsActive)
+        if (firstIsActive && !secondIsActive && !thirdIsActive && !fourthIsActive && !fithIsActive && !sixthIsActive && !seventhIsActive && !eightIsActive)
         {
             secondIsActive = true;
             successes++;
@@ -62,7 +66,7 @@ public class RPP_DeterminedOrderMaster : MonoBehaviour
 
     public void CheckThird()
     {
-        if (firstIsActive && secondIsActive && !thirdIsActive && !fourthIsActive)
+        if (firstIsActive && secondIsActive && !thirdIsActive && !fourthIsActive && !fithIsActive && !sixthIsActive && !seventhIsActive && !eightIsActive)
         {
             thirdIsActive = true;
             successes++;
@@ -76,9 +80,65 @@ public class RPP_DeterminedOrderMaster : MonoBehaviour
 
     public void CheckFourth()
     {
-        if (firstIsActive && secondIsActive && thirdIsActive && !fourthIsActive)
+        if (firstIsActive && secondIsActive && thirdIsActive && !fourthIsActive && !fithIsActive && !sixthIsActive && !seventhIsActive && !eightIsActive)
         {
             fourthIsActive = true;
+            successes++;
+            tries++;
+        }
+        else
+        {
+            tries++;
+        }
+    }
+
+    public void CheckFith()
+    {
+        if (firstIsActive && secondIsActive && thirdIsActive && fourthIsActive && !fithIsActive && !sixthIsActive && !seventhIsActive && !eightIsActive)
+        {
+            fithIsActive = true;
+            successes++;
+            tries++;
+        }
+        else
+        {
+            tries++;
+        }
+    }
+
+    public void CheckSixth()
+    {
+        if (firstIsActive && secondIsActive && thirdIsActive && fourthIsActive && fithIsActive && !sixthIsActive && !seventhIsActive && !eightIsActive)
+        {
+            sixthIsActive = true;
+            successes++;
+            tries++;
+        }
+        else
+        {
+            tries++;
+        }
+    }
+
+    public void CheckSeventh()
+    {
+        if (firstIsActive && secondIsActive && thirdIsActive && fourthIsActive && fithIsActive && sixthIsActive && !seventhIsActive && !eightIsActive)
+        {
+            seventhIsActive = true;
+            successes++;
+            tries++;
+        }
+        else
+        {
+            tries++;
+        }
+    }
+
+    public void CheckEight()
+    {
+        if (firstIsActive && secondIsActive && thirdIsActive && fourthIsActive && fithIsActive && sixthIsActive && seventhIsActive && !eightIsActive)
+        {
+            eightIsActive = true;
             successes++;
             tries++;
         }
@@ -100,6 +160,10 @@ public class RPP_DeterminedOrderMaster : MonoBehaviour
         secondIsActive = false;
         thirdIsActive = false;
         fourthIsActive = false;
+        fithIsActive = false;
+        sixthIsActive = false;
+        seventhIsActive = false;
+        eightIsActive = false;
         successes = 0;
     }
 }

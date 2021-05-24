@@ -154,7 +154,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 45b7811cf73e12c40868b65c2c93356c, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 99b3e36242ce82e43b7950f0d7b39062, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -197,3 +197,4 @@ MonoBehaviour:
   sprite: {fileID: 0}
   flashManager: {fileID: 0}
   isVisible: 0
+  isSpecialInk: 0
