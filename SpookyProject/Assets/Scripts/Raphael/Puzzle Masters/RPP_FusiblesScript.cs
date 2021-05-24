@@ -11,10 +11,10 @@ public class RPP_FusiblesScript : MonoBehaviour
     public bool needsBlueFuse, needsYellowFuse, needsGreenFuse, needsVioletFuse, linkedToADoor = false;
     bool blueFuseActive = false, yellowFuseActive = false, greenFuseActive = false, violetFuseActive = false, retrievedFuse = false;
     [SerializeField] static bool puzzleSolved = false;
-    public int totalFusesRequired, fusesAcquired;
+    public int totalFusesRequired = 0, fusesAcquired;
 
     [SerializeField] RPP_GeneralPuzzleMaster puzzleMaster;
-    [SerializeField] bool needPzMnA = true, needPzMnB, needPzMnC, needPzMnD;
+    [SerializeField] bool needPzMnA = true, needPzMnB, needPzMnC, needPzMnD, needPzMnE, needPzMnF, needPzMnG;
     void Start()
     {
         interactionManager = GetComponent<JUB_InteractibleBehavior>();
@@ -26,7 +26,7 @@ public class RPP_FusiblesScript : MonoBehaviour
     {       
             if (interactionManager.interacted)
             {
-                FusesCheck();
+                InteractionCheck();
                 interactionManager.interacted = false;
             }
             if(fusesAcquired == totalFusesRequired && !puzzleSolved && !linkedToADoor)
@@ -54,6 +54,18 @@ public class RPP_FusiblesScript : MonoBehaviour
         {
             puzzleMaster = GameObject.FindGameObjectWithTag("PuzzleMasterD").GetComponent<RPP_GeneralPuzzleMaster>();
         }
+        else if (needPzMnE)
+        {
+            puzzleMaster = GameObject.FindGameObjectWithTag("PuzzleMasterE").GetComponent<RPP_GeneralPuzzleMaster>();
+        }
+        else if (needPzMnF)
+        {
+            puzzleMaster = GameObject.FindGameObjectWithTag("PuzzleMasterF").GetComponent<RPP_GeneralPuzzleMaster>();
+        }
+        else if (needPzMnG)
+        {
+            puzzleMaster = GameObject.FindGameObjectWithTag("PuzzleMasterG").GetComponent<RPP_GeneralPuzzleMaster>();
+        }
     }
 
     void ActiveFusesCheck()
@@ -62,34 +74,43 @@ public class RPP_FusiblesScript : MonoBehaviour
         {
             blueFuse.enabled = true;
             blueFuse.sprite = inactiveBlueFuse;
+            totalFusesRequired++;
         }
         if (needsYellowFuse)
         {
             yellowFuse.enabled = true;
             yellowFuse.sprite = inactiveYellowFuse;
+            totalFusesRequired++;
         }
         if (needsGreenFuse)
         {
             greenFuse.enabled = true;
             greenFuse.sprite = inactiveGreenFuse;
+            totalFusesRequired++;
         }
         if (needsVioletFuse)
         {
             violetFuse.enabled = true;
             violetFuse.sprite = inactiveVioletFuse;
+            totalFusesRequired++;
         }
     }
 
-    void FusesCheck()
+    void InteractionCheck()
     {
-        if(needsBlueFuse && puzzleMaster.hasBlueKey && !blueFuseActive)
+        if(!puzzleMaster.hasBlueKey && !puzzleMaster.hasYellowKey && !puzzleMaster.hasGreenKey && !puzzleMaster.hasVioletKey)
         {
-            blueFuse.sprite = activeBlueFuse;
-            puzzleMaster.hasBlueKey = false;
-            blueFuseActive = true;
-            fusesAcquired++;
+            RemoveFuses();
         }
-        else if(needsBlueFuse && !puzzleMaster.hasBlueKey && blueFuseActive)
+        else
+        {
+            AddFuses();
+        }
+    }
+
+    void RemoveFuses()
+    {
+        if (needsBlueFuse && blueFuseActive)
         {
             blueFuse.sprite = inactiveBlueFuse;
             puzzleMaster.hasBlueKey = true;
@@ -98,14 +119,7 @@ public class RPP_FusiblesScript : MonoBehaviour
             puzzleSolved = false;
             retrievedFuse = true;
         }
-        if (needsYellowFuse && puzzleMaster.hasYellowKey && !yellowFuseActive)
-        {
-            yellowFuse.sprite = activeYellowFuse;
-            puzzleMaster.hasYellowKey = false;
-            yellowFuseActive = true;
-            fusesAcquired++;
-        }
-        else if (needsYellowFuse && !puzzleMaster.hasYellowKey && yellowFuseActive)
+        if (needsYellowFuse && yellowFuseActive)
         {
             yellowFuse.sprite = inactiveYellowFuse;
             puzzleMaster.hasYellowKey = true;
@@ -114,14 +128,7 @@ public class RPP_FusiblesScript : MonoBehaviour
             puzzleSolved = false;
             retrievedFuse = true;
         }
-        if (needsGreenFuse && puzzleMaster.hasGreenKey && !greenFuseActive)
-        {
-            greenFuse.sprite = activeGreenFuse;
-            puzzleMaster.hasGreenKey = false;
-            greenFuseActive = true;
-            fusesAcquired++;
-        }
-        else if (needsGreenFuse && !puzzleMaster.hasGreenKey && greenFuseActive)
+        if (needsGreenFuse && greenFuseActive)
         {
             greenFuse.sprite = inactiveGreenFuse;
             puzzleMaster.hasGreenKey = true;
@@ -130,14 +137,7 @@ public class RPP_FusiblesScript : MonoBehaviour
             puzzleSolved = false;
             retrievedFuse = true;
         }
-        if (needsVioletFuse && puzzleMaster.hasVioletKey && !violetFuseActive)
-        {
-            violetFuse.sprite = activeVioletFuse;
-            puzzleMaster.hasVioletKey = false;
-            violetFuseActive = true;
-            fusesAcquired++;
-        }
-        else if (needsVioletFuse && !puzzleMaster.hasVioletKey && violetFuseActive)
+        if (needsVioletFuse && violetFuseActive)
         {
             violetFuse.sprite = inactiveVioletFuse;
             puzzleMaster.hasVioletKey = true;
@@ -146,6 +146,38 @@ public class RPP_FusiblesScript : MonoBehaviour
             puzzleSolved = false;
             retrievedFuse = true;
         }
+    }
+
+    void AddFuses()
+    {
+        if(needsBlueFuse && puzzleMaster.hasBlueKey && !blueFuseActive)
+        {
+            blueFuse.sprite = activeBlueFuse;
+            puzzleMaster.hasBlueKey = false;
+            blueFuseActive = true;
+            fusesAcquired++;
+        }
+        if (needsYellowFuse && puzzleMaster.hasYellowKey && !yellowFuseActive)
+        {
+            yellowFuse.sprite = activeYellowFuse;
+            puzzleMaster.hasYellowKey = false;
+            yellowFuseActive = true;
+            fusesAcquired++;
+        }
+        if (needsGreenFuse && puzzleMaster.hasGreenKey && !greenFuseActive)
+        {
+            greenFuse.sprite = activeGreenFuse;
+            puzzleMaster.hasGreenKey = false;
+            greenFuseActive = true;
+            fusesAcquired++;
+        }       
+        if (needsVioletFuse && puzzleMaster.hasVioletKey && !violetFuseActive)
+        {
+            violetFuse.sprite = activeVioletFuse;
+            puzzleMaster.hasVioletKey = false;
+            violetFuseActive = true;
+            fusesAcquired++;
+        }        
         if (retrievedFuse && !puzzleSolved && !linkedToADoor)
         {
             puzzleMaster.puzzlesSolved--;

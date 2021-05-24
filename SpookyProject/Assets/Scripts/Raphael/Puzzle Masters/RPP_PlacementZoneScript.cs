@@ -13,7 +13,7 @@ public class RPP_PlacementZoneScript : MonoBehaviour
     }
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.GetComponent<JUB_PushableBehavior>())
+        if (collision.GetComponent<JUB_PushableBehavior>() && !placementManager.puzzleSolved)
         {
             Debug.Log("A pushable object has been detected");
             //collision.gameObject.layer = 14; //The object must always be converted to the layer "Flashable Objects"

@@ -6,6 +6,7 @@ public class RPP_InvisibleInkScript : MonoBehaviour
 {
     public SpriteRenderer sprite; // Je modifie le material juste pour avoir du feedback de test, pas besoin de le maintenir    
     public JUB_FlashManager flashManager; //flash manager à mettre en enfant et sur layer flashable
+    public bool isVisible;
 
     void Start()
     {
@@ -20,10 +21,12 @@ public class RPP_InvisibleInkScript : MonoBehaviour
         if (flashManager.flashed)
         {
             sprite.enabled = true;
+            isVisible = true;
         }
         else
         {
             sprite.enabled = false;
+            isVisible = false;
         }
     }
 }

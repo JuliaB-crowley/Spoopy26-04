@@ -7,7 +7,7 @@ public class RPP_SubPuzzleManager : MonoBehaviour
     [SerializeField] RPP_GeneralPuzzleMaster puzzleMaster;
     public int totalSuccessesRequired, successesAchieved;
     public bool puzzleSolved = false;
-    [SerializeField] bool needPzMnA = true, needPzMnB, needPzMnC, needPzMnD;
+    [SerializeField] bool needPzMnA = true, needPzMnB, needPzMnC, needPzMnD, needPzMnE, needPzMnF, needPzMnG;
 
     private void Start()
     {
@@ -26,6 +26,18 @@ public class RPP_SubPuzzleManager : MonoBehaviour
         else if (needPzMnD)
         {
             puzzleMaster = GameObject.FindGameObjectWithTag("PuzzleMasterD").GetComponent<RPP_GeneralPuzzleMaster>();
+        }
+        else if (needPzMnE)
+        {
+            puzzleMaster = GameObject.FindGameObjectWithTag("PuzzleMasterE").GetComponent<RPP_GeneralPuzzleMaster>();
+        }
+        else if (needPzMnF)
+        {
+            puzzleMaster = GameObject.FindGameObjectWithTag("PuzzleMasterF").GetComponent<RPP_GeneralPuzzleMaster>();
+        }
+        else if (needPzMnG)
+        {
+            puzzleMaster = GameObject.FindGameObjectWithTag("PuzzleMasterG").GetComponent<RPP_GeneralPuzzleMaster>();
         }
     }
 

@@ -406,13 +406,17 @@ MonoBehaviour:
   needsYellowFuse: 0
   needsGreenFuse: 1
   needsVioletFuse: 0
-  totalFusesRequired: 1
+  linkedToADoor: 0
+  totalFusesRequired: 0
   fusesAcquired: 0
   puzzleMaster: {fileID: 0}
   needPzMnA: 0
   needPzMnB: 0
   needPzMnC: 1
   needPzMnD: 0
+  needPzMnE: 0
+  needPzMnF: 0
+  needPzMnG: 0
 --- !u!1 &8285678382622083753
 GameObject:
   m_ObjectHideFlags: 0
