@@ -23,7 +23,7 @@ namespace character
         Controller controller;
         public float speed, rollSpeed, rollDuration, rollRecover, crouchSpeed, xVelocity, yVelocity, accelerationTime;
         Vector2 rStick, lStick, lStickNormalised, lastDirection, rollDirection, targetSpeed, currentSpeed;
-        public float lastAngle;
+        public float lastAngle, correctionAngle;
         public DirectionAngle dirAngle;
         public DirectionObject dirObject;
 
@@ -126,16 +126,17 @@ namespace character
             {
                 lastDirection = lStickNormalised;
                 lastAngle = Vector2.Angle(Vector2.up, lastDirection);
+                correctionAngle = Vector2.Angle(Vector2.left, lastDirection);
 
-                if(lastAngle > -45 && lastAngle < 45)
+                if(lastAngle >= -45 && lastAngle <= 45)
                 {
                     dirAngle = DirectionAngle.North;
                 }
-                else if(45 < lastAngle && lastAngle < 135 && xVelocity > 0)
+                else if(45 < lastAngle && lastAngle < 135 && correctionAngle > 90)
                 {
                     dirAngle = DirectionAngle.Est;
                 }
-                else if(45 < lastAngle && lastAngle < 135 && xVelocity < 0)
+                else if(45 < lastAngle && lastAngle < 135 && correctionAngle < 90)
                 {
                     dirAngle = DirectionAngle.West;
                 }

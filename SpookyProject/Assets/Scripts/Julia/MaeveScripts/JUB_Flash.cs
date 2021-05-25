@@ -60,7 +60,7 @@ public class JUB_Flash : MonoBehaviour
                 if (flashable.GetComponent<JUB_FlashManager>().flashed == false)
                 {
                     flashable.GetComponent<JUB_FlashManager>().flashed = true;
-                    flashable.GetComponent<JUB_FlashManager>().FlashEnd();
+                    flashable.GetComponent<JUB_FlashManager>().FlashEnd(flashTime);
                 }
             }
 
@@ -69,7 +69,7 @@ public class JUB_Flash : MonoBehaviour
                 if (burnable.GetComponent<JUB_FlashManager>().burned == false)
                 {
                     burnable.GetComponent<JUB_FlashManager>().burned = true;
-                    burnable.GetComponent<JUB_FlashManager>().BurnEnd();
+                    burnable.GetComponent<JUB_FlashManager>().BurnEnd(flashTime);
                 }
             }
 

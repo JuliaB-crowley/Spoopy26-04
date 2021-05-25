@@ -528,6 +528,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b1dd15d2cafcfb045bc92f63bc84ef24, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  invisibleScript: {fileID: 0}
   possibleLoots:
   - {fileID: 2962616450383077693, guid: 1b450b43b8138c949994c42200bc4ea4, type: 3}
   - {fileID: 2654147877702478415, guid: 8805ecfdead8b2b43a5f0a2ccdefd8de, type: 3}
@@ -539,6 +540,7 @@ MonoBehaviour:
   - {fileID: 1423039011}
   - {fileID: 2962616450383077693, guid: 1b450b43b8138c949994c42200bc4ea4, type: 3}
   breakTime: 0
+  needsInvisibleScript: 0
 --- !u!58 &161726804
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -1112,7 +1114,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!23 &1092546272
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -1174,9 +1176,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b1dd15d2cafcfb045bc92f63bc84ef24, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  invisibleScript: {fileID: 0}
   possibleLoots:
   - {fileID: 4505395667627260979, guid: 91faeb50ada8aba4ca6ee776d61820f6, type: 3}
   breakTime: 0
+  needsInvisibleScript: 0
 --- !u!58 &1092546275
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -1603,6 +1607,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Caisse
       objectReference: {fileID: 0}
+    - target: {fileID: 1504498610766505460, guid: 1fa093406d06d8b45906e43722f863e1, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1504498610766505461, guid: 1fa093406d06d8b45906e43722f863e1, type: 3}
       propertyPath: m_RootOrder
       value: 1
@@ -1738,6 +1746,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b1dd15d2cafcfb045bc92f63bc84ef24, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  invisibleScript: {fileID: 0}
   possibleLoots:
   - {fileID: 2962616450383077693, guid: 1b450b43b8138c949994c42200bc4ea4, type: 3}
   - {fileID: 2654147877702478415, guid: 8805ecfdead8b2b43a5f0a2ccdefd8de, type: 3}
@@ -1749,6 +1758,7 @@ MonoBehaviour:
   - {fileID: 1423039011}
   - {fileID: 2962616450383077693, guid: 1b450b43b8138c949994c42200bc4ea4, type: 3}
   breakTime: 0
+  needsInvisibleScript: 0
 --- !u!58 &1825140711
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -2032,6 +2042,7 @@ MonoBehaviour:
   pathfinder: {fileID: 0}
   destinationSetter: {fileID: 0}
   player: {fileID: 0}
+  ennemyDamage: {fileID: 0}
   maxSight: 5
   toPlayer: {x: 0, y: 0}
   blocksLOS:
@@ -2063,6 +2074,7 @@ MonoBehaviour:
   stunTime: 0
   flashManager: {fileID: 0}
   hasBeenStunned: 0
+  graphicAnimator: {fileID: 0}
 --- !u!95 &2045512774
 Animator:
   serializedVersion: 3
@@ -2277,6 +2289,10 @@ PrefabInstance:
       propertyPath: patrolTargets.Array.data[3]
       value: 
       objectReference: {fileID: 642158977}
+    - target: {fileID: 5621156021909451105, guid: ffa18a4845f3fa24b84c996af1485c9a, type: 3}
+      propertyPath: flashTime
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ffa18a4845f3fa24b84c996af1485c9a, type: 3}
 --- !u!1001 &956402889182664459
@@ -2333,6 +2349,10 @@ PrefabInstance:
     - target: {fileID: 2654147877702478415, guid: 8805ecfdead8b2b43a5f0a2ccdefd8de, type: 3}
       propertyPath: m_Name
       value: Tas de ptits bonbons
+      objectReference: {fileID: 0}
+    - target: {fileID: 2654147877702478415, guid: 8805ecfdead8b2b43a5f0a2ccdefd8de, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8805ecfdead8b2b43a5f0a2ccdefd8de, type: 3}
@@ -2423,6 +2443,10 @@ PrefabInstance:
     - target: {fileID: 2809584976226621176, guid: e79b9aabf5a330a47b70f696eaa25cf2, type: 3}
       propertyPath: m_Name
       value: Pot coeurs
+      objectReference: {fileID: 0}
+    - target: {fileID: 2809584976226621176, guid: e79b9aabf5a330a47b70f696eaa25cf2, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2809584976226621181, guid: e79b9aabf5a330a47b70f696eaa25cf2, type: 3}
       propertyPath: m_RootOrder
@@ -2586,6 +2610,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Pot tuto
       objectReference: {fileID: 0}
+    - target: {fileID: 5503309359061635948, guid: 75d8788212c16a44e9f4925e9736be5e, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 75d8788212c16a44e9f4925e9736be5e, type: 3}
 --- !u!1001 &5562259910591121813
@@ -2724,6 +2752,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Pot vide
       objectReference: {fileID: 0}
+    - target: {fileID: 7262659720714772085, guid: 59582711c36cc194c81e285703886e40, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 59582711c36cc194c81e285703886e40, type: 3}
 --- !u!1001 &7425675823002669608
@@ -2793,6 +2825,10 @@ PrefabInstance:
     - target: {fileID: 8380586844361745824, guid: 82c700e989f2fc246b2d564f2b1b4383, type: 3}
       propertyPath: m_Name
       value: Pot bonbons
+      objectReference: {fileID: 0}
+    - target: {fileID: 8380586844361745824, guid: 82c700e989f2fc246b2d564f2b1b4383, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8380586844361745851, guid: 82c700e989f2fc246b2d564f2b1b4383, type: 3}
       propertyPath: m_RootOrder

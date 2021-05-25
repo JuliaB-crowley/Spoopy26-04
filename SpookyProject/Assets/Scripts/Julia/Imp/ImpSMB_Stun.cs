@@ -9,6 +9,8 @@ public class ImpSMB_Stun : StateMachineBehaviour
     // OnStateEnter is called when a transition starts and the state machine starts to evaluate this state
     override public void OnStateEnter(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
+        imp.SetAnimation(3);
+
         Debug.LogWarning("is flashed");
         timeSinceStun = 0;
         imp.destinationSetter.target = null;
@@ -24,7 +26,7 @@ public class ImpSMB_Stun : StateMachineBehaviour
             Debug.LogWarning(timeSinceStun);
             timeSinceStun = 0;
             imp.hasBeenStunned = false;
-            animator.Play("Escape");
+            animator.Play("Pause");
         }
     }
 
