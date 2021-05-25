@@ -16,9 +16,11 @@ TagManager:
   - PuzzleMasterB
   - PuzzleMasterC
   - PuzzleMasterD
-  - Puzzle Master
   - DialogueManager
   - Hint Canvas
+  - PuzzleMasterE
+  - PuzzleMasterF
+  - PuzzleMasterG
   layers:
   - Default
   - TransparentFX

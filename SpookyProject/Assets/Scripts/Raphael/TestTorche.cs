@@ -11,19 +11,21 @@ public class TestTorche : MonoBehaviour
     [SerializeField] RPP_SubPuzzleManager torchesManager; //Script qui gère les puzzles des torches
     public bool isPartOfAPuzzle = false;
 
-    /*C'est Pierre qui à fait ça
-    public UnityEvent wasUnlit = new UnityEvent();
-    List<Collider2D> litObjects = new List<Collider2D>();*/
+
+    /*[SerializeField] float iluminationRadius;
+    [SerializeField] LayerMask layersIluminated;
+    Transform torchTransform;*/
+
 
     //flash manager à mettre en enfant et sur layer flashable
     public JUB_FlashManager flashManager;
 
     private void Start()
     {
+        //torchTransform = GetComponent<Transform>();
         torchesManager = GetComponentInParent<RPP_SubPuzzleManager>();
         spriteRenderer = GetComponent<SpriteRenderer>();
         flashManager = GetComponent<JUB_FlashManager>();
-        //wasUnlit.AddListener(UnlightEverything);
 
         if (!isLit)
         {
@@ -45,44 +47,47 @@ public class TestTorche : MonoBehaviour
 
     void LitTorch()
     {
-        //GetComponent<CircleCollider2D>().radius = 2;
         isLit = true;
         spriteRenderer.sprite = litTorch;
-        Debug.Log("torche allumée");
         if (!isPartOfAPuzzle)
         {
             torchesManager.successesAchieved++;
         }
+        /*Collider2D[] iluminatedObjects = Physics2D.OverlapCircleAll(torchTransform.position, iluminationRadius, layersIluminated);
+        foreach (Collider2D item in iluminatedObjects)
+        {
+            if (item.GetComponent<RPP_BoutonScript>())
+            {
+                item.GetComponent<RPP_BoutonScript>().PermanentlyActivateButton();
+            }
+            if (item.GetComponent<RPP_InvisibleInkScript>())
+            {
+                item.GetComponent<RPP_InvisibleInkScript>().sprite.enabled = true;
+            }
+        }*/
     }
 
+    //Cette méthode ne doit pas être utilisé si la torche peut être bougée
     public void UnlitTorch()
     {
         spriteRenderer.sprite = unlitTorch;
         isLit = false;
         hasBeenBurned = false;
-        //wasUnlit.Invoke();
     }
 
-    //Cette méthode fau=it que quand la torche s'éteint lorsqu'un object est en train d'intéragir avec, cet objet s'étein aussi
-    /*void UnlightEverything()
-    {
-        GetComponent<CircleCollider2D>().radius = 0;
-        foreach (Collider2D col in litObjects)
-        {
-            col.GetComponent<RPP_InvisibleInkScript>().sprite.enabled = false;
-        }
-        litObjects.Clear();
-    }
 
     //Contrairement au flash qui dit à l'object détécté à s'allumer, c'est la torche elle même qui vas révéler les objets invisibles
     void OnTriggerEnter2D(Collider2D collision)
     {
         if (isLit)
         {
-            litObjects.Add(collision);
             if (collision.GetComponent<RPP_InvisibleInkScript>())
             {
                 collision.GetComponent<RPP_InvisibleInkScript>().sprite.enabled = true;
+            }
+            if (collision.GetComponent<RPP_BoutonScript>())
+            {
+                collision.GetComponent<RPP_BoutonScript>().PermanentlyActivateButton();
             }
         }
     }
@@ -92,11 +97,31 @@ public class TestTorche : MonoBehaviour
     {
         if (isLit)
         {
-            litObjects.Remove(collision);
             if (collision.GetComponent<RPP_InvisibleInkScript>())
             {
                 collision.GetComponent<RPP_InvisibleInkScript>().sprite.enabled = false;
             }
+            if (collision.GetComponent<RPP_BoutonScript>())
+            {
+                collision.GetComponent<RPP_BoutonScript>().ResetButton();
+            }
         }
+    }
+
+    /*private void OnTriggerStay2D(Collider2D collision)
+    {
+        if (isLit)
+        {
+            if (!collision.GetComponent<RPP_BoutonScript>().hasBeenFlashed)
+            {
+                collision.GetComponent<RPP_BoutonScript>().PermanentlyActivateButton();
+            }
+        }
+    }/*
+
+    /*private void OnDrawGizmosSelected()
+    {
+        Gizmos.color = Color.red;
+        Gizmos.DrawWireSphere(torchTransform.position, iluminationRadius);
     }*/
 }

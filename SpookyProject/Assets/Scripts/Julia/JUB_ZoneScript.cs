@@ -18,6 +18,7 @@ public class JUB_ZoneScript : MonoBehaviour
     //système d'indices 
     Controller controller;
     [SerializeField]
+    [TextArea(3, 10)]
     string[] indice;
     public GameObject canvasIndice;
     public Camera mainCam;

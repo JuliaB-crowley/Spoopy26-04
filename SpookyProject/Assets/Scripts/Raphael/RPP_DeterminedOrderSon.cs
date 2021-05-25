@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class RPP_DeterminedOrderSon : MonoBehaviour
 {
-    [SerializeField] bool isFirst, isSecond, isThird, isFourth, isButton, isTorch, hasBeenChecked = false;
+    [SerializeField] bool isFirst, isSecond, isThird, isFourth, isFith, isSixth, isSeventh, isEight, isButton, isTorch, hasBeenChecked = false;
     [SerializeField] RPP_BoutonScript buttonScript;
     [SerializeField] TestTorche torchScript;
     [SerializeField] RPP_DeterminedOrderMaster orderMaster;
@@ -47,12 +47,33 @@ public class RPP_DeterminedOrderSon : MonoBehaviour
                     hasBeenChecked = true;
                     orderMaster.CheckFourth();
                 }
+                if (isFith)
+                {
+                    hasBeenChecked = true;
+                    orderMaster.CheckFith();
+                }
+                if (isSixth)
+                {
+                    hasBeenChecked = true;
+                    orderMaster.CheckSixth();
+                }
+                if (isSeventh)
+                {
+                    hasBeenChecked = true;
+                    orderMaster.CheckSeventh();
+                }
+                if (isEight)
+                {
+                    hasBeenChecked = true;
+                    orderMaster.CheckEight();
+                }
             }
         }
         else if (isTorch)
         {
             if(torchScript.isLit && !hasBeenChecked)
             {
+
                 if (isFirst)
                 {
                     hasBeenChecked = true;
@@ -72,6 +93,26 @@ public class RPP_DeterminedOrderSon : MonoBehaviour
                 {
                     hasBeenChecked = true;
                     orderMaster.CheckFourth();
+                }
+                if (isFith)
+                {
+                    hasBeenChecked = true;
+                    orderMaster.CheckFith();
+                }
+                if (isSixth)
+                {
+                    hasBeenChecked = true;
+                    orderMaster.CheckSixth();
+                }
+                if (isSeventh)
+                {
+                    hasBeenChecked = true;
+                    orderMaster.CheckSeventh();
+                }
+                if (isEight)
+                {
+                    hasBeenChecked = true;
+                    orderMaster.CheckEight();
                 }
             }
         }       

@@ -7,13 +7,16 @@ public class RPP_BoutonScript : MonoBehaviour
     [SerializeField] SpriteRenderer spriteRenderer; // Je modifie le sprite pour avoir du feedback visuel  
     [SerializeField] JUB_FlashManager flashManager; //flash manager à mettre sur layer flashable
     [SerializeField] Sprite boutonActivé, boutonDésactivé; //différents sprites du bouton
-    [SerializeField] RPP_SubPuzzleManager buttonsManager;
+    [SerializeField] RPP_ButtonPuzzleMaster buttonsManager;
 
-    public bool hasBeenFlashed = false, isPartOfAPuzzle = false;
+    public bool hasBeenFlashed = false, needAPuzzleMaster = true;
 
     void Start()
     {
-        buttonsManager = GetComponentInParent<RPP_SubPuzzleManager>();
+        if (needAPuzzleMaster)
+        {
+            buttonsManager = GetComponentInParent<RPP_ButtonPuzzleMaster>();
+        }
         spriteRenderer =GetComponent<SpriteRenderer>();
         flashManager = GetComponentInChildren<JUB_FlashManager>();
         spriteRenderer.sprite = boutonDésactivé;
@@ -21,21 +24,23 @@ public class RPP_BoutonScript : MonoBehaviour
 
     void Update()
     {
-        if (flashManager.flashed && !hasBeenFlashed && !buttonsManager.puzzleSolved)
+        if (needAPuzzleMaster)
         {
-            if (!isPartOfAPuzzle)
+            if (flashManager.flashed && !hasBeenFlashed && !buttonsManager.puzzleSolved)
             {
                 StartCoroutine(ActivateButton());
             }
-            else
+            if (buttonsManager.puzzleSolved)
             {
                 spriteRenderer.sprite = boutonActivé;
-                hasBeenFlashed = true;
             }
         }
-        if (buttonsManager.puzzleSolved)
+        else
         {
-            spriteRenderer.sprite = boutonActivé;
+            if (flashManager.flashed && !hasBeenFlashed)
+            {
+                PermanentlyActivateButton();
+            }
         }
     }
 
@@ -43,16 +48,30 @@ public class RPP_BoutonScript : MonoBehaviour
     {
         spriteRenderer.sprite = boutonActivé;
         hasBeenFlashed = true;
-        buttonsManager.successesAchieved++;
+        buttonsManager.buttonsActive++;
         yield return new WaitForSeconds(flashManager.flashTime);
         spriteRenderer.sprite = boutonDésactivé;
         hasBeenFlashed = false;
-        buttonsManager.successesAchieved--;
+        buttonsManager.buttonsActive--;
     }
 
     public void ResetButton()
     {
         spriteRenderer.sprite = boutonDésactivé;
         hasBeenFlashed = false;
+        if (needAPuzzleMaster)
+        {
+            buttonsManager.buttonsActive--;
+        }
+    }
+
+    public void PermanentlyActivateButton()
+    {
+        spriteRenderer.sprite = boutonActivé;
+        hasBeenFlashed = true;
+        if (needAPuzzleMaster)
+        {
+            buttonsManager.buttonsActive++;
+        }
     }
 }

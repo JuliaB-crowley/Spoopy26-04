@@ -810,8 +810,8 @@ MonoBehaviour:
   items:
   - {fileID: 8679658624842575868, guid: 804d61b66413d1547b13b7766feeed3a, type: 3}
   - {fileID: 376972224340718787, guid: 35a622dc58d564b45806e5365a561116, type: 3}
-  - {fileID: 376972224340718787, guid: 35a622dc58d564b45806e5365a561116, type: 3}
-  - {fileID: 376972224340718787, guid: 35a622dc58d564b45806e5365a561116, type: 3}
+  - {fileID: 8749998773255505538, guid: 8c43184509bc8fc489ff15ba959534a9, type: 3}
+  - {fileID: 4367449603238734919, guid: b46c1e414ff128146a47056e9a55af8c, type: 3}
   confirmationRescale: {fileID: 5073029023857857651}
   confirmationText: {fileID: 5073029023470248678}
   soldText:
@@ -1298,8 +1298,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -184, y: -289}
-  m_SizeDelta: {x: 258, y: 44}
+  m_AnchoredPosition: {x: -302.79, y: -289}
+  m_SizeDelta: {x: 203.48, y: 44}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &5073029023128973577
 CanvasRenderer:
