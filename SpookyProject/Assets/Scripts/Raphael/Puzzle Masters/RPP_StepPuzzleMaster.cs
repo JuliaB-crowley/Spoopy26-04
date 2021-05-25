@@ -46,7 +46,7 @@ public class RPP_StepPuzzleMaster : MonoBehaviour
 
     void Update()
     {
-        if(currentSteps == stepsRequired) //Check de tentative du joueur
+        if(currentSteps >= stepsRequired) //Check de tentative du joueur
         {
             if(correctSteps >= stepsRequired && !puzzleHasBeenCompleted) //Le joueur à réussit
             {

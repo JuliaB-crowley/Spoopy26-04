@@ -31,6 +31,7 @@ public class RPP_FusiblesScript : MonoBehaviour
             }
             if(fusesAcquired == totalFusesRequired && !puzzleSolved && !linkedToADoor)
             {
+                Debug.Log("the fusebox works");
                 puzzleMaster.puzzlesSolved++;
                 puzzleSolved = true;
             }       
@@ -146,6 +147,11 @@ public class RPP_FusiblesScript : MonoBehaviour
             puzzleSolved = false;
             retrievedFuse = true;
         }
+        if (retrievedFuse && !puzzleSolved && !linkedToADoor)
+        {
+            puzzleMaster.puzzlesSolved--;
+            retrievedFuse = false;
+        }
     }
 
     void AddFuses()
@@ -177,11 +183,6 @@ public class RPP_FusiblesScript : MonoBehaviour
             puzzleMaster.hasVioletKey = false;
             violetFuseActive = true;
             fusesAcquired++;
-        }        
-        if (retrievedFuse && !puzzleSolved && !linkedToADoor)
-        {
-            puzzleMaster.puzzlesSolved--;
-            retrievedFuse = false;
-        }
+        }               
     }
 }
