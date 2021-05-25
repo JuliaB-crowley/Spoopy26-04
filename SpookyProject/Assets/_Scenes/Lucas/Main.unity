@@ -157,7 +157,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -166.566, y: 81.172}
+  m_AnchoredPosition: {x: -166.57, y: 106.3}
   m_SizeDelta: {x: 206.186, y: 45.143}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &23270301
@@ -1437,7 +1437,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -166.566, y: 81.172}
+  m_AnchoredPosition: {x: -166.57, y: 106.3}
   m_SizeDelta: {x: 206.186, y: 45.143}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &364383939
@@ -2785,7 +2785,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 181.317, y: 81.172}
+  m_AnchoredPosition: {x: 181.32, y: 106.3}
   m_SizeDelta: {x: 193.993, y: 45.144}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &756481127
@@ -3632,8 +3632,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -134.83, y: -40.374}
-  m_SizeDelta: {x: 269.66, y: 176.473}
+  m_AnchoredPosition: {x: -105.801056, y: -20.481}
+  m_SizeDelta: {x: 327.718, y: 191.44}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1061366402
 MonoBehaviour:
@@ -3674,7 +3674,7 @@ MonoBehaviour:
     Lucas Combes
 
 
-    Raphael Pelletier Pallumbo'
+    Raphael Pelletier Palumbo'
 --- !u!222 &1061366403
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -5367,7 +5367,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 165.0469, y: -43.145}
+  m_AnchoredPosition: {x: 165.05, y: -16.411}
   m_SizeDelta: {x: 161.456, y: 182.016}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1770296918
@@ -5403,7 +5403,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "L\xE9a Meynet\n\nLhin Lacoste\n\nMarie Cordier"
+  m_Text: "L\xE9a Meynet\n\nLinh Lacoste\n\nMarie Cordier"
 --- !u!222 &1770296919
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -5600,7 +5600,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 181.317, y: 81.172}
+  m_AnchoredPosition: {x: 181.32, y: 106.3}
   m_SizeDelta: {x: 193.993, y: 45.144}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1884005954
@@ -6053,7 +6053,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 165.0469, y: -43.145}
+  m_AnchoredPosition: {x: 165.05, y: -15.771}
   m_SizeDelta: {x: 161.456, y: 182.016}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1970581627
@@ -6089,7 +6089,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "L\xE9a Meynet\n\nLhin Lacoste\n\nMarie Cordier"
+  m_Text: "L\xE9a Meynet\n\nLinh Lacoste\n\nMarie Cordier"
 --- !u!222 &1970581628
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -6563,8 +6563,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -134.83, y: -63.734}
-  m_SizeDelta: {x: 269.66, y: 223.194}
+  m_AnchoredPosition: {x: -101.843, y: -50.855}
+  m_SizeDelta: {x: 335.635, y: 250.903}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2024950042
 MonoBehaviour:
@@ -6605,7 +6605,7 @@ MonoBehaviour:
     Lucas Combes
 
 
-    Raphael Pelletier Pallumbo'
+    Raphael Pelletier Palumbo'
 --- !u!222 &2024950043
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -6671,7 +6671,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 0394bb562be7c8540ba059a7ac809b31, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 291581e3830e51243a31d431397ada0d, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
