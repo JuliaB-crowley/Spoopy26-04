@@ -93,7 +93,7 @@ Animator:
   m_GameObject: {fileID: 818388626489780613}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: f0d98313d9fc04546bfe90140805039c, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -279,6 +279,7 @@ MonoBehaviour:
   pathfinder: {fileID: 0}
   destinationSetter: {fileID: 0}
   player: {fileID: 0}
+  ennemyDamage: {fileID: 0}
   maxSight: 5
   toPlayer: {x: 0, y: 0}
   blocksLOS:
@@ -307,9 +308,10 @@ MonoBehaviour:
   damageTrail: {fileID: 7425675822204543736, guid: 7e74e5a42fca821459e83fbf2c27ed57, type: 3}
   isAttacking: 0
   pauseTime: 3
-  stunTime: 0
+  stunTime: 1.5
   flashManager: {fileID: 0}
   hasBeenStunned: 0
+  graphicAnimator: {fileID: 2499470756399686384}
 --- !u!114 &6014785153597361554
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -327,9 +329,6 @@ MonoBehaviour:
   deathAnimationTime: 0.2
   knockbackForce: 4
   knockbackDuration: 0.5
-  playerTransform: {fileID: 0}
-  rb: {fileID: 0}
-  AIPath: {fileID: 0}
   hasLoot: 1
   possibleLoots:
   - {fileID: 4505395667627260979, guid: 91faeb50ada8aba4ca6ee776d61820f6, type: 3}

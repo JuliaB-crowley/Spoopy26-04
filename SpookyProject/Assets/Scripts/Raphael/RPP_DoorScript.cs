@@ -12,7 +12,7 @@ public class RPP_DoorScript : MonoBehaviour
     [SerializeField] RPP_FusiblesScript fusiblesScript;
     public SpriteRenderer doorSprite;
     public Sprite doorOpen, doorLocked, blueDoor, yellowDoor, greenDoor, violetDoor, brokenDoor, openOneSide;
-    [SerializeField] bool needBlueKey, needYellowKey, needGreenKey, needVioletKey, doorIsBroken, opensOneSide, needPzMnA = true, needPzMnB, needPzMnC, needPzMnD, dependsOnFusebox  = false;
+    [SerializeField] bool needBlueKey, needYellowKey, needGreenKey, needVioletKey, doorIsBroken, opensOneSide, needPzMnA = true, needPzMnB, needPzMnC, needPzMnD, needPzMnE, needPzMnF, needPzMnG, dependsOnFusebox  = false;
 
     void Start()
     {
@@ -210,6 +210,18 @@ public class RPP_DoorScript : MonoBehaviour
         else if (needPzMnD)
         {
             puzzleMaster = GameObject.FindGameObjectWithTag("PuzzleMasterD").GetComponent<RPP_GeneralPuzzleMaster>();
+        }
+        else if (needPzMnE)
+        {
+            puzzleMaster = GameObject.FindGameObjectWithTag("PuzzleMasterE").GetComponent<RPP_GeneralPuzzleMaster>();
+        }
+        else if (needPzMnF)
+        {
+            puzzleMaster = GameObject.FindGameObjectWithTag("PuzzleMasterF").GetComponent<RPP_GeneralPuzzleMaster>();
+        }
+        else if (needPzMnG)
+        {
+            puzzleMaster = GameObject.FindGameObjectWithTag("PuzzleMasterG").GetComponent<RPP_GeneralPuzzleMaster>();
         }
     }
     

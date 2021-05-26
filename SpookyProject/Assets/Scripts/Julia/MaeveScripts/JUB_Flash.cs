@@ -9,7 +9,7 @@ public class JUB_Flash : MonoBehaviour
     Controller controller;
     public Transform up, down, left, right;
     public LayerMask flashableObjects;
-    public float burnRange, flashRange, flashTime;
+    public float burnRange, flashRange, flashTime, flashAnim;
     public bool flashWasObtained;
     Collider2D[] flashableInRange, burnableInRange;
     
@@ -31,6 +31,7 @@ public class JUB_Flash : MonoBehaviour
         {
             maeve.isFlashing = true;
             Transform flashPoint = right;
+            maeve.animationIndex = 3;
 
             switch (maeve.dirAngle)
             {
@@ -59,7 +60,7 @@ public class JUB_Flash : MonoBehaviour
                 if (flashable.GetComponent<JUB_FlashManager>().flashed == false)
                 {
                     flashable.GetComponent<JUB_FlashManager>().flashed = true;
-                    flashable.GetComponent<JUB_FlashManager>().FlashEnd();
+                    flashable.GetComponent<JUB_FlashManager>().FlashEnd(flashTime);
                 }
             }
 
@@ -68,7 +69,7 @@ public class JUB_Flash : MonoBehaviour
                 if (burnable.GetComponent<JUB_FlashManager>().burned == false)
                 {
                     burnable.GetComponent<JUB_FlashManager>().burned = true;
-                    burnable.GetComponent<JUB_FlashManager>().BurnEnd();
+                    burnable.GetComponent<JUB_FlashManager>().BurnEnd(flashTime);
                 }
             }
 
@@ -80,7 +81,7 @@ public class JUB_Flash : MonoBehaviour
 
     IEnumerator EndFlash()
     {
-        yield return new WaitForEndOfFrame();
+        yield return new WaitForSeconds(flashAnim);
         maeve.isFlashing = false;
         Debug.Log("fin de flash");
     }
