@@ -13,6 +13,8 @@ public class BossSMB_PawAttack : StateMachineBehaviour
     {
         timeSinceHitspan = timeSinceBuildup = timeSinceRecovery = 0;
         isInBuildup = true;
+        boss.isInAttack = true;
+        boss.SetAnimation(4);
     }
 
     // OnStateUpdate is called on each Update frame between OnStateEnter and OnStateExit callbacks
@@ -62,10 +64,10 @@ public class BossSMB_PawAttack : StateMachineBehaviour
     }
 
     // OnStateExit is called when a transition ends and the state machine finishes evaluating this state
-    //override public void OnStateExit(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
-    //{
-    //    
-    //}
+    override public void OnStateExit(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
+    {
+        boss.isInAttack = false;
+    }
 
     // OnStateMove is called right after Animator.OnAnimatorMove()
     //override public void OnStateMove(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
