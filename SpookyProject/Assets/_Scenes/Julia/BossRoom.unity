@@ -1198,9 +1198,10 @@ MonoBehaviour:
   graphicAnimator: {fileID: 1955427288}
   bossRenderer: {fileID: 1955427286}
   startAnimationTime: 1
-  timered: 0.1
+  timered: 0.3
   isInAttack: 0
   isBurned: 0
+  isBlinking: 0
 --- !u!1 &1196481815
 GameObject:
   m_ObjectHideFlags: 0

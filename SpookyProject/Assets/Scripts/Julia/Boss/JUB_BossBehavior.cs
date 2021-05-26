@@ -41,10 +41,10 @@ public class JUB_BossBehavior : MonoBehaviour
 
     //anim
     public Animator graphicAnimator;
-    public Renderer bossRenderer;
+    public SpriteRenderer bossRenderer;
     Color originalColor;
     public float startAnimationTime = 1f, timered;
-    public bool isInAttack, isBurned;
+    public bool isInAttack, isBurned, isBlinking;
 
     // Start is called before the first frame update
     void Start()
@@ -57,7 +57,7 @@ public class JUB_BossBehavior : MonoBehaviour
 
         canBeFlashed = true;
 
-        originalColor = bossRenderer.material.color;
+        originalColor = this.bossRenderer.color;
     }
 
     // Update is called once per frame
@@ -70,13 +70,15 @@ public class JUB_BossBehavior : MonoBehaviour
                 SetAnimation(0);
             }
         }
-        else if(bossHitNumber == 1)
+        else if(bossHitNumber == 1 && !isBlinking)
         {
+            isBlinking = true;
             StartCoroutine(EyesClosingCoroutine()); //coroutine d'ouverture et de fermeture d'yeux
         }
 
         if(tailFlashManager.burned && bossHitNumber >= 2)
         {
+            isBurned = true;
             canBeFlashed = true;
             StartCoroutine(BurnTailRecovery()); //celui ci doit lancer le compteur de temps avant que la queue ne soit plus brulée
         }
@@ -85,6 +87,11 @@ public class JUB_BossBehavior : MonoBehaviour
         {
             isFlashed = true; //empeche l'attaque de pattes
             StartCoroutine(FlashRecovery()); //recovery du flash
+        }
+
+        if(bossHitNumber >= 2 && !isBurned && !isFlashed && !isInAttack)
+        {
+            SetAnimation(3);
         }
     }
 
@@ -111,9 +118,9 @@ public class JUB_BossBehavior : MonoBehaviour
 
     IEnumerator TimeRedCoroutine()
     {
-        bossRenderer.material.color = Color.red;
+        this.bossRenderer.color = Color.Lerp(originalColor, Color.red, 0.8f);
         yield return new WaitForSeconds(timered);
-        bossRenderer.material.color = originalColor;
+        this.bossRenderer.color = originalColor;
     }
     
 
@@ -145,6 +152,7 @@ public class JUB_BossBehavior : MonoBehaviour
         SetAnimation(6);
         yield return new WaitForSeconds(timeBurning);
         canBeFlashed = false;
+        isBurned = false;
     }
 
     IEnumerator EyesClosingCoroutine()
@@ -162,6 +170,7 @@ public class JUB_BossBehavior : MonoBehaviour
             {
                 SetAnimation(1);
             }
+            isBlinking = false;
         }
 
         //faudra bien vérifier vis à vis de l'anim et régler à l'entrée de l'état

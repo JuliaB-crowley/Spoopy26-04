@@ -8,11 +8,12 @@ public class JUB_TrapBoss : JUB_DamagingEvent
     public Collider2D colliderTrap;
 
     //pour test
-    public Renderer trapRenderer;
+    public Animator graphAnim;
 
     // Start is called before the first frame update
     void Start()
     {
+        graphAnim.Play("pics-enter");
         colliderTrap.enabled = false;
         StartCoroutine(ActivationCoroutine());
     }
@@ -20,7 +21,7 @@ public class JUB_TrapBoss : JUB_DamagingEvent
     IEnumerator ActivationCoroutine()
     {
         yield return new WaitForSeconds(activationTime);
-        trapRenderer.material.color = Color.Lerp(trapRenderer.material.color, Color.red, 0.8f);
+        graphAnim.Play("pics");
         colliderTrap.enabled = true;
         Destroy(this.gameObject, decayTime);
     }
