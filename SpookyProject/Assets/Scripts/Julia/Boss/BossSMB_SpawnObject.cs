@@ -7,9 +7,11 @@ public class BossSMB_SpawnObject : StateMachineBehaviour
     public JUB_BossBehavior boss;
     public float timeBetweenTraps;
     public int numberAlreadySpawned;
+    public bool maeveTrapSpawned = false;
     // OnStateEnter is called when a transition starts and the state machine starts to evaluate this state
     override public void OnStateEnter(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
+        maeveTrapSpawned = false;
         timeBetweenTraps = 0;
         numberAlreadySpawned = 0;
     }
@@ -19,7 +21,11 @@ public class BossSMB_SpawnObject : StateMachineBehaviour
     {
         timeBetweenTraps += Time.deltaTime;
         boss.centerOfArea = boss.maeve.transform.position;
-
+        if(maeveTrapSpawned == false)
+        {
+            maeveTrapSpawned = true;
+            Instantiate(boss.spawningTrap, boss.maeve.transform.position, Quaternion.identity);
+        }
         if (boss.bossHitNumber == 0)
         {
             if (timeBetweenTraps >= boss.timeBetweenTwo && numberAlreadySpawned <= boss.numberTrapPhase1)
@@ -74,6 +80,7 @@ public class BossSMB_SpawnObject : StateMachineBehaviour
     {
         timeBetweenTraps = 0;
         numberAlreadySpawned = 0;
+        maeveTrapSpawned = false;
     }
 
     // OnStateMove is called right after Animator.OnAnimatorMove()
