@@ -513,8 +513,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 54, y: -146}
-  m_SizeDelta: {x: 1303, y: 733}
+  m_AnchoredPosition: {x: 56.4, y: -145}
+  m_SizeDelta: {x: 1049.7104, y: 642.0754}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &825217370960300294
 CanvasRenderer:
@@ -546,7 +546,7 @@ MonoBehaviour:
       m_Calls: []
   m_Sprite: {fileID: 21300000, guid: ce4979196d884f040825fe8cb88cab80, type: 3}
   m_Type: 0
-  m_PreserveAspect: 0
+  m_PreserveAspect: 1
   m_FillCenter: 1
   m_FillMethod: 4
   m_FillAmount: 1
@@ -706,8 +706,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -88, y: -146}
-  m_SizeDelta: {x: 1303, y: 733}
+  m_AnchoredPosition: {x: -90.9, y: -142.1}
+  m_SizeDelta: {x: 1043.2158, y: 733}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &2810789626265629998
 CanvasRenderer:
@@ -739,7 +739,7 @@ MonoBehaviour:
       m_Calls: []
   m_Sprite: {fileID: 21300000, guid: a7f0e833b4b92654abde4476c89c2605, type: 3}
   m_Type: 0
-  m_PreserveAspect: 0
+  m_PreserveAspect: 1
   m_FillCenter: 1
   m_FillMethod: 4
   m_FillAmount: 1
@@ -1284,7 +1284,7 @@ MonoBehaviour:
   animationIndex: 0
   maeveAnimator: {fileID: 2588054932057960255}
   deathCanvas: {fileID: 603992811953839225}
-  jeuSceneName: 
+  jeuSceneName: Main
 --- !u!50 &5857361522451789454
 Rigidbody2D:
   serializedVersion: 4
