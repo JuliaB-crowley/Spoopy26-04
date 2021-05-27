@@ -7,6 +7,7 @@ using System.Runtime.InteropServices.ComTypes;
 using UnityEngine;
 using UnityEngine.SocialPlatforms;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 namespace character
 {
@@ -67,6 +68,8 @@ namespace character
         //anim
         public int animationIndex; //-1 mort, 0 idle, 1 course, 2 attaque, 3 flash, 4 roulade, 5 accroupi, 6 déplacement objet, 7 accroupi iddle, 8 immunité
         public Animator maeveAnimator;
+        public GameObject deathCanvas;
+        public string jeuSceneName;
 
         // Start is called before the first frame update
         void Start()
@@ -80,6 +83,7 @@ namespace character
             AttackProfile heavyAttack = new AttackProfile(3, new Vector2(2, 1), 0.4f, 0.8f, "heavy");
 
             currentLife = maxLife;
+            deathCanvas.SetActive(false);
 
 
             controller.MainController.Roll.performed += ctx => Roll();  
@@ -651,8 +655,6 @@ namespace character
 
         void Die()
         {
-            //RIP
-            //anim mort
             StartCoroutine(DeathCoroutine());
             //respawn checkpoint
         }
@@ -660,9 +662,23 @@ namespace character
         IEnumerator DeathCoroutine()
         {
             yield return new WaitForSeconds(deathAnimDuration);
+            deathCanvas.SetActive(true);
+           
+        }
+
+        public void Respawn()
+        {
+            deathCanvas.SetActive(false);
             this.gameObject.transform.position = actualCheckpoint.position;
             Heal(maxLife);
             Immunity(immunityTime);
+        }
+
+        public void Quit()
+        {
+            deathCanvas.SetActive(false);
+            Destroy(this.gameObject);
+            Application.Quit();
         }
 
         public void GainBonbons(int bonbons)

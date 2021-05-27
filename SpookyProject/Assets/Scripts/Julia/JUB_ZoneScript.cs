@@ -39,6 +39,8 @@ public class JUB_ZoneScript : MonoBehaviour
         player = GameObject.FindGameObjectWithTag("Player").GetComponent<JUB_Maeve>();
         cameraTransform = mainCam.transform;
         //glisser déposer le roomCameraPoint si isInterior
+
+        checkpoint = GetComponentInChildren<Transform>();
         
 
         canvasIndice.GetComponent<Transform>().localScale = Vector3.zero;
