@@ -211,7 +211,6 @@ public class JUB_ImpBehavior : MonoBehaviour
                 break;
         }
         graphicAnimator.Play(animToPlay);
-        Debug.LogWarning(animToPlay);
     }
 
 }

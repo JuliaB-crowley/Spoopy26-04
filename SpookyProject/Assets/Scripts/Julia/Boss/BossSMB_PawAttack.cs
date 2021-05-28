@@ -58,7 +58,7 @@ public class BossSMB_PawAttack : StateMachineBehaviour
         {
             if(boss.pawCollider.IsTouchingLayers(boss.playerLayer))
             {
-                boss.maeve.TakeDamages(boss.pawDamages);
+                boss.maeve.TakeDamages(boss.pawDamages, boss.pawCollider.gameObject.transform.position);
             }
         }
     }

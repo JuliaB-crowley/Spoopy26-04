@@ -27,10 +27,11 @@ namespace character
         public float lastAngle, correctionAngle;
         public DirectionAngle dirAngle;
         public DirectionObject dirObject;
+        public float knockbackDuration, knockbackForce;
 
 
         [SerializeField]
-        bool isInRoll,  isInRecoil, isInImmunity, isInRecover, isPushingObject;
+        bool isInRoll,  isInRecoil, isInImmunity, isInRecover, isPushingObject, isInKnockback;
         public bool isFlashing;
         public LayerMask pushableObjects, interactibleObjects;
         public bool isCrouching;
@@ -101,7 +102,11 @@ namespace character
             Inputs();
             InteractSphere();
             PushableSphere();
-            Move();
+            if (!isInKnockback)
+            {
+                Move();
+
+            }
 
             displayLife.text = currentLife.ToString() + " / " + maxLife.ToString();
             if (currentLife > maxLife)
@@ -601,7 +606,7 @@ namespace character
 
         //fonctions liées au HUD
 
-        public void TakeDamages(int damages)
+        public void TakeDamages(int damages, Vector3 monsterPosition)
         {
             if (!isInImmunity)
             {
@@ -611,10 +616,30 @@ namespace character
                     currentLife = 0;
                     Die();
                 }
+                Knockback(monsterPosition);
                 Immunity(immunityTime);
                 StartCoroutine(RedFrameCoroutine());
             }
         }
+
+        public void Knockback(Vector3 monsterPosition)
+        {
+            isInKnockback = true;
+            Vector2 direction = (monsterPosition - this.transform.position).normalized;
+            Debug.LogWarning("position" + direction);
+            rigidBody.velocity = (-direction * knockbackForce);
+            StartCoroutine(KnockbackCoroutine());
+        }
+
+        IEnumerator KnockbackCoroutine()
+        {
+            yield return new WaitForSeconds(knockbackDuration);
+            Debug.LogWarning(rigidBody.velocity);
+            rigidBody.velocity = Vector2.zero;
+            isInKnockback = false;
+        }
+
+
 
         public void Immunity(float immuTime)
         {
@@ -716,7 +741,7 @@ namespace character
 
             if (collision.CompareTag("DamageDealer"))
             {
-                TakeDamages(collision.GetComponent<JUB_DamagingEvent>().damageAmount);
+                TakeDamages(collision.GetComponent<JUB_DamagingEvent>().damageAmount, collision.transform.position);
             }
         }
 

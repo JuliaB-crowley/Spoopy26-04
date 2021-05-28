@@ -1219,11 +1219,14 @@ MonoBehaviour:
   correctionAngle: 0
   dirAngle: 0
   dirObject: 0
+  knockbackDuration: 0.2
+  knockbackForce: 3
   isInRoll: 0
   isInRecoil: 0
   isInImmunity: 0
   isInRecover: 0
   isPushingObject: 0
+  isInKnockback: 0
   isFlashing: 0
   pushableObjects:
     serializedVersion: 2
@@ -1297,7 +1300,7 @@ Rigidbody2D:
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
-  m_Mass: 1
+  m_Mass: 5
   m_LinearDrag: 0
   m_AngularDrag: 0.05
   m_GravityScale: 0
