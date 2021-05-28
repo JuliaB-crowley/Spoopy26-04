@@ -17,7 +17,7 @@ public class JUB_BossBehavior : MonoBehaviour
     public bool isInImmunity;
 
     //attack paw
-    public Collider2D pawCollider, pawAttackZone; //paw attack zone doit être sur l'objet qui contient ce script //paw collider sur un enfant
+    public Collider2D pawCollider, pawAttackZone, obstacleCollider; //paw attack zone doit être sur l'objet qui contient ce script //paw collider sur un enfant
     public float flashRecoveryTime;
     public float buildupTime, recoveryTime, hitspanTime;
     public int pawDamages = 3;
@@ -143,6 +143,8 @@ public class JUB_BossBehavior : MonoBehaviour
     {
         yield return new WaitForSeconds(deathAnimationTime);
         Time.timeScale = 0f;
+        SetAnimation(7);
+        obstacleCollider.enabled = false;
         GameObject.FindGameObjectWithTag("DialogueManager").GetComponent<JUB_DialogueManager>().StartDialogue(endDialogue);
 
     }
@@ -258,6 +260,10 @@ public class JUB_BossBehavior : MonoBehaviour
 
             case 6:
                 graphicAnimator.Play("boss_burn");
+                break;
+
+            case 7:
+                graphicAnimator.Play("boss_idle_laydown");
                 break;
         }
     }

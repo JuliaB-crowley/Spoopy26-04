@@ -13,6 +13,8 @@ public class JUB_DialogueManager : MonoBehaviour
     public Image faceImage;
     public Transform resizeCanvas;
     public float timeBetweenLetters;
+    public bool isReading;
+    public string actualPhrase;
 
     JUB_Maeve maeve;
     Controller controller;
@@ -54,18 +56,34 @@ public class JUB_DialogueManager : MonoBehaviour
 
     public void DisplayNextSentence()
     {
-        if(sentences.Count == 0)
+        Debug.LogWarning(sentences);
+        maeve.isInDialogue = false;
+        if(sentences.Count == 0 && isReading == false)
         {
             EndDialogue();
             return;
         }
 
-        string sentence = sentences.Dequeue();
+
+        maeve.isInDialogue = true;
         StopAllCoroutines();
-        Sprite sprite = imageNPC.Dequeue();
-        StartCoroutine(TypeSentence(sentence));
-        faceImage.sprite = sprite;
-        Debug.LogWarning(sentence);
+
+        if (isReading)
+        { 
+            StopAllCoroutines();
+            text.text = actualPhrase;
+            isReading = false;
+        }
+        else
+        {
+            string sentence = sentences.Dequeue();
+            Sprite sprite = imageNPC.Dequeue();
+            StartCoroutine(TypeSentence(sentence));
+            isReading = true;
+            actualPhrase = sentence;
+            faceImage.sprite = sprite;
+            Debug.LogWarning(sentence);
+        }
     }
 
     IEnumerator TypeSentence(string sentence)
@@ -76,12 +94,13 @@ public class JUB_DialogueManager : MonoBehaviour
             text.text += letter;
             yield return StartCoroutine(JUB_RealtimeCoroutine.WaitForRealSeconds(timeBetweenLetters));
         }
+        isReading = false;
     }
 
     void EndDialogue()
     {
+        Debug.LogWarning("je passe par là");
         Time.timeScale = 1f;
-        maeve.isInDialogue = false;
         resizeCanvas.localScale = Vector3.zero;
     }
 }
