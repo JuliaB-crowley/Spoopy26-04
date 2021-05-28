@@ -13,6 +13,8 @@ public class JUB_IntroEvent : MonoBehaviour
     public float timeBetweenLetters;
 
     public string nomSceneSuivante;
+    bool isReading;
+    string actualPhrase;
 
     Controller controller;
     // Start is called before the first frame update
@@ -48,10 +50,22 @@ public class JUB_IntroEvent : MonoBehaviour
             return;
         }
 
-        string sentence = sentences.Dequeue();
         StopAllCoroutines();
-        StartCoroutine(TypeSentence(sentence));
-        Debug.LogWarning(sentence);
+
+        if (isReading)
+        {
+            StopAllCoroutines();
+            text.text = actualPhrase;
+            isReading = false;
+        }
+        else
+        {
+            string sentence = sentences.Dequeue();
+            StartCoroutine(TypeSentence(sentence));
+            isReading = true;
+            actualPhrase = sentence;
+            Debug.LogWarning(sentence);
+        }
     }
 
     IEnumerator TypeSentence(string sentence)
@@ -62,6 +76,7 @@ public class JUB_IntroEvent : MonoBehaviour
             text.text += letter;
             yield return StartCoroutine(JUB_RealtimeCoroutine.WaitForRealSeconds(timeBetweenLetters));
         }
+        isReading = false;
     }
 
     void EndDialogue()

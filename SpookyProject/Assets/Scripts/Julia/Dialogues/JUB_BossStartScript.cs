@@ -17,6 +17,8 @@ public class JUB_BossStartScript : MonoBehaviour
     JUB_Maeve maeve;
     Controller controller;
     public JUB_Dialogue introBossDialogue;
+    bool isReading;
+    string actualPhrase;
 
     public bool dialogueWasSaid;
     // Start is called before the first frame update
@@ -64,12 +66,25 @@ public class JUB_BossStartScript : MonoBehaviour
             return;
         }
 
-        string sentence = sentences.Dequeue();
+        
         StopAllCoroutines();
-        Sprite sprite = imageNPC.Dequeue();
-        StartCoroutine(TypeSentence(sentence));
-        faceImage.sprite = sprite;
-        Debug.LogWarning(sentence);
+
+        if (isReading)
+        {
+            StopAllCoroutines();
+            text.text = actualPhrase;
+            isReading = false;
+        }
+        else
+        {
+            string sentence = sentences.Dequeue();
+            Sprite sprite = imageNPC.Dequeue();
+            StartCoroutine(TypeSentence(sentence));
+            isReading = true;
+            actualPhrase = sentence;
+            faceImage.sprite = sprite;
+            Debug.LogWarning(sentence);
+        }
     }
 
     IEnumerator TypeSentence(string sentence)
@@ -80,6 +95,7 @@ public class JUB_BossStartScript : MonoBehaviour
             text.text += letter;
             yield return StartCoroutine(JUB_RealtimeCoroutine.WaitForRealSeconds(timeBetweenLetters));
         }
+        isReading = false;
     }
 
     void EndDialogue()

@@ -69,7 +69,7 @@ public class JUB_DialogueManager : MonoBehaviour
         StopAllCoroutines();
 
         if (isReading)
-        { 
+        {
             StopAllCoroutines();
             text.text = actualPhrase;
             isReading = false;
