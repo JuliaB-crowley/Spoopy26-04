@@ -1258,7 +1258,7 @@ MonoBehaviour:
   timeRed: 0.5
   rendererMaeve: {fileID: 2346143091938068979}
   actualCheckpoint: {fileID: 0}
-  deathAnimDuration: 0
+  deathAnimDuration: 0.3
   interactAndPushableRange: 1.2
   maxLife: 6
   currentLife: 0

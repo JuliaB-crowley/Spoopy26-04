@@ -11,6 +11,7 @@ public class JUB_BossBehavior : MonoBehaviour
     public bool canBeFlashed, isFlashed;
     public LayerMask playerLayer;
     public JUB_Maeve maeve;
+    
 
     public float immunityTime;
     public bool isInImmunity;
@@ -43,8 +44,10 @@ public class JUB_BossBehavior : MonoBehaviour
     public Animator graphicAnimator;
     public SpriteRenderer bossRenderer;
     Color originalColor;
-    public float startAnimationTime = 1f, timered;
+    public float startAnimationTime = 1f, deathAnimationTime = 1f, timered;
     public bool isInAttack, isBurned, isBlinking;
+
+    public JUB_Dialogue endDialogue;
 
     // Start is called before the first frame update
     void Start()
@@ -63,41 +66,44 @@ public class JUB_BossBehavior : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(bossHitNumber == 0)
+        if (isInCombat)
         {
-            if (!isInAttack && !isFlashed)
+            if (bossHitNumber == 0)
             {
-                SetAnimation(0);
+                if (!isInAttack && !isFlashed)
+                {
+                    SetAnimation(0);
+                }
             }
-        }
-        else if(bossHitNumber == 1 && !isBlinking)
-        {
-            isBlinking = true;
-            StartCoroutine(EyesClosingCoroutine()); //coroutine d'ouverture et de fermeture d'yeux
-        }
+            else if (bossHitNumber == 1 && !isBlinking)
+            {
+                isBlinking = true;
+                StartCoroutine(EyesClosingCoroutine()); //coroutine d'ouverture et de fermeture d'yeux
+            }
 
-        if(tailFlashManager.burned && bossHitNumber >= 2)
-        {
-            isBurned = true;
-            canBeFlashed = true;
-            StartCoroutine(BurnTailRecovery()); //celui ci doit lancer le compteur de temps avant que la queue ne soit plus brulée
-        }
+            if (tailFlashManager.burned && bossHitNumber >= 2)
+            {
+                isBurned = true;
+                canBeFlashed = true;
+                StartCoroutine(BurnTailRecovery()); //celui ci doit lancer le compteur de temps avant que la queue ne soit plus brulée
+            }
 
-        if(canBeFlashed && flashManager.flashed)
-        {
-            isFlashed = true; //empeche l'attaque de pattes
-            StartCoroutine(FlashRecovery()); //recovery du flash
-        }
+            if (canBeFlashed && flashManager.flashed)
+            {
+                isFlashed = true; //empeche l'attaque de pattes
+                StartCoroutine(FlashRecovery()); //recovery du flash
+            }
 
-        if(bossHitNumber >= 2 && !isBurned && !isFlashed && !isInAttack)
-        {
-            SetAnimation(3);
+            if (bossHitNumber >= 2 && !isBurned && !isFlashed && !isInAttack)
+            {
+                SetAnimation(3);
+            }
         }
     }
 
     public void TakeDamage()
     {
-        if (!isInImmunity)
+        if (!isInImmunity && isInCombat)
         {
             bossHitNumber++;
             isInImmunity = true;
@@ -128,13 +134,22 @@ public class JUB_BossBehavior : MonoBehaviour
     {
         isInCombat = false;
         SetAnimation(-1);
+        StartCoroutine(EndBattleCoroutine());
         //Time.timeScale = 0f;
         //lancer dialogue
+    }
+    
+    IEnumerator EndBattleCoroutine()
+    {
+        yield return new WaitForSeconds(deathAnimationTime);
+        Time.timeScale = 0f;
+        GameObject.FindGameObjectWithTag("DialogueManager").GetComponent<JUB_DialogueManager>().StartDialogue(endDialogue);
+
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if(collision.CompareTag("Player") && !isFlashed)
+        if(collision.CompareTag("Player") && !isFlashed && isInCombat)
         {
             SMBanimator.Play("PawAttack");
         }
@@ -184,8 +199,11 @@ public class JUB_BossBehavior : MonoBehaviour
 
     public void StartFight()
     {
-        SetAnimation(-2);
-        StartCoroutine(StartFightCoroutine());
+        if (isInCombat == false)
+        {
+            StartCoroutine(StartFightCoroutine());
+            SetAnimation(-2);
+        }
 
     }
 
