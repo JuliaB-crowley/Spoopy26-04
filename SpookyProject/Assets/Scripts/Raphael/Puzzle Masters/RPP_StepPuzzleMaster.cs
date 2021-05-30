@@ -8,9 +8,10 @@ public class RPP_StepPuzzleMaster : MonoBehaviour
     public int stepsRequired; // Combien de dalles le joueur doit bien activer pour réussir
     public int currentSteps = 0; // Combien de dalles le joueur à marché
     public int correctSteps = 0; // Combien de dalles correctes le joueur à marché
-    public bool playesIsPresent = false, playerHasFailed = false, playerHasSucceeded = false, puzzleHasBeenCompleted = false; // des bools qui checkent la progréssion du joueur dans le niveau
+    public bool playerHasFailed = false, playerHasSucceeded = false, puzzleHasBeenCompleted = false; // des bools qui checkent la progréssion du joueur dans le niveau
     [SerializeField] RPP_GeneralPuzzleMaster puzzleMaster;
     [SerializeField] bool needPzMnA = true, needPzMnB, needPzMnC, needPzMnD, needPzMnE, needPzMnF, needPzMnG;
+    [SerializeField] RPP_IndividualStep[] steps;
 
     private void Start()
     {
@@ -48,7 +49,7 @@ public class RPP_StepPuzzleMaster : MonoBehaviour
     {
         if(currentSteps >= stepsRequired) //Check de tentative du joueur
         {
-            if(correctSteps >= stepsRequired && !puzzleHasBeenCompleted) //Le joueur à réussit
+            if(correctSteps == stepsRequired && !puzzleHasBeenCompleted) //Le joueur à réussit
             {
                 puzzleHasBeenCompleted = true;
                 playerHasSucceeded = true;
@@ -57,38 +58,23 @@ public class RPP_StepPuzzleMaster : MonoBehaviour
             }
             else if(correctSteps < stepsRequired) // Le joueur à échoué. Il doit sortir des dalles pour les reset puis récommencer
             {
-                playerHasFailed = true;
-                correctSteps = 0;
-                currentSteps = 0;
+                StartCoroutine(ResetTiles());
             }
 
         }
     }
 
-
-    //Check si le joueur est présent
-    private void OnTriggerEnter2D(Collider2D collision)
-    {
-        if (collision.CompareTag("Player"))
-        {
-            playesIsPresent = true;
-        }
-    }
-
-    //Check si le joueur n'est plus présent
-    private void OnTriggerExit2D(Collider2D collision)
-    {
-        if (collision.CompareTag("Player"))
-        {
-            StartCoroutine(ResetTiles());
-        }
-    }
-
     //J'ai besoin que les deux bools soyent opposés pendant quelques frames pour que je puisse reset les dalles
     IEnumerator ResetTiles()
-    {
-        playesIsPresent = false;
-        yield return new WaitForSeconds(0.02f);
+    {       
+        playerHasFailed = true;
+        yield return new WaitForSeconds(0.5f);
+        currentSteps = 0;
+        correctSteps = 0;
+        foreach (RPP_IndividualStep item in steps)
+        {
+            item.ResetStep();
+        }
         playerHasFailed = false;
     }   
 }
