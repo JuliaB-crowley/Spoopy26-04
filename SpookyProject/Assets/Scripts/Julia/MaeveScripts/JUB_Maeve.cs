@@ -7,6 +7,7 @@ using System.Runtime.InteropServices.ComTypes;
 using UnityEngine;
 using UnityEngine.SocialPlatforms;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 namespace character
 {
@@ -23,13 +24,14 @@ namespace character
         Controller controller;
         public float speed, rollSpeed, rollDuration, rollRecover, crouchSpeed, xVelocity, yVelocity, accelerationTime;
         Vector2 rStick, lStick, lStickNormalised, lastDirection, rollDirection, targetSpeed, currentSpeed;
-        public float lastAngle;
+        public float lastAngle, correctionAngle;
         public DirectionAngle dirAngle;
         public DirectionObject dirObject;
+        public float knockbackDuration, knockbackForce;
 
 
         [SerializeField]
-        bool isInRoll,  isInRecoil, isInImmunity, isInRecover, isPushingObject;
+        bool isInRoll,  isInRecoil, isInImmunity, isInRecover, isPushingObject, isInKnockback;
         public bool isFlashing;
         public LayerMask pushableObjects, interactibleObjects;
         public bool isCrouching;
@@ -67,11 +69,16 @@ namespace character
         //anim
         public int animationIndex; //-1 mort, 0 idle, 1 course, 2 attaque, 3 flash, 4 roulade, 5 accroupi, 6 déplacement objet, 7 accroupi iddle, 8 immunité
         public Animator maeveAnimator;
+        public GameObject deathCanvas;
+        public string jeuSceneName;
+        public GameObject mainCam;
+        public float ennemyScreenshakeAmount, bossScreenshakeAmount, screenshakeDuration;
 
         // Start is called before the first frame update
         void Start()
         {
             rigidBody = GetComponent<Rigidbody2D>();
+            mainCam = GameObject.FindGameObjectWithTag("MainCamera");
             controller = new Controller();
             controller.Enable();
             displayBonbons.text = currentBonbons.ToString();
@@ -80,6 +87,7 @@ namespace character
             AttackProfile heavyAttack = new AttackProfile(3, new Vector2(2, 1), 0.4f, 0.8f, "heavy");
 
             currentLife = maxLife;
+            deathCanvas.SetActive(false);
 
 
             controller.MainController.Roll.performed += ctx => Roll();  
@@ -97,7 +105,11 @@ namespace character
             Inputs();
             InteractSphere();
             PushableSphere();
-            Move();
+            if (!isInKnockback)
+            {
+                Move();
+
+            }
 
             displayLife.text = currentLife.ToString() + " / " + maxLife.ToString();
             if (currentLife > maxLife)
@@ -126,16 +138,17 @@ namespace character
             {
                 lastDirection = lStickNormalised;
                 lastAngle = Vector2.Angle(Vector2.up, lastDirection);
+                correctionAngle = Vector2.Angle(Vector2.left, lastDirection);
 
-                if(lastAngle > -45 && lastAngle < 45)
+                if(lastAngle >= -45 && lastAngle <= 45)
                 {
                     dirAngle = DirectionAngle.North;
                 }
-                else if(45 < lastAngle && lastAngle < 135 && xVelocity > 0)
+                else if(45 < lastAngle && lastAngle < 135 && correctionAngle > 90)
                 {
                     dirAngle = DirectionAngle.Est;
                 }
-                else if(45 < lastAngle && lastAngle < 135 && xVelocity < 0)
+                else if(45 < lastAngle && lastAngle < 135 && correctionAngle < 90)
                 {
                     dirAngle = DirectionAngle.West;
                 }
@@ -377,6 +390,7 @@ namespace character
                             if (ennemy.GetComponent<JUB_EnnemyDamage>())
                             {
                                 ennemy.GetComponent<JUB_EnnemyDamage>().TakeDamage(attackProfile.atkDamage);
+                                StartCoroutine(CameraShake(screenshakeDuration, ennemyScreenshakeAmount));
                                 Debug.Log("attack was performed");
                                 ennemiesHitLastTime.Add(ennemy);
 
@@ -396,10 +410,31 @@ namespace character
             foreach(Collider2D jewel in hitBoss)
             {
                 jewel.GetComponentInParent<JUB_BossBehavior>().TakeDamage();
+                StartCoroutine(CameraShake(screenshakeDuration, bossScreenshakeAmount));
             }
 
             yield return new WaitForSeconds(attackProfile.atkRecover);
             isInRecover = false;
+        }
+
+        IEnumerator CameraShake(float duration, float magnitude)
+        {
+            Vector2 originalPos = mainCam.transform.localPosition;
+
+            float elapsed = 0f;
+
+            while (elapsed < duration)
+            {
+                float x = UnityEngine.Random.Range(-1f, 1f) * magnitude;
+                float y = UnityEngine.Random.Range(-1f, 1f) * magnitude;
+                mainCam.transform.localPosition = new Vector2(x, y);
+
+                elapsed += Time.deltaTime;
+
+                yield return null;
+            }
+
+            mainCam.transform.localPosition = originalPos;
         }
 
         private void OnDrawGizmosSelected()
@@ -596,7 +631,7 @@ namespace character
 
         //fonctions liées au HUD
 
-        public void TakeDamages(int damages)
+        public void TakeDamages(int damages, Vector3 monsterPosition)
         {
             if (!isInImmunity)
             {
@@ -606,10 +641,30 @@ namespace character
                     currentLife = 0;
                     Die();
                 }
+                Knockback(monsterPosition);
                 Immunity(immunityTime);
                 StartCoroutine(RedFrameCoroutine());
             }
         }
+
+        public void Knockback(Vector3 monsterPosition)
+        {
+            isInKnockback = true;
+            Vector2 direction = (monsterPosition - this.transform.position).normalized;
+            Debug.LogWarning("position" + direction);
+            rigidBody.velocity = (-direction * knockbackForce);
+            StartCoroutine(KnockbackCoroutine());
+        }
+
+        IEnumerator KnockbackCoroutine()
+        {
+            yield return new WaitForSeconds(knockbackDuration);
+            Debug.LogWarning(rigidBody.velocity);
+            rigidBody.velocity = Vector2.zero;
+            isInKnockback = false;
+        }
+
+
 
         public void Immunity(float immuTime)
         {
@@ -650,8 +705,6 @@ namespace character
 
         void Die()
         {
-            //RIP
-            //anim mort
             StartCoroutine(DeathCoroutine());
             //respawn checkpoint
         }
@@ -659,9 +712,23 @@ namespace character
         IEnumerator DeathCoroutine()
         {
             yield return new WaitForSeconds(deathAnimDuration);
+            deathCanvas.SetActive(true);
+           
+        }
+
+        public void Respawn()
+        {
+            deathCanvas.SetActive(false);
             this.gameObject.transform.position = actualCheckpoint.position;
             Heal(maxLife);
             Immunity(immunityTime);
+        }
+
+        public void Quit()
+        {
+            deathCanvas.SetActive(false);
+            Destroy(this.gameObject);
+            Application.Quit();
         }
 
         public void GainBonbons(int bonbons)
@@ -699,7 +766,7 @@ namespace character
 
             if (collision.CompareTag("DamageDealer"))
             {
-                TakeDamages(collision.GetComponent<JUB_DamagingEvent>().damageAmount);
+                TakeDamages(collision.GetComponent<JUB_DamagingEvent>().damageAmount, collision.transform.position);
             }
         }
 
@@ -924,6 +991,8 @@ namespace character
                     break;
 
             }
+
+
                 
         }
     }

@@ -10,6 +10,8 @@ public class ImpSMB_Sprint : StateMachineBehaviour
     // OnStateEnter is called when a transition starts and the state machine starts to evaluate this state
     override public void OnStateEnter(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
+        imp.SetAnimation(2);
+
         Debug.LogWarning("was called");
 
         imp.pathfinder.maxSpeed = imp.sprintSpeed;

@@ -7,21 +7,21 @@ public class JUB_FlashManager : MonoBehaviour
     public bool burned, flashed;
     public float flashTime = 1;
 
-    public void FlashEnd()
+    public void FlashEnd(float timeFlashing)
     {
-        StartCoroutine(FlashEndCoroutine());
+        StartCoroutine(FlashEndCoroutine(timeFlashing));
     }
-    public IEnumerator FlashEndCoroutine()
+    public IEnumerator FlashEndCoroutine(float timeFlashing)
     {
         yield return new WaitForSeconds(flashTime);
         flashed = false;
         Debug.Log("flash désactivé");
     }
-    public void BurnEnd()
+    public void BurnEnd(float timeBurning)
     {
-        StartCoroutine(BurnEndCoroutine());
+        StartCoroutine(BurnEndCoroutine(timeBurning));
     }
-    public IEnumerator BurnEndCoroutine()
+    public IEnumerator BurnEndCoroutine(float timeBurning)
     {
         yield return new WaitForSeconds(flashTime);
         burned = false;

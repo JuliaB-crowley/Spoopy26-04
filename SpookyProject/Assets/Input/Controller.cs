@@ -385,6 +385,38 @@ public class @Controller : IInputActionCollection, IDisposable
                     ""expectedControlType"": ""Button"",
                     ""processors"": """",
                     ""interactions"": """"
+                },
+                {
+                    ""name"": ""LifePlus"",
+                    ""type"": ""Button"",
+                    ""id"": ""7173953b-8f09-4422-ae25-9232cd123970"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """"
+                },
+                {
+                    ""name"": ""MoneyPlus"",
+                    ""type"": ""Button"",
+                    ""id"": ""063097c1-36d2-4684-bcb3-ebf9fd45aced"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """"
+                },
+                {
+                    ""name"": ""Donjon"",
+                    ""type"": ""Button"",
+                    ""id"": ""91f0e626-487e-4702-8dbb-adb699fac04b"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """"
+                },
+                {
+                    ""name"": ""Boss"",
+                    ""type"": ""Button"",
+                    ""id"": ""37f85ec3-4faa-46a7-b20b-40055737cbd9"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """"
                 }
             ],
             ""bindings"": [
@@ -420,6 +452,50 @@ public class @Controller : IInputActionCollection, IDisposable
                     ""action"": ""Dialogues"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""7b7254d9-1c8d-44f1-b697-233e05ce2d32"",
+                    ""path"": ""<Keyboard>/l"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""LifePlus"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""d2b238d3-06cd-4bfb-ba1d-3bd9d6a985ec"",
+                    ""path"": ""<Keyboard>/semicolon"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""MoneyPlus"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""b9603dc3-c392-49e6-b5ec-5ea247008676"",
+                    ""path"": ""<Keyboard>/o"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Donjon"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""92d93a36-c227-4ec1-b9f2-7fc7fdeb2a68"",
+                    ""path"": ""<Keyboard>/p"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Boss"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
                 }
             ]
         }
@@ -442,6 +518,10 @@ public class @Controller : IInputActionCollection, IDisposable
         m_Menu = asset.FindActionMap("Menu", throwIfNotFound: true);
         m_Menu_Menu = m_Menu.FindAction("Menu", throwIfNotFound: true);
         m_Menu_Dialogues = m_Menu.FindAction("Dialogues", throwIfNotFound: true);
+        m_Menu_LifePlus = m_Menu.FindAction("LifePlus", throwIfNotFound: true);
+        m_Menu_MoneyPlus = m_Menu.FindAction("MoneyPlus", throwIfNotFound: true);
+        m_Menu_Donjon = m_Menu.FindAction("Donjon", throwIfNotFound: true);
+        m_Menu_Boss = m_Menu.FindAction("Boss", throwIfNotFound: true);
     }
 
     public void Dispose()
@@ -598,12 +678,20 @@ public class @Controller : IInputActionCollection, IDisposable
     private IMenuActions m_MenuActionsCallbackInterface;
     private readonly InputAction m_Menu_Menu;
     private readonly InputAction m_Menu_Dialogues;
+    private readonly InputAction m_Menu_LifePlus;
+    private readonly InputAction m_Menu_MoneyPlus;
+    private readonly InputAction m_Menu_Donjon;
+    private readonly InputAction m_Menu_Boss;
     public struct MenuActions
     {
         private @Controller m_Wrapper;
         public MenuActions(@Controller wrapper) { m_Wrapper = wrapper; }
         public InputAction @Menu => m_Wrapper.m_Menu_Menu;
         public InputAction @Dialogues => m_Wrapper.m_Menu_Dialogues;
+        public InputAction @LifePlus => m_Wrapper.m_Menu_LifePlus;
+        public InputAction @MoneyPlus => m_Wrapper.m_Menu_MoneyPlus;
+        public InputAction @Donjon => m_Wrapper.m_Menu_Donjon;
+        public InputAction @Boss => m_Wrapper.m_Menu_Boss;
         public InputActionMap Get() { return m_Wrapper.m_Menu; }
         public void Enable() { Get().Enable(); }
         public void Disable() { Get().Disable(); }
@@ -619,6 +707,18 @@ public class @Controller : IInputActionCollection, IDisposable
                 @Dialogues.started -= m_Wrapper.m_MenuActionsCallbackInterface.OnDialogues;
                 @Dialogues.performed -= m_Wrapper.m_MenuActionsCallbackInterface.OnDialogues;
                 @Dialogues.canceled -= m_Wrapper.m_MenuActionsCallbackInterface.OnDialogues;
+                @LifePlus.started -= m_Wrapper.m_MenuActionsCallbackInterface.OnLifePlus;
+                @LifePlus.performed -= m_Wrapper.m_MenuActionsCallbackInterface.OnLifePlus;
+                @LifePlus.canceled -= m_Wrapper.m_MenuActionsCallbackInterface.OnLifePlus;
+                @MoneyPlus.started -= m_Wrapper.m_MenuActionsCallbackInterface.OnMoneyPlus;
+                @MoneyPlus.performed -= m_Wrapper.m_MenuActionsCallbackInterface.OnMoneyPlus;
+                @MoneyPlus.canceled -= m_Wrapper.m_MenuActionsCallbackInterface.OnMoneyPlus;
+                @Donjon.started -= m_Wrapper.m_MenuActionsCallbackInterface.OnDonjon;
+                @Donjon.performed -= m_Wrapper.m_MenuActionsCallbackInterface.OnDonjon;
+                @Donjon.canceled -= m_Wrapper.m_MenuActionsCallbackInterface.OnDonjon;
+                @Boss.started -= m_Wrapper.m_MenuActionsCallbackInterface.OnBoss;
+                @Boss.performed -= m_Wrapper.m_MenuActionsCallbackInterface.OnBoss;
+                @Boss.canceled -= m_Wrapper.m_MenuActionsCallbackInterface.OnBoss;
             }
             m_Wrapper.m_MenuActionsCallbackInterface = instance;
             if (instance != null)
@@ -629,6 +729,18 @@ public class @Controller : IInputActionCollection, IDisposable
                 @Dialogues.started += instance.OnDialogues;
                 @Dialogues.performed += instance.OnDialogues;
                 @Dialogues.canceled += instance.OnDialogues;
+                @LifePlus.started += instance.OnLifePlus;
+                @LifePlus.performed += instance.OnLifePlus;
+                @LifePlus.canceled += instance.OnLifePlus;
+                @MoneyPlus.started += instance.OnMoneyPlus;
+                @MoneyPlus.performed += instance.OnMoneyPlus;
+                @MoneyPlus.canceled += instance.OnMoneyPlus;
+                @Donjon.started += instance.OnDonjon;
+                @Donjon.performed += instance.OnDonjon;
+                @Donjon.canceled += instance.OnDonjon;
+                @Boss.started += instance.OnBoss;
+                @Boss.performed += instance.OnBoss;
+                @Boss.canceled += instance.OnBoss;
             }
         }
     }
@@ -650,5 +762,9 @@ public class @Controller : IInputActionCollection, IDisposable
     {
         void OnMenu(InputAction.CallbackContext context);
         void OnDialogues(InputAction.CallbackContext context);
+        void OnLifePlus(InputAction.CallbackContext context);
+        void OnMoneyPlus(InputAction.CallbackContext context);
+        void OnDonjon(InputAction.CallbackContext context);
+        void OnBoss(InputAction.CallbackContext context);
     }
 }
