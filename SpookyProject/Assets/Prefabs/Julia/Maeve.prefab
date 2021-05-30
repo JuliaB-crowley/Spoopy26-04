@@ -1288,6 +1288,10 @@ MonoBehaviour:
   maeveAnimator: {fileID: 2588054932057960255}
   deathCanvas: {fileID: 603992811953839225}
   jeuSceneName: Main
+  mainCam: {fileID: 0}
+  ennemyScreenshakeAmount: 0.4
+  bossScreenshakeAmount: 0.6
+  screenshakeDuration: 0.15
 --- !u!50 &5857361522451789454
 Rigidbody2D:
   serializedVersion: 4

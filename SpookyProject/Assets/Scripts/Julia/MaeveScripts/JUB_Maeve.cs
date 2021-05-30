@@ -71,11 +71,14 @@ namespace character
         public Animator maeveAnimator;
         public GameObject deathCanvas;
         public string jeuSceneName;
+        public GameObject mainCam;
+        public float ennemyScreenshakeAmount, bossScreenshakeAmount, screenshakeDuration;
 
         // Start is called before the first frame update
         void Start()
         {
             rigidBody = GetComponent<Rigidbody2D>();
+            mainCam = GameObject.FindGameObjectWithTag("MainCamera");
             controller = new Controller();
             controller.Enable();
             displayBonbons.text = currentBonbons.ToString();
@@ -387,6 +390,7 @@ namespace character
                             if (ennemy.GetComponent<JUB_EnnemyDamage>())
                             {
                                 ennemy.GetComponent<JUB_EnnemyDamage>().TakeDamage(attackProfile.atkDamage);
+                                StartCoroutine(CameraShake(screenshakeDuration, ennemyScreenshakeAmount));
                                 Debug.Log("attack was performed");
                                 ennemiesHitLastTime.Add(ennemy);
 
@@ -406,10 +410,31 @@ namespace character
             foreach(Collider2D jewel in hitBoss)
             {
                 jewel.GetComponentInParent<JUB_BossBehavior>().TakeDamage();
+                StartCoroutine(CameraShake(screenshakeDuration, bossScreenshakeAmount));
             }
 
             yield return new WaitForSeconds(attackProfile.atkRecover);
             isInRecover = false;
+        }
+
+        IEnumerator CameraShake(float duration, float magnitude)
+        {
+            Vector2 originalPos = mainCam.transform.localPosition;
+
+            float elapsed = 0f;
+
+            while (elapsed < duration)
+            {
+                float x = UnityEngine.Random.Range(-1f, 1f) * magnitude;
+                float y = UnityEngine.Random.Range(-1f, 1f) * magnitude;
+                mainCam.transform.localPosition = new Vector2(x, y);
+
+                elapsed += Time.deltaTime;
+
+                yield return null;
+            }
+
+            mainCam.transform.localPosition = originalPos;
         }
 
         private void OnDrawGizmosSelected()
@@ -966,6 +991,8 @@ namespace character
                     break;
 
             }
+
+
                 
         }
     }
