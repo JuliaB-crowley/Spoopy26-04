@@ -10,6 +10,14 @@ public class JUB_QuestManager : MonoBehaviour
     public Text questBookText;
     public JUB_DialogueManager dialogueManager;
     public bool firstKeyPartObtained = false;
+    public JUB_Dialogue Intro;
+    public JUB_Dialogue MamieCitrouille;
+    public JUB_Dialogue MaisonPortail;
+    public JUB_Dialogue FirstKey;
+    public JUB_Dialogue SecondKey;
+    public JUB_Dialogue QuartierEst;
+    public JUB_Dialogue RentrerChezMoi;
+    public JUB_Dialogue Gardien;
     // Start is called before the first frame update
     void Start()
     {
@@ -26,11 +34,36 @@ public class JUB_QuestManager : MonoBehaviour
         if(!firstKeyPartObtained && ItemID == 4)
         {
             firstKeyPartObtained = true;
+            dialogueManager.StartDialogue(FirstKey);
 
         }
         if(firstKeyPartObtained && ItemID == 4)
         {
             questBookText.text = objectivesName[5];
+            dialogueManager.StartDialogue(SecondKey);
+        }
+        if(ItemID == 1){
+            dialogueManager.StartDialogue(Intro);
+        }
+        if (ItemID == 2)
+        {
+            dialogueManager.StartDialogue(MamieCitrouille);
+        }
+        if(ItemID == 3)
+        {
+            dialogueManager.StartDialogue(MaisonPortail);
+        }
+        if(ItemID == 6)
+        {
+            dialogueManager.StartDialogue(QuartierEst);
+        }
+        if(ItemID == 7)
+        {
+            dialogueManager.StartDialogue(RentrerChezMoi);
+        }
+        if(ItemID == 8)
+        {
+            dialogueManager.StartDialogue(Gardien);
         }
     }
 }
