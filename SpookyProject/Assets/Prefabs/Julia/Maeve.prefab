@@ -292,6 +292,292 @@ MonoBehaviour:
   questBookText: {fileID: 4277342107428785635}
   dialogueManager: {fileID: 0}
   firstKeyPartObtained: 0
+  Intro:
+    sentences:
+    - "Bon bah voil\xE0 !! On est sortis !\r"
+    - "On peut aller s\u2019amuser maintenant !"
+    - "Euh...Mais on est o\xF9 ? C'est pas chez moi ici !\r"
+    - "Ah \xE7a, en fait nous sommes dans un autre monde!"
+    - "Mais je vais te passer les d\xE9tails \xE7a serait trop long.\r"
+    - "Sache juste qu\u2019ici c'est Halloween pour toujours !!\r"
+    - "Euh\u2026 petit chat ?\r"
+    - "Pourquoi ma peau est verte d\u2019un coup ??\r"
+    - ...
+    - 'Ah oui effectivement!
+
+'
+    - "\xC7a doit \xEAtre parce que tu as seulement une partie de d\xE9guisement
+      de sorci\xE8re.\r"
+    - "Dans ce monde les enfants se transforment compl\xE8tement en leurs d\xE9guisements.
+      Un peu comme ce gamin dans le stade de base ball qui t\u2019as attaqu\xE9."
+    - "Mais pourquoi les autres enfants m\u2019attaquent ?\r"
+    - "Bah pour la seule chose qui en vaille la peine\u2026\r"
+    - DES BONBONS !!
+    - Des bonbons ??
+    - "C\u2019est Halloween tout le temps, donc ce monde est rempli de bonbons!!"
+    - Chouette !! Allons en chercher alors!
+    - "Au fait, si tu ne sais pas quoi faire de tes bonbons,  va voir la vieille
+      dame qui est l\xE0-bas."
+    npcFaces:
+    - {fileID: 21300000, guid: d5fff1667331a3f4ab46f580c7503862, type: 3}
+    - {fileID: 21300000, guid: d5fff1667331a3f4ab46f580c7503862, type: 3}
+    - {fileID: 21300000, guid: 283f39941bffbcd49a3cb68e9e820e37, type: 3}
+    - {fileID: 21300000, guid: d5fff1667331a3f4ab46f580c7503862, type: 3}
+    - {fileID: 21300000, guid: d5fff1667331a3f4ab46f580c7503862, type: 3}
+    - {fileID: 21300000, guid: d5fff1667331a3f4ab46f580c7503862, type: 3}
+    - {fileID: 21300000, guid: 283f39941bffbcd49a3cb68e9e820e37, type: 3}
+    - {fileID: 21300000, guid: 283f39941bffbcd49a3cb68e9e820e37, type: 3}
+    - {fileID: 21300000, guid: d5fff1667331a3f4ab46f580c7503862, type: 3}
+    - {fileID: 21300000, guid: d5fff1667331a3f4ab46f580c7503862, type: 3}
+    - {fileID: 21300000, guid: d5fff1667331a3f4ab46f580c7503862, type: 3}
+    - {fileID: 21300000, guid: d5fff1667331a3f4ab46f580c7503862, type: 3}
+    - {fileID: 21300000, guid: 283f39941bffbcd49a3cb68e9e820e37, type: 3}
+    - {fileID: 21300000, guid: d5fff1667331a3f4ab46f580c7503862, type: 3}
+    - {fileID: 21300000, guid: d5fff1667331a3f4ab46f580c7503862, type: 3}
+    - {fileID: 21300000, guid: 283f39941bffbcd49a3cb68e9e820e37, type: 3}
+    - {fileID: 21300000, guid: d5fff1667331a3f4ab46f580c7503862, type: 3}
+    - {fileID: 21300000, guid: 283f39941bffbcd49a3cb68e9e820e37, type: 3}
+    - {fileID: 21300000, guid: d5fff1667331a3f4ab46f580c7503862, type: 3}
+  MamieCitrouille:
+    sentences:
+    - "Tiens, bonjour mon enfant, tu m\u2019as l\u2019air moins\u2026 agressive que
+      les autres gamins.\r"
+    - "Agressifs? Ils ont juste l\u2019air un peu turbulents!\r"
+    - "On m\u2019a dit de venir vous voir pour les bonbons.\r"
+    - "DES BONBONS ??\r"
+    - "O\xF9 \xE7a ??\r"
+    - Euh...J'en ai quelques uns, pourquoi ?
+    - "Oh bah j\u2019adore \xE7a !!\r"
+    - "Il para\xEEt que ce n'est pas bon pour mes dents mais je doute que mon dentiste
+      me retrouve ici."
+    - "Bref, si tu as des bonbons je te les \xE9change contre quelques objets de
+      ma concoction."
+    npcFaces:
+    - {fileID: 21300000, guid: 8f93d8fb04fbc184ea14812152b3c6cf, type: 3}
+    - {fileID: 21300000, guid: 283f39941bffbcd49a3cb68e9e820e37, type: 3}
+    - {fileID: 21300000, guid: 283f39941bffbcd49a3cb68e9e820e37, type: 3}
+    - {fileID: 21300000, guid: 8f93d8fb04fbc184ea14812152b3c6cf, type: 3}
+    - {fileID: 21300000, guid: 8f93d8fb04fbc184ea14812152b3c6cf, type: 3}
+    - {fileID: 21300000, guid: 283f39941bffbcd49a3cb68e9e820e37, type: 3}
+    - {fileID: 21300000, guid: 8f93d8fb04fbc184ea14812152b3c6cf, type: 3}
+    - {fileID: 21300000, guid: 8f93d8fb04fbc184ea14812152b3c6cf, type: 3}
+    - {fileID: 21300000, guid: 8f93d8fb04fbc184ea14812152b3c6cf, type: 3}
+  MaisonPortail:
+    sentences:
+    - "C\u2019est ferm\xE9\u2026"
+    - "Comment on rentre ?\r"
+    - "Ah mince\u2026\r"
+    - "Alors si je me souviens bien le quartier Est a \xE9t\xE9 un peu\u2026 scell\xE9\r."
+    - "Mais on peut toujours y acc\xE9der!"
+    - "Il te faut les 2 moiti\xE9s de la cl\xE9, il y en a une au Nord et une au
+      Sud."
+    - Ah bah je vais pouvoir explorer la ville du coup!
+    - En avant !!
+    npcFaces:
+    - {fileID: 21300000, guid: 283f39941bffbcd49a3cb68e9e820e37, type: 3}
+    - {fileID: 21300000, guid: 283f39941bffbcd49a3cb68e9e820e37, type: 3}
+    - {fileID: 21300000, guid: d5fff1667331a3f4ab46f580c7503862, type: 3}
+    - {fileID: 21300000, guid: d5fff1667331a3f4ab46f580c7503862, type: 3}
+    - {fileID: 21300000, guid: d5fff1667331a3f4ab46f580c7503862, type: 3}
+    - {fileID: 21300000, guid: d5fff1667331a3f4ab46f580c7503862, type: 3}
+    - {fileID: 21300000, guid: 283f39941bffbcd49a3cb68e9e820e37, type: 3}
+    - {fileID: 21300000, guid: 283f39941bffbcd49a3cb68e9e820e37, type: 3}
+  FirstKey:
+    sentences:
+    - "Bravo ! Tu as finalement r\xE9ussi \xE0 trouver la premi\xE8re partie de la
+      clef !  Tu es \xE0 la moiti\xE9 du chemin ! Vas-y ! Fonce !"
+    - "F\u2026 fonce? Attends un peu Kit Cat\u2026 laisse\u2026 laisse-moi reprendre
+      mon souffle."
+    - "Quoi ? Tu ne vas pas me dire que tu es d\xE9j\xE0 fatigu\xE9e, non?"
+    - "\xC9videmment que je suis fatigu\xE9e !  Je viens de traverser tout un quartier
+      en courant, je ne suis pas une athl\xE8te, une super h\xE9ro\xEFne ou une vraie
+      sorci\xE8re : je suis juste une fille normale qui est fatigu\xE9e apr\xE8s
+      avoir couru sans cesse."
+    - ...
+    - "Quoi ? Le chat a mang\xE9 sa langue ?"
+    - " Non ! Rien ! C\u2019est juste que\u2026 je ne pense pas que tu sois juste
+      quelqu\u2019un de normal pour moi."
+    - "Awn, merci. Et qu\u2019est-ce que je serais alors ?"
+    - "\u2026"
+    - Kit Cat ?
+    - "\u2026 Tu es quelqu\u2019un de tr\xE8s fain\xE9ant ! HAHAHAHAHA ! Bon, assez
+      rigol\xE9, en avant. Tu as eu ta pause. Les bonbons ne vont pas se r\xE9cup\xE9rer
+      tout seuls."
+    - "H\xE9 ! Tu n\u2019es pas gentil !"
+    - "Je suis un chat. Qu'attendais-tu?\r"
+    npcFaces:
+    - {fileID: 21300000, guid: d5fff1667331a3f4ab46f580c7503862, type: 3}
+    - {fileID: 21300000, guid: 283f39941bffbcd49a3cb68e9e820e37, type: 3}
+    - {fileID: 21300000, guid: d5fff1667331a3f4ab46f580c7503862, type: 3}
+    - {fileID: 21300000, guid: 283f39941bffbcd49a3cb68e9e820e37, type: 3}
+    - {fileID: 21300000, guid: d5fff1667331a3f4ab46f580c7503862, type: 3}
+    - {fileID: 21300000, guid: 283f39941bffbcd49a3cb68e9e820e37, type: 3}
+    - {fileID: 21300000, guid: d5fff1667331a3f4ab46f580c7503862, type: 3}
+    - {fileID: 21300000, guid: 283f39941bffbcd49a3cb68e9e820e37, type: 3}
+    - {fileID: 21300000, guid: d5fff1667331a3f4ab46f580c7503862, type: 3}
+    - {fileID: 21300000, guid: 283f39941bffbcd49a3cb68e9e820e37, type: 3}
+    - {fileID: 21300000, guid: d5fff1667331a3f4ab46f580c7503862, type: 3}
+    - {fileID: 21300000, guid: 283f39941bffbcd49a3cb68e9e820e37, type: 3}
+    - {fileID: 21300000, guid: d5fff1667331a3f4ab46f580c7503862, type: 3}
+  SecondKey:
+    sentences:
+    - "Belissimo ! On poss\xE8de finalement l\u2019enti\xE8ret\xE9 de la clef ! Tu
+      n\u2019as qu\u2019\xE0 retourner \xE0 la Maison du Portail et\u2026 arr\xEAtes
+      de me regarder comme \xE7a."
+    - "Suis-je toujours une fain\xE9ante ?"
+    - ...Pardon ?
+    - "Tu sais tr\xE8s bien de quoi je parle. Tu m\u2019avais trait\xE9 de fain\xE9ante
+      quand on avait r\xE9cup\xE9r\xE9 la premi\xE8re moiti\xE9 de la clef."
+    - Ah oui ! Je me souviens ! Et quoi donc ?
+    - "Suis-je toujours une fain\xE9ante ?"
+    - "\xC9videmment que non ! Faut que tu arr\xEAtes de prendre tout au s\xE9rieux.
+      J\u2019\xE9tais juste en train d\u2019essayer de te motiver !"
+    - "...Certes, mais c\u2019\xE9tait quand m\xEAme pas tr\xE8s gentil."
+    - " \u2026 Euh\u2026 bah\u2026 d\xE9sol\xE9, voil\xE0."
+    - "Excuses accept\xE9es. De toute fa\xE7on, j\u2019ai toujours pr\xE9f\xE9r\xE9
+      les chiens."
+    - "QUOI !? Comment oses tu\u2026"
+    - "HAHAHAHA ! D\xE9sol\xE9 ! Je rigole, \xE9videmment, ils sont beaucoup trop
+      b\xEAtes."
+    - "\u2026 Hehehe. Alors \xE7a, c\u2019\xE9tait pas gentil."
+    - "Bon, assez tra\xEEn\xE9 comme \xE7a, retournons \xE0 la Maison du Portail."
+    npcFaces:
+    - {fileID: 21300000, guid: d5fff1667331a3f4ab46f580c7503862, type: 3}
+    - {fileID: 21300000, guid: 283f39941bffbcd49a3cb68e9e820e37, type: 3}
+    - {fileID: 21300000, guid: d5fff1667331a3f4ab46f580c7503862, type: 3}
+    - {fileID: 21300000, guid: 283f39941bffbcd49a3cb68e9e820e37, type: 3}
+    - {fileID: 21300000, guid: d5fff1667331a3f4ab46f580c7503862, type: 3}
+    - {fileID: 21300000, guid: 283f39941bffbcd49a3cb68e9e820e37, type: 3}
+    - {fileID: 21300000, guid: d5fff1667331a3f4ab46f580c7503862, type: 3}
+    - {fileID: 21300000, guid: 283f39941bffbcd49a3cb68e9e820e37, type: 3}
+    - {fileID: 21300000, guid: d5fff1667331a3f4ab46f580c7503862, type: 3}
+    - {fileID: 21300000, guid: 283f39941bffbcd49a3cb68e9e820e37, type: 3}
+    - {fileID: 21300000, guid: d5fff1667331a3f4ab46f580c7503862, type: 3}
+    - {fileID: 21300000, guid: 283f39941bffbcd49a3cb68e9e820e37, type: 3}
+    - {fileID: 21300000, guid: d5fff1667331a3f4ab46f580c7503862, type: 3}
+    - {fileID: 21300000, guid: 283f39941bffbcd49a3cb68e9e820e37, type: 3}
+  QuartierEst:
+    sentences:
+    - "\u2026 Eh !... attends\u2026 je connais ce quartier\u2026\r"
+    - "Ah bon ? Pourtant, c\u2019est la premi\xE8re fois qu\u2019on passe par l\xE0."
+    - "Oui !  J\u2019en suis s\xFBre. C\u2019est\u2026 c\u2019est le quartier o\xF9
+      j\u2019habite."
+    - "Tiens tiens. C\u2019est vrai que ce monde\u2026 \u201Cs\u2019inspire\u201D
+      de ton monde pour se d\xE9velopper. Je t'expliquerai avec plus de d\xE9tails
+      plus tard si tu veux. Pour le moment, allons chercher des bonbons !"
+    - "\u2026"
+    npcFaces:
+    - {fileID: 21300000, guid: 283f39941bffbcd49a3cb68e9e820e37, type: 3}
+    - {fileID: 21300000, guid: d5fff1667331a3f4ab46f580c7503862, type: 3}
+    - {fileID: 21300000, guid: 283f39941bffbcd49a3cb68e9e820e37, type: 3}
+    - {fileID: 21300000, guid: d5fff1667331a3f4ab46f580c7503862, type: 3}
+    - {fileID: 21300000, guid: 283f39941bffbcd49a3cb68e9e820e37, type: 3}
+  RentrerChezMoi:
+    sentences:
+    - "\u2026 C\u2019est chez moi ici."
+    - OUI !!! Regarde tous ces bonbons ! On a de quoi manger pendant des jours !
+    - "\u2026 Kit Cat je\u2026"
+    - "On est riiiiiiches ! Et quand on aura tout mang\xE9, on repartira dans des
+      aventures pour en retrouver plus ! N\u2019est-ce pas une belle vie Maeve ?"
+    - "Kit Cat je\u2026 je veux rentrer chez moi."
+    - "\u2026"
+    - "\u2026"
+    - "Mais\u2026 pourquoi ? Tu en as marre des bonbons ? Peut-\xEAtre que tu voudrais
+      quelque chose de sal\xE9 ? Est-ce que tu t'es fait mal en combattant les enfants
+      poss\xE9d\xE9s ? Est-ce que tu es toujours f\xE2ch\xE9e contre moi pour t\u2019avoir
+      trait\xE9 de fain\xE9ante ? Encore une fois, je t\u2019ai d\xE9j\xE0 dit que
+      j\u2019\xE9tais d\xE9sol\xE9 et que\u2026"
+    - "Kit Cat ! Non ! D\xE9sol\xE9, il n\u2019y a pas que \xE7a. Les bonbons sont
+      supers, c\u2019est vrai que les enfants poss\xE9d\xE9s peuvent faire mal, mais
+      \xE7a va et je t\u2019ai d\xE9j\xE0 pardonn\xE9. C\u2019est juste que\u2026
+      mes amis\u2026 mes parents\u2026 ils me manquent tu sais ?"
+    - "\u2026"
+    - Kit Cat ?
+    - "\u2026 Je comprends. Je sais ce que c\u2019est d\u2019avoir une personne qui
+      nous manque. Ok, je vais t\u2019aider. La sortie de ce monde se trouve dans
+      la crypte derri\xE8re le manoir."
+    - "Le Grand Manoir ? Tu es s\xFBr ? Il me fait un peu peur. Qui est-ce qui l'habite
+      ?"
+    - "En ce moment, personne. Mais il \xE9tait habit\xE9 par une grande et gentille
+      sorci\xE8re appel\xE9e Bha-Lie. C\u2019est elle qui dirigeait ce monde."
+    - " Tu parles comme si tu la connaissais. Que lui est-il arriv\xE9 ?"
+    - "Elle\u2026 eh ben tu vois\u2026 elle \xE9tait quand m\xEAme tr\xE8s vieille
+      et\u2026"
+    - "Je comprends, je suis d\xE9sol\xE9e."
+    - "\xC7a va, c'\xE9tait il y a tr\xE8s longtemps. Bon, en avant."
+    - Kit Cat ?
+    - Hum ?
+    - Merci beaucoup.
+    - Tu me remercieras quand nous serons dans la crypte. Allons-y.
+    npcFaces:
+    - {fileID: 21300000, guid: 283f39941bffbcd49a3cb68e9e820e37, type: 3}
+    - {fileID: 21300000, guid: d5fff1667331a3f4ab46f580c7503862, type: 3}
+    - {fileID: 21300000, guid: 283f39941bffbcd49a3cb68e9e820e37, type: 3}
+    - {fileID: 21300000, guid: d5fff1667331a3f4ab46f580c7503862, type: 3}
+    - {fileID: 21300000, guid: 283f39941bffbcd49a3cb68e9e820e37, type: 3}
+    - {fileID: 21300000, guid: d5fff1667331a3f4ab46f580c7503862, type: 3}
+    - {fileID: 21300000, guid: 283f39941bffbcd49a3cb68e9e820e37, type: 3}
+    - {fileID: 21300000, guid: d5fff1667331a3f4ab46f580c7503862, type: 3}
+    - {fileID: 21300000, guid: 283f39941bffbcd49a3cb68e9e820e37, type: 3}
+    - {fileID: 21300000, guid: d5fff1667331a3f4ab46f580c7503862, type: 3}
+    - {fileID: 21300000, guid: 283f39941bffbcd49a3cb68e9e820e37, type: 3}
+    - {fileID: 21300000, guid: d5fff1667331a3f4ab46f580c7503862, type: 3}
+    - {fileID: 21300000, guid: 283f39941bffbcd49a3cb68e9e820e37, type: 3}
+    - {fileID: 21300000, guid: d5fff1667331a3f4ab46f580c7503862, type: 3}
+    - {fileID: 21300000, guid: 283f39941bffbcd49a3cb68e9e820e37, type: 3}
+    - {fileID: 21300000, guid: d5fff1667331a3f4ab46f580c7503862, type: 3}
+    - {fileID: 21300000, guid: 283f39941bffbcd49a3cb68e9e820e37, type: 3}
+    - {fileID: 21300000, guid: d5fff1667331a3f4ab46f580c7503862, type: 3}
+    - {fileID: 21300000, guid: 283f39941bffbcd49a3cb68e9e820e37, type: 3}
+    - {fileID: 21300000, guid: d5fff1667331a3f4ab46f580c7503862, type: 3}
+    - {fileID: 21300000, guid: 283f39941bffbcd49a3cb68e9e820e37, type: 3}
+    - {fileID: 21300000, guid: d5fff1667331a3f4ab46f580c7503862, type: 3}
+  Gardien:
+    sentences:
+    - "Ah! Monsieur le Chat ! Je pensais bien que c\u2019\xE9tait vous que j\u2019avais
+      vu passer ! \xC7a fait des ann\xE9es qu\u2019on ne s'est pas vu. Et qui est
+      cette belle jeune fille qui vous accompagne ?"
+    - "(soupire tr\xE8s bas) Oh non, pas lui\u2026"
+    - "Elle s\u2019appelle Maeve. Elle m'a nomm\xE9 Kit Cat. Nous d\xE9sirons entrer
+      dans le Manoir de Bha-Lie."
+    - "La maison de votre ancienne ma\xEEtresse ? Pour quelle raison ?"
+    - Je veux rentrer chez moi. Dans mon monde.
+    - "Hummm\u2026 je vois. Bon, je vous laisse passer. Mais attention ! Le manoir
+      a \xE9t\xE9 envahi par plusieurs monstres. Prenez soin de vous."
+    - Merci !
+    - "(chuchote avec Kit Cat ) Comment \xE7a se fait qu\u2019elle ne s'est pas transform\xE9e
+      ?"
+    - "(chuchote) Son costume n\u2019\xE9tait pas complet."
+    - "(chuchote) Ah. Je vois. Vous avez l\u2019air de bien vous entendre.\r"
+    - "(chuchote) Oui, je l'appr\xE9cie beaucoup."
+    - "(chuchote) \xE7a ne me surprend pas. M\xEAme avec un costume incomplet de
+      sorci\xE8re, elle rappelle \xE9norm\xE9ment Bha-Lie. C\u2019est bien pour \xE7a
+      que tu l\u2019appr\xE9cie, non ?"
+    - "(chuchote) ce n\u2019est pas que \xE7a ! Elle\u2026"
+    - De quoi vous parlez ?
+    - "Oh, rien. Je lui racontais les nouvelles des\u2026 euh\u2026 autres mondes
+      ! Des trucs que tu ne comprends pas."
+    - "Autres mondes ? Comment \xE7a ?"
+    - "Ne l\u2019\xE9coute pas, il dit des b\xEAtises, enfin, pas compl\xE8tement.
+      Mais bon, ce n\u2019est pas important. Allons-y."
+    npcFaces:
+    - {fileID: 21300000, guid: 4b518ca2b3d53e34a88066281b534974, type: 3}
+    - {fileID: 21300000, guid: d5fff1667331a3f4ab46f580c7503862, type: 3}
+    - {fileID: 21300000, guid: d5fff1667331a3f4ab46f580c7503862, type: 3}
+    - {fileID: 21300000, guid: 4b518ca2b3d53e34a88066281b534974, type: 3}
+    - {fileID: 21300000, guid: 283f39941bffbcd49a3cb68e9e820e37, type: 3}
+    - {fileID: 21300000, guid: 4b518ca2b3d53e34a88066281b534974, type: 3}
+    - {fileID: 21300000, guid: 283f39941bffbcd49a3cb68e9e820e37, type: 3}
+    - {fileID: 21300000, guid: 4b518ca2b3d53e34a88066281b534974, type: 3}
+    - {fileID: 21300000, guid: d5fff1667331a3f4ab46f580c7503862, type: 3}
+    - {fileID: 21300000, guid: 4b518ca2b3d53e34a88066281b534974, type: 3}
+    - {fileID: 21300000, guid: d5fff1667331a3f4ab46f580c7503862, type: 3}
+    - {fileID: 21300000, guid: 4b518ca2b3d53e34a88066281b534974, type: 3}
+    - {fileID: 21300000, guid: d5fff1667331a3f4ab46f580c7503862, type: 3}
+    - {fileID: 21300000, guid: 283f39941bffbcd49a3cb68e9e820e37, type: 3}
+    - {fileID: 21300000, guid: 4b518ca2b3d53e34a88066281b534974, type: 3}
+    - {fileID: 21300000, guid: 283f39941bffbcd49a3cb68e9e820e37, type: 3}
+    - {fileID: 21300000, guid: d5fff1667331a3f4ab46f580c7503862, type: 3}
 --- !u!1 &603992811953839225
 GameObject:
   m_ObjectHideFlags: 0
