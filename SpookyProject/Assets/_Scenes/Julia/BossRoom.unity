@@ -235,9 +235,52 @@ MonoBehaviour:
   timeBetweenLetters: 0.05
   introBossDialogue:
     sentences:
-    - TEST
+    - "On y est. Enfin. C\u2019est ici que Bha-Lie\u2026 repose ?"
+    - "Oui. On appelle pas cet endroit \u201CLa Crypte\u201D pour rien. Hehehe\u2026"
+    - "Et la sortie, c\u2019est bien cette grande porte ?"
+    - "Oui\u2026"
+    - "Bon bah\u2026 euh\u2026 merci beaucoup ! \xE0 la prochaine Kit Cat !"
+    - "\u2026 Attends ! Je veux te montrer un truc. Tu vois ce collier que je porte?
+      Il m'a \xE9t\xE9 offert par Bha-Lie avant qu\u2019elle\u2026 s\u2019en aille.
+      C\u2019est ce collier qui contr\xF4le tout ce monde d\u2019Halloween. C\u2019est
+      moi, le porteur de ce collier, qui ai imagin\xE9 toutes ces aventures qu\u2019on
+      a pass\xE9 ensemble. Si tu d\xE9cides de rester, je te le donne. Tu serais
+      la nouvelle ma\xEEtresse de ce monde ! Tu pourras cr\xE9er tout ce que tu voudras
+      !"
+    - "Ouah ! C\u2019est\u2026 super gentil de ta part ! Mais t\u2019as pas besoin
+      de m\u2019offrir \xE7a. Je reviendrais s\xFBrement te voir !"
+    - "Tu ne comprends pas ! On ne rentre dans ce monde qu\u2019une seule fois !
+      Si tu pars, tu ne pourras plus jamais revenir !"
+    - "Kit Cat\u2026 je ne savais pas\u2026 je\u2026 je suis d\xE9sol\xE9e\u2026
+      mais\u2026 je ne peux pas accepter. Mes proches, mes amis et ma famille me
+      manqueraient trop."
+    - "QUOI ?! Et moi alors ? J\u2019ai pass\xE9 des ann\xE9es tout seul ! En faisant
+      rien d\u2019autre que penser \xE0 mes souvenirs avec Bha-Lie et en essayant
+      de me distraire de ce sentiment infernal, toujours sans succ\xE8s!"
+    - "\xC9coute Kit Cat, je suis navr\xE9e mais\u2026"
+    - "Jusqu\u2019\xE0 ce que tu arrives ! Jusqu\u2019\xE0 ce que tu arrives et que
+      je ne me sente plus seul pour la premi\xE8re fois depuis des ann\xE9es ! Et
+      maintenant tu veux me quitter ? Pour rencontrer des gens qui ne peuvent m\xEAme
+      pas t'offrir un quart de ce que je viens de t\u2019offrir ?"
+    - "Je n\u2019ai pas besoin de tout \xE7a Kit Cat ! Je les aime pour qui  ils
+      sont, pas pour ce qu\u2019ils me donnent."
+    - "Tu ne m\u2019aimes donc pas pour qui je suis ?! Peu importe ! Tu ne quitteras
+      jamais ce monde !"
     npcFaces:
     - {fileID: 21300000, guid: 283f39941bffbcd49a3cb68e9e820e37, type: 3}
+    - {fileID: 21300000, guid: d5fff1667331a3f4ab46f580c7503862, type: 3}
+    - {fileID: 21300000, guid: 283f39941bffbcd49a3cb68e9e820e37, type: 3}
+    - {fileID: 21300000, guid: d5fff1667331a3f4ab46f580c7503862, type: 3}
+    - {fileID: 21300000, guid: 283f39941bffbcd49a3cb68e9e820e37, type: 3}
+    - {fileID: 21300000, guid: d5fff1667331a3f4ab46f580c7503862, type: 3}
+    - {fileID: 21300000, guid: 283f39941bffbcd49a3cb68e9e820e37, type: 3}
+    - {fileID: 21300000, guid: d5fff1667331a3f4ab46f580c7503862, type: 3}
+    - {fileID: 21300000, guid: 283f39941bffbcd49a3cb68e9e820e37, type: 3}
+    - {fileID: 21300000, guid: d5fff1667331a3f4ab46f580c7503862, type: 3}
+    - {fileID: 21300000, guid: 283f39941bffbcd49a3cb68e9e820e37, type: 3}
+    - {fileID: 21300000, guid: d5fff1667331a3f4ab46f580c7503862, type: 3}
+    - {fileID: 21300000, guid: 283f39941bffbcd49a3cb68e9e820e37, type: 3}
+    - {fileID: 21300000, guid: d5fff1667331a3f4ab46f580c7503862, type: 3}
   dialogueWasSaid: 0
 --- !u!1 &196171334
 GameObject:
@@ -1253,8 +1296,40 @@ MonoBehaviour:
   isBurned: 0
   isBlinking: 0
   endDialogue:
-    sentences: []
-    npcFaces: []
+    sentences:
+    - "Kit Cat ! Arr\xEAte ! \xE7a suffit comme \xE7a !"
+    - "A\xEFe\u2026 qu\u2019est-ce que t\u2019en as \xE0 faire ? Tu vas me laisser
+      tout seul de toute fa\xE7on\u2026"
+    - "Arr\xEAte de pleurnicher ! Je ne te laisserai jamais seul ! Peu importe si
+      tu me donnes des pouvoirs ou pas."
+    - "\u2026 Alors, tu vas rester ici ? Avec moi ?"
+    - "Je veux rester avec toi, mais pas ici. \xE7a te dirait de venir avec moi ?\r"
+    - "\u2026 ?!"
+    - "Je sais que \xE7a doit \xEAtre g\xE9nial de pouvoir tout contr\xF4ler autour
+      de toi, mais \xE0 quoi \xE7a peut bien servir si tu es tout seul ?\r"
+    - "\u2026 Mais\u2026 si je pars de ce monde, je ne pourrais plus parler\u2026"
+    - "Ah. C\u2019est vrai que c\u2019est emb\xEAtant\u2026 mais je ne pense pas
+      que tu aies besoin de pouvoir parler pour me traiter de fain\xE9ante, non ?"
+    - "Ah\u2026 ahaha\u2026 HAHAHAHAHA !"
+    - "HIHIHIHIHIHI\u2026"
+    - "\u2026"
+    - "\u2026 Bon, on y va ?"
+    - "\u2026 Oui, allons-y."
+    npcFaces:
+    - {fileID: 21300000, guid: 283f39941bffbcd49a3cb68e9e820e37, type: 3}
+    - {fileID: 21300000, guid: d5fff1667331a3f4ab46f580c7503862, type: 3}
+    - {fileID: 21300000, guid: 283f39941bffbcd49a3cb68e9e820e37, type: 3}
+    - {fileID: 21300000, guid: d5fff1667331a3f4ab46f580c7503862, type: 3}
+    - {fileID: 21300000, guid: 283f39941bffbcd49a3cb68e9e820e37, type: 3}
+    - {fileID: 21300000, guid: d5fff1667331a3f4ab46f580c7503862, type: 3}
+    - {fileID: 21300000, guid: 283f39941bffbcd49a3cb68e9e820e37, type: 3}
+    - {fileID: 21300000, guid: d5fff1667331a3f4ab46f580c7503862, type: 3}
+    - {fileID: 21300000, guid: 283f39941bffbcd49a3cb68e9e820e37, type: 3}
+    - {fileID: 21300000, guid: d5fff1667331a3f4ab46f580c7503862, type: 3}
+    - {fileID: 21300000, guid: 283f39941bffbcd49a3cb68e9e820e37, type: 3}
+    - {fileID: 21300000, guid: d5fff1667331a3f4ab46f580c7503862, type: 3}
+    - {fileID: 21300000, guid: 283f39941bffbcd49a3cb68e9e820e37, type: 3}
+    - {fileID: 21300000, guid: d5fff1667331a3f4ab46f580c7503862, type: 3}
 --- !u!1 &1174334723
 GameObject:
   m_ObjectHideFlags: 0
