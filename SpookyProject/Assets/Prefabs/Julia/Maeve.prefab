@@ -369,8 +369,8 @@ MonoBehaviour:
     - "Ah mince\u2026\r"
     - "Alors si je me souviens bien le quartier Est a \xE9t\xE9 un peu\u2026 scell\xE9\r."
     - "Mais on peut toujours y acc\xE9der!"
-    - "Il te faut les 2 moiti\xE9s de la cl\xE9, il y en a une au Nord et une au
-      Sud."
+    - "Il te faut les deux moiti\xE9s de la cl\xE9, il y en a une au Nord et une
+      au Sud."
     - Ah bah je vais pouvoir explorer la ville du coup!
     - En avant !!
     npcFaces:
@@ -1493,11 +1493,11 @@ MonoBehaviour:
   collisionRight: 0
   collisionTop: 0
   collisionBottom: 0
-  speed: 4
+  speed: 5
   rollSpeed: 6
   rollDuration: 0.2
   rollRecover: 0.05
-  crouchSpeed: 1.5
+  crouchSpeed: 3
   xVelocity: 0
   yVelocity: 0
   accelerationTime: 0.05
@@ -1527,8 +1527,8 @@ MonoBehaviour:
   attackPoint: {fileID: 5857361521908021005}
   attackRange: 1.5
   attackTime: 0
-  quickAtkZone: {x: 1.5, y: 45}
-  heavyAtkZone: {x: 1.5, y: 70}
+  quickAtkZone: {x: 1.5, y: 65}
+  heavyAtkZone: {x: 1.5, y: 90}
   ennemies:
     serializedVersion: 2
     m_Bits: 128

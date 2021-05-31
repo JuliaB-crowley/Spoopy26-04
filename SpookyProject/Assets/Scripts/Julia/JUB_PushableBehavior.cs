@@ -5,7 +5,7 @@ using UnityEngine;
 
 public class JUB_PushableBehavior : MonoBehaviour
 {
-    [SerializeField] BoxCollider2D objectCollider;
+    [SerializeField] //BoxCollider2D objectCollider;
     public bool pushable, pushed;
     public Transform playerTransform;
     public GameObject pushableObject;
@@ -23,13 +23,13 @@ public class JUB_PushableBehavior : MonoBehaviour
         if (pushed == true)
         {
             pushableObject.transform.SetParent(playerTransform);
-            objectCollider.enabled = false;
+            //objectCollider.enabled = false;
         }
 
         if (pushed == false)
         {
             pushableObject.transform.SetParent(null);
-            objectCollider.enabled = true;
+            //objectCollider.enabled = true;
         }
     }
 }

@@ -206,7 +206,7 @@ namespace character
                     }
                     else if (isPushingObject)
                     {
-                        animationIndex = 6;
+                        animationIndex = 1;
                     }
                 }
             }
@@ -772,7 +772,10 @@ namespace character
 
         public void Anim()
         {
-            
+            if(isInRoll)
+            {
+                animationIndex = 4;
+            }
             if (!isPushingObject)
             {
                 switch (dirAngle)
@@ -815,7 +818,7 @@ namespace character
                         break;
                 }
             }
-
+            
             switch(animationIndex)
             {
                 //-1 mort, 0 idle, 1 course, 2 attaque, 3 flash, 4 roulade, 5 accroupi, 6 déplacement objet, 7 accroupi iddle, 8 immunité, 9 pushIdle
@@ -991,8 +994,10 @@ namespace character
                     break;
 
             }
+            Debug.LogWarning(animationIndex);
+            //animationIndex = 0;
 
-
+            
                 
         }
     }

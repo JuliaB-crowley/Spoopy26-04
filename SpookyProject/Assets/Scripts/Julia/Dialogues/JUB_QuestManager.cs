@@ -18,6 +18,7 @@ public class JUB_QuestManager : MonoBehaviour
     public JUB_Dialogue QuartierEst;
     public JUB_Dialogue RentrerChezMoi;
     public JUB_Dialogue Gardien;
+    bool introSaid, mamieSaid, portailSaid, firstSaid, secondKeySaid, quartierEstSaid, rentrerSaid, gardienSaid;
     // Start is called before the first frame update
     void Start()
     {
@@ -31,38 +32,47 @@ public class JUB_QuestManager : MonoBehaviour
         //si y a un dialogue associé faire un if (itemID = numéro voulu) puis mettre cette ligne dedans
         //dialogueManager.StartDialogue(nom dialogue correspondant);
 
-        if(!firstKeyPartObtained && ItemID == 4)
+        if(!firstKeyPartObtained && ItemID == 4 && !firstSaid)
         {
+            firstSaid = true;
             firstKeyPartObtained = true;
             dialogueManager.StartDialogue(FirstKey);
 
         }
-        if(firstKeyPartObtained && ItemID == 4)
+        if(firstKeyPartObtained && ItemID == 4 && !secondKeySaid)
         {
+            secondKeySaid = true;
             questBookText.text = objectivesName[5];
             dialogueManager.StartDialogue(SecondKey);
         }
-        if(ItemID == 1){
+        if(ItemID == 1 && !introSaid)
+        {
+            introSaid = true;
             dialogueManager.StartDialogue(Intro);
         }
-        if (ItemID == 2)
+        if (ItemID == 2 && !mamieSaid)
         {
+            mamieSaid = true;
             dialogueManager.StartDialogue(MamieCitrouille);
         }
-        if(ItemID == 3)
+        if(ItemID == 3 && !portailSaid)
         {
+            portailSaid = true;
             dialogueManager.StartDialogue(MaisonPortail);
         }
-        if(ItemID == 6)
+        if(ItemID == 6 && !quartierEstSaid)
         {
+            quartierEstSaid = true;
             dialogueManager.StartDialogue(QuartierEst);
         }
-        if(ItemID == 7)
+        if(ItemID == 7 && !rentrerSaid)
         {
+            rentrerSaid = true;
             dialogueManager.StartDialogue(RentrerChezMoi);
         }
-        if(ItemID == 8)
+        if(ItemID == 8 && !gardienSaid)
         {
+            gardienSaid = true;
             dialogueManager.StartDialogue(Gardien);
         }
     }

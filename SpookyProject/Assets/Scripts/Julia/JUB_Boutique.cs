@@ -9,7 +9,7 @@ public class JUB_Boutique : MonoBehaviour
 {
     //ouverture
     public JUB_InteractibleBehavior interactibleBehavior;
-    public GameObject canvasRescale;
+    public GameObject canvasRescale, papaAll;
     public bool isOpen;
     public JUB_Maeve maeve;
     public JUB_Flash flash;
@@ -56,6 +56,7 @@ public class JUB_Boutique : MonoBehaviour
     {
         if(interactibleBehavior.interacted && isOpen == false)
         {
+            papaAll.SetActive(true);
             canvasRescale.GetComponent<Transform>().localScale = Vector3.one;
             isOpen = true;
             Time.timeScale = 0f;
@@ -67,6 +68,7 @@ public class JUB_Boutique : MonoBehaviour
             isOpen = false;
             Time.timeScale = 1f;
             interactibleBehavior.interacted = false;
+            papaAll.SetActive(false);
         }
     }
 
