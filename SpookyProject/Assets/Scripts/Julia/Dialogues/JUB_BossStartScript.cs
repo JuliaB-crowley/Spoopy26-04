@@ -17,6 +17,7 @@ public class JUB_BossStartScript : MonoBehaviour
     JUB_Maeve maeve;
     Controller controller;
     public JUB_Dialogue introBossDialogue;
+    JUB_QuestManager questManager;
     bool isReading;
     string actualPhrase;
 
@@ -31,6 +32,7 @@ public class JUB_BossStartScript : MonoBehaviour
         controller.Enable();
 
         maeve = GameObject.FindGameObjectWithTag("Player").GetComponent<JUB_Maeve>();
+        questManager = GameObject.FindGameObjectWithTag("HUD").GetComponent<JUB_QuestManager>();
         resizeCanvas.localScale = Vector3.zero;
 
         controller.Menu.Dialogues.performed += ctx => DisplayNextSentence();
@@ -100,6 +102,7 @@ public class JUB_BossStartScript : MonoBehaviour
 
     void EndDialogue()
     {
+        questManager.UpdateObjective(10);
         Time.timeScale = 1f;
         maeve.isInDialogue = false;
         resizeCanvas.localScale = Vector3.zero;
