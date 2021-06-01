@@ -13,12 +13,14 @@ public class JUB_Notebook : MonoBehaviour
 
     public bool isOpen;
 
-    // Start is called before the first frame update
-    void Start()
+    private void Awake()
     {
         canvasLivre = GameObject.FindGameObjectWithTag("NotebookCanvas");
         canvasText = canvasLivre.GetComponentInChildren<Text>();
         interactible = GetComponentInChildren<JUB_InteractibleBehavior>();
+    }
+    void Start()
+    {        
         canvasLivre.SetActive(false);
     }
 

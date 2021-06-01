@@ -1053,6 +1053,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   affiche: {fileID: 0}
   shouldAppear: 0
+  interactionButon: {fileID: 21300000, guid: 1802369da0506664280005a34b12f8fc, type: 3}
+  pushButon: {fileID: 21300000, guid: 27fa18cfa523c724eaaa6a201f4e3ad6, type: 3}
 --- !u!58 &455116295860898819
 CircleCollider2D:
   m_ObjectHideFlags: 0
