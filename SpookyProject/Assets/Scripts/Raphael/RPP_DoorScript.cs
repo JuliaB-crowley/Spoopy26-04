@@ -15,7 +15,12 @@ public class RPP_DoorScript : MonoBehaviour
 
     void Start()
     {
+
         doorManager = this.GetComponent<JUB_InteractibleBehavior>();
+        if (opensOneSide)
+        {
+            doorManager.canBeShown = true;
+        }
         doorSprite = GetComponentInChildren<SpriteRenderer>();
 
         if (dependsOnFusebox)
@@ -47,7 +52,6 @@ public class RPP_DoorScript : MonoBehaviour
                 {
                     doorSprite.sprite = doorLocked;
                     doorObject.SetActive(true);
-                    doorManager.interacted = false;
                 }
             }
             else if (!needBlueKey && !needYellowKey && !needGreenKey && !needVioletKey)
@@ -65,6 +69,7 @@ public class RPP_DoorScript : MonoBehaviour
                     else
                     {
                         doorObject.SetActive(false);
+                        //DestructionOfDoorManager();
                     }
                 }
                 else
@@ -81,7 +86,6 @@ public class RPP_DoorScript : MonoBehaviour
                     if (!puzzleMaster.hasBlueKey)
                     {
                         doorObject.SetActive(true);
-                        doorManager.interacted = false;
                     }
                     else
                     {
@@ -94,7 +98,6 @@ public class RPP_DoorScript : MonoBehaviour
                     if (!puzzleMaster.hasYellowKey)
                     {
                         doorObject.SetActive(true);
-                        doorManager.interacted = false;
                     }
                     else
                     {
@@ -107,7 +110,6 @@ public class RPP_DoorScript : MonoBehaviour
                     if (!puzzleMaster.hasGreenKey)
                     {
                         doorObject.SetActive(true);
-                        doorManager.interacted = false;
                     }
                     else
                     {
@@ -121,7 +123,6 @@ public class RPP_DoorScript : MonoBehaviour
                     if (!puzzleMaster.hasVioletKey)
                     {
                         doorObject.SetActive(true);
-                        doorManager.interacted = false;
                     }
                     else
                     {
@@ -133,10 +134,16 @@ public class RPP_DoorScript : MonoBehaviour
         else
         {
             doorObject.SetActive(true);
-            doorManager.interacted = false;
         }
     }
 
+    void DestructionOfDoorManager()
+    {
+        if (!doorManager.interactible)
+        {
+            Destroy(doorManager);
+        }
+    }
     void PuzzleManagerCheck()
     {
         if (needPzMnA)
