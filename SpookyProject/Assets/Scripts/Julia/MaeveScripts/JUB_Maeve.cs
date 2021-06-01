@@ -390,7 +390,7 @@ namespace character
                             if (ennemy.GetComponent<JUB_EnnemyDamage>())
                             {
                                 ennemy.GetComponent<JUB_EnnemyDamage>().TakeDamage(attackProfile.atkDamage);
-                                StartCoroutine(CameraShake(screenshakeDuration, ennemyScreenshakeAmount));
+                                //StartCoroutine(CameraShake(screenshakeDuration, ennemyScreenshakeAmount));
                                 Debug.Log("attack was performed");
                                 ennemiesHitLastTime.Add(ennemy);
 
@@ -410,14 +410,14 @@ namespace character
             foreach(Collider2D jewel in hitBoss)
             {
                 jewel.GetComponentInParent<JUB_BossBehavior>().TakeDamage();
-                StartCoroutine(CameraShake(screenshakeDuration, bossScreenshakeAmount));
+                //StartCoroutine(CameraShake(screenshakeDuration, bossScreenshakeAmount));
             }
 
             yield return new WaitForSeconds(attackProfile.atkRecover);
             isInRecover = false;
         }
 
-        IEnumerator CameraShake(float duration, float magnitude)
+        /*IEnumerator CameraShake(float duration, float magnitude)
         {
             Vector2 originalPos = mainCam.transform.localPosition;
 
@@ -435,7 +435,7 @@ namespace character
             }
 
             mainCam.transform.localPosition = originalPos;
-        }
+        }*/
 
         private void OnDrawGizmosSelected()
         {
