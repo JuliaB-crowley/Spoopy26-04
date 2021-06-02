@@ -214,7 +214,7 @@ MonoBehaviour:
   iddleSpeed: 2.5
   stopDistance: 1
   pursueSpeed: 2.5
-  pauseTime: 2
+  pauseTime: 4
   attackRange: 1.5
   attackDamages: 2
   fleeDistance: 6

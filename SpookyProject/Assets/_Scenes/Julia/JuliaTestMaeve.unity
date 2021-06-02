@@ -367,6 +367,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   interactible: 0
   interacted: 0
+  canBeShown: 1
   player: {fileID: 0}
   maeveScript: {fileID: 0}
 --- !u!1 &679166133 stripped
@@ -838,7 +839,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7690415590435662503, guid: e68ffad8b5362bb49a1cd48f9ad4b7d0, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e68ffad8b5362bb49a1cd48f9ad4b7d0, type: 3}
@@ -964,6 +965,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: af2071401c5c5ae49a2d5727c0928c64, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  objectCollider: {fileID: 0}
   pushable: 0
   pushed: 0
   playerTransform: {fileID: 0}
@@ -1294,7 +1296,7 @@ GameObject:
   - component: {fileID: 1801868890}
   m_Layer: 0
   m_Name: Camera Anchor
-  m_TagString: Untagged
+  m_TagString: Anchor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1453,6 +1455,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   interactible: 0
   interacted: 0
+  canBeShown: 1
   player: {fileID: 0}
   maeveScript: {fileID: 0}
 --- !u!58 &1915648906
@@ -1932,11 +1935,11 @@ PrefabInstance:
       objectReference: {fileID: 1651661855}
     - target: {fileID: 5073029024244769804, guid: 99ca432830462b44aac8e28f6dea91e2, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: -168
+      value: -167.99998
       objectReference: {fileID: 0}
     - target: {fileID: 5073029024244769804, guid: 99ca432830462b44aac8e28f6dea91e2, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -92.18933
+      value: -92.189316
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 99ca432830462b44aac8e28f6dea91e2, type: 3}
