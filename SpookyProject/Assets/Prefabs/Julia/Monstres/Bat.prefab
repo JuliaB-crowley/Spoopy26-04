@@ -119,9 +119,6 @@ MonoBehaviour:
   deathAnimationTime: 0
   knockbackForce: 0
   knockbackDuration: 0
-  playerTransform: {fileID: 0}
-  rb: {fileID: 0}
-  AIPath: {fileID: 0}
   hasLoot: 0
   possibleLoots: []
   rendererEnnemies: {fileID: 1940289393888737312}
@@ -255,9 +252,9 @@ CircleCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: -0.00665918, y: 0}
   serializedVersion: 2
-  m_Radius: 0.4
+  m_Radius: 0.30011263
 --- !u!50 &-934431368079912391
 Rigidbody2D:
   serializedVersion: 4

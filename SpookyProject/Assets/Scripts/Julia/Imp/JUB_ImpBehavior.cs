@@ -164,7 +164,7 @@ public class JUB_ImpBehavior : MonoBehaviour
                 break;
 
             case 1:
-                animToPlay = "Diablotin_run";
+                animToPlay = "Diablotin_walk";
                 break;
 
             case 2:
@@ -176,19 +176,19 @@ public class JUB_ImpBehavior : MonoBehaviour
                 break;
         }
         int direction = 3; //0 = rigth, 1 = left, 2 = up, 3 = down
-        if(pathfinder.velocity.x > 0.12)
+        if(pathfinder.velocity.normalized.x > 0.5)
         {
             direction = 0;
         }
-        else if(pathfinder.velocity.x < -0.12)
+        else if(pathfinder.velocity.normalized.x < -0.5)
         {
             direction = 1;
         }
-        else if(pathfinder.velocity.y > 0.12)
+        else if(pathfinder.velocity.normalized.y > 0.5)
         {
             direction = 2;
         }
-        else if(pathfinder.velocity.y < -0.12)
+        else if(pathfinder.velocity.normalized.y < -0.5)
         {
             direction = 3;
         }
@@ -211,7 +211,6 @@ public class JUB_ImpBehavior : MonoBehaviour
                 break;
         }
         graphicAnimator.Play(animToPlay);
-        Debug.LogWarning(animToPlay);
     }
 
 }

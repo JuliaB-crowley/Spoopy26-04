@@ -5,7 +5,6 @@ using UnityEngine;
 public class RPP_DoorScript : MonoBehaviour
 {
     [SerializeField] JUB_InteractibleBehavior doorManager;
-    //public RPP_RoomMasterScript roomMaster;
     public GameObject doorObject;
     public int minPuzzlesSolved;
     [SerializeField] RPP_GeneralPuzzleMaster puzzleMaster;
@@ -16,7 +15,12 @@ public class RPP_DoorScript : MonoBehaviour
 
     void Start()
     {
+
         doorManager = this.GetComponent<JUB_InteractibleBehavior>();
+        if (opensOneSide)
+        {
+            doorManager.canBeShown = true;
+        }
         doorSprite = GetComponentInChildren<SpriteRenderer>();
 
         if (dependsOnFusebox)
@@ -42,38 +46,19 @@ public class RPP_DoorScript : MonoBehaviour
             {
                 if(fusiblesScript.fusesAcquired >= fusiblesScript.totalFusesRequired)
                 {
-                    doorSprite.sprite = doorOpen;
-
-                    if (!doorManager.interacted)
-                    {
-                        doorObject.SetActive(true);
-                    }
-                    else
-                    {
-                        doorObject.SetActive(false);
-                    }
+                    doorObject.SetActive(false);
                 }
                 else
                 {
                     doorSprite.sprite = doorLocked;
                     doorObject.SetActive(true);
-                    doorManager.interacted = false;
                 }
             }
             else if (!needBlueKey && !needYellowKey && !needGreenKey && !needVioletKey)
             {
                 if (minPuzzlesSolved <= puzzleMaster.puzzlesSolved && !opensOneSide)
                 {
-                    doorSprite.sprite = doorOpen;
-
-                    if (!doorManager.interacted)
-                    {
-                        doorObject.SetActive(true);
-                    }
-                    else
-                    {
-                        doorObject.SetActive(false);
-                    }
+                    doorObject.SetActive(false);
                 }
                 else if(minPuzzlesSolved <= puzzleMaster.puzzlesSolved && opensOneSide)
                 {
@@ -84,12 +69,12 @@ public class RPP_DoorScript : MonoBehaviour
                     else
                     {
                         doorObject.SetActive(false);
+                        //DestructionOfDoorManager();
                     }
                 }
                 else
                 {
                     doorObject.SetActive(true);
-                    doorManager.interacted = false;
                     doorSprite.sprite = doorLocked;
                     //Debug.Log("The player has to solve a puzzle");
                 }
@@ -101,20 +86,10 @@ public class RPP_DoorScript : MonoBehaviour
                     if (!puzzleMaster.hasBlueKey)
                     {
                         doorObject.SetActive(true);
-                        doorManager.interacted = false;
                     }
                     else
                     {
-                        doorSprite.sprite = doorOpen;
-
-                        if (!doorManager.interacted)
-                        {
-                            doorObject.SetActive(true);
-                        }
-                        else
-                        {
-                            doorObject.SetActive(false);
-                        }
+                        doorObject.SetActive(false);
                     }
                 }
 
@@ -123,20 +98,10 @@ public class RPP_DoorScript : MonoBehaviour
                     if (!puzzleMaster.hasYellowKey)
                     {
                         doorObject.SetActive(true);
-                        doorManager.interacted = false;
                     }
                     else
                     {
-                        doorSprite.sprite = doorOpen;
-
-                        if (!doorManager.interacted)
-                        {
-                            doorObject.SetActive(true);
-                        }
-                        else
-                        {
-                            doorObject.SetActive(false);
-                        }
+                        doorObject.SetActive(false);
                     }
                 }
 
@@ -145,20 +110,10 @@ public class RPP_DoorScript : MonoBehaviour
                     if (!puzzleMaster.hasGreenKey)
                     {
                         doorObject.SetActive(true);
-                        doorManager.interacted = false;
                     }
                     else
                     {
-                        doorSprite.sprite = doorOpen;
-
-                        if (!doorManager.interacted)
-                        {
-                            doorObject.SetActive(true);
-                        }
-                        else
-                        {
-                            doorObject.SetActive(false);
-                        }
+                        doorObject.SetActive(false);
                     }
 
                 }
@@ -168,20 +123,10 @@ public class RPP_DoorScript : MonoBehaviour
                     if (!puzzleMaster.hasVioletKey)
                     {
                         doorObject.SetActive(true);
-                        doorManager.interacted = false;
                     }
                     else
                     {
-                        doorSprite.sprite = doorOpen;
-
-                        if (!doorManager.interacted)
-                        {
-                            doorObject.SetActive(true);
-                        }
-                        else
-                        {
-                            doorObject.SetActive(false);
-                        }
+                        doorObject.SetActive(false);
                     }
                 }
             }
@@ -189,10 +134,16 @@ public class RPP_DoorScript : MonoBehaviour
         else
         {
             doorObject.SetActive(true);
-            doorManager.interacted = false;
         }
     }
 
+    void DestructionOfDoorManager()
+    {
+        if (!doorManager.interactible)
+        {
+            Destroy(doorManager);
+        }
+    }
     void PuzzleManagerCheck()
     {
         if (needPzMnA)

@@ -46,7 +46,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   puzzleMaster: {fileID: 0}
-  totalSuccessesRequired: 2
+  totalSuccessesRequired: 1
   successesAchieved: 0
   puzzleSolved: 0
   needPzMnA: 1

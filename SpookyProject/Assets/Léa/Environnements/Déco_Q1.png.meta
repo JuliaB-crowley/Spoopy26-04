@@ -1,0 +1,540 @@
+fileFormatVersion: 2
+guid: c9ba268d0a900764ab4df411184d7d7d
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 7275511756495908465
+    second: "D\xE9co_Q1_0"
+  - first:
+      213: 1605279109123396828
+    second: "D\xE9co_Q1_1"
+  - first:
+      213: -3481895661530255021
+    second: "D\xE9co_Q1_2"
+  - first:
+      213: 6028155045688285966
+    second: "D\xE9co_Q1_3"
+  - first:
+      213: 1947098218951415172
+    second: "D\xE9co_Q1_4"
+  - first:
+      213: -6740071061148133472
+    second: "D\xE9co_Q1_5"
+  - first:
+      213: 866795919840533868
+    second: "D\xE9co_Q1_6"
+  - first:
+      213: 7118800546014891193
+    second: "D\xE9co_Q1_7"
+  - first:
+      213: 7502467089370260230
+    second: "D\xE9co_Q1_8"
+  - first:
+      213: 3533346633801491940
+    second: "D\xE9co_Q1_9"
+  - first:
+      213: 9220410306609902399
+    second: "D\xE9co_Q1_10"
+  - first:
+      213: -1363073418461027998
+    second: "D\xE9co_Q1_11"
+  - first:
+      213: 3509561766027250166
+    second: "D\xE9co_Q1_12"
+  - first:
+      213: 6700285341682426374
+    second: "D\xE9co_Q1_13"
+  - first:
+      213: -2161407572483714587
+    second: "D\xE9co_Q1_14"
+  - first:
+      213: 5140078999248884056
+    second: "D\xE9co_Q1_15"
+  - first:
+      213: 4888762283544349603
+    second: "D\xE9co_Q1_16"
+  - first:
+      213: 7915905789315370545
+    second: "D\xE9co_Q1_17"
+  externalObjects: {}
+  serializedVersion: 11
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: -1
+    mipBias: -100
+    wrapU: 1
+    wrapV: 1
+    wrapW: -1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 64
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: "D\xE9co_Q1_0"
+      rect:
+        serializedVersion: 2
+        x: 51
+        y: 513
+        width: 128
+        height: 178
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 17eed1d256fc7f460800000000000000
+      internalID: 7275511756495908465
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "D\xE9co_Q1_1"
+      rect:
+        serializedVersion: 2
+        x: 273
+        y: 515
+        width: 136
+        height: 168
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cd4d7a838d8174610800000000000000
+      internalID: 1605279109123396828
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "D\xE9co_Q1_2"
+      rect:
+        serializedVersion: 2
+        x: 600
+        y: 593
+        width: 173
+        height: 129
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 351f38df752ddafc0800000000000000
+      internalID: -3481895661530255021
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "D\xE9co_Q1_3"
+      rect:
+        serializedVersion: 2
+        x: 844
+        y: 769
+        width: 101
+        height: 98
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e0b9a35531f48a350800000000000000
+      internalID: 6028155045688285966
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "D\xE9co_Q1_4"
+      rect:
+        serializedVersion: 2
+        x: 1060
+        y: 775
+        width: 108
+        height: 88
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4851563938b750b10800000000000000
+      internalID: 1947098218951415172
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "D\xE9co_Q1_5"
+      rect:
+        serializedVersion: 2
+        x: 1295
+        y: 771
+        width: 88
+        height: 74
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0a7106f84157672a0800000000000000
+      internalID: -6740071061148133472
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "D\xE9co_Q1_6"
+      rect:
+        serializedVersion: 2
+        x: 1464
+        y: 500
+        width: 431
+        height: 404
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c6d5adeeb4a770c00800000000000000
+      internalID: 866795919840533868
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "D\xE9co_Q1_7"
+      rect:
+        serializedVersion: 2
+        x: 1323
+        y: 106
+        width: 385
+        height: 304
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9bc031c216f0bc260800000000000000
+      internalID: 7118800546014891193
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "D\xE9co_Q1_8"
+      rect:
+        serializedVersion: 2
+        x: 1476
+        y: 102
+        width: 58
+        height: 57
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 60329f8611e1e1860800000000000000
+      internalID: 7502467089370260230
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "D\xE9co_Q1_9"
+      rect:
+        serializedVersion: 2
+        x: 1012
+        y: 115
+        width: 236
+        height: 258
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4e56f000b08f80130800000000000000
+      internalID: 3533346633801491940
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "D\xE9co_Q1_10"
+      rect:
+        serializedVersion: 2
+        x: 740
+        y: 117
+        width: 102
+        height: 123
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f3375d0725a75ff70800000000000000
+      internalID: 9220410306609902399
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "D\xE9co_Q1_11"
+      rect:
+        serializedVersion: 2
+        x: 759
+        y: 337
+        width: 208
+        height: 168
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2616ad1a2f3651de0800000000000000
+      internalID: -1363073418461027998
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "D\xE9co_Q1_12"
+      rect:
+        serializedVersion: 2
+        x: 836
+        y: 518
+        width: 124
+        height: 143
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6f9c85de4d774b030800000000000000
+      internalID: 3509561766027250166
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "D\xE9co_Q1_13"
+      rect:
+        serializedVersion: 2
+        x: 1052
+        y: 569
+        width: 351
+        height: 172
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 602ecb4c4023cfc50800000000000000
+      internalID: 6700285341682426374
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "D\xE9co_Q1_14"
+      rect:
+        serializedVersion: 2
+        x: 515
+        y: 112
+        width: 125
+        height: 122
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5e1d443b3432102e0800000000000000
+      internalID: -2161407572483714587
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "D\xE9co_Q1_15"
+      rect:
+        serializedVersion: 2
+        x: 572
+        y: 280
+        width: 99
+        height: 216
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 851dca3dd9a355740800000000000000
+      internalID: 5140078999248884056
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "D\xE9co_Q1_16"
+      rect:
+        serializedVersion: 2
+        x: 271
+        y: 270
+        width: 137
+        height: 169
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3ab0df5256f58d340800000000000000
+      internalID: 4888762283544349603
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "D\xE9co_Q1_17"
+      rect:
+        serializedVersion: 2
+        x: 52
+        y: 269
+        width: 131
+        height: 174
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 13ec9970062fadd60800000000000000
+      internalID: 7915905789315370545
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 4076df2d7784f5a408f74a5c79f41e1d
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

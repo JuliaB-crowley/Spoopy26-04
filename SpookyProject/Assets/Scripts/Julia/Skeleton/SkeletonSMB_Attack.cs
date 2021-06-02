@@ -58,7 +58,7 @@ public class SkeletonSMB_Attack : StateMachineBehaviour
     {
         if(skeleton.toPlayer.magnitude - skeleton.player.GetComponent<CircleCollider2D>().radius < skeleton.attackRange)
         {
-            skeleton.player.TakeDamages(skeleton.attackDamages);
+            skeleton.player.TakeDamages(skeleton.attackDamages, skeleton.transform.position);
             return true;
         }
         return false;
