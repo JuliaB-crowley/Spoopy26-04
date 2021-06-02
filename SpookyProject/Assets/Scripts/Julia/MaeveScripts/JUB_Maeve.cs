@@ -80,6 +80,8 @@ namespace character
         // Start is called before the first frame update
         void Start()
         {
+            deathParticles.Stop();
+
             rigidBody = GetComponent<Rigidbody2D>();
             mainCam = GameObject.FindGameObjectWithTag("MainCamera");
             controller = new Controller();

@@ -5,13 +5,14 @@ using UnityEngine.SceneManagement;
 
 public class RPP_SceneTransition : MonoBehaviour
 {
+    public bool isInNeborhood, isInDungeon;
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.CompareTag("Player") && SceneManager.sceneCount==1)
+        if (collision.CompareTag("Player") && isInNeborhood)
         {
             SceneManager.LoadScene("Prototype_Dungeon");
         }
-        else if(SceneManager.sceneCount == 2)
+        else if(collision.CompareTag("Player") && isInDungeon)
         {
             SceneManager.LoadScene("BossRoom");
         }

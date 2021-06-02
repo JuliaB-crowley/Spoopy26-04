@@ -1670,7 +1670,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1336236368028793440, guid: a4b6535be47ce4e4e8528f044324bf7d, type: 3}
       propertyPath: m_RootOrder
-      value: 14
+      value: 13
       objectReference: {fileID: 0}
     - target: {fileID: 1931998442579023523, guid: a4b6535be47ce4e4e8528f044324bf7d, type: 3}
       propertyPath: pushButon
@@ -1734,7 +1734,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5857361522451789452, guid: a4b6535be47ce4e4e8528f044324bf7d, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -8
+      value: 6.91
       objectReference: {fileID: 0}
     - target: {fileID: 5857361522451789452, guid: a4b6535be47ce4e4e8528f044324bf7d, type: 3}
       propertyPath: m_LocalPosition.y
@@ -9869,6 +9869,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1621134743}
     m_Modifications:
+    - target: {fileID: 2254761166631462544, guid: e092fc7f4d28af648b470cdacf4d0850, type: 3}
+      propertyPath: flashTime
+      value: 5
+      objectReference: {fileID: 0}
     - target: {fileID: 8737581888886346543, guid: e092fc7f4d28af648b470cdacf4d0850, type: 3}
       propertyPath: m_RootOrder
       value: 11
