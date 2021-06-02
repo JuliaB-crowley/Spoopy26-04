@@ -17,4 +17,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/_Scenes/Raphael/Proto Tous Quartiers.unity
     guid: e9f92e60b89eb3442af812de74664322
+  - enabled: 1
+    path: Assets/_Scenes/Raphael/Prototype_Dungeon.unity
+    guid: 8a4090ae298eed04fa007cef42633be8
   m_configObjects: {}
