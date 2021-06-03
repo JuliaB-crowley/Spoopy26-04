@@ -967,7 +967,7 @@ GameObject:
   - component: {fileID: 6423948896663145127}
   - component: {fileID: 1931998442579023523}
   - component: {fileID: 455116295860898819}
-  m_Layer: 10
+  m_Layer: 0
   m_Name: "Affiche Int\xE9raction"
   m_TagString: Untagged
   m_Icon: {fileID: 0}

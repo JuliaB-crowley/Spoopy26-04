@@ -733,7 +733,7 @@ MonoBehaviour:
   - {fileID: 376972224340718787, guid: 35a622dc58d564b45806e5365a561116, type: 3}
   - {fileID: 8749998773255505538, guid: 8c43184509bc8fc489ff15ba959534a9, type: 3}
   - {fileID: 4367449603238734919, guid: b46c1e414ff128146a47056e9a55af8c, type: 3}
-  confirmationRescale: {fileID: 5073029023857857651}
+  confirmationRescale: {fileID: 5073029023789247311}
   confirmationText: {fileID: 5073029023470248678}
   soldText:
   - {fileID: 7628790628921492495}
