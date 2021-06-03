@@ -6,17 +6,11 @@ public class RPP_SuccessZone : MonoBehaviour
 {
     public bool hasBeenUsed = false;
     [SerializeField] RPP_GeneralPuzzleMaster puzzleMaster;
-    [SerializeField] bool needPzMnA = true, needPzMnB, needPzMnC, needPzMnD, needPzMnE, needPzMnF, needPzMnG;
+    [SerializeField] bool needPzMnA = true, needPzMnB, needPzMnC, needPzMnD, needPzMnE, needPzMnF, needPzMnG, needPzMnH;
 
     void Start()
     {
         PuzzleMasterCheck();
-    }
-
-    
-    void Update()
-    {
-        
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
@@ -57,6 +51,10 @@ public class RPP_SuccessZone : MonoBehaviour
         else if (needPzMnG)
         {
             puzzleMaster = GameObject.FindGameObjectWithTag("PuzzleMasterG").GetComponent<RPP_GeneralPuzzleMaster>();
+        }
+        else if (needPzMnH)
+        {
+            puzzleMaster = GameObject.FindGameObjectWithTag("PuzzleMasterH").GetComponent<RPP_GeneralPuzzleMaster>();
         }
     }
 }
