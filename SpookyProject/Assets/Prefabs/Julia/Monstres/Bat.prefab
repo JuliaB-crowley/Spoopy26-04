@@ -45,6 +45,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   damageAmount: 1
+  parent: {fileID: 6187441230836505324}
 --- !u!58 &4178059927141909003
 CircleCollider2D:
   m_ObjectHideFlags: 0

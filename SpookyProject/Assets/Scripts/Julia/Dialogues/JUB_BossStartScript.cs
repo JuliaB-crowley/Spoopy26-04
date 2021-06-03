@@ -20,6 +20,7 @@ public class JUB_BossStartScript : MonoBehaviour
     JUB_QuestManager questManager;
     bool isReading;
     string actualPhrase;
+    public JUB_DialogueManager dialogueManager;
 
     public bool dialogueWasSaid;
     // Start is called before the first frame update
@@ -33,6 +34,8 @@ public class JUB_BossStartScript : MonoBehaviour
 
         maeve = GameObject.FindGameObjectWithTag("Player").GetComponent<JUB_Maeve>();
         questManager = GameObject.FindGameObjectWithTag("HUD").GetComponent<JUB_QuestManager>();
+        dialogueManager = GameObject.FindGameObjectWithTag("DialogueManager").GetComponent<JUB_DialogueManager>();
+        dialogueManager.controller.Disable();
         resizeCanvas.localScale = Vector3.zero;
 
         controller.Menu.Dialogues.performed += ctx => DisplayNextSentence();
@@ -102,11 +105,14 @@ public class JUB_BossStartScript : MonoBehaviour
 
     void EndDialogue()
     {
+        Debug.Log("présent");
         questManager.UpdateObjective(10);
         Time.timeScale = 1f;
         maeve.isInDialogue = false;
         resizeCanvas.localScale = Vector3.zero;
         FindObjectOfType<JUB_BossBehavior>().StartFight();
+        dialogueManager.controller.Enable();
+        this.enabled = false;
     }
 
     private void OnTriggerEnter2D(Collider2D collision)

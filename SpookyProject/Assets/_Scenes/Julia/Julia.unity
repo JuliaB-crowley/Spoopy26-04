@@ -1834,6 +1834,10 @@ PrefabInstance:
       propertyPath: m_Camera
       value: 
       objectReference: {fileID: 248379154}
+    - target: {fileID: 3005734260546411460, guid: a4b6535be47ce4e4e8528f044324bf7d, type: 3}
+      propertyPath: m_Name
+      value: Affiche Interraction
+      objectReference: {fileID: 0}
     - target: {fileID: 5701466241730403767, guid: a4b6535be47ce4e4e8528f044324bf7d, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
