@@ -6,7 +6,7 @@ public class RPP_GeneralPuzzleMaster : MonoBehaviour
 {
     public int puzzlesSolved = 0;
     public bool hasBlueKey = false, hasYellowKey = false, hasGreenKey = false, hasVioletKey = false;
-    public bool isPuzzleMasterA, isPuzzleMasterB, isPuzzleMasterC, isPuzzleMasterD, isPuzzleMasterE, isPuzzleMasterF, isPuzzleMasterG;
+    public bool isPuzzleMasterA, isPuzzleMasterB, isPuzzleMasterC, isPuzzleMasterD, isPuzzleMasterE, isPuzzleMasterF, isPuzzleMasterG, isPuzzleMasterH;
 
     private void Awake()
     {
@@ -37,6 +37,10 @@ public class RPP_GeneralPuzzleMaster : MonoBehaviour
         else if (isPuzzleMasterG)
         {
             this.tag = "PuzzleMasterG";
+        }
+        else if (isPuzzleMasterH)
+        {
+            this.tag = "PuzzleMasterH";
         }
     }
 }
