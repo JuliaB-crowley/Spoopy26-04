@@ -26,6 +26,12 @@ TextureImporter:
   - first:
       213: 2184580333448797473
     second: spritesheet_Maeve_flash_right_7
+  - first:
+      213: 609377843480858117
+    second: spritesheet_Maeve_flash_right_8
+  - first:
+      213: -9194251903581767955
+    second: spritesheet_Maeve_flash_right_9
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -74,7 +80,7 @@ TextureImporter:
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
-  alphaIsTransparency: 0
+  alphaIsTransparency: 1
   spriteTessellationDetail: -1
   textureType: 0
   textureShape: 1
@@ -120,7 +126,7 @@ TextureImporter:
         serializedVersion: 2
         x: 0
         y: 700
-        width: 952
+        width: 761
         height: 700
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -139,9 +145,9 @@ TextureImporter:
       name: spritesheet_Maeve_flash_right_1
       rect:
         serializedVersion: 2
-        x: 952
+        x: 761
         y: 700
-        width: 952
+        width: 761
         height: 700
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -160,9 +166,9 @@ TextureImporter:
       name: spritesheet_Maeve_flash_right_2
       rect:
         serializedVersion: 2
-        x: 1904
+        x: 1522
         y: 700
-        width: 952
+        width: 761
         height: 700
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -181,9 +187,9 @@ TextureImporter:
       name: spritesheet_Maeve_flash_right_3
       rect:
         serializedVersion: 2
-        x: 2856
+        x: 2283
         y: 700
-        width: 952
+        width: 761
         height: 700
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -202,9 +208,9 @@ TextureImporter:
       name: spritesheet_Maeve_flash_right_4
       rect:
         serializedVersion: 2
-        x: 0
-        y: 0
-        width: 952
+        x: 3044
+        y: 700
+        width: 761
         height: 700
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -223,9 +229,9 @@ TextureImporter:
       name: spritesheet_Maeve_flash_right_5
       rect:
         serializedVersion: 2
-        x: 952
+        x: 0
         y: 0
-        width: 952
+        width: 761
         height: 700
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -244,9 +250,9 @@ TextureImporter:
       name: spritesheet_Maeve_flash_right_6
       rect:
         serializedVersion: 2
-        x: 1904
+        x: 761
         y: 0
-        width: 952
+        width: 761
         height: 700
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -265,9 +271,9 @@ TextureImporter:
       name: spritesheet_Maeve_flash_right_7
       rect:
         serializedVersion: 2
-        x: 2856
+        x: 1522
         y: 0
-        width: 952
+        width: 761
         height: 700
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -278,6 +284,48 @@ TextureImporter:
       bones: []
       spriteID: 12d15862d30315e10800000000000000
       internalID: 2184580333448797473
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spritesheet_Maeve_flash_right_8
+      rect:
+        serializedVersion: 2
+        x: 2283
+        y: 0
+        width: 761
+        height: 700
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 50e8ba68be1f47800800000000000000
+      internalID: 609377843480858117
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spritesheet_Maeve_flash_right_9
+      rect:
+        serializedVersion: 2
+        x: 3044
+        y: 0
+        width: 761
+        height: 700
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: de6bc8f5b94776080800000000000000
+      internalID: -9194251903581767955
       vertices: []
       indices: 
       edges: []
