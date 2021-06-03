@@ -222,7 +222,7 @@ MonoBehaviour:
   bodyIsBroken: 0
   bodyHealth: 1
   ennemyDamage: {fileID: 0}
-  graphicAnimator: {fileID: 0}
+  graphicAnimator: {fileID: 6523097663441760217}
 --- !u!114 &1556395513520290170
 MonoBehaviour:
   m_ObjectHideFlags: 0

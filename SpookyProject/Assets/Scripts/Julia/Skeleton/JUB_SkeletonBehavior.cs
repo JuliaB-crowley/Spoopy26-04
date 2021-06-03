@@ -81,6 +81,10 @@ public class JUB_SkeletonBehavior : MonoBehaviour
         {
             SMBanimator.Play("Destruction");
         }
+        if (ennemyDamage.currentHealth == 0)
+        {
+            SetAnimation(-1);
+        }
     }
 
     void SightCast()
@@ -162,7 +166,7 @@ public class JUB_SkeletonBehavior : MonoBehaviour
                 break;
 
             case 5:
-                animToPlay = "Squelette_walkhead";
+                animToPlay = "SqueletteHead";
                 break;
         }
         if (anim == 5 || anim == 0 || anim == 1)
@@ -203,6 +207,7 @@ public class JUB_SkeletonBehavior : MonoBehaviour
                     break;
             }
         }
+        Debug.LogWarning(animToPlay);
         graphicAnimator.Play(animToPlay);
     }
 

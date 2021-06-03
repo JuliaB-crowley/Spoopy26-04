@@ -82,7 +82,7 @@ AnimatorStateMachine:
     m_Position: {x: 690, y: 910, z: 0}
   - serializedVersion: 1
     m_State: {fileID: -1770580317074461447}
-    m_Position: {x: 725, y: 975, z: 0}
+    m_Position: {x: 720, y: 970, z: 0}
   - serializedVersion: 1
     m_State: {fileID: -6360877520148319520}
     m_Position: {x: 760, y: 1040, z: 0}
@@ -100,7 +100,7 @@ AnimatorStateMachine:
     m_Position: {x: 900, y: 1300, z: 0}
   - serializedVersion: 1
     m_State: {fileID: 2921521543389970484}
-    m_Position: {x: 935, y: 1365, z: 0}
+    m_Position: {x: 940, y: 1360, z: 0}
   - serializedVersion: 1
     m_State: {fileID: -507705574431590221}
     m_Position: {x: 970, y: 1430, z: 0}
@@ -318,7 +318,7 @@ AnimatorState:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Squelette_walk_face
+  m_Name: Squelette_walk_front
   m_Speed: 1
   m_CycleOffset: 0
   m_Transitions: []
@@ -626,7 +626,7 @@ AnimatorState:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Squelette_idle_face
+  m_Name: Squelette_idle_front
   m_Speed: 1
   m_CycleOffset: 0
   m_Transitions: []
@@ -834,7 +834,7 @@ AnimatorState:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: SqueletteHead_face
+  m_Name: SqueletteHead_front
   m_Speed: 1
   m_CycleOffset: 0
   m_Transitions: []

@@ -14,6 +14,8 @@ public class SkeletonSMB_Attack : StateMachineBehaviour
         skeleton.destinationSetter.target = skeleton.transform;
         currentHitspanTime = currentBuildupTime = currentRecoverTime = 0;
         isInBuildup = true;
+
+        skeleton.SetAnimation(2);
     }
 
     // OnStateUpdate is called on each Update frame between OnStateEnter and OnStateExit callbacks

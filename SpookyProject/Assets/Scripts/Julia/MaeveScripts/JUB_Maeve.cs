@@ -816,19 +816,19 @@ namespace character
             if (collision.CompareTag("Heal"))
             {
                 Heal(collision.GetComponent<RPP_CollectibleScript>().collectibleValeur);
-                Destroy(collision.GetComponent<RPP_CollectibleScript>().collectibleObject);
+                collision.GetComponent<RPP_CollectibleScript>().DestroyCollectible();
             }
 
             if (collision.CompareTag("HealthBoost"))
             {
                 MaxUpgrades(collision.GetComponent<RPP_CollectibleScript>().collectibleValeur);
-                Destroy(collision.GetComponent<RPP_CollectibleScript>().collectibleObject);
+                collision.GetComponent<RPP_CollectibleScript>().DestroyCollectible();
             }
 
             if (collision.CompareTag("Bonbon"))
             {
                 GainBonbons(collision.GetComponent<RPP_CollectibleScript>().collectibleValeur);
-                Destroy(collision.GetComponent<RPP_CollectibleScript>().collectibleObject);
+                collision.GetComponent<RPP_CollectibleScript>().DestroyCollectible();
             }
 
             if (collision.CompareTag("DamageDealer"))
