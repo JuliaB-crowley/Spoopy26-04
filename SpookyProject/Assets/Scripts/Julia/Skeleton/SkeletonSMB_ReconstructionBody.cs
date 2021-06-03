@@ -12,6 +12,7 @@ public class SkeletonSMB_ReconstructionBody : StateMachineBehaviour
     {
         timeSinceAnimationStart = 0;
         skeleton.destinationSetter.target = skeleton.transform;
+        skeleton.SetAnimation(4);
     }
 
     // OnStateUpdate is called on each Update frame between OnStateEnter and OnStateExit callbacks

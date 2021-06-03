@@ -24,6 +24,8 @@ public class SkeletonSMB_Pursue : StateMachineBehaviour
         vectorToTravel = toPlayer.normalized * distanceToWalk;
 
         skeleton.pathfinder.destination = skeleton.transform.position + vectorToTravel;
+
+
     }
 
     // OnStateUpdate is called on each Update frame between OnStateEnter and OnStateExit callbacks
@@ -49,6 +51,8 @@ public class SkeletonSMB_Pursue : StateMachineBehaviour
             Debug.LogWarning("returned in patrol");
             animator.Play("Idle");
         }
+
+        skeleton.SetAnimation(1);
     }
 
     // OnStateExit is called when a transition ends and the state machine finishes evaluating this state

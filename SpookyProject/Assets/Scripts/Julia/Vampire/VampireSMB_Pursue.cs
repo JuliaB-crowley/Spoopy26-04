@@ -48,6 +48,7 @@ public class VampireSMB_Pursue : StateMachineBehaviour
             Debug.LogWarning("returned in patrol");
             animator.Play("Idle");
         }
+        vampire.SetAnimation(0);
     }
 
     // OnStateExit is called when a transition ends and the state machine finishes evaluating this state

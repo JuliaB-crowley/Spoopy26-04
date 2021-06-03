@@ -12,7 +12,7 @@ public class JUB_QuestItem : MonoBehaviour
         if(collision.CompareTag("Player"))
         {
             GameObject.FindGameObjectWithTag("HUD").GetComponent<JUB_QuestManager>().UpdateObjective(itemID);
-
+            Destroy(this.gameObject);
         }
     }
 }

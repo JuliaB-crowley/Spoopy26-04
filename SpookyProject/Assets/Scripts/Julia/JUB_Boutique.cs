@@ -83,7 +83,7 @@ public class JUB_Boutique : MonoBehaviour
 
     public void Buy()
     {
-        if(maeve.currentBonbons > items[buttonNumber].scriptableObject.itemPrice)
+        if(maeve.currentBonbons >= items[buttonNumber].scriptableObject.itemPrice)
         {
             maeve.Achat(items[buttonNumber].scriptableObject.itemPrice);
             Debug.Log(items[buttonNumber].scriptableObject.itemType);

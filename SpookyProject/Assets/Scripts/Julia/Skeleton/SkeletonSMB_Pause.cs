@@ -15,12 +15,12 @@ public class SkeletonSMB_Pause : StateMachineBehaviour
     // OnStateUpdate is called on each Update frame between OnStateEnter and OnStateExit callbacks
     override public void OnStateUpdate(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
+        skeleton.SetAnimation(0);
         timeSincePause += Time.deltaTime;
         if (timeSincePause >= skeleton.pauseTime)
         {
             if (!skeleton.playerInMemory)
             {
-                Debug.LogWarning("returned in patrol");
                 animator.Play("Idle");
             }
             else

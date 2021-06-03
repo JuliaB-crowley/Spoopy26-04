@@ -36,6 +36,8 @@ public class VampireSMB_Escape : StateMachineBehaviour
         {
            animator.Play("Pause");
         }
+
+        vampire.SetAnimation(4);
     }
 
     Vector3 FleeTarget()

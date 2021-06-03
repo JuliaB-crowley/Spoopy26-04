@@ -54,6 +54,9 @@ public class VampireSMB_Idle : StateMachineBehaviour
         {
             animator.Play("Pursue");
         }
+
+        vampire.SetAnimation(0);
+        
     }
 
     void NewDestination()
