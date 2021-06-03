@@ -1774,7 +1774,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   nomSceneBoss: BossRoom
-  nomSceneDonjon: Prototype_Donjon
+  nomSceneDonjon: Prototype_Dungeon
 --- !u!1 &5857361522811762284
 GameObject:
   m_ObjectHideFlags: 0
@@ -1928,7 +1928,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 10
+  m_SortingOrder: 20
   m_Sprite: {fileID: 3727030966371823956, guid: 3a5c6498621f34948a995e1b584944d5, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -2797,7 +2797,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 6415365470693042688, guid: a6b52db514017794c8ec3283bc5ae8fb, type: 3}
       propertyPath: m_SortingOrder
-      value: 20
+      value: 19
       objectReference: {fileID: 0}
     - target: {fileID: 6415365470693042688, guid: a6b52db514017794c8ec3283bc5ae8fb, type: 3}
       propertyPath: m_Materials.Array.size

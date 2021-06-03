@@ -39,7 +39,7 @@ public class JUB_QuestManager : MonoBehaviour
             dialogueManager.StartDialogue(FirstKey);
 
         }
-        if(firstKeyPartObtained && ItemID == 4 && !secondKeySaid)
+        else if(firstKeyPartObtained && ItemID == 4 && !secondKeySaid)
         {
             secondKeySaid = true;
             questBookText.text = objectivesName[5];
