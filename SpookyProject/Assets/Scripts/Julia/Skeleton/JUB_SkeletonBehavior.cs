@@ -42,6 +42,9 @@ public class JUB_SkeletonBehavior : MonoBehaviour
     float thresholdLife;
     public JUB_EnnemyDamage ennemyDamage;
 
+    //anim
+    public Animator graphicAnimator;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -125,6 +128,82 @@ public class JUB_SkeletonBehavior : MonoBehaviour
             playerInMemory = false;
             secondSinceLastSeen = 0;
         }
+    }
+
+    public void SetAnimation(int anim)
+    {
+        //-1 ded, 0 idle, 1 run, 2 attack, 3 destruction, 4 reconstruction, 5 move head
+
+        string animToPlay = "Squelette_idle";
+        switch (anim)
+        {
+            case -1:
+                animToPlay = "Squelette_finaldeath";
+                break;
+
+            case 0:
+                animToPlay = "Squelette_idle";
+                break;
+
+            case 1:
+                animToPlay = "Squelette_walk";
+                break;
+
+            case 2:
+                animToPlay = "Squelette_headattack";
+                break;
+
+            case 3:
+                animToPlay = "Squelette_firstdeath";
+                break;
+
+            case 4:
+                animToPlay = "Squelette_reconstruction";
+                break;
+
+            case 5:
+                animToPlay = "Squelette_walkhead";
+                break;
+        }
+        if (anim == 5 || anim == 0 || anim == 1)
+        {
+            int direction = 3; //0 = rigth, 1 = left, 2 = up, 3 = down
+            if (pathfinder.velocity.normalized.x > 0.5)
+            {
+                direction = 0;
+            }
+            else if (pathfinder.velocity.normalized.x < -0.5)
+            {
+                direction = 1;
+            }
+            else if (pathfinder.velocity.normalized.y > 0.5)
+            {
+                direction = 2;
+            }
+            else if (pathfinder.velocity.normalized.y < -0.5)
+            {
+                direction = 3;
+            }
+            switch (direction)
+            {
+                case 0:
+                    animToPlay += "_right";
+                    break;
+
+                case 1:
+                    animToPlay += "_left";
+                    break;
+
+                case 2:
+                    animToPlay += "_back";
+                    break;
+
+                case 3:
+                    animToPlay += "_front";
+                    break;
+            }
+        }
+        graphicAnimator.Play(animToPlay);
     }
 
 }

@@ -7,7 +7,7 @@ AnimatorState:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: "Vamp_idle_d\xE9placement_right_"
+  m_Name: "Vamp_idle_d\xE9placement_right"
   m_Speed: 1
   m_CycleOffset: 0
   m_Transitions: []
@@ -162,7 +162,7 @@ AnimatorState:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: SqueletteHead_Right
+  m_Name: SqueletteHead_right
   m_Speed: 1
   m_CycleOffset: 0
   m_Transitions: []
@@ -214,7 +214,7 @@ AnimatorState:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: SqueletteHead_Left
+  m_Name: SqueletteHead_left
   m_Speed: 1
   m_CycleOffset: 0
   m_Transitions: []
@@ -652,7 +652,7 @@ AnimatorState:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: "Vamp_idle_d\xE9placement_left_"
+  m_Name: "Vamp_idle_d\xE9placement_left"
   m_Speed: 1
   m_CycleOffset: 0
   m_Transitions: []
@@ -678,7 +678,7 @@ AnimatorState:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: "Vamp_idle_d\xE9placement_front_"
+  m_Name: "Vamp_idle_d\xE9placement_front"
   m_Speed: 1
   m_CycleOffset: 0
   m_Transitions: []
@@ -808,7 +808,7 @@ AnimatorState:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: SqueletteHead_Back
+  m_Name: SqueletteHead_back
   m_Speed: 1
   m_CycleOffset: 0
   m_Transitions: []
@@ -834,7 +834,7 @@ AnimatorState:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: SqueletteHead_Face
+  m_Name: SqueletteHead_face
   m_Speed: 1
   m_CycleOffset: 0
   m_Transitions: []

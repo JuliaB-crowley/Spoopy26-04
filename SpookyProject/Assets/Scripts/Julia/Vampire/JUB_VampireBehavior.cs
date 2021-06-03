@@ -10,6 +10,7 @@ public class JUB_VampireBehavior : MonoBehaviour
     public AIPath pathfinder;
     public AIDestinationSetter destinationSetter;
     public JUB_Maeve player;
+    public JUB_EnnemyDamage ennemyDamage;
 
     //sight cast parameters 
     public float maxSight;
@@ -42,6 +43,9 @@ public class JUB_VampireBehavior : MonoBehaviour
     public JUB_FlashManager flashManager;
     public bool hasBeenStunned;
 
+    //anim 
+    public Animator graphicAnimator;
+    public float animTransformTime = 1f;
 
     // Start is called before the first frame update
     void Start()
@@ -51,6 +55,7 @@ public class JUB_VampireBehavior : MonoBehaviour
         pathfinder = GetComponent<AIPath>();
         destinationSetter = GetComponent<AIDestinationSetter>();
         flashManager = GetComponentInChildren<JUB_FlashManager>();
+        ennemyDamage = GetComponent<JUB_EnnemyDamage>();
 
         SMBanimator.GetBehaviour<VampireSMB_Idle>().vampire = this;
         SMBanimator.GetBehaviour<VampireSMB_Attack>().vampire = this;
@@ -75,7 +80,9 @@ public class JUB_VampireBehavior : MonoBehaviour
 
         if((distanceFromPlayer.magnitude < securityThreshold) && !isEscaping && !hasBeenStunned)
         {
-            SMBanimator.Play("Escape");
+            isEscaping = true;
+            SetAnimation(3);
+            StartCoroutine(TransformAnim());
         }
 
         if(flashManager.flashed && !hasBeenStunned)
@@ -83,8 +90,17 @@ public class JUB_VampireBehavior : MonoBehaviour
             hasBeenStunned = true;
             SMBanimator.Play("Stun");
         }
+        if (ennemyDamage.currentHealth == 0)
+        {
+            SetAnimation(-1);
+        }
     }
 
+    IEnumerator TransformAnim()
+    {
+        yield return new WaitForSeconds(animTransformTime);
+        SMBanimator.Play("Escape");
+    }
     void SightCast()
     {
         RaycastHit2D hit2D;
@@ -131,4 +147,77 @@ public class JUB_VampireBehavior : MonoBehaviour
             secondSinceLastSeen = 0;
         }
     }
+
+    public void SetAnimation(int anim)
+    {
+        //-1 ded, 0 idle, 1 invoc, 2 stun, 3 transformation, 4 chauve souris form
+
+        string animToPlay = "Vamp_idle_déplacement";
+        switch (anim)
+        {
+            case -1:
+                animToPlay = "Vamp_mort";
+                break;
+
+            case 0:
+                animToPlay = "Vamp_idle_déplacement";
+                break;
+
+            case 1:
+                animToPlay = "Vamp_invocation";
+                break;
+
+            case 2:
+                animToPlay = "Vamp_stun";
+                break;
+
+            case 3:
+                animToPlay = "Vamp_transformation";
+                break;
+
+            case 4:
+                animToPlay = "Chauvesouris_transformation";
+                break;
+        }
+        if (anim == 0)
+        {
+            int direction = 3; //0 = rigth, 1 = left, 2 = up, 3 = down
+            if (pathfinder.velocity.normalized.x > 0.5)
+            {
+                direction = 0;
+            }
+            else if (pathfinder.velocity.normalized.x < -0.5)
+            {
+                direction = 1;
+            }
+            else if (pathfinder.velocity.normalized.y > 0.5)
+            {
+                direction = 2;
+            }
+            else if (pathfinder.velocity.normalized.y < -0.5)
+            {
+                direction = 3;
+            }
+            switch (direction)
+            {
+                case 0:
+                    animToPlay += "_right";
+                    break;
+
+                case 1:
+                    animToPlay += "_left";
+                    break;
+
+                case 2:
+                    animToPlay += "_back";
+                    break;
+
+                case 3:
+                    animToPlay += "_front";
+                    break;
+            }
+        }
+        graphicAnimator.Play(animToPlay);
+    }
+
 }
