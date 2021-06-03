@@ -1,31 +1,28 @@
 fileFormatVersion: 2
-guid: 66137f3e50bfe7b4eba93cabfae7afc0
+guid: ecf01805b49ee204bb5a94c7ab01dda8
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -2161029673337754109
-    second: "sprite d\xE9placement back_0"
+      213: 3038349685179454343
+    second: "1\xE8re mort_0"
   - first:
-      213: 5936917569578837993
-    second: "sprite d\xE9placement back_1"
+      213: 8234851447493421222
+    second: "1\xE8re mort_1"
   - first:
-      213: -3978903852942214647
-    second: "sprite d\xE9placement back_2"
+      213: 4212486932946786394
+    second: "1\xE8re mort_2"
   - first:
-      213: 622040594013219943
-    second: "sprite d\xE9placement back_3"
+      213: -315211788935776383
+    second: "1\xE8re mort_3"
   - first:
-      213: -285869560467772420
-    second: "sprite d\xE9placement back_4"
+      213: 6129474786147874298
+    second: "1\xE8re mort_4"
   - first:
-      213: 8708808404262071712
-    second: "sprite d\xE9placement back_5"
+      213: 5947518681397762187
+    second: "1\xE8re mort_5"
   - first:
-      213: -7059194128239275526
-    second: "sprite d\xE9placement back_6"
-  - first:
-      213: 4358499473436365594
-    second: "sprite d\xE9placement back_7"
+      213: 1011096074382099746
+    second: "1\xE8re mort_13"
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -115,169 +112,148 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: "sprite d\xE9placement back_0"
+      name: "1\xE8re mort_0"
       rect:
         serializedVersion: 2
-        x: 117
-        y: 710
-        width: 306
-        height: 515
+        x: 58
+        y: 0
+        width: 368
+        height: 690
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 30eef9336fa7202e0800000000000000
-      internalID: -2161029673337754109
+      spriteID: 7839a88d0f26a2a20800000000000000
+      internalID: 3038349685179454343
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: "sprite d\xE9placement back_1"
+      name: "1\xE8re mort_1"
       rect:
         serializedVersion: 2
-        x: 638
-        y: 725
-        width: 312
-        height: 503
+        x: 554
+        y: 0
+        width: 370
+        height: 690
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 9e7a58b031b246250800000000000000
-      internalID: 5936917569578837993
+      spriteID: 6a8e4f9e2c1184270800000000000000
+      internalID: 8234851447493421222
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: "sprite d\xE9placement back_2"
+      name: "1\xE8re mort_2"
       rect:
         serializedVersion: 2
-        x: 1158
-        y: 709
-        width: 305
-        height: 516
+        x: 1014
+        y: 0
+        width: 450
+        height: 690
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 90a32f1e60818c8c0800000000000000
-      internalID: -3978903852942214647
+      spriteID: a58944bfb82c57a30800000000000000
+      internalID: 4212486932946786394
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: "sprite d\xE9placement back_3"
+      name: "1\xE8re mort_3"
       rect:
         serializedVersion: 2
-        x: 1684
-        y: 721
-        width: 308
-        height: 504
+        x: 1524
+        y: 0
+        width: 427
+        height: 690
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 76ce702ef9ee1a800800000000000000
-      internalID: 622040594013219943
+      spriteID: 187b77b4c8420abf0800000000000000
+      internalID: -315211788935776383
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: "sprite d\xE9placement back_4"
+      name: "1\xE8re mort_4"
       rect:
         serializedVersion: 2
-        x: 2202
-        y: 711
-        width: 307
-        height: 515
+        x: 2104
+        y: 0
+        width: 286
+        height: 690
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: cfba83c3623680cf0800000000000000
-      internalID: -285869560467772420
+      spriteID: af5be08b7d4401550800000000000000
+      internalID: 6129474786147874298
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: "sprite d\xE9placement back_5"
+      name: "1\xE8re mort_5"
       rect:
         serializedVersion: 2
-        x: 113
-        y: 60
-        width: 310
-        height: 496
+        x: 3054
+        y: 0
+        width: 368
+        height: 690
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 0ad2af83a17ebd870800000000000000
-      internalID: 8708808404262071712
+      spriteID: b8896bbbab4d98250800000000000000
+      internalID: 5947518681397762187
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: "sprite d\xE9placement back_6"
+      name: "1\xE8re mort_13"
       rect:
         serializedVersion: 2
-        x: 635
-        y: 45
-        width: 309
-        height: 513
+        x: 2523
+        y: 0
+        width: 408
+        height: 690
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: af156c17754b80e90800000000000000
-      internalID: -7059194128239275526
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: "sprite d\xE9placement back_7"
-      rect:
-        serializedVersion: 2
-        x: 1160
-        y: 52
-        width: 309
-        height: 507
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: a13d6e3cd208c7c30800000000000000
-      internalID: 4358499473436365594
+      spriteID: 225465bc582280e00800000000000000
+      internalID: 1011096074382099746
       vertices: []
       indices: 
       edges: []
@@ -285,7 +261,7 @@ TextureImporter:
     outline: []
     physicsShape: []
     bones: []
-    spriteID: 9a24628fe4439de4b9506f0a3f7a1a4e
+    spriteID: 8731bf112c5131744a90732645253dab
     internalID: 0
     vertices: []
     indices: 

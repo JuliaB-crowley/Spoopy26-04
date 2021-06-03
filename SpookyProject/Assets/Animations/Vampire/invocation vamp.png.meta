@@ -1,31 +1,31 @@
 fileFormatVersion: 2
-guid: 66137f3e50bfe7b4eba93cabfae7afc0
+guid: 57a6c5dafd13e76498146ad727917876
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -2161029673337754109
-    second: "sprite d\xE9placement back_0"
+      213: 4661798282037223138
+    second: invocation vamp_0
   - first:
-      213: 5936917569578837993
-    second: "sprite d\xE9placement back_1"
+      213: 1230498069513766073
+    second: invocation vamp_1
   - first:
-      213: -3978903852942214647
-    second: "sprite d\xE9placement back_2"
+      213: 8767799418545947973
+    second: invocation vamp_2
   - first:
-      213: 622040594013219943
-    second: "sprite d\xE9placement back_3"
+      213: -5378841524255413895
+    second: invocation vamp_3
   - first:
-      213: -285869560467772420
-    second: "sprite d\xE9placement back_4"
+      213: 6766565456269449944
+    second: invocation vamp_4
   - first:
-      213: 8708808404262071712
-    second: "sprite d\xE9placement back_5"
+      213: -1382892906529425902
+    second: invocation vamp_5
   - first:
-      213: -7059194128239275526
-    second: "sprite d\xE9placement back_6"
+      213: -381460405218542008
+    second: invocation vamp_6
   - first:
-      213: 4358499473436365594
-    second: "sprite d\xE9placement back_7"
+      213: -1871149936967707025
+    second: invocation vamp_7
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -115,169 +115,169 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: "sprite d\xE9placement back_0"
+      name: invocation vamp_0
       rect:
         serializedVersion: 2
-        x: 117
-        y: 710
-        width: 306
-        height: 515
+        x: 196
+        y: 0
+        width: 412
+        height: 703
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 30eef9336fa7202e0800000000000000
-      internalID: -2161029673337754109
+      spriteID: 2eeda5796d802b040800000000000000
+      internalID: 4661798282037223138
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: "sprite d\xE9placement back_1"
+      name: invocation vamp_1
       rect:
         serializedVersion: 2
-        x: 638
-        y: 725
-        width: 312
-        height: 503
+        x: 1046
+        y: 0
+        width: 411
+        height: 703
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 9e7a58b031b246250800000000000000
-      internalID: 5936917569578837993
+      spriteID: 9b40c2a897b931110800000000000000
+      internalID: 1230498069513766073
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: "sprite d\xE9placement back_2"
+      name: invocation vamp_2
       rect:
         serializedVersion: 2
-        x: 1158
-        y: 709
-        width: 305
-        height: 516
+        x: 1894
+        y: 0
+        width: 415
+        height: 703
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 90a32f1e60818c8c0800000000000000
-      internalID: -3978903852942214647
+      spriteID: 545ce4c0e1b7da970800000000000000
+      internalID: 8767799418545947973
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: "sprite d\xE9placement back_3"
+      name: invocation vamp_3
       rect:
         serializedVersion: 2
-        x: 1684
-        y: 721
-        width: 308
-        height: 504
+        x: 2746
+        y: 0
+        width: 411
+        height: 703
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 76ce702ef9ee1a800800000000000000
-      internalID: 622040594013219943
+      spriteID: 979a2abc1248a55b0800000000000000
+      internalID: -5378841524255413895
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: "sprite d\xE9placement back_4"
+      name: invocation vamp_4
       rect:
         serializedVersion: 2
-        x: 2202
-        y: 711
-        width: 307
-        height: 515
+        x: 3607
+        y: 0
+        width: 413
+        height: 703
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: cfba83c3623680cf0800000000000000
-      internalID: -285869560467772420
+      spriteID: 8da9e528e6ba7ed50800000000000000
+      internalID: 6766565456269449944
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: "sprite d\xE9placement back_5"
+      name: invocation vamp_5
       rect:
         serializedVersion: 2
-        x: 113
-        y: 60
-        width: 310
-        height: 496
+        x: 4439
+        y: 0
+        width: 413
+        height: 703
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 0ad2af83a17ebd870800000000000000
-      internalID: 8708808404262071712
+      spriteID: 216f7e77a3afecce0800000000000000
+      internalID: -1382892906529425902
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: "sprite d\xE9placement back_6"
+      name: invocation vamp_6
       rect:
         serializedVersion: 2
-        x: 635
-        y: 45
-        width: 309
-        height: 513
+        x: 5294
+        y: 0
+        width: 413
+        height: 703
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: af156c17754b80e90800000000000000
-      internalID: -7059194128239275526
+      spriteID: 84e721358c7c4baf0800000000000000
+      internalID: -381460405218542008
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: "sprite d\xE9placement back_7"
+      name: invocation vamp_7
       rect:
         serializedVersion: 2
-        x: 1160
-        y: 52
-        width: 309
-        height: 507
+        x: 6140
+        y: 0
+        width: 413
+        height: 703
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a13d6e3cd208c7c30800000000000000
-      internalID: 4358499473436365594
+      spriteID: f669b8dcb075806e0800000000000000
+      internalID: -1871149936967707025
       vertices: []
       indices: 
       edges: []
@@ -285,7 +285,7 @@ TextureImporter:
     outline: []
     physicsShape: []
     bones: []
-    spriteID: 9a24628fe4439de4b9506f0a3f7a1a4e
+    spriteID: 6ed5b6ab9c39b4e4a94b9cdf62f0644e
     internalID: 0
     vertices: []
     indices: 

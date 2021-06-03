@@ -1,31 +1,37 @@
 fileFormatVersion: 2
-guid: 66137f3e50bfe7b4eba93cabfae7afc0
+guid: 7d5e236228bd7e94c9bad886d0a3cb47
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -2161029673337754109
-    second: "sprite d\xE9placement back_0"
+      213: 7752101067400398677
+    second: "D\xE9placement  t\xEAte gauche_0"
   - first:
-      213: 5936917569578837993
-    second: "sprite d\xE9placement back_1"
+      213: -162355225664580282
+    second: "D\xE9placement  t\xEAte gauche_1"
   - first:
-      213: -3978903852942214647
-    second: "sprite d\xE9placement back_2"
+      213: 5312557697209251282
+    second: "D\xE9placement  t\xEAte gauche_2"
   - first:
-      213: 622040594013219943
-    second: "sprite d\xE9placement back_3"
+      213: -6655041745547526536
+    second: "D\xE9placement  t\xEAte gauche_3"
   - first:
-      213: -285869560467772420
-    second: "sprite d\xE9placement back_4"
+      213: 4227894948681413538
+    second: "D\xE9placement  t\xEAte gauche_4"
   - first:
-      213: 8708808404262071712
-    second: "sprite d\xE9placement back_5"
+      213: -1010918990442660867
+    second: "D\xE9placement  t\xEAte gauche_5"
   - first:
-      213: -7059194128239275526
-    second: "sprite d\xE9placement back_6"
+      213: 853573213753532417
+    second: "D\xE9placement  t\xEAte gauche_6"
   - first:
-      213: 4358499473436365594
-    second: "sprite d\xE9placement back_7"
+      213: -4685078478601158246
+    second: "D\xE9placement  t\xEAte gauche_7"
+  - first:
+      213: 7171478641680694061
+    second: "D\xE9placement  t\xEAte gauche_8"
+  - first:
+      213: 4862940584551332319
+    second: "D\xE9placement  t\xEAte gauche_9"
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -115,13 +121,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: "sprite d\xE9placement back_0"
+      name: "D\xE9placement  t\xEAte gauche_0"
       rect:
         serializedVersion: 2
-        x: 117
-        y: 710
-        width: 306
-        height: 515
+        x: 1322
+        y: 0
+        width: 173
+        height: 594
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -129,20 +135,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 30eef9336fa7202e0800000000000000
-      internalID: -2161029673337754109
+      spriteID: 557c35139def49b60800000000000000
+      internalID: 7752101067400398677
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: "sprite d\xE9placement back_1"
+      name: "D\xE9placement  t\xEAte gauche_1"
       rect:
         serializedVersion: 2
-        x: 638
-        y: 725
-        width: 312
-        height: 503
+        x: 2060
+        y: 0
+        width: 196
+        height: 594
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -150,20 +156,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 9e7a58b031b246250800000000000000
-      internalID: 5936917569578837993
+      spriteID: 64595de48c23fbdf0800000000000000
+      internalID: -162355225664580282
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: "sprite d\xE9placement back_2"
+      name: "D\xE9placement  t\xEAte gauche_2"
       rect:
         serializedVersion: 2
-        x: 1158
-        y: 709
-        width: 305
-        height: 516
+        x: 2780
+        y: 0
+        width: 196
+        height: 594
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -171,20 +177,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 90a32f1e60818c8c0800000000000000
-      internalID: -3978903852942214647
+      spriteID: 2d5bce6141ff9b940800000000000000
+      internalID: 5312557697209251282
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: "sprite d\xE9placement back_3"
+      name: "D\xE9placement  t\xEAte gauche_3"
       rect:
         serializedVersion: 2
-        x: 1684
-        y: 721
-        width: 308
-        height: 504
+        x: 3500
+        y: 0
+        width: 173
+        height: 594
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -192,20 +198,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 76ce702ef9ee1a800800000000000000
-      internalID: 622040594013219943
+      spriteID: 87e7e37daca84a3a0800000000000000
+      internalID: -6655041745547526536
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: "sprite d\xE9placement back_4"
+      name: "D\xE9placement  t\xEAte gauche_4"
       rect:
         serializedVersion: 2
-        x: 2202
-        y: 711
-        width: 307
-        height: 515
+        x: 4216
+        y: 0
+        width: 173
+        height: 586
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -213,20 +219,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: cfba83c3623680cf0800000000000000
-      internalID: -285869560467772420
+      spriteID: 2a3f2d33e008caa30800000000000000
+      internalID: 4227894948681413538
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: "sprite d\xE9placement back_5"
+      name: "D\xE9placement  t\xEAte gauche_8"
       rect:
         serializedVersion: 2
-        x: 113
-        y: 60
-        width: 310
-        height: 496
+        x: 563
+        y: 0
+        width: 195
+        height: 594
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -234,20 +240,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 0ad2af83a17ebd870800000000000000
-      internalID: 8708808404262071712
+      spriteID: d2bbda714d5368360800000000000000
+      internalID: 7171478641680694061
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: "sprite d\xE9placement back_6"
+      name: "D\xE9placement  t\xEAte gauche_9"
       rect:
         serializedVersion: 2
-        x: 635
-        y: 45
-        width: 309
-        height: 513
+        x: 4962
+        y: 0
+        width: 185
+        height: 594
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -255,29 +261,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: af156c17754b80e90800000000000000
-      internalID: -7059194128239275526
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: "sprite d\xE9placement back_7"
-      rect:
-        serializedVersion: 2
-        x: 1160
-        y: 52
-        width: 309
-        height: 507
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: a13d6e3cd208c7c30800000000000000
-      internalID: 4358499473436365594
+      spriteID: fd9330a52b2ac7340800000000000000
+      internalID: 4862940584551332319
       vertices: []
       indices: 
       edges: []
@@ -285,7 +270,7 @@ TextureImporter:
     outline: []
     physicsShape: []
     bones: []
-    spriteID: 9a24628fe4439de4b9506f0a3f7a1a4e
+    spriteID: 5e3694b1e8e97b443926954e565da9d4
     internalID: 0
     vertices: []
     indices: 
