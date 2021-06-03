@@ -17,7 +17,7 @@ public class JUB_DialogueManager : MonoBehaviour
     public string actualPhrase;
 
     JUB_Maeve maeve;
-    Controller controller;
+    public Controller controller;
     // Start is called before the first frame update
     void Start()
     {

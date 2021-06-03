@@ -73,15 +73,22 @@ namespace character
         public string jeuSceneName;
         public GameObject mainCam;
         public float ennemyScreenshakeAmount, bossScreenshakeAmount, screenshakeDuration;
+        public ParticleSystem deathParticles, dust;
+        public GameObject paquetBonbons;
+        Vector3 paquetOriginalScale;
 
         // Start is called before the first frame update
         void Start()
         {
+            deathParticles.Stop();
+
             rigidBody = GetComponent<Rigidbody2D>();
             mainCam = GameObject.FindGameObjectWithTag("MainCamera");
             controller = new Controller();
             controller.Enable();
             displayBonbons.text = currentBonbons.ToString();
+
+            paquetOriginalScale = paquetBonbons.transform.localScale;
 
             AttackProfile quickAttack = new AttackProfile(1, new Vector2(1, 1), 0.4f, 0.2f, "quick");
             AttackProfile heavyAttack = new AttackProfile(3, new Vector2(2, 1), 0.4f, 0.8f, "heavy");
@@ -109,6 +116,10 @@ namespace character
             {
                 Move();
 
+            }
+            else
+            {
+                Collisions();
             }
 
             displayLife.text = currentLife.ToString() + " / " + maxLife.ToString();
@@ -206,15 +217,12 @@ namespace character
                     }
                     else if (isPushingObject)
                     {
-                        animationIndex = 6;
+                        animationIndex = 1;
+                        //si tu veux mettre un son d'objet qu'on pousse c'est ici
                     }
                 }
             }
 
-            collisionLeft = left.isCollision;
-            collisionRight = right.isCollision;
-            collisionTop = top.isCollision;
-            collisionBottom = bottom.isCollision;
 
             if (!isInRecoil && !isFlashing)
             {
@@ -222,6 +230,11 @@ namespace character
                 currentSpeed.y = Mathf.SmoothDamp(currentSpeed.y, targetSpeed.y, ref yVelocity, accelerationTime);
 
             }
+
+            collisionLeft = left.isCollision;
+            collisionRight = right.isCollision;
+            collisionTop = top.isCollision;
+            collisionBottom = bottom.isCollision;
 
             if (collisionLeft && currentSpeed.x < 0)
             {
@@ -239,8 +252,11 @@ namespace character
             {
                 currentSpeed.y = 0;
             }
-            if(currentSpeed.magnitude < 0.05)
+
+            if (currentSpeed.magnitude < 0.05)
             {
+                dust.Pause();
+                dust.Clear();
                 if (isInBuildup)
                 {
                     animationIndex = 2;
@@ -262,6 +278,11 @@ namespace character
                 {
                     animationIndex = 7;
                 }
+                
+            }
+            else
+            {
+                dust.Play();
             }
             if(!isFlashing)
             {
@@ -275,6 +296,36 @@ namespace character
             }
 
             
+
+        }
+
+        void Collisions()
+        {
+            collisionLeft = left.isCollision;
+            collisionRight = right.isCollision;
+            collisionTop = top.isCollision;
+            collisionBottom = bottom.isCollision;
+
+            Vector3 knockbackSpeed = rigidBody.velocity;
+
+            if (collisionLeft && knockbackSpeed.x < 0)
+            {
+                knockbackSpeed.x = 0;
+            }
+            if (collisionRight && knockbackSpeed.x > 0)
+            {
+                knockbackSpeed.x = 0;
+            }
+            if (collisionTop && knockbackSpeed.y > 0)
+            {
+                knockbackSpeed.y = 0;
+            }
+            if (collisionBottom && knockbackSpeed.y < 0)
+            {
+                knockbackSpeed.y = 0;
+            }
+
+            rigidBody.velocity = knockbackSpeed;
 
         }
 
@@ -315,6 +366,7 @@ namespace character
         {
             targetSpeed = rollDirection * rollSpeed;
             //anim roulade
+            //son roulade
             yield return new WaitForSeconds(rollDuration);
             isInRoll = false;
             isInImmunity = false;
@@ -362,6 +414,7 @@ namespace character
             yield return new WaitForSeconds(attackProfile.atkBuildup);
             isInBuildup = false;
             isInRecover = true;
+            //son attaque
             StartCoroutine(Hit(attackProfile));
         }
         IEnumerator Hit(AttackProfile attackProfile)
@@ -636,6 +689,7 @@ namespace character
             if (!isInImmunity)
             {
                 currentLife -= damages;
+                //son dégâts
                 if (currentLife <= 0)
                 {
                     currentLife = 0;
@@ -705,6 +759,8 @@ namespace character
 
         void Die()
         {
+            deathParticles.Play();
+            //son de mort
             StartCoroutine(DeathCoroutine());
             //respawn checkpoint
         }
@@ -712,6 +768,7 @@ namespace character
         IEnumerator DeathCoroutine()
         {
             yield return new WaitForSeconds(deathAnimDuration);
+            deathParticles.Stop();
             deathCanvas.SetActive(true);
            
         }
@@ -733,13 +790,23 @@ namespace character
 
         public void GainBonbons(int bonbons)
         {
+            paquetBonbons.transform.localScale = paquetOriginalScale * 1.2f;
+            //son gain bonbons
             currentBonbons += bonbons;
+            StartCoroutine(PaquetNormal());
             displayBonbons.text = currentBonbons.ToString();
+        }
+
+        IEnumerator PaquetNormal()
+        {
+            yield return new WaitForSeconds(0.1f);
+            paquetBonbons.transform.localScale = paquetOriginalScale;
         }
 
         public void Achat(int price)
         {
             currentBonbons -= price;
+            //son achat
             displayBonbons.text = currentBonbons.ToString();
         }
 
@@ -772,7 +839,10 @@ namespace character
 
         public void Anim()
         {
-            
+            if(isInRoll)
+            {
+                animationIndex = 4;
+            }
             if (!isPushingObject)
             {
                 switch (dirAngle)
@@ -815,7 +885,7 @@ namespace character
                         break;
                 }
             }
-
+            
             switch(animationIndex)
             {
                 //-1 mort, 0 idle, 1 course, 2 attaque, 3 flash, 4 roulade, 5 accroupi, 6 déplacement objet, 7 accroupi iddle, 8 immunité, 9 pushIdle
@@ -991,8 +1061,10 @@ namespace character
                     break;
 
             }
+            //Debug.LogWarning(animationIndex);
+            //animationIndex = 0;
 
-
+            
                 
         }
     }

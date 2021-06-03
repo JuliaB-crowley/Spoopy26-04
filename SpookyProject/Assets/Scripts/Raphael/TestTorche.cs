@@ -9,13 +9,7 @@ public class TestTorche : MonoBehaviour
     public SpriteRenderer spriteRenderer; //Sprite Renderer de la torche
     public Sprite litTorch, unlitTorch; //Possibles Sprites que la torche peux avoir
     [SerializeField] RPP_SubPuzzleManager torchesManager; //Script qui gère les puzzles des torches
-    public bool isPartOfAPuzzle = false;
-
-
-    /*[SerializeField] float iluminationRadius;
-    [SerializeField] LayerMask layersIluminated;
-    Transform torchTransform;*/
-
+    public bool isPartOfAPuzzle = false, hasBeenUsed = false;
 
     //flash manager à mettre en enfant et sur layer flashable
     public JUB_FlashManager flashManager;
@@ -53,18 +47,6 @@ public class TestTorche : MonoBehaviour
         {
             torchesManager.successesAchieved++;
         }
-        /*Collider2D[] iluminatedObjects = Physics2D.OverlapCircleAll(torchTransform.position, iluminationRadius, layersIluminated);
-        foreach (Collider2D item in iluminatedObjects)
-        {
-            if (item.GetComponent<RPP_BoutonScript>())
-            {
-                item.GetComponent<RPP_BoutonScript>().PermanentlyActivateButton();
-            }
-            if (item.GetComponent<RPP_InvisibleInkScript>())
-            {
-                item.GetComponent<RPP_InvisibleInkScript>().sprite.enabled = true;
-            }
-        }*/
     }
 
     //Cette méthode ne doit pas être utilisé si la torche peut être bougée
@@ -107,21 +89,4 @@ public class TestTorche : MonoBehaviour
             }
         }
     }
-
-    /*private void OnTriggerStay2D(Collider2D collision)
-    {
-        if (isLit)
-        {
-            if (!collision.GetComponent<RPP_BoutonScript>().hasBeenFlashed)
-            {
-                collision.GetComponent<RPP_BoutonScript>().PermanentlyActivateButton();
-            }
-        }
-    }/*
-
-    /*private void OnDrawGizmosSelected()
-    {
-        Gizmos.color = Color.red;
-        Gizmos.DrawWireSphere(torchTransform.position, iluminationRadius);
-    }*/
 }

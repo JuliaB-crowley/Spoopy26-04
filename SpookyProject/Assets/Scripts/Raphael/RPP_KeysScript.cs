@@ -7,7 +7,7 @@ public class RPP_KeysScript : MonoBehaviour
     public GameObject keyObject;
     [SerializeField] RPP_GeneralPuzzleMaster puzzleMaster;
     public bool isYellowKey, isBlueKey, isGreenKey, isVioletKey;
-    [SerializeField] bool needPzMnA = true, needPzMnB, needPzMnC, needPzMnD, needPzMnE, needPzMnF, needPzMnG;
+    [SerializeField] bool needPzMnA = true, needPzMnB, needPzMnC, needPzMnD, needPzMnE, needPzMnF, needPzMnG, needPzMnH;
 
     void Start()
     {
@@ -39,6 +39,10 @@ public class RPP_KeysScript : MonoBehaviour
         else if (needPzMnG)
         {
             puzzleMaster = GameObject.FindGameObjectWithTag("PuzzleMasterG").GetComponent<RPP_GeneralPuzzleMaster>();
+        }
+        else if (needPzMnH)
+        {
+            puzzleMaster = GameObject.FindGameObjectWithTag("PuzzleMasterH").GetComponent<RPP_GeneralPuzzleMaster>();
         }
     }
 

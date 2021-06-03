@@ -81,6 +81,7 @@ public class JUB_IntroEvent : MonoBehaviour
 
     void EndDialogue()
     {
+        StopAllCoroutines();
             SceneManager.LoadScene(nomSceneSuivante);
         
     }

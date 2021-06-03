@@ -9,7 +9,7 @@ public class JUB_Boutique : MonoBehaviour
 {
     //ouverture
     public JUB_InteractibleBehavior interactibleBehavior;
-    public GameObject canvasRescale;
+    public GameObject canvasRescale, papaAll;
     public bool isOpen;
     public JUB_Maeve maeve;
     public JUB_Flash flash;
@@ -37,8 +37,7 @@ public class JUB_Boutique : MonoBehaviour
         interactibleBehavior = GetComponentInChildren<JUB_InteractibleBehavior>();
         maeve = GameObject.FindGameObjectWithTag("Player").GetComponent<JUB_Maeve>();
         flash = GameObject.FindGameObjectWithTag("Player").GetComponent<JUB_Flash>();
-        canvasRescale.GetComponent<Transform>().localScale = Vector3.zero;
-        confirmationRescale.GetComponent<Transform>().localScale = Vector3.zero;
+        
 
         for(int i = 0; i < items.Length; i++) 
         {
@@ -49,6 +48,8 @@ public class JUB_Boutique : MonoBehaviour
         }
 
         confirmationColor = confirmationText.color;
+        confirmationRescale.SetActive(false);
+        papaAll.SetActive(false);
     }
 
     // Update is called once per frame
@@ -56,23 +57,25 @@ public class JUB_Boutique : MonoBehaviour
     {
         if(interactibleBehavior.interacted && isOpen == false)
         {
-            canvasRescale.GetComponent<Transform>().localScale = Vector3.one;
+            papaAll.SetActive(true);
+            confirmationRescale.SetActive(false);
+
             isOpen = true;
             Time.timeScale = 0f;
             interactibleBehavior.interacted = false;
         }
         if(interactibleBehavior.interacted && isOpen == true)
         {
-            canvasRescale.GetComponent<Transform>().localScale = Vector3.zero;
             isOpen = false;
             Time.timeScale = 1f;
             interactibleBehavior.interacted = false;
+            papaAll.SetActive(false);
         }
     }
 
     public void ConfirmationStart(int buttonNumberHit)
     {
-        confirmationRescale.GetComponent<Transform>().localScale = Vector3.one;
+        confirmationRescale.SetActive(true);
         confirmationText.color = confirmationColor;
         confirmationText.text = "Cet objet coûte " + items[buttonNumberHit].scriptableObject.itemPrice.ToString() + " bonbons. Voulez-vous l'acheter ?";
         buttonNumber = buttonNumberHit;
@@ -87,7 +90,7 @@ public class JUB_Boutique : MonoBehaviour
             ApplyEffect();
             soldText[buttonNumber].SetActive(true);
             buttons[buttonNumber].enabled = false;
-            confirmationRescale.GetComponent<Transform>().localScale = Vector3.zero;
+            confirmationRescale.SetActive(false);
 
         }
         else
@@ -122,6 +125,6 @@ public class JUB_Boutique : MonoBehaviour
 
     public void Cancel()
     {
-        confirmationRescale.GetComponent<Transform>().localScale = Vector3.zero;
+        confirmationRescale.SetActive(false);
     }
 }
