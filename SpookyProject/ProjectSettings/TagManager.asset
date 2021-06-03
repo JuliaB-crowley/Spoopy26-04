@@ -23,6 +23,7 @@ TagManager:
   - PuzzleMasterG
   - NotebookCanvas
   - Anchor
+  - PuzzleMasterH
   layers:
   - Default
   - TransparentFX

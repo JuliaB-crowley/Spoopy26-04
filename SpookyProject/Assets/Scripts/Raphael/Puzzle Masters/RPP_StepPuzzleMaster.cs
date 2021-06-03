@@ -10,7 +10,7 @@ public class RPP_StepPuzzleMaster : MonoBehaviour
     public int correctSteps = 0; // Combien de dalles correctes le joueur à marché
     public bool playerHasFailed = false, playerHasSucceeded = false, puzzleHasBeenCompleted = false; // des bools qui checkent la progréssion du joueur dans le niveau
     [SerializeField] RPP_GeneralPuzzleMaster puzzleMaster;
-    [SerializeField] bool needPzMnA = true, needPzMnB, needPzMnC, needPzMnD, needPzMnE, needPzMnF, needPzMnG;
+    [SerializeField] bool needPzMnA = true, needPzMnB, needPzMnC, needPzMnD, needPzMnE, needPzMnF, needPzMnG, needPzMnH;
     [SerializeField] RPP_IndividualStep[] steps;
 
     private void Start()
@@ -42,6 +42,10 @@ public class RPP_StepPuzzleMaster : MonoBehaviour
         else if (needPzMnG)
         {
             puzzleMaster = GameObject.FindGameObjectWithTag("PuzzleMasterG").GetComponent<RPP_GeneralPuzzleMaster>();
+        }
+        else if (needPzMnH)
+        {
+            puzzleMaster = GameObject.FindGameObjectWithTag("PuzzleMasterH").GetComponent<RPP_GeneralPuzzleMaster>();
         }
     }
 
