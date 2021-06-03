@@ -22,6 +22,7 @@ public class JUB_Cheatcodes : MonoBehaviour
         controller.Menu.Donjon.performed += ctx => GoDonjon();
         controller.Menu.Boss.performed += ctx => GoBoss();
 
+        maeve = GetComponent<JUB_Maeve>();
     }
 
     void MoreMoney()
