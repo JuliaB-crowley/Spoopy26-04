@@ -1,31 +1,37 @@
 fileFormatVersion: 2
-guid: 66137f3e50bfe7b4eba93cabfae7afc0
+guid: e332c7348e3a83f458e432f737db1949
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -2161029673337754109
-    second: "sprite d\xE9placement back_0"
+      213: -17537784881347907
+    second: "D\xE9placement et idle t\xEAte back_0"
   - first:
-      213: 5936917569578837993
-    second: "sprite d\xE9placement back_1"
+      213: -8017878412149504598
+    second: "D\xE9placement et idle t\xEAte back_1"
   - first:
-      213: -3978903852942214647
-    second: "sprite d\xE9placement back_2"
+      213: -7442827751692983843
+    second: "D\xE9placement et idle t\xEAte back_2"
   - first:
-      213: 622040594013219943
-    second: "sprite d\xE9placement back_3"
+      213: -8800531365457029742
+    second: "D\xE9placement et idle t\xEAte back_3"
   - first:
-      213: -285869560467772420
-    second: "sprite d\xE9placement back_4"
+      213: -3856642361430726842
+    second: "D\xE9placement et idle t\xEAte back_4"
   - first:
-      213: 8708808404262071712
-    second: "sprite d\xE9placement back_5"
+      213: 3817250032438882204
+    second: "D\xE9placement et idle t\xEAte back_5"
   - first:
-      213: -7059194128239275526
-    second: "sprite d\xE9placement back_6"
+      213: -4844875145378726831
+    second: "D\xE9placement et idle t\xEAte back_6"
   - first:
-      213: 4358499473436365594
-    second: "sprite d\xE9placement back_7"
+      213: -396199660039354299
+    second: "D\xE9placement et idle t\xEAte back_7"
+  - first:
+      213: -7254905312338691373
+    second: "D\xE9placement et idle t\xEAte back_8"
+  - first:
+      213: -2617424024386251746
+    second: "D\xE9placement et idle t\xEAte back_9"
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -115,169 +121,211 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: "sprite d\xE9placement back_0"
+      name: "D\xE9placement et idle t\xEAte back_0"
       rect:
         serializedVersion: 2
-        x: 117
-        y: 710
-        width: 306
-        height: 515
+        x: 917
+        y: 0
+        width: 232
+        height: 614
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 30eef9336fa7202e0800000000000000
-      internalID: -2161029673337754109
+      spriteID: db200024a71b1cff0800000000000000
+      internalID: -17537784881347907
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: "sprite d\xE9placement back_1"
+      name: "D\xE9placement et idle t\xEAte back_1"
       rect:
         serializedVersion: 2
-        x: 638
-        y: 725
-        width: 312
-        height: 503
+        x: 1351
+        y: 0
+        width: 203
+        height: 614
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 9e7a58b031b246250800000000000000
-      internalID: 5936917569578837993
+      spriteID: aa54e8f8016cab090800000000000000
+      internalID: -8017878412149504598
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: "sprite d\xE9placement back_2"
+      name: "D\xE9placement et idle t\xEAte back_2"
       rect:
         serializedVersion: 2
-        x: 1158
-        y: 709
-        width: 305
-        height: 516
+        x: 3001
+        y: 0
+        width: 217
+        height: 614
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 90a32f1e60818c8c0800000000000000
-      internalID: -3978903852942214647
+      spriteID: dd1abe7f793c5b890800000000000000
+      internalID: -7442827751692983843
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: "sprite d\xE9placement back_3"
+      name: "D\xE9placement et idle t\xEAte back_3"
       rect:
         serializedVersion: 2
-        x: 1684
-        y: 721
-        width: 308
-        height: 504
+        x: 3435
+        y: 0
+        width: 194
+        height: 614
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 76ce702ef9ee1a800800000000000000
-      internalID: 622040594013219943
+      spriteID: 295104fa95b3ed580800000000000000
+      internalID: -8800531365457029742
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: "sprite d\xE9placement back_4"
+      name: "D\xE9placement et idle t\xEAte back_4"
       rect:
         serializedVersion: 2
-        x: 2202
-        y: 711
-        width: 307
-        height: 515
+        x: 78
+        y: 0
+        width: 259
+        height: 614
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: cfba83c3623680cf0800000000000000
-      internalID: -285869560467772420
+      spriteID: 647a235a4347a7ac0800000000000000
+      internalID: -3856642361430726842
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: "sprite d\xE9placement back_5"
+      name: "D\xE9placement et idle t\xEAte back_5"
       rect:
         serializedVersion: 2
-        x: 113
-        y: 60
-        width: 310
-        height: 496
+        x: 534
+        y: 0
+        width: 175
+        height: 614
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 0ad2af83a17ebd870800000000000000
-      internalID: 8708808404262071712
+      spriteID: c9f2e5a0ea899f430800000000000000
+      internalID: 3817250032438882204
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: "sprite d\xE9placement back_6"
+      name: "D\xE9placement et idle t\xEAte back_6"
       rect:
         serializedVersion: 2
-        x: 635
-        y: 45
-        width: 309
-        height: 513
+        x: 1787
+        y: 0
+        width: 159
+        height: 614
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: af156c17754b80e90800000000000000
-      internalID: -7059194128239275526
+      spriteID: 15cf49a79bb83ccb0800000000000000
+      internalID: -4844875145378726831
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: "sprite d\xE9placement back_7"
+      name: "D\xE9placement et idle t\xEAte back_7"
       rect:
         serializedVersion: 2
-        x: 1160
-        y: 52
-        width: 309
-        height: 507
+        x: 2162
+        y: 0
+        width: 242
+        height: 614
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a13d6e3cd208c7c30800000000000000
-      internalID: 4358499473436365594
+      spriteID: 5484933228a608af0800000000000000
+      internalID: -396199660039354299
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "D\xE9placement et idle t\xEAte back_8"
+      rect:
+        serializedVersion: 2
+        x: 2614
+        y: 0
+        width: 163
+        height: 614
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3da35fa7e06615b90800000000000000
+      internalID: -7254905312338691373
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "D\xE9placement et idle t\xEAte back_9"
+      rect:
+        serializedVersion: 2
+        x: 3858
+        y: 0
+        width: 163
+        height: 614
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e1452efa7ba0dabd0800000000000000
+      internalID: -2617424024386251746
       vertices: []
       indices: 
       edges: []
@@ -285,7 +333,7 @@ TextureImporter:
     outline: []
     physicsShape: []
     bones: []
-    spriteID: 9a24628fe4439de4b9506f0a3f7a1a4e
+    spriteID: 044fa52461a1af34fb463bca53b2266c
     internalID: 0
     vertices: []
     indices: 

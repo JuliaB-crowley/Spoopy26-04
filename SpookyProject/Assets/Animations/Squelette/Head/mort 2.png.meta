@@ -1,31 +1,31 @@
 fileFormatVersion: 2
-guid: 66137f3e50bfe7b4eba93cabfae7afc0
+guid: 9f901f8d7eb489141ad02a6c2e864aec
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -2161029673337754109
-    second: "sprite d\xE9placement back_0"
+      213: -43034191649317057
+    second: mort 2_0
   - first:
-      213: 5936917569578837993
-    second: "sprite d\xE9placement back_1"
+      213: 2063886557713230027
+    second: mort 2_1
   - first:
-      213: -3978903852942214647
-    second: "sprite d\xE9placement back_2"
+      213: 7211490261727107950
+    second: mort 2_2
   - first:
-      213: 622040594013219943
-    second: "sprite d\xE9placement back_3"
+      213: -4935901673017098246
+    second: mort 2_3
   - first:
-      213: -285869560467772420
-    second: "sprite d\xE9placement back_4"
+      213: 2363206100435877510
+    second: mort 2_4
   - first:
-      213: 8708808404262071712
-    second: "sprite d\xE9placement back_5"
+      213: 8495637590813542106
+    second: mort 2_5
   - first:
-      213: -7059194128239275526
-    second: "sprite d\xE9placement back_6"
+      213: -4447829800549755291
+    second: mort 2_6
   - first:
-      213: 4358499473436365594
-    second: "sprite d\xE9placement back_7"
+      213: -7185273866590430084
+    second: mort 2_7
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -115,169 +115,169 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: "sprite d\xE9placement back_0"
+      name: mort 2_0
       rect:
         serializedVersion: 2
-        x: 117
-        y: 710
-        width: 306
-        height: 515
+        x: 814
+        y: 0
+        width: 228
+        height: 663
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 30eef9336fa7202e0800000000000000
-      internalID: -2161029673337754109
+      spriteID: f3fdb8571ac176ff0800000000000000
+      internalID: -43034191649317057
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: "sprite d\xE9placement back_1"
+      name: mort 2_1
       rect:
         serializedVersion: 2
-        x: 638
-        y: 725
-        width: 312
-        height: 503
+        x: 1210
+        y: 0
+        width: 245
+        height: 663
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 9e7a58b031b246250800000000000000
-      internalID: 5936917569578837993
+      spriteID: bc86339a3e564ac10800000000000000
+      internalID: 2063886557713230027
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: "sprite d\xE9placement back_2"
+      name: mort 2_2
       rect:
         serializedVersion: 2
-        x: 1158
-        y: 709
-        width: 305
-        height: 516
+        x: 1592
+        y: 0
+        width: 244
+        height: 663
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 90a32f1e60818c8c0800000000000000
-      internalID: -3978903852942214647
+      spriteID: e6bde675f2c541460800000000000000
+      internalID: 7211490261727107950
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: "sprite d\xE9placement back_3"
+      name: mort 2_3
       rect:
         serializedVersion: 2
-        x: 1684
-        y: 721
-        width: 308
-        height: 504
+        x: 61
+        y: 0
+        width: 257
+        height: 656
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 76ce702ef9ee1a800800000000000000
-      internalID: 622040594013219943
+      spriteID: aff3f857497208bb0800000000000000
+      internalID: -4935901673017098246
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: "sprite d\xE9placement back_4"
+      name: mort 2_4
       rect:
         serializedVersion: 2
-        x: 2202
-        y: 711
-        width: 307
-        height: 515
+        x: 457
+        y: 0
+        width: 196
+        height: 663
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: cfba83c3623680cf0800000000000000
-      internalID: -285869560467772420
+      spriteID: 68e34837d6bcbc020800000000000000
+      internalID: 2363206100435877510
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: "sprite d\xE9placement back_5"
+      name: mort 2_5
       rect:
         serializedVersion: 2
-        x: 113
-        y: 60
-        width: 310
-        height: 496
+        x: 2010
+        y: 0
+        width: 187
+        height: 663
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 0ad2af83a17ebd870800000000000000
-      internalID: 8708808404262071712
+      spriteID: ad685e4806196e570800000000000000
+      internalID: 8495637590813542106
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: "sprite d\xE9placement back_6"
+      name: mort 2_6
       rect:
         serializedVersion: 2
-        x: 635
-        y: 45
-        width: 309
-        height: 513
+        x: 2345
+        y: 0
+        width: 257
+        height: 652
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: af156c17754b80e90800000000000000
-      internalID: -7059194128239275526
+      spriteID: 566d5dcac522642c0800000000000000
+      internalID: -4447829800549755291
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: "sprite d\xE9placement back_7"
+      name: mort 2_7
       rect:
         serializedVersion: 2
-        x: 1160
-        y: 52
-        width: 309
-        height: 507
+        x: 2698
+        y: 0
+        width: 278
+        height: 663
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a13d6e3cd208c7c30800000000000000
-      internalID: 4358499473436365594
+      spriteID: c7cdaffcc77c84c90800000000000000
+      internalID: -7185273866590430084
       vertices: []
       indices: 
       edges: []
@@ -285,7 +285,7 @@ TextureImporter:
     outline: []
     physicsShape: []
     bones: []
-    spriteID: 9a24628fe4439de4b9506f0a3f7a1a4e
+    spriteID: e6eb2bb3b4ac88f438924862dc56a360
     internalID: 0
     vertices: []
     indices: 
