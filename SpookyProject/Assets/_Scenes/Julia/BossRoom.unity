@@ -267,20 +267,20 @@ MonoBehaviour:
     - "Tu ne m\u2019aimes donc pas pour qui je suis ?! Peu importe ! Tu ne quitteras
       jamais ce monde !"
     npcFaces:
-    - {fileID: 21300000, guid: 283f39941bffbcd49a3cb68e9e820e37, type: 3}
-    - {fileID: 21300000, guid: d5fff1667331a3f4ab46f580c7503862, type: 3}
-    - {fileID: 21300000, guid: 283f39941bffbcd49a3cb68e9e820e37, type: 3}
-    - {fileID: 21300000, guid: d5fff1667331a3f4ab46f580c7503862, type: 3}
-    - {fileID: 21300000, guid: 283f39941bffbcd49a3cb68e9e820e37, type: 3}
-    - {fileID: 21300000, guid: d5fff1667331a3f4ab46f580c7503862, type: 3}
-    - {fileID: 21300000, guid: 283f39941bffbcd49a3cb68e9e820e37, type: 3}
-    - {fileID: 21300000, guid: d5fff1667331a3f4ab46f580c7503862, type: 3}
-    - {fileID: 21300000, guid: 283f39941bffbcd49a3cb68e9e820e37, type: 3}
-    - {fileID: 21300000, guid: d5fff1667331a3f4ab46f580c7503862, type: 3}
-    - {fileID: 21300000, guid: 283f39941bffbcd49a3cb68e9e820e37, type: 3}
-    - {fileID: 21300000, guid: d5fff1667331a3f4ab46f580c7503862, type: 3}
-    - {fileID: 21300000, guid: 283f39941bffbcd49a3cb68e9e820e37, type: 3}
-    - {fileID: 21300000, guid: d5fff1667331a3f4ab46f580c7503862, type: 3}
+    - {fileID: -1898398621692303480, guid: f00eae344ff330e47976338116231146, type: 3}
+    - {fileID: 5764316097204582594, guid: f00eae344ff330e47976338116231146, type: 3}
+    - {fileID: -1898398621692303480, guid: f00eae344ff330e47976338116231146, type: 3}
+    - {fileID: 5764316097204582594, guid: f00eae344ff330e47976338116231146, type: 3}
+    - {fileID: -1898398621692303480, guid: f00eae344ff330e47976338116231146, type: 3}
+    - {fileID: 5764316097204582594, guid: f00eae344ff330e47976338116231146, type: 3}
+    - {fileID: -1898398621692303480, guid: f00eae344ff330e47976338116231146, type: 3}
+    - {fileID: 5764316097204582594, guid: f00eae344ff330e47976338116231146, type: 3}
+    - {fileID: -1898398621692303480, guid: f00eae344ff330e47976338116231146, type: 3}
+    - {fileID: 5764316097204582594, guid: f00eae344ff330e47976338116231146, type: 3}
+    - {fileID: -1898398621692303480, guid: f00eae344ff330e47976338116231146, type: 3}
+    - {fileID: 5764316097204582594, guid: f00eae344ff330e47976338116231146, type: 3}
+    - {fileID: -1898398621692303480, guid: f00eae344ff330e47976338116231146, type: 3}
+    - {fileID: 5764316097204582594, guid: f00eae344ff330e47976338116231146, type: 3}
   dialogueManager: {fileID: 0}
   dialogueWasSaid: 0
 --- !u!1001 &192624713
@@ -1271,20 +1271,20 @@ MonoBehaviour:
     - "\u2026 Bon, on y va ?"
     - "\u2026 Oui, allons-y."
     npcFaces:
-    - {fileID: 21300000, guid: 283f39941bffbcd49a3cb68e9e820e37, type: 3}
-    - {fileID: 21300000, guid: d5fff1667331a3f4ab46f580c7503862, type: 3}
-    - {fileID: 21300000, guid: 283f39941bffbcd49a3cb68e9e820e37, type: 3}
-    - {fileID: 21300000, guid: d5fff1667331a3f4ab46f580c7503862, type: 3}
-    - {fileID: 21300000, guid: 283f39941bffbcd49a3cb68e9e820e37, type: 3}
-    - {fileID: 21300000, guid: d5fff1667331a3f4ab46f580c7503862, type: 3}
-    - {fileID: 21300000, guid: 283f39941bffbcd49a3cb68e9e820e37, type: 3}
-    - {fileID: 21300000, guid: d5fff1667331a3f4ab46f580c7503862, type: 3}
-    - {fileID: 21300000, guid: 283f39941bffbcd49a3cb68e9e820e37, type: 3}
-    - {fileID: 21300000, guid: d5fff1667331a3f4ab46f580c7503862, type: 3}
-    - {fileID: 21300000, guid: 283f39941bffbcd49a3cb68e9e820e37, type: 3}
-    - {fileID: 21300000, guid: d5fff1667331a3f4ab46f580c7503862, type: 3}
-    - {fileID: 21300000, guid: 283f39941bffbcd49a3cb68e9e820e37, type: 3}
-    - {fileID: 21300000, guid: d5fff1667331a3f4ab46f580c7503862, type: 3}
+    - {fileID: -1898398621692303480, guid: f00eae344ff330e47976338116231146, type: 3}
+    - {fileID: 5764316097204582594, guid: f00eae344ff330e47976338116231146, type: 3}
+    - {fileID: -1898398621692303480, guid: f00eae344ff330e47976338116231146, type: 3}
+    - {fileID: 5764316097204582594, guid: f00eae344ff330e47976338116231146, type: 3}
+    - {fileID: -1898398621692303480, guid: f00eae344ff330e47976338116231146, type: 3}
+    - {fileID: 5764316097204582594, guid: f00eae344ff330e47976338116231146, type: 3}
+    - {fileID: -1898398621692303480, guid: f00eae344ff330e47976338116231146, type: 3}
+    - {fileID: 5764316097204582594, guid: f00eae344ff330e47976338116231146, type: 3}
+    - {fileID: -1898398621692303480, guid: f00eae344ff330e47976338116231146, type: 3}
+    - {fileID: 5764316097204582594, guid: f00eae344ff330e47976338116231146, type: 3}
+    - {fileID: -1898398621692303480, guid: f00eae344ff330e47976338116231146, type: 3}
+    - {fileID: 5764316097204582594, guid: f00eae344ff330e47976338116231146, type: 3}
+    - {fileID: -1898398621692303480, guid: f00eae344ff330e47976338116231146, type: 3}
+    - {fileID: 5764316097204582594, guid: f00eae344ff330e47976338116231146, type: 3}
 --- !u!1 &1174334723
 GameObject:
   m_ObjectHideFlags: 0
