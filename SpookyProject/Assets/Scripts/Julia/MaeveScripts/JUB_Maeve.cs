@@ -943,19 +943,19 @@ namespace character
 
                 //flash
                 case 103:
-                    maeveAnimator.Play("Maeve_burnflash_back");
+                    maeveAnimator.Play("Maeve_flash_back");
                     break;
 
                 case 203:
-                    maeveAnimator.Play("Maeve_burnflash_right");
+                    maeveAnimator.Play("Maeve_flash_right");
                     break;
 
                 case 303:
-                    maeveAnimator.Play("Maeve_burnflash_front");
+                    maeveAnimator.Play("Maeve_flash_front");
                     break;
 
                 case 403:
-                    maeveAnimator.Play("Maeve_burnflash_left");
+                    maeveAnimator.Play("Maeve_flash_left");
                     break;
 
                 //roulade
