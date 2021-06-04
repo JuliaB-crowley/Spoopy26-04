@@ -4,58 +4,58 @@ TextureImporter:
   internalIDToNameTable:
   - first:
       213: 7275511756495908465
-    second: "D\xE9co_Q1_0"
+    second: Caisse_1
   - first:
       213: 1605279109123396828
-    second: "D\xE9co_Q1_1"
+    second: Caisse_2
   - first:
       213: -3481895661530255021
-    second: "D\xE9co_Q1_2"
+    second: "Barri\xE8re_Blanche"
   - first:
       213: 6028155045688285966
-    second: "D\xE9co_Q1_3"
+    second: Buisson
   - first:
       213: 1947098218951415172
-    second: "D\xE9co_Q1_4"
+    second: Feuilles
   - first:
       213: -6740071061148133472
-    second: "D\xE9co_Q1_5"
+    second: Herbe
   - first:
       213: 866795919840533868
-    second: "D\xE9co_Q1_6"
+    second: Panneau_Affichage
   - first:
       213: 7118800546014891193
-    second: "D\xE9co_Q1_7"
+    second: Panneau_Baseball
   - first:
       213: 7502467089370260230
-    second: "D\xE9co_Q1_8"
+    second: Petite_Herbe
   - first:
       213: 3533346633801491940
-    second: "D\xE9co_Q1_9"
+    second: Palmier
   - first:
       213: 9220410306609902399
-    second: "D\xE9co_Q1_10"
+    second: Cactus
   - first:
       213: -1363073418461027998
-    second: "D\xE9co_Q1_11"
+    second: CitrouilleS
   - first:
       213: 3509561766027250166
-    second: "D\xE9co_Q1_12"
+    second: Citrouille
   - first:
       213: 6700285341682426374
-    second: "D\xE9co_Q1_13"
+    second: Haie
   - first:
       213: -2161407572483714587
-    second: "D\xE9co_Q1_14"
+    second: Succulent
   - first:
       213: 5140078999248884056
-    second: "D\xE9co_Q1_15"
+    second: Boite_Lettres
   - first:
       213: 4888762283544349603
-    second: "D\xE9co_Q1_16"
+    second: Caisse_4
   - first:
       213: 7915905789315370545
-    second: "D\xE9co_Q1_17"
+    second: Caisse_3
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -145,7 +145,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: "D\xE9co_Q1_0"
+      name: Caisse_1
       rect:
         serializedVersion: 2
         x: 51
@@ -153,7 +153,7 @@ TextureImporter:
         width: 128
         height: 178
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -166,7 +166,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: "D\xE9co_Q1_1"
+      name: Caisse_2
       rect:
         serializedVersion: 2
         x: 273
@@ -174,7 +174,7 @@ TextureImporter:
         width: 136
         height: 168
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -187,7 +187,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: "D\xE9co_Q1_2"
+      name: "Barri\xE8re_Blanche"
       rect:
         serializedVersion: 2
         x: 600
@@ -195,7 +195,7 @@ TextureImporter:
         width: 173
         height: 129
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -208,15 +208,15 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: "D\xE9co_Q1_3"
+      name: Buisson
       rect:
         serializedVersion: 2
-        x: 844
+        x: 842
         y: 769
         width: 101
         height: 98
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -229,7 +229,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: "D\xE9co_Q1_4"
+      name: Feuilles
       rect:
         serializedVersion: 2
         x: 1060
@@ -237,7 +237,7 @@ TextureImporter:
         width: 108
         height: 88
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -250,7 +250,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: "D\xE9co_Q1_5"
+      name: Herbe
       rect:
         serializedVersion: 2
         x: 1295
@@ -258,7 +258,7 @@ TextureImporter:
         width: 88
         height: 74
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -271,15 +271,15 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: "D\xE9co_Q1_6"
+      name: Panneau_Affichage
       rect:
         serializedVersion: 2
         x: 1464
-        y: 500
+        y: 501
         width: 431
         height: 404
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -292,7 +292,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: "D\xE9co_Q1_7"
+      name: Panneau_Baseball
       rect:
         serializedVersion: 2
         x: 1323
@@ -300,7 +300,7 @@ TextureImporter:
         width: 385
         height: 304
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -313,7 +313,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: "D\xE9co_Q1_8"
+      name: Petite_Herbe
       rect:
         serializedVersion: 2
         x: 1476
@@ -321,7 +321,7 @@ TextureImporter:
         width: 58
         height: 57
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -334,7 +334,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: "D\xE9co_Q1_9"
+      name: Palmier
       rect:
         serializedVersion: 2
         x: 1012
@@ -342,7 +342,7 @@ TextureImporter:
         width: 236
         height: 258
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -355,7 +355,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: "D\xE9co_Q1_10"
+      name: Cactus
       rect:
         serializedVersion: 2
         x: 740
@@ -363,7 +363,7 @@ TextureImporter:
         width: 102
         height: 123
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -376,7 +376,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: "D\xE9co_Q1_11"
+      name: CitrouilleS
       rect:
         serializedVersion: 2
         x: 759
@@ -384,7 +384,7 @@ TextureImporter:
         width: 208
         height: 168
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -397,15 +397,15 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: "D\xE9co_Q1_12"
+      name: Citrouille
       rect:
         serializedVersion: 2
-        x: 836
+        x: 838
         y: 518
         width: 124
         height: 143
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -418,7 +418,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: "D\xE9co_Q1_13"
+      name: Haie
       rect:
         serializedVersion: 2
         x: 1052
@@ -426,7 +426,7 @@ TextureImporter:
         width: 351
         height: 172
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -439,7 +439,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: "D\xE9co_Q1_14"
+      name: Succulent
       rect:
         serializedVersion: 2
         x: 515
@@ -447,7 +447,7 @@ TextureImporter:
         width: 125
         height: 122
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -460,7 +460,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: "D\xE9co_Q1_15"
+      name: Boite_Lettres
       rect:
         serializedVersion: 2
         x: 572
@@ -468,7 +468,7 @@ TextureImporter:
         width: 99
         height: 216
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -481,7 +481,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: "D\xE9co_Q1_16"
+      name: Caisse_4
       rect:
         serializedVersion: 2
         x: 271
@@ -489,7 +489,7 @@ TextureImporter:
         width: 137
         height: 169
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -502,7 +502,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: "D\xE9co_Q1_17"
+      name: Caisse_3
       rect:
         serializedVersion: 2
         x: 52
@@ -510,7 +510,7 @@ TextureImporter:
         width: 131
         height: 174
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
