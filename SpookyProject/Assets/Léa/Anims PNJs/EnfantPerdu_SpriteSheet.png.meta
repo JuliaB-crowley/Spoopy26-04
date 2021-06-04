@@ -1,22 +1,31 @@
 fileFormatVersion: 2
-guid: 151c41177eb0b1e46af7d3d397746fd9
+guid: 8dae3bbde34d26543aa0ae6e28ab0048
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -4874218288908996624
-    second: Cage_Baseball
+      213: -3381414564664059856
+    second: EnfantPerdu_SpriteSheet_0
   - first:
-      213: 3560509932221820369
-    second: Terrain_Baseball
+      213: 8622183808043954328
+    second: EnfantPerdu_SpriteSheet_1
   - first:
-      213: 7064097835872335536
-    second: "Barri\xE8re_Baseball"
+      213: -3511592937294500706
+    second: EnfantPerdu_SpriteSheet_2
   - first:
-      213: -972428757941283413
-    second: Affiches_1
+      213: -435203275508808076
+    second: EnfantPerdu_SpriteSheet_3
   - first:
-      213: -8144575203525269738
-    second: Affiches_2
+      213: -7062436364161949604
+    second: EnfantPerdu_SpriteSheet_4
+  - first:
+      213: 8669796213588542506
+    second: EnfantPerdu_SpriteSheet_5
+  - first:
+      213: -4829016825468535572
+    second: EnfantPerdu_SpriteSheet_6
+  - first:
+      213: 1016611519945253300
+    second: EnfantPerdu_SpriteSheet_7
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -106,106 +115,169 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Cage_Baseball
+      name: EnfantPerdu_SpriteSheet_0
       rect:
         serializedVersion: 2
-        x: 1944
-        y: 64
-        width: 345
-        height: 453
+        x: 98
+        y: 175
+        width: 402
+        height: 496
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 0ffeddb7a4c4b5cb0800000000000000
-      internalID: -4874218288908996624
+      spriteID: 038ddd27e5dc211d0800000000000000
+      internalID: -3381414564664059856
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Terrain_Baseball
+      name: EnfantPerdu_SpriteSheet_1
       rect:
         serializedVersion: 2
-        x: 444
-        y: 509
-        width: 1465
-        height: 1181
+        x: 645
+        y: 175
+        width: 402
+        height: 496
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 1dde4514be8796130800000000000000
-      internalID: 3560509932221820369
+      spriteID: 890b59abd7628a770800000000000000
+      internalID: 8622183808043954328
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: "Barri\xE8re_Baseball"
+      name: EnfantPerdu_SpriteSheet_2
       rect:
         serializedVersion: 2
-        x: 273
-        y: 298
-        width: 1131
-        height: 114
+        x: 1192
+        y: 175
+        width: 402
+        height: 496
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 0b6b6c5fd87b80260800000000000000
-      internalID: 7064097835872335536
+      spriteID: e9c6ac824d0544fc0800000000000000
+      internalID: -3511592937294500706
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Affiches_1
+      name: EnfantPerdu_SpriteSheet_3
       rect:
         serializedVersion: 2
-        x: 1481
-        y: 352
-        width: 287
-        height: 153
+        x: 1737
+        y: 175
+        width: 404
+        height: 496
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ba51981623d3182f0800000000000000
-      internalID: -972428757941283413
+      spriteID: 476063e3de8d5f9f0800000000000000
+      internalID: -435203275508808076
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Affiches_2
+      name: EnfantPerdu_SpriteSheet_4
       rect:
         serializedVersion: 2
-        x: 1492
-        y: 182
-        width: 289
-        height: 147
+        x: 2282
+        y: 175
+        width: 406
+        height: 496
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 617eb631108a8fe80800000000000000
-      internalID: -8144575203525269738
+      spriteID: c5063519b8f2dfd90800000000000000
+      internalID: -7062436364161949604
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EnfantPerdu_SpriteSheet_5
+      rect:
+        serializedVersion: 2
+        x: 2833
+        y: 175
+        width: 402
+        height: 496
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a24c8f1c8bd415870800000000000000
+      internalID: 8669796213588542506
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EnfantPerdu_SpriteSheet_6
+      rect:
+        serializedVersion: 2
+        x: 3380
+        y: 175
+        width: 402
+        height: 496
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cec309f48c2ebfcb0800000000000000
+      internalID: -4829016825468535572
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EnfantPerdu_SpriteSheet_7
+      rect:
+        serializedVersion: 2
+        x: 3927
+        y: 175
+        width: 402
+        height: 496
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4b128e88acabb1e00800000000000000
+      internalID: 1016611519945253300
       vertices: []
       indices: 
       edges: []
@@ -213,7 +285,7 @@ TextureImporter:
     outline: []
     physicsShape: []
     bones: []
-    spriteID: 03afec324a612264ebb1854a8a4eeaad
+    spriteID: c19f42875fb7a664782f53024a40479e
     internalID: 0
     vertices: []
     indices: 
