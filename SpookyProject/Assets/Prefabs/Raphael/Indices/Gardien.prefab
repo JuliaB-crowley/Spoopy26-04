@@ -94,7 +94,7 @@ GameObject:
   - component: {fileID: 6638988715283165951}
   - component: {fileID: 6638988715283165950}
   m_Layer: 13
-  m_Name: Guardien
+  m_Name: Gardien
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -200,6 +200,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   interactible: 0
   interacted: 0
+  canBeShown: 1
   player: {fileID: 0}
   maeveScript: {fileID: 0}
 --- !u!61 &6638988715283165951

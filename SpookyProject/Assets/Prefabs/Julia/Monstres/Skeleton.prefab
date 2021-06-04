@@ -214,14 +214,15 @@ MonoBehaviour:
   iddleSpeed: 2.5
   stopDistance: 1
   pursueSpeed: 2.5
-  pauseTime: 2
+  pauseTime: 4
   attackRange: 1.5
   attackDamages: 2
   fleeDistance: 6
   fleeSpeed: 3
   bodyIsBroken: 0
-  bodyHealth: 2
+  bodyHealth: 1
   ennemyDamage: {fileID: 0}
+  graphicAnimator: {fileID: 6523097663441760217}
 --- !u!114 &1556395513520290170
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -234,14 +235,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c1ccdc33e1bca3f47b9d6593059bee1c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxHealth: 4
+  maxHealth: 3
   currentHealth: 0
   deathAnimationTime: 0.5
   knockbackForce: 4
   knockbackDuration: 0.5
-  playerTransform: {fileID: 0}
-  rb: {fileID: 0}
-  AIPath: {fileID: 0}
   hasLoot: 1
   possibleLoots:
   - {fileID: 6492889625563825800, guid: f9797014ba71f2c45957985106394ac6, type: 3}
@@ -282,6 +280,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8651957028952695579}
   - component: {fileID: 6804991361460256455}
+  - component: {fileID: 6523097663441760217}
   m_Layer: 7
   m_Name: Anim
   m_TagString: Untagged
@@ -354,3 +353,22 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!95 &6523097663441760217
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9073805397861030664}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 4626a99ac370bc8418ed6de45adac363, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0

@@ -299,9 +299,9 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   patrolWaitTime: 1
-  iddleSpeed: 2
+  iddleSpeed: 3
   stopDistance: 1
-  pursueSpeed: 2
+  pursueSpeed: 3.5
   sprintDistance: 5
   sprintSpeed: 4
   instantiationTime: 0

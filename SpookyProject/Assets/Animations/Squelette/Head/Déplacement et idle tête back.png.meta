@@ -1,0 +1,348 @@
+fileFormatVersion: 2
+guid: e332c7348e3a83f458e432f737db1949
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -17537784881347907
+    second: "D\xE9placement et idle t\xEAte back_0"
+  - first:
+      213: -8017878412149504598
+    second: "D\xE9placement et idle t\xEAte back_1"
+  - first:
+      213: -7442827751692983843
+    second: "D\xE9placement et idle t\xEAte back_2"
+  - first:
+      213: -8800531365457029742
+    second: "D\xE9placement et idle t\xEAte back_3"
+  - first:
+      213: -3856642361430726842
+    second: "D\xE9placement et idle t\xEAte back_4"
+  - first:
+      213: 3817250032438882204
+    second: "D\xE9placement et idle t\xEAte back_5"
+  - first:
+      213: -4844875145378726831
+    second: "D\xE9placement et idle t\xEAte back_6"
+  - first:
+      213: -396199660039354299
+    second: "D\xE9placement et idle t\xEAte back_7"
+  - first:
+      213: -7254905312338691373
+    second: "D\xE9placement et idle t\xEAte back_8"
+  - first:
+      213: -2617424024386251746
+    second: "D\xE9placement et idle t\xEAte back_9"
+  externalObjects: {}
+  serializedVersion: 11
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: -1
+    mipBias: -100
+    wrapU: 1
+    wrapV: 1
+    wrapW: -1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 300
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: "D\xE9placement et idle t\xEAte back_0"
+      rect:
+        serializedVersion: 2
+        x: 917
+        y: 0
+        width: 232
+        height: 614
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: db200024a71b1cff0800000000000000
+      internalID: -17537784881347907
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "D\xE9placement et idle t\xEAte back_1"
+      rect:
+        serializedVersion: 2
+        x: 1351
+        y: 0
+        width: 203
+        height: 614
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: aa54e8f8016cab090800000000000000
+      internalID: -8017878412149504598
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "D\xE9placement et idle t\xEAte back_2"
+      rect:
+        serializedVersion: 2
+        x: 3001
+        y: 0
+        width: 217
+        height: 614
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dd1abe7f793c5b890800000000000000
+      internalID: -7442827751692983843
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "D\xE9placement et idle t\xEAte back_3"
+      rect:
+        serializedVersion: 2
+        x: 3435
+        y: 0
+        width: 194
+        height: 614
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 295104fa95b3ed580800000000000000
+      internalID: -8800531365457029742
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "D\xE9placement et idle t\xEAte back_4"
+      rect:
+        serializedVersion: 2
+        x: 78
+        y: 0
+        width: 259
+        height: 614
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 647a235a4347a7ac0800000000000000
+      internalID: -3856642361430726842
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "D\xE9placement et idle t\xEAte back_5"
+      rect:
+        serializedVersion: 2
+        x: 534
+        y: 0
+        width: 175
+        height: 614
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c9f2e5a0ea899f430800000000000000
+      internalID: 3817250032438882204
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "D\xE9placement et idle t\xEAte back_6"
+      rect:
+        serializedVersion: 2
+        x: 1787
+        y: 0
+        width: 159
+        height: 614
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 15cf49a79bb83ccb0800000000000000
+      internalID: -4844875145378726831
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "D\xE9placement et idle t\xEAte back_7"
+      rect:
+        serializedVersion: 2
+        x: 2162
+        y: 0
+        width: 242
+        height: 614
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5484933228a608af0800000000000000
+      internalID: -396199660039354299
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "D\xE9placement et idle t\xEAte back_8"
+      rect:
+        serializedVersion: 2
+        x: 2614
+        y: 0
+        width: 163
+        height: 614
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3da35fa7e06615b90800000000000000
+      internalID: -7254905312338691373
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "D\xE9placement et idle t\xEAte back_9"
+      rect:
+        serializedVersion: 2
+        x: 3858
+        y: 0
+        width: 163
+        height: 614
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e1452efa7ba0dabd0800000000000000
+      internalID: -2617424024386251746
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 044fa52461a1af34fb463bca53b2266c
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

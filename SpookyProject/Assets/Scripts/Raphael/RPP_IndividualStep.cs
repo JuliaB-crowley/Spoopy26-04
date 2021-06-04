@@ -35,12 +35,6 @@ public class RPP_IndividualStep : MonoBehaviour
         {
             stepSprite.color = Color.white;
         }
-
-        //Reset le Puzzle pour que le joueur puisse reessayer
-        if (!puzzleMaster.playesIsPresent && puzzleMaster.playerHasFailed)
-        {
-            hasBeenStepped = false;
-        }
     }
 
     //Détecte le joueur
@@ -51,6 +45,11 @@ public class RPP_IndividualStep : MonoBehaviour
             hasBeenStepped = true;
             StepCheck();
         }
+    }
+
+    public void ResetStep()
+    {
+        hasBeenStepped = false;
     }
 
     //Check quel type de dalle viens d'être activé puis modifie les ints du puzzle master en accord

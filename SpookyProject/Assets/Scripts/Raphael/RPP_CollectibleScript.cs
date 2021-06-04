@@ -11,4 +11,9 @@ public class RPP_CollectibleScript : MonoBehaviour
     {
         collectibleObject = this.gameObject;
     }
+
+    public void DestroyCollectible()
+    {
+        Destroy(this.gameObject);
+    }
 }

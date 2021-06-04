@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 499007309236263174}
   - component: {fileID: 5932053849976724420}
+  - component: {fileID: 4186699327776834930}
   m_Layer: 0
   m_Name: Anim
   m_TagString: Untagged
@@ -82,6 +83,25 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!95 &4186699327776834930
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3863063274489456083}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 4626a99ac370bc8418ed6de45adac363, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &5562259911019479694
 GameObject:
   m_ObjectHideFlags: 0
@@ -275,6 +295,7 @@ MonoBehaviour:
   pathfinder: {fileID: 0}
   destinationSetter: {fileID: 0}
   player: {fileID: 0}
+  ennemyDamage: {fileID: 0}
   maxSight: 5
   toPlayer: {x: 0, y: 0}
   blocksLOS:
@@ -294,13 +315,13 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   patrolWaitTime: 1
-  iddleSpeed: 2
+  iddleSpeed: 3
   stopDistance: 4
-  pursueSpeed: 2
+  pursueSpeed: 3
   pauseTime: 2
   securityThreshold: 1.5
   fleeDistance: 3
-  fleeSpeed: 2.2
+  fleeSpeed: 2.5
   isEscaping: 0
   batPrefab: {fileID: 1854680120657952879, guid: a2329f07a33e6d646b5550b200df8fa3, type: 3}
   buildupTime: 0.4
@@ -308,6 +329,8 @@ MonoBehaviour:
   stunTime: 1
   flashManager: {fileID: 0}
   hasBeenStunned: 0
+  graphicAnimator: {fileID: 4186699327776834930}
+  animTransformTime: 1.1
 --- !u!114 &5562259911019479689
 MonoBehaviour:
   m_ObjectHideFlags: 0
