@@ -4,22 +4,22 @@ TextureImporter:
   internalIDToNameTable:
   - first:
       213: 1117866877027718162
-    second: Maisons_Q1_0
+    second: Maison_Squelette
   - first:
       213: -6447140135025695414
-    second: Maisons_Q1_1
+    second: Maison_Slime
   - first:
       213: 7680357123952177196
-    second: Maisons_Q1_2
+    second: Maison_Fantome
   - first:
       213: -552218838105018345
-    second: Maisons_Q1_3
+    second: Maison_Citrouille
   - first:
       213: -5236435473761445427
-    second: Maisons_Q1_4
+    second: Maison_ChauveSouris
   - first:
       213: -1782894863844838548
-    second: Maisons_Q1_5
+    second: "Maison_Araign\xE9es"
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -109,7 +109,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Maisons_Q1_0
+      name: Maison_Squelette
       rect:
         serializedVersion: 2
         x: 112
@@ -117,7 +117,7 @@ TextureImporter:
         width: 759
         height: 671
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -130,15 +130,15 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Maisons_Q1_1
+      name: Maison_Slime
       rect:
         serializedVersion: 2
         x: 897
-        y: 898
+        y: 900
         width: 742
         height: 674
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -151,7 +151,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Maisons_Q1_2
+      name: Maison_Fantome
       rect:
         serializedVersion: 2
         x: 1677
@@ -159,7 +159,7 @@ TextureImporter:
         width: 745
         height: 672
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -172,15 +172,15 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Maisons_Q1_3
+      name: Maison_Citrouille
       rect:
         serializedVersion: 2
-        x: 124
-        y: 155
+        x: 114
+        y: 158
         width: 759
         height: 675
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -193,7 +193,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Maisons_Q1_4
+      name: Maison_ChauveSouris
       rect:
         serializedVersion: 2
         x: 905
@@ -201,7 +201,7 @@ TextureImporter:
         width: 742
         height: 667
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -214,7 +214,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Maisons_Q1_5
+      name: "Maison_Araign\xE9es"
       rect:
         serializedVersion: 2
         x: 1674
@@ -222,7 +222,7 @@ TextureImporter:
         width: 757
         height: 679
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
