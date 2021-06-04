@@ -74,7 +74,7 @@ namespace character
         public GameObject mainCam;
         public float ennemyScreenshakeAmount, bossScreenshakeAmount, screenshakeDuration;
         public ParticleSystem deathParticles, dust;
-        public GameObject paquetBonbons;
+        public GameObject paquetBonbons, shaderFlame;
         Vector3 paquetOriginalScale;
 
         // Start is called before the first frame update
@@ -104,6 +104,8 @@ namespace character
             //controller.MainController.Crouch.performed += ctx => isCrouching = !isCrouching;
             controller.MainController.Attack.performed += ctx => Attack(quickAttack);// Attack();
             controller.MainController.HeavyAttack.performed += ctx => Attack(heavyAttack);
+
+            shaderFlame.SetActive(false);
         }
 
         // Update is called once per frame
@@ -839,7 +841,15 @@ namespace character
 
         public void Anim()
         {
-            if(isInRoll)
+            if (animationIndex == 3)
+            {
+                shaderFlame.SetActive(true);
+            }
+            else
+            {
+                shaderFlame.SetActive(false);
+            }
+            if (isInRoll)
             {
                 animationIndex = 4;
             }
@@ -885,6 +895,8 @@ namespace character
                         break;
                 }
             }
+
+            
             
             switch(animationIndex)
             {
@@ -943,19 +955,19 @@ namespace character
 
                 //flash
                 case 103:
-                    maeveAnimator.Play("Maeve_flash_back");
+                    maeveAnimator.Play("Maeve_burn_back");
                     break;
 
                 case 203:
-                    maeveAnimator.Play("Maeve_flash_right");
+                    maeveAnimator.Play("Maeve_burn_right");
                     break;
 
                 case 303:
-                    maeveAnimator.Play("Maeve_flash_front");
+                    maeveAnimator.Play("Maeve_burn_front");
                     break;
 
                 case 403:
-                    maeveAnimator.Play("Maeve_flash_left");
+                    maeveAnimator.Play("Maeve_burn_left");
                     break;
 
                 //roulade
