@@ -10,6 +10,7 @@ public class ImpSMB_Pursue : StateMachineBehaviour
     // OnStateEnter is called when a transition starts and the state machine starts to evaluate this state
     override public void OnStateEnter(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
+
         imp.destinationSetter.target = null;
         imp.destinationSetter.enabled = false;
 
@@ -25,7 +26,7 @@ public class ImpSMB_Pursue : StateMachineBehaviour
         imp.pathfinder.destination = imp.transform.position + vectorToTravel;
 
 
-       
+
     }
 
     //OnStateUpdate is called on each Update frame between OnStateEnter and OnStateExit callbacks
@@ -51,6 +52,8 @@ public class ImpSMB_Pursue : StateMachineBehaviour
             Debug.LogWarning("returned in patrol");
             animator.Play("Idle");
         }
+
+        imp.SetAnimation(1);
     }
 
     // OnStateExit is called when a transition ends and the state machine finishes evaluating this state

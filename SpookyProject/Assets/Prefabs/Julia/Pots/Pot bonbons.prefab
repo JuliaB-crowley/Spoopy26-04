@@ -145,14 +145,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b1dd15d2cafcfb045bc92f63bc84ef24, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  invisibleScript: {fileID: 0}
   possibleLoots:
   - {fileID: 2654147877702478415, guid: 8805ecfdead8b2b43a5f0a2ccdefd8de, type: 3}
   - {fileID: 2654147877702478415, guid: 8805ecfdead8b2b43a5f0a2ccdefd8de, type: 3}
   - {fileID: 4058683843120401103, guid: 5b4ba125498b83349bfee32b037a879f, type: 3}
   - {fileID: 4058683843120401103, guid: 5b4ba125498b83349bfee32b037a879f, type: 3}
-  - {fileID: 7707960502096642182, guid: 4f94ed04b2d69e54c92e3b1c8d63219e, type: 3}
-  - {fileID: 4505395667627260979, guid: 91faeb50ada8aba4ca6ee776d61820f6, type: 3}
   breakTime: 0
+  needsInvisibleScript: 0
 --- !u!33 &8380586844361745830
 MeshFilter:
   m_ObjectHideFlags: 0

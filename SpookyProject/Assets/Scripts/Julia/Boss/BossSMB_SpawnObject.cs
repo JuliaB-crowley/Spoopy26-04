@@ -7,9 +7,11 @@ public class BossSMB_SpawnObject : StateMachineBehaviour
     public JUB_BossBehavior boss;
     public float timeBetweenTraps;
     public int numberAlreadySpawned;
+    public bool maeveTrapSpawned = false;
     // OnStateEnter is called when a transition starts and the state machine starts to evaluate this state
     override public void OnStateEnter(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
+        maeveTrapSpawned = false;
         timeBetweenTraps = 0;
         numberAlreadySpawned = 0;
     }
@@ -17,54 +19,65 @@ public class BossSMB_SpawnObject : StateMachineBehaviour
     // OnStateUpdate is called on each Update frame between OnStateEnter and OnStateExit callbacks
     override public void OnStateUpdate(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
-        timeBetweenTraps += Time.deltaTime;
-        boss.centerOfArea = boss.maeve.transform.position;
-
-        if (boss.bossHitNumber == 0)
+        if (boss.isInCombat)
         {
-            if (timeBetweenTraps >= boss.timeBetweenTwo && numberAlreadySpawned <= boss.numberTrapPhase1)
+            timeBetweenTraps += Time.deltaTime;
+            boss.centerOfArea = boss.maeve.transform.position;
+            if (maeveTrapSpawned == false)
             {
-                timeBetweenTraps = 0;
-                Vector2 pos = boss.centerOfArea + new Vector2(Random.Range(-boss.sizeOfArea.x / 2, boss.sizeOfArea.x / 2), Random.Range(-boss.sizeOfArea.y / 2, boss.sizeOfArea.y / 2));
-                Instantiate(boss.spawningTrap, pos, Quaternion.identity);
-                numberAlreadySpawned++;
-
+                maeveTrapSpawned = true;
+                Instantiate(boss.spawningTrap, boss.maeve.transform.position, Quaternion.identity);
             }
-            else if(numberAlreadySpawned > boss.numberTrapPhase1)
+            if (boss.bossHitNumber == 0)
             {
-                animator.Play("Idle");
+                if (timeBetweenTraps >= boss.timeBetweenTwo && numberAlreadySpawned <= boss.numberTrapPhase1)
+                {
+                    timeBetweenTraps = 0;
+                    Vector2 pos = boss.centerOfArea + new Vector2(Random.Range(-boss.sizeOfArea.x / 2, boss.sizeOfArea.x / 2), Random.Range(-boss.sizeOfArea.y / 2, boss.sizeOfArea.y / 2));
+                    Instantiate(boss.spawningTrap, pos, Quaternion.identity);
+                    numberAlreadySpawned++;
+
+                }
+                else if (numberAlreadySpawned > boss.numberTrapPhase1)
+                {
+                    animator.Play("Idle");
+                }
+            }
+
+            else if (boss.bossHitNumber == 1)
+            {
+                if (timeBetweenTraps >= boss.timeBetweenTwo && numberAlreadySpawned <= boss.numberTrapPhase2)
+                {
+                    timeBetweenTraps = 0;
+                    Vector2 pos = boss.centerOfArea + new Vector2(Random.Range(-boss.sizeOfArea.x / 2, boss.sizeOfArea.x / 2), Random.Range(-boss.sizeOfArea.y / 2, boss.sizeOfArea.y / 2));
+                    Instantiate(boss.spawningTrap, pos, Quaternion.identity);
+                    numberAlreadySpawned++;
+                }
+                else if (numberAlreadySpawned > boss.numberTrapPhase2)
+                {
+                    animator.Play("Idle");
+                }
+            }
+
+            else if (boss.bossHitNumber == 2)
+            {
+                if (timeBetweenTraps >= boss.timeBetweenTwo && numberAlreadySpawned <= boss.numberTrapPhase3)
+                {
+                    timeBetweenTraps = 0;
+                    Vector2 pos = boss.centerOfArea + new Vector2(Random.Range(-boss.sizeOfArea.x / 2, boss.sizeOfArea.x / 2), Random.Range(-boss.sizeOfArea.y / 2, boss.sizeOfArea.y / 2));
+                    Instantiate(boss.spawningTrap, pos, Quaternion.identity);
+                    numberAlreadySpawned++;
+
+                }
+                else if (numberAlreadySpawned > boss.numberTrapPhase3)
+                {
+                    animator.Play("Idle");
+                }
             }
         }
-
-        else if (boss.bossHitNumber == 1)
+        else
         {
-            if (timeBetweenTraps >= boss.timeBetweenTwo && numberAlreadySpawned <= boss.numberTrapPhase2)
-            {
-                timeBetweenTraps = 0;
-                Vector2 pos = boss.centerOfArea + new Vector2(Random.Range(-boss.sizeOfArea.x / 2, boss.sizeOfArea.x / 2), Random.Range(-boss.sizeOfArea.y / 2, boss.sizeOfArea.y / 2));
-                Instantiate(boss.spawningTrap, pos, Quaternion.identity);
-                numberAlreadySpawned++;
-            }
-            else if (numberAlreadySpawned > boss.numberTrapPhase2)
-            {
-                animator.Play("Idle");
-            }
-        }
-
-        else if (boss.bossHitNumber == 2)
-        {
-            if (timeBetweenTraps >= boss.timeBetweenTwo && numberAlreadySpawned <= boss.numberTrapPhase3)
-            {
-                timeBetweenTraps = 0;
-                Vector2 pos = boss.centerOfArea + new Vector2(Random.Range(-boss.sizeOfArea.x / 2, boss.sizeOfArea.x / 2), Random.Range(-boss.sizeOfArea.y / 2, boss.sizeOfArea.y / 2));
-                Instantiate(boss.spawningTrap, pos, Quaternion.identity);
-                numberAlreadySpawned++;
-
-            }
-            else if(numberAlreadySpawned > boss.numberTrapPhase3)
-            {
-                animator.Play("Idle");
-            }
+            animator.Play("Idle");
         }
     }
 
@@ -74,6 +87,7 @@ public class BossSMB_SpawnObject : StateMachineBehaviour
     {
         timeBetweenTraps = 0;
         numberAlreadySpawned = 0;
+        maeveTrapSpawned = false;
     }
 
     // OnStateMove is called right after Animator.OnAnimatorMove()

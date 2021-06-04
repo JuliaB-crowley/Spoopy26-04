@@ -58,7 +58,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 32
+  spritePixelsToUnits: 300
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -103,7 +103,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: spritesheet_Diablotin_attack_front_0
+      name: spritesheet_Diablotin_attack_back_0
       rect:
         serializedVersion: 2
         x: 0
@@ -117,14 +117,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 8a0a6e1e6fc03f610800000000000000
-      internalID: 1653679742666580136
+      spriteID: d3cb7637cfe0a0650800000000000000
+      internalID: 6199784314459634749
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: spritesheet_Diablotin_attack_front_1
+      name: spritesheet_Diablotin_attack_back_1
       rect:
         serializedVersion: 2
         x: 952
@@ -138,14 +138,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: fd7feebb7f7ee14f0800000000000000
-      internalID: -855991827957876769
+      spriteID: 12c18c35baedb8f20800000000000000
+      internalID: 3426076768971791393
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: spritesheet_Diablotin_attack_front_2
+      name: spritesheet_Diablotin_attack_back_2
       rect:
         serializedVersion: 2
         x: 0
@@ -159,14 +159,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c80fb03c2b5eb95c0800000000000000
-      internalID: -4207516870908317556
+      spriteID: d2e9abdcb59198160800000000000000
+      internalID: 7028176575572647469
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: spritesheet_Diablotin_attack_front_3
+      name: spritesheet_Diablotin_attack_back_3
       rect:
         serializedVersion: 2
         x: 952
@@ -180,8 +180,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 677f79c58f329b7c0800000000000000
-      internalID: -4055170439858096266
+      spriteID: b20d87d3f7a9cae20800000000000000
+      internalID: 3363232893021769771
       vertices: []
       indices: 
       edges: []
@@ -189,7 +189,7 @@ TextureImporter:
     outline: []
     physicsShape: []
     bones: []
-    spriteID: d26d48d6d7fc6dc469a6ab36d8849ab1
+    spriteID: ea2fa8f5924ff7e4a9fc23620157334b
     internalID: 0
     vertices: []
     indices: 

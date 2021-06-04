@@ -57,9 +57,13 @@ MonoBehaviour:
   secondIsActive: 0
   thirdIsActive: 0
   fourthIsActive: 0
+  fithIsActive: 0
+  sixthIsActive: 0
+  seventhIsActive: 0
+  eightIsActive: 0
   tries: 0
   successes: 0
-  successesNeeded: 4
+  successesNeeded: 0
 --- !u!1 &1118824966764848881
 GameObject:
   m_ObjectHideFlags: 0
@@ -115,44 +119,26 @@ MonoBehaviour:
   needPzMnE: 1
   needPzMnF: 0
   needPzMnG: 0
---- !u!114 &1118824966783809015
+--- !u!114 &1118824968199753219
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4270581383242701020}
+  m_GameObject: {fileID: 4270581382997702904}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 05bf9ffd9946a534d8bee5e516110366, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   isFirst: 0
-  isSecond: 0
-  isThird: 1
-  isFourth: 0
-  isButton: 0
-  isTorch: 1
-  hasBeenChecked: 0
-  buttonScript: {fileID: 0}
-  torchScript: {fileID: 0}
-  orderMaster: {fileID: 0}
---- !u!114 &1118824967018728784
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4270581384074852085}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 05bf9ffd9946a534d8bee5e516110366, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  isFirst: 0
-  isSecond: 0
+  isSecond: 1
   isThird: 0
-  isFourth: 1
+  isFourth: 0
+  isFith: 0
+  isSixth: 0
+  isSeventh: 0
+  isEight: 0
   isButton: 0
   isTorch: 1
   hasBeenChecked: 0
@@ -175,28 +161,62 @@ MonoBehaviour:
   isSecond: 0
   isThird: 0
   isFourth: 0
+  isFith: 0
+  isSixth: 0
+  isSeventh: 0
+  isEight: 0
   isButton: 0
   isTorch: 1
   hasBeenChecked: 0
   buttonScript: {fileID: 0}
   torchScript: {fileID: 0}
   orderMaster: {fileID: 0}
---- !u!114 &1118824968199753219
+--- !u!114 &1118824966783809015
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4270581382997702904}
+  m_GameObject: {fileID: 4270581383242701020}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 05bf9ffd9946a534d8bee5e516110366, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   isFirst: 0
-  isSecond: 1
-  isThird: 0
+  isSecond: 0
+  isThird: 1
   isFourth: 0
+  isFith: 0
+  isSixth: 0
+  isSeventh: 0
+  isEight: 0
+  isButton: 0
+  isTorch: 1
+  hasBeenChecked: 0
+  buttonScript: {fileID: 0}
+  torchScript: {fileID: 0}
+  orderMaster: {fileID: 0}
+--- !u!114 &1118824967018728784
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4270581384074852085}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 05bf9ffd9946a534d8bee5e516110366, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isFirst: 0
+  isSecond: 0
+  isThird: 0
+  isFourth: 1
+  isFith: 0
+  isSixth: 0
+  isSeventh: 0
+  isEight: 0
   isButton: 0
   isTorch: 1
   hasBeenChecked: 0

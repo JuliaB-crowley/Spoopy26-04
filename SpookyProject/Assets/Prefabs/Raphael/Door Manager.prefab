@@ -205,6 +205,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   interactible: 0
   interacted: 0
+  canBeShown: 0
   player: {fileID: 0}
   maeveScript: {fileID: 0}
 --- !u!114 &108081846713818927
@@ -219,10 +220,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7ea3b03ed90835c46ab07faaa3418d63, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  doorManager: {fileID: 108081846713818928}
+  doorManager: {fileID: 0}
   doorObject: {fileID: 108081845312248059}
   minPuzzlesSolved: 0
   puzzleMaster: {fileID: 0}
+  fusiblesScript: {fileID: 0}
   doorSprite: {fileID: 8015566268489061759}
   doorOpen: {fileID: 21300000, guid: 73c14b6c53942f440a56190ddd143e6c, type: 3}
   doorLocked: {fileID: 21300000, guid: 4977cd5b0bdf09d489543fa4f3919380, type: 3}
@@ -242,3 +244,7 @@ MonoBehaviour:
   needPzMnB: 0
   needPzMnC: 0
   needPzMnD: 0
+  needPzMnE: 0
+  needPzMnF: 0
+  needPzMnG: 0
+  dependsOnFusebox: 0

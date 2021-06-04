@@ -55,6 +55,15 @@ public class SkeletonSMB_Iddle : StateMachineBehaviour
         {
             animator.Play("Pursue");
         }
+
+        if (skeleton.patrolTargets.Count == 1)
+        {
+            skeleton.SetAnimation(0);
+        }
+        else if (skeleton.patrolTargets.Count > 1)
+        {
+            skeleton.SetAnimation(1);
+        }
     }
 
     // OnStateExit is called when a transition ends and the state machine finishes evaluating this state

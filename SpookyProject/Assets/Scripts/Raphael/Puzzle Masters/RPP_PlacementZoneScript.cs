@@ -21,8 +21,9 @@ public class RPP_PlacementZoneScript : MonoBehaviour
             collision.gameObject.transform.position = successfulPositions[currentPositionValue].position;
             collision.gameObject.transform.SetParent(successfulPositions[currentPositionValue]);            
             currentPositionValue ++;
-            if (collision.CompareTag("Torche"))
+            if (collision.CompareTag("Torche") && !collision.GetComponentInChildren<TestTorche>().hasBeenUsed)
             {
+                collision.GetComponentInChildren<TestTorche>().hasBeenUsed = true;
                 if (collision.GetComponentInChildren<TestTorche>().isLit)
                 {
                     Debug.Log("The torch has been lit inside the zone");
@@ -37,6 +38,19 @@ public class RPP_PlacementZoneScript : MonoBehaviour
             {
                 placementManager.successesAchieved++;
             }          
+        }
+    }
+    private void OnTriggerExit2D(Collider2D collision)
+    {
+        if (collision.CompareTag("Torche") && collision.GetComponentInChildren<TestTorche>().hasBeenUsed)
+        {
+            collision.GetComponentInChildren<TestTorche>().hasBeenUsed = false;
+            currentPositionValue--;
+
+            if (collision.GetComponentInChildren<TestTorche>().isLit)
+            {
+                placementManager.successesAchieved--;
+            }
         }
     }
 }

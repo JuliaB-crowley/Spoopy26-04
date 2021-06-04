@@ -12,6 +12,7 @@ public class ImpSMB_Idle : StateMachineBehaviour
     // OnStateEnter is called when a transition starts and the state machine starts to evaluate this state
     override public void OnStateEnter(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
+
         imp.destinationSetter.enabled = true;
 
         imp.pathfinder.maxSpeed = imp.iddleSpeed;
@@ -54,6 +55,15 @@ public class ImpSMB_Idle : StateMachineBehaviour
         if (imp.playerInSight)
         {
             animator.Play("Pursue");
+        }
+
+        if (imp.patrolTargets.Count == 1)
+        {
+            imp.SetAnimation(0);
+        }
+        else if (imp.patrolTargets.Count > 1)
+        {
+            imp.SetAnimation(1);
         }
     }
 

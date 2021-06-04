@@ -23,6 +23,7 @@ public class JUB_BreakableBehavior : MonoBehaviour
         {
             if (possibleLoots.Count > 0)
             {
+                Debug.Log("a vase has been destroyed");
                 int index = Random.Range(0, possibleLoots.Count - 1);
                 Instantiate(possibleLoots[index], transform.position, Quaternion.identity);
             }
@@ -32,6 +33,7 @@ public class JUB_BreakableBehavior : MonoBehaviour
         {
             if (possibleLoots.Count > 0 && invisibleScript.isVisible)
             {
+                Debug.Log("an invisible vase has been destroyed");
                 int index = Random.Range(0, possibleLoots.Count - 1);
                 Instantiate(possibleLoots[index], transform.position, Quaternion.identity);
                 StartCoroutine("DestroyCoroutine");

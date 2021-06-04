@@ -21,6 +21,9 @@ TagManager:
   - PuzzleMasterE
   - PuzzleMasterF
   - PuzzleMasterG
+  - NotebookCanvas
+  - Anchor
+  - PuzzleMasterH
   layers:
   - Default
   - TransparentFX
@@ -42,7 +45,7 @@ TagManager:
   - Item
   - BossJewel
   - Quartier
-  - 
+  - Background
   - 
   - 
   - 

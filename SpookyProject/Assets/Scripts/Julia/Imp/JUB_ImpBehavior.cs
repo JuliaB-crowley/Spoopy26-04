@@ -10,6 +10,7 @@ public class JUB_ImpBehavior : MonoBehaviour
     public AIPath pathfinder;
     public AIDestinationSetter destinationSetter;
     public JUB_Maeve player;
+    public JUB_EnnemyDamage ennemyDamage;
 
     //sight cast parameters 
     public float maxSight;
@@ -40,6 +41,10 @@ public class JUB_ImpBehavior : MonoBehaviour
     public JUB_FlashManager flashManager;
     public bool hasBeenStunned;
 
+    //animation parameters
+    public Animator graphicAnimator;
+
+
     // Start is called before the first frame update
     void Start()
     {
@@ -50,6 +55,7 @@ public class JUB_ImpBehavior : MonoBehaviour
         SMBanimator = GetComponent<Animator>();
         pathfinder = GetComponent<AIPath>();
         destinationSetter = GetComponent<AIDestinationSetter>();
+        ennemyDamage = GetComponent<JUB_EnnemyDamage>();
 
         SMBanimator.GetBehaviour<ImpSMB_Idle>().imp = this;
         SMBanimator.GetBehaviour<ImpSMB_Pursue>().imp = this;
@@ -83,6 +89,10 @@ public class JUB_ImpBehavior : MonoBehaviour
         {
             hasBeenStunned = true;
             SMBanimator.Play("Stun");
+        }
+        if(ennemyDamage.currentHealth == 0)
+        {
+            SetAnimation(-1);
         }
     }
 
@@ -138,5 +148,69 @@ public class JUB_ImpBehavior : MonoBehaviour
         Object.Instantiate(damageTrail).transform.position = transform.position;
     }
 
+    public void SetAnimation(int anim)
+    {
+        //-1 ded, 0 idle, 1 run, 2 attack, 3 stun
+
+        string animToPlay = "Diablotin_idle";
+        switch(anim)
+        {
+            case -1:
+                animToPlay = "Diablotin_death";
+                break;
+
+            case 0:
+                animToPlay = "Diablotin_idle";
+                break;
+
+            case 1:
+                animToPlay = "Diablotin_walk";
+                break;
+
+            case 2:
+                animToPlay = "Diablotin_attack";
+                break;
+
+            case 3:
+                animToPlay = "Diablotin_hit";
+                break;
+        }
+        int direction = 3; //0 = rigth, 1 = left, 2 = up, 3 = down
+        if(pathfinder.velocity.normalized.x > 0.5)
+        {
+            direction = 0;
+        }
+        else if(pathfinder.velocity.normalized.x < -0.5)
+        {
+            direction = 1;
+        }
+        else if(pathfinder.velocity.normalized.y > 0.5)
+        {
+            direction = 2;
+        }
+        else if(pathfinder.velocity.normalized.y < -0.5)
+        {
+            direction = 3;
+        }
+        switch (direction)
+        {
+            case 0:
+                animToPlay += "_right";
+                break;
+
+            case 1:
+                animToPlay += "_left";
+                break;
+
+            case 2:
+                animToPlay += "_back";
+                break;
+
+            case 3:
+                animToPlay += "_front";
+                break;
+        }
+        graphicAnimator.Play(animToPlay);
+    }
 
 }

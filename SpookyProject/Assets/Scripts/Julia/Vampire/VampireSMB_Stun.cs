@@ -26,6 +26,7 @@ public class VampireSMB_Stun : StateMachineBehaviour
             vampire.hasBeenStunned = false;
             animator.Play("Escape");
         }
+        vampire.SetAnimation(2);
     }
 
     // OnStateExit is called when a transition ends and the state machine finishes evaluating this state

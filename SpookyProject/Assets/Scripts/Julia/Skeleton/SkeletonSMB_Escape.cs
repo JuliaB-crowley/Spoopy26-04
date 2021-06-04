@@ -24,6 +24,7 @@ public class SkeletonSMB_Escape : StateMachineBehaviour
     // OnStateUpdate is called on each Update frame between OnStateEnter and OnStateExit callbacks
     override public void OnStateUpdate(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
+        skeleton.SetAnimation(5);
         timeSinceFleeBegins += Time.deltaTime;
         if(timeSinceFleeBegins >= maxFleeRate)
         {
@@ -36,6 +37,8 @@ public class SkeletonSMB_Escape : StateMachineBehaviour
         {
             animator.Play("Reconstruction");
         }
+
+
     }  
 
     Vector3 FleeTarget()

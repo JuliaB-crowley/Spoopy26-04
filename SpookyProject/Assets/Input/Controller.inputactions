@@ -372,6 +372,38 @@
                     "expectedControlType": "Button",
                     "processors": "",
                     "interactions": ""
+                },
+                {
+                    "name": "LifePlus",
+                    "type": "Button",
+                    "id": "7173953b-8f09-4422-ae25-9232cd123970",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": ""
+                },
+                {
+                    "name": "MoneyPlus",
+                    "type": "Button",
+                    "id": "063097c1-36d2-4684-bcb3-ebf9fd45aced",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": ""
+                },
+                {
+                    "name": "Donjon",
+                    "type": "Button",
+                    "id": "91f0e626-487e-4702-8dbb-adb699fac04b",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": ""
+                },
+                {
+                    "name": "Boss",
+                    "type": "Button",
+                    "id": "37f85ec3-4faa-46a7-b20b-40055737cbd9",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": ""
                 }
             ],
             "bindings": [
@@ -405,6 +437,50 @@
                     "processors": "",
                     "groups": "",
                     "action": "Dialogues",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "7b7254d9-1c8d-44f1-b697-233e05ce2d32",
+                    "path": "<Keyboard>/l",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "LifePlus",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "d2b238d3-06cd-4bfb-ba1d-3bd9d6a985ec",
+                    "path": "<Keyboard>/semicolon",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "MoneyPlus",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "b9603dc3-c392-49e6-b5ec-5ea247008676",
+                    "path": "<Keyboard>/o",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Donjon",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "92d93a36-c227-4ec1-b9f2-7fc7fdeb2a68",
+                    "path": "<Keyboard>/p",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Boss",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }
