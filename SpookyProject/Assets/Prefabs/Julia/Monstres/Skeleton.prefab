@@ -249,6 +249,7 @@ MonoBehaviour:
   - {fileID: 7707960502096642182, guid: 4f94ed04b2d69e54c92e3b1c8d63219e, type: 3}
   rendererEnnemies: {fileID: 6804991361460256455}
   timeRed: 0.3
+  nomDuSon: CoupSquelette
 --- !u!50 &5626020860192697857
 Rigidbody2D:
   serializedVersion: 4

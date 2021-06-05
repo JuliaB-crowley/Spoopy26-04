@@ -34,6 +34,7 @@ public class RPP_FusiblesScript : MonoBehaviour
                 Debug.Log("the fusebox works");
                 puzzleMaster.puzzlesSolved++;
                 puzzleSolved = true;
+                FindObjectOfType<AudioManager>().Play("EnigmeVrai");
             }       
     }
 

@@ -93,6 +93,7 @@ public class JUB_ImpBehavior : MonoBehaviour
         if(ennemyDamage.currentHealth == 0)
         {
             SetAnimation(-1);
+            FindObjectOfType<AudioManager>().Play("MortEnnemi");
         }
     }
 

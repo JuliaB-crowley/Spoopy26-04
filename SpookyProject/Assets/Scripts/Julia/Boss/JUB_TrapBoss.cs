@@ -22,6 +22,7 @@ public class JUB_TrapBoss : JUB_DamagingEvent
     {
         yield return new WaitForSeconds(activationTime);
         graphAnim.Play("pics");
+        FindObjectOfType<AudioManager>().Play("Pics");
         colliderTrap.enabled = true;
         Destroy(this.gameObject, decayTime);
     }

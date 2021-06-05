@@ -16,6 +16,7 @@ public class SkeletonSMB_Attack : StateMachineBehaviour
         isInBuildup = true;
 
         skeleton.SetAnimation(2);
+        FindObjectOfType<AudioManager>().Play("ToupieSquelette");
     }
 
     // OnStateUpdate is called on each Update frame between OnStateEnter and OnStateExit callbacks

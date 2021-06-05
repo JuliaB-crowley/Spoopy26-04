@@ -25,12 +25,14 @@ public class RPP_DeterminedOrderMaster : MonoBehaviour
         {
             tries = 0;
             if(successes == successesNeeded && !puzzleCompleted)
-            {                
+            {
+                FindObjectOfType<AudioManager>().Play("EnigmeVrai");
                 orderPuzzeManager.successesAchieved++;
                 puzzleCompleted = true;
             }
             else
             {
+                FindObjectOfType<AudioManager>().Play("EnigmeFausse");
                 StartCoroutine(ResetSons());
             }
         }

@@ -336,6 +336,7 @@ MonoBehaviour:
   - {fileID: 2962616450383077693, guid: 1b450b43b8138c949994c42200bc4ea4, type: 3}
   rendererEnnemies: {fileID: 2379143486348672844}
   timeRed: 0.3
+  nomDuSon: CoupsDiablotin
 --- !u!58 &8603929350840154592
 CircleCollider2D:
   m_ObjectHideFlags: 0

@@ -23,18 +23,22 @@ namespace items
             switch(scriptableObject.itemType)
             {
                 case ItemType.Flash:
+                    FindObjectOfType<AudioManager>().Play("Potion");
                     flash.flashTime *= 2;
                     break;
 
                 case ItemType.Heal:
+                    FindObjectOfType<AudioManager>().Play("Coeur");
                     maeve.Heal(scriptableObject.strengh);
                     break;
 
                 case ItemType.MaxPlus:
+                    FindObjectOfType<AudioManager>().Play("Potion");
                     maeve.MaxUpgrades(scriptableObject.strengh);
                     break;
 
                 case ItemType.Strengh:
+                    FindObjectOfType<AudioManager>().Play("Potion");
                     maeve.attackDamage += 1;
                     break;
             }
