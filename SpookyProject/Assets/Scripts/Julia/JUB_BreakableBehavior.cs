@@ -27,7 +27,7 @@ public class JUB_BreakableBehavior : MonoBehaviour
                 int index = Random.Range(0, possibleLoots.Count - 1);
                 Instantiate(possibleLoots[index], transform.position, Quaternion.identity);
             }
-            StartCoroutine("DestroyCoroutine");
+            StartCoroutine(DestroyCoroutine());
         }
         else
         {
@@ -36,13 +36,14 @@ public class JUB_BreakableBehavior : MonoBehaviour
                 Debug.Log("an invisible vase has been destroyed");
                 int index = Random.Range(0, possibleLoots.Count - 1);
                 Instantiate(possibleLoots[index], transform.position, Quaternion.identity);
-                StartCoroutine("DestroyCoroutine");
+                StartCoroutine(DestroyCoroutine());
             }       
         }       
     }
 
     IEnumerator DestroyCoroutine()
     {
+        FindObjectOfType<AudioManager>().Play("PumpkinDestroyed");
         yield return new WaitForSeconds(breakTime);
         Destroy(gameObject);
     }

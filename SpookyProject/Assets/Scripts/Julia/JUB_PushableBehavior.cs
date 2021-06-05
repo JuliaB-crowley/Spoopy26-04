@@ -6,7 +6,7 @@ using UnityEngine;
 public class JUB_PushableBehavior : MonoBehaviour
 {
     [SerializeField] BoxCollider2D objectCollider;
-    public bool pushable, pushed;
+    public bool pushable, pushed, playedPushObject = false;
     public Transform playerTransform;
     public GameObject pushableObject;
     // Start is called before the first frame update
@@ -17,6 +17,13 @@ public class JUB_PushableBehavior : MonoBehaviour
     }
 
     // Update is called once per frame
+    private void Update()
+    {
+        if (pushed && !playedPushObject)
+        {
+            StartCoroutine(PushSound());
+        }
+    }
 
     public void ManagePushing()
     {
@@ -31,5 +38,13 @@ public class JUB_PushableBehavior : MonoBehaviour
             pushableObject.transform.SetParent(null);
             objectCollider.enabled = true;
         }
+    }
+
+    IEnumerator PushSound()
+    {
+        playedPushObject = true;
+        FindObjectOfType<AudioManager>().Play("PushObject");
+        yield return new WaitForSeconds(1.2f);
+        playedPushObject = false;
     }
 }

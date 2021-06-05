@@ -1745,7 +1745,7 @@ MonoBehaviour:
     m_Bits: 16384
   burnRange: 1
   flashRange: 3.5
-  flashTime: 0.4
+  flashTime: 1.5
   flashAnim: 0.4
   flashWasObtained: 1
 --- !u!58 &5313178945619841773

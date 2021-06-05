@@ -2,14 +2,16 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class RPP_SubPuzzleManager : MonoBehaviour
+public class RPP_LockedPortalScript : MonoBehaviour
 {
+    [SerializeField] JUB_TeleportationPoints teleportScript;
     [SerializeField] RPP_GeneralPuzzleMaster puzzleMaster;
-    public int totalSuccessesRequired, successesAchieved;
-    public bool puzzleSolved = false;
     [SerializeField] bool needPzMnA = true, needPzMnB, needPzMnC, needPzMnD, needPzMnE, needPzMnF, needPzMnG;
+    [SerializeField] bool needBlueKey, needYellowKey, needGreenKey, needVioletKey;
+    [SerializeField] GameObject portalBlock;
+    public int totalKeysNeeded, keysPosessed;
 
-    private void Start()
+    void Start()
     {
         if (needPzMnA)
         {
@@ -39,15 +41,56 @@ public class RPP_SubPuzzleManager : MonoBehaviour
         {
             puzzleMaster = GameObject.FindGameObjectWithTag("PuzzleMasterG").GetComponent<RPP_GeneralPuzzleMaster>();
         }
+
+        if (needBlueKey)
+        {
+            totalKeysNeeded++;
+        }
+        if(needYellowKey)
+        {
+            totalKeysNeeded++;
+        }
+        if (needGreenKey)
+        {
+            totalKeysNeeded++;
+        }
+        if (needVioletKey)
+        {
+            totalKeysNeeded++;
+        }
+
+        teleportScript = GetComponent<JUB_TeleportationPoints>();
+        teleportScript.pointADesactivated = true;
     }
 
-    private void Update()
+    void Update()
     {
-        if (totalSuccessesRequired <= successesAchieved && !puzzleSolved)
+        if(needBlueKey && puzzleMaster.hasBlueKey)
         {
-            puzzleSolved = true;
-            puzzleMaster.puzzlesSolved++;
-            FindObjectOfType<AudioManager>().Play("EnigmeVrai");
+            needBlueKey = false;
+            keysPosessed++;
+        }
+        if (needGreenKey && puzzleMaster.hasGreenKey)
+        {
+            needGreenKey = false;
+            keysPosessed++;
+        }
+        if (needYellowKey && puzzleMaster.hasYellowKey)
+        {
+            needYellowKey = false;
+            keysPosessed++;
+        }
+        if (needVioletKey && puzzleMaster.hasVioletKey)
+        {
+            needVioletKey = false;
+            keysPosessed++;
+        }
+
+        if(keysPosessed == totalKeysNeeded)
+        {
+            portalBlock.SetActive(false);
+            teleportScript.pointADesactivated = false;
         }
     }
 }
+

@@ -17,7 +17,7 @@ public class JUB_Endgame : MonoBehaviour
     {
         if (collision.CompareTag("Player"))
         {
-            victoryCanvas.SetActive(true);
+            SceneManager.LoadScene("Outro");
         }
     }
 
