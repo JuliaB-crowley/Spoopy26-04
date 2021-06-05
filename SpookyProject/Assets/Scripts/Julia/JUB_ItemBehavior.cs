@@ -21,9 +21,22 @@ namespace items
         }
         public void ApplyEffect()
         {
-            Debug.Log(scriptableObject.itemType);
+            Debug.LogWarning(scriptableObject.itemType);
+            if(scriptableObject.itemType == ItemType.Strengh)
+            {
+                Debug.LogWarning("potion achetée");
+                Debug.LogWarning(maeve.quickAttack.atkDamage);
+                maeve.quickAttack.ChangeDamage(1);
+                /*maeve.quickDamage += 1; JUGEZ PAS C LA PLS
+                maeve.heavyDamage += 1;
+                maeve.quickAttack = new JUB_Combat.AttackProfile(maeve.quickDamage, new Vector2(1, 1), 0.4f, 0.2f, "quick");
+                maeve.heavyAttack = new JUB_Combat.AttackProfile(maeve.heavyDamage, new Vector2(2, 1), 0.4f, 0.8f, "heavy");*/
+                Debug.LogWarning(maeve.quickAttack.atkDamage);
+                FindObjectOfType<AudioManager>().Play("Potion");
+            }
             switch(scriptableObject.itemType)
             {
+                
                 case ItemType.Flash:
                     FindObjectOfType<AudioManager>().Play("Potion");
                     flash.flashTime *= 1.2f;
@@ -40,9 +53,7 @@ namespace items
                     break;
 
                 case ItemType.Strengh:
-                    FindObjectOfType<AudioManager>().Play("Potion");
-                    maeve.quickAttack.ChangeDamage(1);
-                    maeve.heavyAttack.ChangeDamage(1);
+
                     break;
             }
         }

@@ -79,7 +79,7 @@ namespace character
         Vector3 paquetOriginalScale;
 
         //attack profile
-        //public float quickDamage = 1, heavyDamage = 3;
+        public float quickDamage = 1, heavyDamage = 3;
         public JUB_Combat.AttackProfile quickAttack, heavyAttack;
 
         // Start is called before the first frame update
@@ -95,8 +95,8 @@ namespace character
 
             paquetOriginalScale = paquetBonbons.transform.localScale;
 
-            quickAttack = new JUB_Combat.AttackProfile(1, new Vector2(1, 1), 0.4f, 0.2f, "quick");
-            heavyAttack = new JUB_Combat.AttackProfile(3, new Vector2(2, 1), 0.4f, 0.8f, "heavy");
+            quickAttack = new JUB_Combat.AttackProfile(quickDamage, new Vector2(1, 1), 0.4f, 0.2f, "quick");
+            heavyAttack = new JUB_Combat.AttackProfile(heavyDamage, new Vector2(2, 1), 0.4f, 0.8f, "heavy");
 
             currentLife = maxLife;
             deathCanvas.SetActive(false);
@@ -430,6 +430,7 @@ namespace character
             {
                 FindObjectOfType<AudioManager>().Play("AttaqueForte");
             }
+            Debug.LogError(quickAttack.atkDamage);
             StartCoroutine(Hit(attackProfile));
         }
         IEnumerator Hit(JUB_Combat.AttackProfile attackProfile)
