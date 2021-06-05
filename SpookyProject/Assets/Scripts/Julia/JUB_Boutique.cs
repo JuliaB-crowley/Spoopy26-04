@@ -86,7 +86,7 @@ public class JUB_Boutique : MonoBehaviour
         if(maeve.currentBonbons >= items[buttonNumber].scriptableObject.itemPrice)
         {
             maeve.Achat(items[buttonNumber].scriptableObject.itemPrice);
-            Debug.Log(items[buttonNumber].scriptableObject.itemType);
+            //Debug.Log(items[buttonNumber].scriptableObject.itemType);
             ApplyEffect();
             soldText[buttonNumber].SetActive(true);
             buttons[buttonNumber].enabled = false;
@@ -106,19 +106,31 @@ public class JUB_Boutique : MonoBehaviour
         switch (items[buttonNumber].scriptableObject.itemType)
         {
             case ItemType.Flash:
-                flash.flashTime *= 2;
+                FindObjectOfType<AudioManager>().Play("Potion");
+                flash.flashTime *= 1.2f;
                 break;
 
             case ItemType.Heal:
+                FindObjectOfType<AudioManager>().Play("Coeur");
                 maeve.Heal(items[buttonNumber].scriptableObject.strengh);
                 break;
 
             case ItemType.MaxPlus:
+                FindObjectOfType<AudioManager>().Play("Potion");
                 maeve.MaxUpgrades(items[buttonNumber].scriptableObject.strengh);
                 break;
 
             case ItemType.Strengh:
-                maeve.attackDamage += 1;
+                FindObjectOfType<AudioManager>().Play("Potion");
+                //Debug.LogWarning("potion achetée");
+                //Debug.LogWarning(maeve.quickAttack.atkDamage);
+                maeve.heavyAttack.ChangeDamage(1);
+                maeve.quickAttack.ChangeDamage(1);
+                /*maeve.quickDamage += 1; JUGEZ PAS C LA PLS
+                maeve.heavyDamage += 1;
+                maeve.quickAttack = new JUB_Combat.AttackProfile(maeve.quickDamage, new Vector2(1, 1), 0.4f, 0.2f, "quick");
+                maeve.heavyAttack = new JUB_Combat.AttackProfile(maeve.heavyDamage, new Vector2(2, 1), 0.4f, 0.8f, "heavy");*/
+                //Debug.LogWarning(maeve.quickAttack.atkDamage);
                 break;
         }
     }
