@@ -39,7 +39,7 @@ namespace items
 
                 case ItemType.Strengh:
                     FindObjectOfType<AudioManager>().Play("Potion");
-                    maeve.attackDamage += 1;
+                    maeve.UpgradeDamages();
                     break;
             }
         }
