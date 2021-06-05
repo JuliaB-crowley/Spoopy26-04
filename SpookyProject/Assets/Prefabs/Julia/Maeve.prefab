@@ -638,7 +638,7 @@ Canvas:
   m_SortingBucketNormalizedSize: 0
   m_AdditionalShaderChannelsFlag: 0
   m_SortingLayerID: 0
-  m_SortingOrder: 1
+  m_SortingOrder: 250
   m_TargetDisplay: 0
 --- !u!114 &8064302281334377685
 MonoBehaviour:
@@ -927,7 +927,7 @@ MonoBehaviour:
     callback:
       m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 8190231965201966219}
+        - m_Target: {fileID: 3583276630144311691}
           m_TargetAssemblyTypeName: GrossirBouton, Assembly-CSharp
           m_MethodName: Hover
           m_Mode: 1
@@ -1661,7 +1661,7 @@ MonoBehaviour:
     m_Bits: 262144
   attackDamage: 10
   ennemyWasHitOnce: 0
-  immunityTime: 0.5
+  immunityTime: 0.8
   timeRed: 0.5
   rendererMaeve: {fileID: 2346143091938068979}
   actualCheckpoint: {fileID: 0}
@@ -1703,6 +1703,8 @@ MonoBehaviour:
   dust: {fileID: 3476643485994134824}
   paquetBonbons: {fileID: 7716418190911829916}
   shaderFlame: {fileID: 7040988765849107423}
+  quickDamage: 1
+  heavyDamage: 3
 --- !u!50 &5857361522451789454
 Rigidbody2D:
   serializedVersion: 4
