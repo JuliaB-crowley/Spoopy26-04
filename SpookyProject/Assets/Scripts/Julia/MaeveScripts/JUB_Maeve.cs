@@ -77,6 +77,9 @@ namespace character
         public GameObject paquetBonbons, shaderFlame;
         Vector3 paquetOriginalScale;
 
+        //attack profile
+        public float quickDamage = 1, heavyDamage = 3;
+
         // Start is called before the first frame update
         void Start()
         {
@@ -90,8 +93,8 @@ namespace character
 
             paquetOriginalScale = paquetBonbons.transform.localScale;
 
-            AttackProfile quickAttack = new AttackProfile(1, new Vector2(1, 1), 0.4f, 0.2f, "quick");
-            AttackProfile heavyAttack = new AttackProfile(3, new Vector2(2, 1), 0.4f, 0.8f, "heavy");
+            AttackProfile quickAttack = new AttackProfile(quickDamage, new Vector2(1, 1), 0.4f, 0.2f, "quick");
+            AttackProfile heavyAttack = new AttackProfile(heavyDamage, new Vector2(2, 1), 0.4f, 0.8f, "heavy");
 
             currentLife = maxLife;
             deathCanvas.SetActive(false);
@@ -526,7 +529,7 @@ namespace character
             Gizmos.DrawWireSphere(transform.position, interactAndPushableRange);
         }
 
-        class AttackProfile
+        public class AttackProfile
         {
             public AttackProfile(float damage, Vector2 zone, float buildup, float recover, string name)
             {
@@ -551,6 +554,12 @@ namespace character
                 atkDamage = newDamageValue;
             }
 
+        }
+
+        public void UpgradeDamages()
+        {
+            quickDamage += 1;
+            heavyDamage += 1;
         }
 
         void InteractSphere()

@@ -13,7 +13,7 @@ public class JUB_FlashManager : MonoBehaviour
     }
     public IEnumerator FlashEndCoroutine(float timeFlashing)
     {
-        yield return new WaitForSeconds(flashTime);
+        yield return new WaitForSeconds(timeFlashing);
         flashed = false;
         Debug.Log("flash désactivé");
     }
@@ -23,7 +23,7 @@ public class JUB_FlashManager : MonoBehaviour
     }
     public IEnumerator BurnEndCoroutine(float timeBurning)
     {
-        yield return new WaitForSeconds(flashTime);
+        yield return new WaitForSeconds(timeBurning);
         burned = false;
     }
 }
