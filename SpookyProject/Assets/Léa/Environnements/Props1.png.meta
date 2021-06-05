@@ -1,25 +1,28 @@
 fileFormatVersion: 2
-guid: 0b2e77e3db2332841bde0e9ce9f0b5c2
+guid: a885eef2101be174a855934cfd764e03
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -5413749512734333066
-    second: "Barri\xE8res _0"
+      213: 7841123039103183476
+    second: Details en plus_0
   - first:
-      213: -4800488724785418102
-    second: "Barri\xE8res _1"
+      213: 5951704308204595992
+    second: Details en plus_1
   - first:
-      213: -8628160826327902671
-    second: "Barri\xE8res _2"
+      213: -5238935639495988571
+    second: Details en plus_2
   - first:
-      213: -2472058692704225449
-    second: "Barri\xE8res _3"
+      213: -7844955451075100753
+    second: Details en plus_3
   - first:
-      213: 7539934301142094590
-    second: "Barri\xE8res _4"
+      213: 4505388039007978794
+    second: Details en plus_4
   - first:
-      213: -8639551639964056679
-    second: "Barri\xE8res _5"
+      213: -6905397439639720147
+    second: Details en plus_5
+  - first:
+      213: 3165785710011286055
+    second: Details en plus_6
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -109,13 +112,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: "Barri\xE8res _0"
+      name: Details en plus_0
       rect:
         serializedVersion: 2
-        x: 552
-        y: 762
-        width: 138
-        height: 191
+        x: 958
+        y: 253
+        width: 795
+        height: 681
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -123,20 +126,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 677a68e508f7ed4b0800000000000000
-      internalID: -5413749512734333066
+      spriteID: 47a60e92cd341dc60800000000000000
+      internalID: 7841123039103183476
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: "Barri\xE8res _1"
+      name: Details en plus_1
       rect:
         serializedVersion: 2
-        x: 550
-        y: 581
-        width: 140
-        height: 181
+        x: 637
+        y: 371
+        width: 291
+        height: 421
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -144,83 +147,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a80b5ea50fc316db0800000000000000
-      internalID: -4800488724785418102
+      spriteID: 81b62bae883b89250800000000000000
+      internalID: 5951704308204595992
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: "Barri\xE8res _2"
+      name: Details en plus_2
       rect:
         serializedVersion: 2
-        x: 549
-        y: 280
-        width: 131
-        height: 300
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 136d8c1417d924880800000000000000
-      internalID: -8628160826327902671
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: "Barri\xE8res _3"
-      rect:
-        serializedVersion: 2
-        x: 171
-        y: 707
-        width: 302
-        height: 151
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 757b27d67bb71bdd0800000000000000
-      internalID: -2472058692704225449
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: "Barri\xE8res _4"
-      rect:
-        serializedVersion: 2
-        x: 475
-        y: 707
-        width: 55
-        height: 146
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: ef29b517c4a33a860800000000000000
-      internalID: 7539934301142094590
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: "Barri\xE8res _5"
-      rect:
-        serializedVersion: 2
-        x: 328
-        y: 689
-        width: 137
-        height: 180
+        x: 36
+        y: 77
+        width: 249
+        height: 172
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -228,8 +168,92 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 9938c49ce852a1880800000000000000
-      internalID: -8639551639964056679
+      spriteID: 5aa25befacf8b47b0800000000000000
+      internalID: -5238935639495988571
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Details en plus_3
+      rect:
+        serializedVersion: 2
+        x: 265
+        y: 24
+        width: 68
+        height: 76
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: faf77e3e49e112390800000000000000
+      internalID: -7844955451075100753
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Details en plus_4
+      rect:
+        serializedVersion: 2
+        x: 847
+        y: 45
+        width: 76
+        height: 44
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a254d580d8a568e30800000000000000
+      internalID: 4505388039007978794
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Details en plus_5
+      rect:
+        serializedVersion: 2
+        x: 726
+        y: 46
+        width: 106
+        height: 61
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d2fe1617d991b20a0800000000000000
+      internalID: -6905397439639720147
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Details en plus_6
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 22
+        width: 1128
+        height: 240
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7220b3884512feb20800000000000000
+      internalID: 3165785710011286055
       vertices: []
       indices: 
       edges: []
@@ -237,7 +261,7 @@ TextureImporter:
     outline: []
     physicsShape: []
     bones: []
-    spriteID: c75df41d1e2c899439c7e90f68a4179e
+    spriteID: 2eece398d705e644c928015a779c364e
     internalID: 0
     vertices: []
     indices: 

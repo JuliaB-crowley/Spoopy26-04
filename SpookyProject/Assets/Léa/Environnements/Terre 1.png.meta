@@ -1,25 +1,13 @@
 fileFormatVersion: 2
-guid: 0b2e77e3db2332841bde0e9ce9f0b5c2
+guid: ed26f95415784314ea321737de5f154b
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -5413749512734333066
-    second: "Barri\xE8res _0"
+      213: -8480140354770991310
+    second: Terre 1_0
   - first:
-      213: -4800488724785418102
-    second: "Barri\xE8res _1"
-  - first:
-      213: -8628160826327902671
-    second: "Barri\xE8res _2"
-  - first:
-      213: -2472058692704225449
-    second: "Barri\xE8res _3"
-  - first:
-      213: 7539934301142094590
-    second: "Barri\xE8res _4"
-  - first:
-      213: -8639551639964056679
-    second: "Barri\xE8res _5"
+      213: -8302596264459948137
+    second: Terre 1_1
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -109,118 +97,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: "Barri\xE8res _0"
+      name: Terre 1_0
       rect:
         serializedVersion: 2
-        x: 552
-        y: 762
-        width: 138
-        height: 191
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 677a68e508f7ed4b0800000000000000
-      internalID: -5413749512734333066
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: "Barri\xE8res _1"
-      rect:
-        serializedVersion: 2
-        x: 550
-        y: 581
-        width: 140
-        height: 181
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: a80b5ea50fc316db0800000000000000
-      internalID: -4800488724785418102
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: "Barri\xE8res _2"
-      rect:
-        serializedVersion: 2
-        x: 549
-        y: 280
-        width: 131
-        height: 300
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 136d8c1417d924880800000000000000
-      internalID: -8628160826327902671
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: "Barri\xE8res _3"
-      rect:
-        serializedVersion: 2
-        x: 171
-        y: 707
-        width: 302
-        height: 151
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 757b27d67bb71bdd0800000000000000
-      internalID: -2472058692704225449
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: "Barri\xE8res _4"
-      rect:
-        serializedVersion: 2
-        x: 475
-        y: 707
-        width: 55
-        height: 146
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: ef29b517c4a33a860800000000000000
-      internalID: 7539934301142094590
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: "Barri\xE8res _5"
-      rect:
-        serializedVersion: 2
-        x: 328
-        y: 689
-        width: 137
-        height: 180
+        x: 112
+        y: 478
+        width: 361
+        height: 319
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -228,8 +111,29 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 9938c49ce852a1880800000000000000
-      internalID: -8639551639964056679
+      spriteID: 2378b6ce64d705a80800000000000000
+      internalID: -8480140354770991310
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Terre 1_1
+      rect:
+        serializedVersion: 2
+        x: 48
+        y: 0
+        width: 484
+        height: 473
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 79f216fbfa047cc80800000000000000
+      internalID: -8302596264459948137
       vertices: []
       indices: 
       edges: []
@@ -237,7 +141,7 @@ TextureImporter:
     outline: []
     physicsShape: []
     bones: []
-    spriteID: c75df41d1e2c899439c7e90f68a4179e
+    spriteID: acb92edab2971a145bf04f0d419c22d7
     internalID: 0
     vertices: []
     indices: 
