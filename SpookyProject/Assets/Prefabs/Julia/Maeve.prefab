@@ -1554,6 +1554,7 @@ GameObject:
   - component: {fileID: 5857361522451789443}
   - component: {fileID: 5313178945619841773}
   - component: {fileID: 6792260649649863123}
+  - component: {fileID: 3870917176763378229}
   m_Layer: 10
   m_Name: Maeve
   m_TagString: Player
@@ -1777,6 +1778,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   nomSceneBoss: BossRoom
   nomSceneDonjon: Prototype_Dungeon
+--- !u!81 &3870917176763378229
+AudioListener:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5857361522451789455}
+  m_Enabled: 1
 --- !u!1 &5857361522811762284
 GameObject:
   m_ObjectHideFlags: 0

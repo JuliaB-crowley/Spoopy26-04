@@ -80,38 +80,45 @@ public class SettingsScript : MonoBehaviour
             if (SceneManager.GetActiveScene().buildIndex == 0)
             {
                 MainMenu.SetActive(true);
+                FindObjectOfType<AudioManager>().Play("CloseMenu");
                 OptionMenu.SetActive(false);
             }
-            if (SceneManager.GetActiveScene().buildIndex == 1)
+            if (SceneManager.GetActiveScene().buildIndex == 1 || SceneManager.GetActiveScene().buildIndex == 2 || SceneManager.GetActiveScene().buildIndex == 3 || SceneManager.GetActiveScene().buildIndex == 4)
             {
+                FindObjectOfType<AudioManager>().Play("CloseMenu");
                 OptionMenu.SetActive(false);
                 PauseMenu.SetActive(true);
             }
         }
 
-        else if (SceneManager.GetActiveScene().buildIndex == 1 && Time.timeScale == 1f)
+        else if (SceneManager.GetActiveScene().buildIndex == 1 || SceneManager.GetActiveScene().buildIndex == 2 || SceneManager.GetActiveScene().buildIndex == 3 || SceneManager.GetActiveScene().buildIndex == 4 && Time.timeScale == 1f)
         {
             Time.timeScale = 0f;
+            FindObjectOfType<AudioManager>().Play("OpenMenu");
             PauseMenu.SetActive(true);
         }
 
-        else if (SceneManager.GetActiveScene().buildIndex == 1 && PauseMenu.activeSelf == true)
+        else if (SceneManager.GetActiveScene().buildIndex == 1 || SceneManager.GetActiveScene().buildIndex == 2 || SceneManager.GetActiveScene().buildIndex == 3 || SceneManager.GetActiveScene().buildIndex == 4 && PauseMenu.activeSelf == true)
         {
             Time.timeScale = 1f;
+            FindObjectOfType<AudioManager>().Play("CloseMenu");
             PauseMenu.SetActive(false);
         }
         else if (Credits.activeSelf == true)
         {
+            FindObjectOfType<AudioManager>().Play("CloseMenu");
             Credits.SetActive(false);
             MainMenu.SetActive(true);
         }
         else if (Credits_Options.activeSelf == true)
         {
+            FindObjectOfType<AudioManager>().Play("CloseMenu");
             OptionMenu.SetActive(true);
             Credits_Options.SetActive(false);
         }
         else if ( Controles.activeSelf == true)
         {
+            FindObjectOfType<AudioManager>().Play("CloseMenu");
             OptionMenu.SetActive(true);
             Controles.SetActive(false);
         }
@@ -119,6 +126,15 @@ public class SettingsScript : MonoBehaviour
     public void ClosePause()
     {
         Time.timeScale = 1f;
+        FindObjectOfType<AudioManager>().Play("CloseMenu");
         PauseMenu.SetActive(false);
+    }
+    public void PlayOpen()
+    {
+        FindObjectOfType<AudioManager>().Play("OpenMenu");
+    }
+    public void PlayClose()
+    {
+        FindObjectOfType<AudioManager>().Play("CloseMenu");
     }
 }

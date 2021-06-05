@@ -417,6 +417,14 @@ namespace character
             isInBuildup = false;
             isInRecover = true;
             //son attaque
+            if(attackProfile.atkName == "quick")
+            {
+                FindObjectOfType<AudioManager>().Play("AttaqueFaible");
+            }
+            else
+            {
+                FindObjectOfType<AudioManager>().Play("AttaqueForte");
+            }
             StartCoroutine(Hit(attackProfile));
         }
         IEnumerator Hit(AttackProfile attackProfile)
@@ -820,6 +828,7 @@ namespace character
             //Debug.LogWarning("touché" + collision.tag.ToString());
             if (collision.CompareTag("Heal"))
             {
+                FindObjectOfType<AudioManager>().Play("Coeur");
                 Heal(collision.GetComponent<RPP_CollectibleScript>().collectibleValeur);
                 collision.GetComponent<RPP_CollectibleScript>().DestroyCollectible();
             }
