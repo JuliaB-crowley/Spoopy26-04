@@ -47,6 +47,7 @@ public class RPP_SubPuzzleManager : MonoBehaviour
         {
             puzzleSolved = true;
             puzzleMaster.puzzlesSolved++;
+            FindObjectOfType<AudioManager>().Play("EnigmeVrai");
         }
     }
 }

@@ -21,7 +21,6 @@ public class RPP_ButtonPuzzleMaster : MonoBehaviour
     {
         if(buttonsActive >= totalButtonsRequired)
         {
-            FindObjectOfType<AudioManager>().Play("EnigmeVrai");
             buttonPuzzeManager.successesAchieved++;
             puzzleSolved = true;
         }

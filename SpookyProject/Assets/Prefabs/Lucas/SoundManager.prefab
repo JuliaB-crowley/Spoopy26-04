@@ -190,6 +190,26 @@ MonoBehaviour:
     volume: 1
     pitch: 1
     source: {fileID: 0}
+  - name: PowerUp
+    clip: {fileID: 8300000, guid: 453966647cf498941a910c9387b3de89, type: 3}
+    volume: 1
+    pitch: 1
+    source: {fileID: 0}
+  - name: PowerDown
+    clip: {fileID: 8300000, guid: 418bc548daebbf347b357a37067c032f, type: 3}
+    volume: 1
+    pitch: 1
+    source: {fileID: 0}
+  - name: PickupKey
+    clip: {fileID: 8300000, guid: 023d65cfc22f4cd4cb6b236c2e3dd4b2, type: 3}
+    volume: 1
+    pitch: 1
+    source: {fileID: 0}
+  - name: PushObject
+    clip: {fileID: 8300000, guid: 3853cf0045d9ee4458c9a5b4e23cd4ea, type: 3}
+    volume: 1
+    pitch: 1
+    source: {fileID: 0}
 --- !u!82 &9200979409449191005
 AudioSource:
   m_ObjectHideFlags: 0

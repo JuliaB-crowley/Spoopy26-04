@@ -42333,6 +42333,22 @@ PrefabInstance:
       propertyPath: m_SortingOrder
       value: 100
       objectReference: {fileID: 0}
+    - target: {fileID: 655315702609822512, guid: a4b6535be47ce4e4e8528f044324bf7d, type: 3}
+      propertyPath: sounds.Array.data[3].clip
+      value: 
+      objectReference: {fileID: 8300000, guid: c47bf4531ae794f418939db7e840a9a6, type: 3}
+    - target: {fileID: 655315702609822512, guid: a4b6535be47ce4e4e8528f044324bf7d, type: 3}
+      propertyPath: sounds.Array.data[6].clip
+      value: 
+      objectReference: {fileID: 8300000, guid: 948ba8edde54c934b8037fcc2c5dabc5, type: 3}
+    - target: {fileID: 655315702609822512, guid: a4b6535be47ce4e4e8528f044324bf7d, type: 3}
+      propertyPath: sounds.Array.data[5].volume
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 655315702609822512, guid: a4b6535be47ce4e4e8528f044324bf7d, type: 3}
+      propertyPath: sounds.Array.data[6].volume
+      value: 0.25
+      objectReference: {fileID: 0}
     - target: {fileID: 2464952654635651914, guid: a4b6535be47ce4e4e8528f044324bf7d, type: 3}
       propertyPath: m_Camera
       value: 
@@ -42347,11 +42363,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5857361522451789452, guid: a4b6535be47ce4e4e8528f044324bf7d, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -213.02
+      value: -212.88
       objectReference: {fileID: 0}
     - target: {fileID: 5857361522451789452, guid: a4b6535be47ce4e4e8528f044324bf7d, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -46.18
+      value: -46.06
       objectReference: {fileID: 0}
     - target: {fileID: 5857361522451789452, guid: a4b6535be47ce4e4e8528f044324bf7d, type: 3}
       propertyPath: m_LocalPosition.z
