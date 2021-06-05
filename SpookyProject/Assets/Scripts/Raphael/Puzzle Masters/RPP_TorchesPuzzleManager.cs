@@ -19,6 +19,7 @@ public class RPP_TorchesPuzzleManager : MonoBehaviour
         {
             puzzleSolved = true;
             puzzleMaster.puzzlesSolved++;
+            FindObjectOfType<AudioManager>().Play("EnigmeVrai");
         }
     }
 }

@@ -83,6 +83,7 @@ public class JUB_BossBehavior : MonoBehaviour
 
             if (tailFlashManager.burned && bossHitNumber >= 2)
             {
+                FindObjectOfType<AudioManager>().Play("BurnTail");
                 isBurned = true;
                 canBeFlashed = true;
                 StartCoroutine(BurnTailRecovery()); //celui ci doit lancer le compteur de temps avant que la queue ne soit plus brulée
@@ -90,6 +91,7 @@ public class JUB_BossBehavior : MonoBehaviour
 
             if (canBeFlashed && flashManager.flashed)
             {
+                FindObjectOfType<AudioManager>().Play("Blind");
                 isFlashed = true; //empeche l'attaque de pattes
                 StartCoroutine(FlashRecovery()); //recovery du flash
             }
@@ -105,6 +107,7 @@ public class JUB_BossBehavior : MonoBehaviour
     {
         if (!isInImmunity && isInCombat)
         {
+            FindObjectOfType<AudioManager>().Play("CoupBoss");
             bossHitNumber++;
             isInImmunity = true;
             StartCoroutine(ImmunityAttacked());
@@ -132,6 +135,7 @@ public class JUB_BossBehavior : MonoBehaviour
 
     void EndBattle()
     {
+        FindObjectOfType<AudioManager>().Play("MortBoss");
         isInCombat = false;
         SetAnimation(-1);
         StartCoroutine(EndBattleCoroutine());

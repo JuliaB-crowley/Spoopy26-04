@@ -692,6 +692,7 @@ namespace character
             {
                 currentLife -= damages;
                 //son dégâts
+                FindObjectOfType<AudioManager>().Play("CoupsJoueur");
                 if (currentLife <= 0)
                 {
                     currentLife = 0;
@@ -763,6 +764,7 @@ namespace character
         {
             deathParticles.Play();
             //son de mort
+            FindObjectOfType<AudioManager>().Play("MortJoueur");
             StartCoroutine(DeathCoroutine());
             //respawn checkpoint
         }
@@ -794,6 +796,7 @@ namespace character
         {
             paquetBonbons.transform.localScale = paquetOriginalScale * 1.2f;
             //son gain bonbons
+            FindObjectOfType<AudioManager>().Play("Bonbons");
             currentBonbons += bonbons;
             StartCoroutine(PaquetNormal());
             displayBonbons.text = currentBonbons.ToString();
