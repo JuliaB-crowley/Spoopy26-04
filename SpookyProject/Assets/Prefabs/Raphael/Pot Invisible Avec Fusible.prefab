@@ -46,7 +46,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   burned: 0
   flashed: 0
-  flashTime: 3
+  flashTime: 50
 --- !u!58 &2254761166631462639
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -180,7 +180,7 @@ MonoBehaviour:
   invisibleScript: {fileID: 0}
   possibleLoots:
   - {fileID: 237492364801745055, guid: bb67323ddf6d34c428897e8417709b65, type: 3}
-  breakTime: 0
+  breakTime: 0.5
   needsInvisibleScript: 1
 --- !u!114 &8737581888886346547
 MonoBehaviour:

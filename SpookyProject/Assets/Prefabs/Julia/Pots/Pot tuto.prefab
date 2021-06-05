@@ -63,9 +63,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b1dd15d2cafcfb045bc92f63bc84ef24, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  invisibleScript: {fileID: 0}
   possibleLoots:
   - {fileID: 4505395667627260979, guid: 91faeb50ada8aba4ca6ee776d61820f6, type: 3}
-  breakTime: 0
+  breakTime: 0.3
+  needsInvisibleScript: 0
 --- !u!33 &5503309359061635946
 MeshFilter:
   m_ObjectHideFlags: 0

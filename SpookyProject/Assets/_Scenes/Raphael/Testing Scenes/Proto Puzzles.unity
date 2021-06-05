@@ -1734,11 +1734,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5857361522451789452, guid: a4b6535be47ce4e4e8528f044324bf7d, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 6.91
+      value: 0.1
       objectReference: {fileID: 0}
     - target: {fileID: 5857361522451789452, guid: a4b6535be47ce4e4e8528f044324bf7d, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 97.8
+      value: 23
       objectReference: {fileID: 0}
     - target: {fileID: 5857361522451789452, guid: a4b6535be47ce4e4e8528f044324bf7d, type: 3}
       propertyPath: m_LocalPosition.z
@@ -6062,11 +6062,11 @@ PrefabInstance:
       objectReference: {fileID: 21300000, guid: acaf3fd8d4515444c9f62f08c0493a61, type: 3}
     - target: {fileID: 5880392444792688542, guid: 27d064a288b28c94592203e3f0be696a, type: 3}
       propertyPath: opensOneSide
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5880392444792688542, guid: 27d064a288b28c94592203e3f0be696a, type: 3}
       propertyPath: minPuzzlesSolved
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5880392444934613173, guid: 27d064a288b28c94592203e3f0be696a, type: 3}
       propertyPath: m_LocalScale.x
@@ -9871,7 +9871,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 2254761166631462544, guid: e092fc7f4d28af648b470cdacf4d0850, type: 3}
       propertyPath: flashTime
-      value: 5
+      value: 50
       objectReference: {fileID: 0}
     - target: {fileID: 8737581888886346543, guid: e092fc7f4d28af648b470cdacf4d0850, type: 3}
       propertyPath: m_RootOrder
