@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using character;
+using combat;
 
 namespace items
 {
@@ -11,6 +12,7 @@ namespace items
     {
         public JUB_Maeve maeve;
         public JUB_Flash flash;
+        public JUB_Combat combat;
         public JUB_ItemScriptableObject scriptableObject;
         private void Awake()
         {
@@ -24,7 +26,7 @@ namespace items
             {
                 case ItemType.Flash:
                     FindObjectOfType<AudioManager>().Play("Potion");
-                    flash.flashTime *= 2;
+                    flash.flashTime *= 1.2f;
                     break;
 
                 case ItemType.Heal:
@@ -39,7 +41,8 @@ namespace items
 
                 case ItemType.Strengh:
                     FindObjectOfType<AudioManager>().Play("Potion");
-                    maeve.UpgradeDamages();
+                    maeve.quickAttack.ChangeDamage(1);
+                    maeve.heavyAttack.ChangeDamage(1);
                     break;
             }
         }
