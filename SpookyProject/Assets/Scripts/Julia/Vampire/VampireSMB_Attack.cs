@@ -14,6 +14,7 @@ public class VampireSMB_Attack : StateMachineBehaviour
         timeSinceBuildup = timeSinceRecovery = 0;
         isInBuildup = true;
         vampire.SetAnimation(1);
+        FindObjectOfType<AudioManager>().Play("BatVampire");
     }
 
     // OnStateUpdate is called on each Update frame between OnStateEnter and OnStateExit callbacks

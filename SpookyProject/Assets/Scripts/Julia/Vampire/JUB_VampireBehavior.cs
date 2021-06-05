@@ -93,6 +93,7 @@ public class JUB_VampireBehavior : MonoBehaviour
         if (ennemyDamage.currentHealth == 0)
         {
             SetAnimation(-1);
+            FindObjectOfType<AudioManager>().Play("MortEnnemi");
         }
     }
 

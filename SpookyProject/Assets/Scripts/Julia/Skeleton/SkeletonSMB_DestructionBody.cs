@@ -14,6 +14,7 @@ public class SkeletonSMB_DestructionBody : StateMachineBehaviour
         timeSinceAnimationStart = 0;
         skeleton.destinationSetter.target = skeleton.transform;
         skeleton.SetAnimation(3);
+        FindObjectOfType<AudioManager>().Play("DestructionSquelette");
 
     }
 

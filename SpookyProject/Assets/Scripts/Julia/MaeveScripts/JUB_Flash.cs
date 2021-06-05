@@ -1,4 +1,4 @@
-using System.Collections;
+ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using character;
@@ -29,6 +29,7 @@ public class JUB_Flash : MonoBehaviour
     {
         if (flashWasObtained)
         {
+            FindObjectOfType<AudioManager>().Play("Flash");
             maeve.isFlashing = true;
             Transform flashPoint = right;
             maeve.animationIndex = 3;

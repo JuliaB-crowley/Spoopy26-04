@@ -11,6 +11,15 @@ public class RPP_PlacementZoneScript : MonoBehaviour
     {
         placementManager = GetComponentInParent<RPP_SubPuzzleManager>();
     }
+
+    private void Update()
+    {
+        if(placementManager.successesAchieved == placementManager.totalSuccessesRequired && placementManager.puzzleSolved)
+        {
+            FindObjectOfType<AudioManager>().Play("EnigmeVrai");
+        }
+    }
+
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.GetComponent<JUB_PushableBehavior>() && !placementManager.puzzleSolved)

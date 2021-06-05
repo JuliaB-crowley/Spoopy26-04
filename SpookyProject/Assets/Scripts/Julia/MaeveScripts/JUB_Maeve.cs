@@ -417,6 +417,14 @@ namespace character
             isInBuildup = false;
             isInRecover = true;
             //son attaque
+            if(attackProfile.atkName == "quick")
+            {
+                FindObjectOfType<AudioManager>().Play("AttaqueFaible");
+            }
+            else
+            {
+                FindObjectOfType<AudioManager>().Play("AttaqueForte");
+            }
             StartCoroutine(Hit(attackProfile));
         }
         IEnumerator Hit(AttackProfile attackProfile)
@@ -692,6 +700,7 @@ namespace character
             {
                 currentLife -= damages;
                 //son dégâts
+                FindObjectOfType<AudioManager>().Play("CoupsJoueur");
                 if (currentLife <= 0)
                 {
                     currentLife = 0;
@@ -763,6 +772,7 @@ namespace character
         {
             deathParticles.Play();
             //son de mort
+            FindObjectOfType<AudioManager>().Play("MortJoueur");
             StartCoroutine(DeathCoroutine());
             //respawn checkpoint
         }
@@ -794,6 +804,7 @@ namespace character
         {
             paquetBonbons.transform.localScale = paquetOriginalScale * 1.2f;
             //son gain bonbons
+            FindObjectOfType<AudioManager>().Play("Bonbons");
             currentBonbons += bonbons;
             StartCoroutine(PaquetNormal());
             displayBonbons.text = currentBonbons.ToString();
@@ -817,6 +828,7 @@ namespace character
             //Debug.LogWarning("touché" + collision.tag.ToString());
             if (collision.CompareTag("Heal"))
             {
+                FindObjectOfType<AudioManager>().Play("Coeur");
                 Heal(collision.GetComponent<RPP_CollectibleScript>().collectibleValeur);
                 collision.GetComponent<RPP_CollectibleScript>().DestroyCollectible();
             }

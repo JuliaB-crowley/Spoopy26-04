@@ -19,6 +19,8 @@ public class JUB_EnnemyDamage : MonoBehaviour
     public Renderer rendererEnnemies;
     public float timeRed;
 
+    public string nomDuSon;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -33,6 +35,7 @@ public class JUB_EnnemyDamage : MonoBehaviour
     public void TakeDamage(float damage)
     {
         //animation dégats
+        FindObjectOfType<AudioManager>().Play(nomDuSon);
         Knockback();
         currentHealth -= damage;
         if(currentHealth <= 0)

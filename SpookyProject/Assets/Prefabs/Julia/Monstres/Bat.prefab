@@ -124,6 +124,7 @@ MonoBehaviour:
   possibleLoots: []
   rendererEnnemies: {fileID: 1940289393888737312}
   timeRed: 0.3
+  nomDuSon: MortEnnemi
 --- !u!114 &7564241397239818343
 MonoBehaviour:
   m_ObjectHideFlags: 0
