@@ -46,7 +46,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   burned: 0
   flashed: 0
-  flashTime: 3
+  flashTime: 50
 --- !u!58 &2254761166631462639
 CircleCollider2D:
   m_ObjectHideFlags: 0
