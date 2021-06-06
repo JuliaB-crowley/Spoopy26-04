@@ -688,6 +688,7 @@ namespace character
                 }
                 Knockback(monsterPosition);
                 Immunity(immunityTime);
+                StopCoroutine(RedFrameCoroutine());
                 StartCoroutine(RedFrameCoroutine());
             }
         }
