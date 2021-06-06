@@ -7,11 +7,11 @@ public class RPP_FusiblesScript : MonoBehaviour
     [SerializeField] JUB_InteractibleBehavior interactionManager;
 
     [SerializeField] SpriteRenderer blueFuse, yellowFuse, greenFuse, violetFuse;
-    [SerializeField] Sprite activeBlueFuse, inactiveBlueFuse, activeYellowFuse, inactiveYellowFuse, activeGreenFuse, inactiveGreenFuse, activeVioletFuse, inactiveVioletFuse;
     public bool needsBlueFuse, needsYellowFuse, needsGreenFuse, needsVioletFuse, linkedToADoor = false;
     bool blueFuseActive = false, yellowFuseActive = false, greenFuseActive = false, violetFuseActive = false, retrievedFuse = false;
     [SerializeField] static bool puzzleSolved = false;
     public int totalFusesRequired = 0, fusesAcquired;
+    public float blueAlpha, yellowAlpha, greenAlpha, violetAlpha;
 
     [SerializeField] RPP_GeneralPuzzleMaster puzzleMaster;
     [SerializeField] bool needPzMnA = true, needPzMnB, needPzMnC, needPzMnD, needPzMnE, needPzMnF, needPzMnG;
@@ -20,6 +20,21 @@ public class RPP_FusiblesScript : MonoBehaviour
         interactionManager = GetComponent<JUB_InteractibleBehavior>();
         PuzzleMasterCheck();
         ActiveFusesCheck();
+
+        // Je ne sais pas pourquoi, mais je dois toucher à l'alpha de chaque un des sprites pour qu'il marchent bien
+        Color currColor = blueFuse.color;
+        currColor.a = blueAlpha;
+        blueFuse.color = currColor;
+        blueAlpha = 1f;
+        currColor.a = yellowAlpha;
+        yellowFuse.color = currColor;
+        yellowAlpha = 1f;
+        currColor.a = greenAlpha;
+        greenFuse.color = currColor;
+        greenAlpha = 1f;
+        currColor.a = violetAlpha;
+        violetFuse.color = currColor;
+        violetAlpha = 1f;
     }
 
     void Update()
@@ -75,25 +90,37 @@ public class RPP_FusiblesScript : MonoBehaviour
         if (needsBlueFuse)
         {
             blueFuse.enabled = true;
-            blueFuse.sprite = inactiveBlueFuse;
+            Color currColor = blueFuse.color;
+            currColor.a = blueAlpha;            
+            blueFuse.color = currColor;
+            blueAlpha = 0.5f;
             totalFusesRequired++;
         }
         if (needsYellowFuse)
         {
             yellowFuse.enabled = true;
-            yellowFuse.sprite = inactiveYellowFuse;
+            Color currColor = yellowFuse.color;
+            currColor.a = yellowAlpha;
+            yellowFuse.color = currColor;
+            yellowAlpha = 0.5f;
             totalFusesRequired++;
         }
         if (needsGreenFuse)
         {
             greenFuse.enabled = true;
-            greenFuse.sprite = inactiveGreenFuse;
+            Color currColor = greenFuse.color;
+            currColor.a = greenAlpha;
+            greenFuse.color = currColor;
+            greenAlpha = 0.5f;
             totalFusesRequired++;
         }
         if (needsVioletFuse)
         {
             violetFuse.enabled = true;
-            violetFuse.sprite = inactiveVioletFuse;
+            Color currColor = violetFuse.color;
+            currColor.a = violetAlpha;
+            violetFuse.color = currColor;
+            violetAlpha = 0.5f;
             totalFusesRequired++;
         }
     }
@@ -116,7 +143,11 @@ public class RPP_FusiblesScript : MonoBehaviour
     {
         if (needsBlueFuse && blueFuseActive)
         {
-            blueFuse.sprite = inactiveBlueFuse;
+            Color currColor = blueFuse.color;
+            currColor.a = blueAlpha;
+            blueFuse.color = currColor;
+            blueAlpha = 1f;
+            //blueAlpha = 0.5f;
             puzzleMaster.hasBlueKey = true;
             blueFuseActive = false;
             fusesAcquired--;
@@ -125,7 +156,11 @@ public class RPP_FusiblesScript : MonoBehaviour
         }
         if (needsYellowFuse && yellowFuseActive)
         {
-            yellowFuse.sprite = inactiveYellowFuse;
+            Color currColor = yellowFuse.color;
+            currColor.a = yellowAlpha;
+            yellowFuse.color = currColor;
+            yellowAlpha = 1f;
+            //yellowAlpha = 0.5f;
             puzzleMaster.hasYellowKey = true;
             yellowFuseActive = false;
             fusesAcquired--;
@@ -134,7 +169,11 @@ public class RPP_FusiblesScript : MonoBehaviour
         }
         if (needsGreenFuse && greenFuseActive)
         {
-            greenFuse.sprite = inactiveGreenFuse;
+            Color currColor = greenFuse.color;
+            currColor.a = greenAlpha;
+            greenFuse.color = currColor;
+            greenAlpha = 1f;
+            //greenAlpha = 0.5f;
             puzzleMaster.hasGreenKey = true;
             greenFuseActive = false;
             fusesAcquired--;
@@ -143,7 +182,11 @@ public class RPP_FusiblesScript : MonoBehaviour
         }
         if (needsVioletFuse && violetFuseActive)
         {
-            violetFuse.sprite = inactiveVioletFuse;
+            Color currColor = violetFuse.color;
+            currColor.a = violetAlpha;
+            violetFuse.color = currColor;
+            violetAlpha = 1f;
+            //violetAlpha = 0.5f;
             puzzleMaster.hasVioletKey = true;
             violetFuseActive = false;
             fusesAcquired--;
@@ -161,28 +204,44 @@ public class RPP_FusiblesScript : MonoBehaviour
     {
         if(needsBlueFuse && puzzleMaster.hasBlueKey && !blueFuseActive)
         {
-            blueFuse.sprite = activeBlueFuse;
+            Color currColor = blueFuse.color;
+            currColor.a = blueAlpha;
+            blueFuse.color = currColor;
+            //blueAlpha = 1f;
+            blueAlpha = 0.5f;
             puzzleMaster.hasBlueKey = false;
             blueFuseActive = true;
             fusesAcquired++;
         }
         if (needsYellowFuse && puzzleMaster.hasYellowKey && !yellowFuseActive)
         {
-            yellowFuse.sprite = activeYellowFuse;
+            Color currColor = yellowFuse.color;
+            currColor.a = yellowAlpha;
+            yellowFuse.color = currColor;
+            yellowAlpha = 0.5f;
+            //yellowAlpha = 1f;
             puzzleMaster.hasYellowKey = false;
             yellowFuseActive = true;
             fusesAcquired++;
         }
         if (needsGreenFuse && puzzleMaster.hasGreenKey && !greenFuseActive)
         {
-            greenFuse.sprite = activeGreenFuse;
+            Color currColor = greenFuse.color;
+            currColor.a = greenAlpha;
+            greenFuse.color = currColor;
+            //greenAlpha = 1f;
+            greenAlpha = 0.5f;
             puzzleMaster.hasGreenKey = false;
             greenFuseActive = true;
             fusesAcquired++;
         }       
         if (needsVioletFuse && puzzleMaster.hasVioletKey && !violetFuseActive)
         {
-            violetFuse.sprite = activeVioletFuse;
+            Color currColor = violetFuse.color;
+            currColor.a = violetAlpha;
+            violetFuse.color = currColor;
+            //violetAlpha = 1f;
+            violetAlpha = 0.5f;
             puzzleMaster.hasVioletKey = false;
             violetFuseActive = true;
             fusesAcquired++;

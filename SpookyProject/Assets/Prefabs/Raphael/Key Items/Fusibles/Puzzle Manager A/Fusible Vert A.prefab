@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 7871331536579571417}
   - component: {fileID: 7871331536579571416}
   m_Layer: 0
-  m_Name: Fusible Vert
+  m_Name: Fusible Vert A
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -74,7 +74,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 3ea709d9e6b51b841add191522fdd3a8, type: 3}
+  m_Sprite: {fileID: 8426545139196502126, guid: 666bc9b8f3b28e74da68e68b22dd10f6, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -98,18 +98,18 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: -0.025474548}
+  m_Offset: {x: 0.0946455, y: 0.0014190674}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1, y: 1}
+    oldSize: {x: 1.609375, y: 1.546875}
     newSize: {x: 1.08, y: 1}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1, y: 0.6433563}
+  m_Size: {x: 0.7891989, y: 1.1488495}
   m_EdgeRadius: 0
 --- !u!50 &7871331536579571417
 Rigidbody2D:
@@ -154,3 +154,7 @@ MonoBehaviour:
   needPzMnB: 0
   needPzMnC: 0
   needPzMnD: 0
+  needPzMnE: 0
+  needPzMnF: 0
+  needPzMnG: 0
+  needPzMnH: 0
