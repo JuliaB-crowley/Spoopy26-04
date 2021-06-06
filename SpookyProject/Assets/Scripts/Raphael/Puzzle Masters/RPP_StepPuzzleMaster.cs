@@ -58,7 +58,8 @@ public class RPP_StepPuzzleMaster : MonoBehaviour
                 puzzleHasBeenCompleted = true;
                 playerHasSucceeded = true;
                 puzzleMaster.puzzlesSolved++;
-                Debug.Log("The Player Has Succeeded");                
+                FindObjectOfType<AudioManager>().Play("EnigmeVrai");
+                //Debug.Log("The Player Has Succeeded");                
             }
             else if(correctSteps < stepsRequired) // Le joueur à échoué. Il doit sortir des dalles pour les reset puis récommencer
             {
@@ -70,7 +71,8 @@ public class RPP_StepPuzzleMaster : MonoBehaviour
 
     //J'ai besoin que les deux bools soyent opposés pendant quelques frames pour que je puisse reset les dalles
     IEnumerator ResetTiles()
-    {       
+    {
+        FindObjectOfType<AudioManager>().Play("EnigmeFausse");
         playerHasFailed = true;
         yield return new WaitForSeconds(0.5f);
         currentSteps = 0;

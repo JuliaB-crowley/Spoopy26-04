@@ -151,7 +151,7 @@ MonoBehaviour:
   - {fileID: 2654147877702478415, guid: 8805ecfdead8b2b43a5f0a2ccdefd8de, type: 3}
   - {fileID: 4058683843120401103, guid: 5b4ba125498b83349bfee32b037a879f, type: 3}
   - {fileID: 4058683843120401103, guid: 5b4ba125498b83349bfee32b037a879f, type: 3}
-  breakTime: 0
+  breakTime: 0.3
   needsInvisibleScript: 0
 --- !u!33 &8380586844361745830
 MeshFilter:

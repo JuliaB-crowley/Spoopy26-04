@@ -1,0 +1,313 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &2158257026759948671
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 8353657172156973578}
+  - component: {fileID: -707592354315585724}
+  - component: {fileID: 9200979409449191005}
+  m_Layer: 0
+  m_Name: SoundManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &8353657172156973578
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2158257026759948671}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &-707592354315585724
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2158257026759948671}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 202f18b35df8fd54f9ce7a6f6954360c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sounds:
+  - name: AttaqueFaible
+    clip: {fileID: 8300000, guid: 7271e81ebe225a34b9af23fce8a8085c, type: 3}
+    volume: 1
+    pitch: 1
+    source: {fileID: 0}
+  - name: AttaqueForte
+    clip: {fileID: 8300000, guid: cc1a4ce200f6d054cb4d58a9ea054706, type: 3}
+    volume: 1
+    pitch: 1
+    source: {fileID: 0}
+  - name: CoupsJoueur
+    clip: {fileID: 8300000, guid: 0ac98eb0bc1ef734895ebc34daa4de77, type: 3}
+    volume: 1
+    pitch: 1
+    source: {fileID: 0}
+  - name: Flash
+    clip: {fileID: 8300000, guid: c47bf4531ae794f418939db7e840a9a6, type: 3}
+    volume: 0.502
+    pitch: 1
+    source: {fileID: 0}
+  - name: MortJoueur
+    clip: {fileID: 8300000, guid: d0a9778f6bc7ae746a38ddfb379dd8d4, type: 3}
+    volume: 1
+    pitch: 1
+    source: {fileID: 0}
+  - name: ThemeBoss
+    clip: {fileID: 8300000, guid: 7399b4dd731c81746976d2eee0e18d82, type: 3}
+    volume: 1
+    pitch: 1
+    source: {fileID: 0}
+  - name: MainTheme
+    clip: {fileID: 8300000, guid: 948ba8edde54c934b8037fcc2c5dabc5, type: 3}
+    volume: 1
+    pitch: 1
+    source: {fileID: 0}
+  - name: OpenMenu
+    clip: {fileID: 8300000, guid: ff73db8b6f9648f44a75fbe801ae7e20, type: 3}
+    volume: 1
+    pitch: 1
+    source: {fileID: 0}
+  - name: CloseMenu
+    clip: {fileID: 8300000, guid: 198440919420df0488c99afd54e2ea80, type: 3}
+    volume: 1
+    pitch: 1
+    source: {fileID: 0}
+  - name: Bonbons
+    clip: {fileID: 8300000, guid: 591d2dd71d29cd64dab1ce37548ee23c, type: 3}
+    volume: 1
+    pitch: 1
+    source: {fileID: 0}
+  - name: Coeur
+    clip: {fileID: 8300000, guid: b4bdb05f36e84c2448ae09c5058f2fe0, type: 3}
+    volume: 1
+    pitch: 1
+    source: {fileID: 0}
+  - name: Potion
+    clip: {fileID: 8300000, guid: 4b14c6a0223ca7e43a31f57edc288b88, type: 3}
+    volume: 1
+    pitch: 1
+    source: {fileID: 0}
+  - name: Bouton
+    clip: {fileID: 8300000, guid: 458d2f33dad58f8469cc0cbbd729f042, type: 3}
+    volume: 1
+    pitch: 1
+    source: {fileID: 0}
+  - name: Torche
+    clip: {fileID: 8300000, guid: 690632274e254594bbc16d8eba57825d, type: 3}
+    volume: 1
+    pitch: 1
+    source: {fileID: 0}
+  - name: MortEnnemi
+    clip: {fileID: 8300000, guid: 1827dc0e3e070ca489440ce270c98eaa, type: 3}
+    volume: 1
+    pitch: 1
+    source: {fileID: 0}
+  - name: Blind
+    clip: {fileID: 8300000, guid: 20862f78ad5e24742bbf2f59e04c229b, type: 3}
+    volume: 1
+    pitch: 1
+    source: {fileID: 0}
+  - name: CoupBoss
+    clip: {fileID: 8300000, guid: ac2a820a1547a674f9fe50b973245c41, type: 3}
+    volume: 1
+    pitch: 1
+    source: {fileID: 0}
+  - name: Pics
+    clip: {fileID: 8300000, guid: d40eef7b60d4bc142bd4856126f1c033, type: 3}
+    volume: 1
+    pitch: 1
+    source: {fileID: 0}
+  - name: MortBoss
+    clip: {fileID: 8300000, guid: 1cf5d089eb39d674c8b5777eabf7a57e, type: 3}
+    volume: 1
+    pitch: 1
+    source: {fileID: 0}
+  - name: BurnTail
+    clip: {fileID: 8300000, guid: 8d71fa861553e824aa5e064ebd70f8b7, type: 3}
+    volume: 1
+    pitch: 1
+    source: {fileID: 0}
+  - name: ChargeDiablotin
+    clip: {fileID: 8300000, guid: fd71a557be9ba4848900c6be02928008, type: 3}
+    volume: 1
+    pitch: 1
+    source: {fileID: 0}
+  - name: CoupsDiablotin
+    clip: {fileID: 8300000, guid: 301dba8db2df7b842bba7ffcd8dffbd3, type: 3}
+    volume: 1
+    pitch: 1
+    source: {fileID: 0}
+  - name: BatVampire
+    clip: {fileID: 8300000, guid: f6d26b222fbce9c479575140d34a8ae0, type: 3}
+    volume: 1
+    pitch: 1
+    source: {fileID: 0}
+  - name: CoupsVampire
+    clip: {fileID: 8300000, guid: 0665233b66d868b478c0d45b2e3348f5, type: 3}
+    volume: 1
+    pitch: 1
+    source: {fileID: 0}
+  - name: CoupSquelette
+    clip: {fileID: 8300000, guid: 64180bd8a7e7b4148acea7d10c0a351d, type: 3}
+    volume: 1
+    pitch: 1
+    source: {fileID: 0}
+  - name: DestructionSquelette
+    clip: {fileID: 8300000, guid: e3db07a50033f4e4796e878f123079de, type: 3}
+    volume: 1
+    pitch: 1
+    source: {fileID: 0}
+  - name: ToupieSquelette
+    clip: {fileID: 8300000, guid: fbc3e3419c182ff44bfaa47d0c859418, type: 3}
+    volume: 1
+    pitch: 1
+    source: {fileID: 0}
+  - name: EnigmeVrai
+    clip: {fileID: 8300000, guid: e8ae8cf2e07126b4791bce550e7a9647, type: 3}
+    volume: 1
+    pitch: 1
+    source: {fileID: 0}
+  - name: EnigmeFausse
+    clip: {fileID: 8300000, guid: a491966055554364ca85cb06f534507e, type: 3}
+    volume: 1
+    pitch: 1
+    source: {fileID: 0}
+  - name: PowerUp
+    clip: {fileID: 8300000, guid: 453966647cf498941a910c9387b3de89, type: 3}
+    volume: 1
+    pitch: 1
+    source: {fileID: 0}
+  - name: PowerDown
+    clip: {fileID: 8300000, guid: 418bc548daebbf347b357a37067c032f, type: 3}
+    volume: 1
+    pitch: 1
+    source: {fileID: 0}
+  - name: PickupKey
+    clip: {fileID: 8300000, guid: 023d65cfc22f4cd4cb6b236c2e3dd4b2, type: 3}
+    volume: 1
+    pitch: 1
+    source: {fileID: 0}
+  - name: PushObject
+    clip: {fileID: 8300000, guid: 3853cf0045d9ee4458c9a5b4e23cd4ea, type: 3}
+    volume: 0.3
+    pitch: 1
+    source: {fileID: 0}
+  - name: PumpkinDestroyed
+    clip: {fileID: 8300000, guid: 056308efecc1b6940801501884a7c55a, type: 3}
+    volume: 0.605
+    pitch: 1
+    source: {fileID: 0}
+--- !u!82 &9200979409449191005
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2158257026759948671}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 0}
+  m_PlayOnAwake: 1
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4

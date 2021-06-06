@@ -326,7 +326,7 @@ MonoBehaviour:
   batPrefab: {fileID: 1854680120657952879, guid: a2329f07a33e6d646b5550b200df8fa3, type: 3}
   buildupTime: 0.4
   recoveryTime: 0.8
-  stunTime: 1
+  stunTime: 2
   flashManager: {fileID: 0}
   hasBeenStunned: 0
   graphicAnimator: {fileID: 4186699327776834930}
@@ -357,6 +357,7 @@ MonoBehaviour:
   - {fileID: 6492889625563825800, guid: f9797014ba71f2c45957985106394ac6, type: 3}
   rendererEnnemies: {fileID: 5932053849976724420}
   timeRed: 0.3
+  nomDuSon: CoupsVampire
 --- !u!50 &3519918886384133659
 Rigidbody2D:
   serializedVersion: 4

@@ -50,6 +50,7 @@ public class RPP_KeysScript : MonoBehaviour
     {
         if (collision.CompareTag("Player"))
         {
+            FindObjectOfType<AudioManager>().Play("PickupKey");
             if (isYellowKey)
             {
                 puzzleMaster.hasYellowKey = true;

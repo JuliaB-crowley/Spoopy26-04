@@ -23,6 +23,8 @@ public class AudioManager : MonoBehaviour
     {
         Sounds s = Array.Find(sounds, sound => sound.name == name);
         s.source.Play();
+        s.source.volume = s.volume;
+        s.source.pitch = s.pitch;
         //Mettre dans les scripts là où on veut jouer un son ou genre l'appeler FindObjectOfType<AudioManager>().Play("nomduson");
     }
 }

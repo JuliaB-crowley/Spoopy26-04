@@ -8,6 +8,7 @@ using UnityEngine;
 using UnityEngine.SocialPlatforms;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
+using combat;
 
 namespace character
 {
@@ -77,6 +78,10 @@ namespace character
         public GameObject paquetBonbons, shaderFlame;
         Vector3 paquetOriginalScale;
 
+        //attack profile
+        public float quickDamage = 1, heavyDamage = 3;
+        public JUB_Combat.AttackProfile quickAttack, heavyAttack;
+
         // Start is called before the first frame update
         void Start()
         {
@@ -90,8 +95,8 @@ namespace character
 
             paquetOriginalScale = paquetBonbons.transform.localScale;
 
-            AttackProfile quickAttack = new AttackProfile(1, new Vector2(1, 1), 0.4f, 0.2f, "quick");
-            AttackProfile heavyAttack = new AttackProfile(3, new Vector2(2, 1), 0.4f, 0.8f, "heavy");
+            quickAttack = new JUB_Combat.AttackProfile(quickDamage, new Vector2(1, 1), 0.4f, 0.2f, "quick");
+            heavyAttack = new JUB_Combat.AttackProfile(heavyDamage, new Vector2(2, 1), 0.4f, 0.8f, "heavy");
 
             currentLife = maxLife;
             deathCanvas.SetActive(false);
@@ -138,7 +143,7 @@ namespace character
             { 
                 heartsDisplay.sprite = heartSprites[currentLife - 1];
             }
-            
+            shaderFlame.SetActive(false); 
             Anim();
         }
 
@@ -377,7 +382,7 @@ namespace character
         }
 
 
-        void Attack(AttackProfile attackProfile)
+        void Attack(JUB_Combat.AttackProfile attackProfile)
         {
             Vector2 attackVector = Vector2.zero;
             if (!isInRecover && !isInBuildup && !isInRoll && !isCrouching && !isPushingObject && !isFlashing)
@@ -411,15 +416,24 @@ namespace character
             }
         }
 
-        IEnumerator Buildup(AttackProfile attackProfile)
+        IEnumerator Buildup(JUB_Combat.AttackProfile attackProfile)
         {
             yield return new WaitForSeconds(attackProfile.atkBuildup);
             isInBuildup = false;
             isInRecover = true;
             //son attaque
+            if(attackProfile.atkName == "quick")
+            {
+                FindObjectOfType<AudioManager>().Play("AttaqueFaible");
+            }
+            else
+            {
+                FindObjectOfType<AudioManager>().Play("AttaqueForte");
+            }
+
             StartCoroutine(Hit(attackProfile));
         }
-        IEnumerator Hit(AttackProfile attackProfile)
+        IEnumerator Hit(JUB_Combat.AttackProfile attackProfile)
         {
             Collider2D[] hitEnnemies = Physics2D.OverlapCircleAll(transform.position, attackProfile.atkZone.x, ennemies);
             Collider2D[] hitObjects = Physics2D.OverlapCircleAll(transform.position, attackProfile.atkZone.x, breakableObjects);
@@ -518,32 +532,6 @@ namespace character
             Gizmos.DrawWireSphere(transform.position, interactAndPushableRange);
         }
 
-        class AttackProfile
-        {
-            public AttackProfile(float damage, Vector2 zone, float buildup, float recover, string name)
-            {
-                atkDamage = damage;
-                atkZone = zone;
-                atkRecover = recover;
-                atkBuildup = buildup;
-                atkName = name;
-            }
-
-            public float atkDamage, atkRecover, atkBuildup;
-            public Vector2 atkZone, atkVector;
-            public string atkName;
-
-            public void ChangeDamage(float changeAmount)
-            {
-                atkDamage += changeAmount;
-            }
-
-            public void NewDamage(float newDamageValue)
-            {
-                atkDamage = newDamageValue;
-            }
-
-        }
 
         void InteractSphere()
         {
@@ -692,6 +680,7 @@ namespace character
             {
                 currentLife -= damages;
                 //son dégâts
+                FindObjectOfType<AudioManager>().Play("CoupsJoueur");
                 if (currentLife <= 0)
                 {
                     currentLife = 0;
@@ -763,6 +752,7 @@ namespace character
         {
             deathParticles.Play();
             //son de mort
+            FindObjectOfType<AudioManager>().Play("MortJoueur");
             StartCoroutine(DeathCoroutine());
             //respawn checkpoint
         }
@@ -794,6 +784,7 @@ namespace character
         {
             paquetBonbons.transform.localScale = paquetOriginalScale * 1.2f;
             //son gain bonbons
+            FindObjectOfType<AudioManager>().Play("Bonbons");
             currentBonbons += bonbons;
             StartCoroutine(PaquetNormal());
             displayBonbons.text = currentBonbons.ToString();
@@ -817,6 +808,7 @@ namespace character
             //Debug.LogWarning("touché" + collision.tag.ToString());
             if (collision.CompareTag("Heal"))
             {
+                FindObjectOfType<AudioManager>().Play("Coeur");
                 Heal(collision.GetComponent<RPP_CollectibleScript>().collectibleValeur);
                 collision.GetComponent<RPP_CollectibleScript>().DestroyCollectible();
             }
@@ -1074,7 +1066,7 @@ namespace character
 
             }
             //Debug.LogWarning(animationIndex);
-            //animationIndex = 0;
+            animationIndex = 0;
 
             
                 

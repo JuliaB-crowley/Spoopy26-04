@@ -88,11 +88,14 @@ public class JUB_VampireBehavior : MonoBehaviour
         if(flashManager.flashed && !hasBeenStunned)
         {
             hasBeenStunned = true;
-            SMBanimator.Play("Stun");
+            SetAnimation(2);
+            StartCoroutine(StunAnim());
+
         }
         if (ennemyDamage.currentHealth == 0)
         {
             SetAnimation(-1);
+            FindObjectOfType<AudioManager>().Play("MortEnnemi");
         }
     }
 
@@ -100,6 +103,12 @@ public class JUB_VampireBehavior : MonoBehaviour
     {
         yield return new WaitForSeconds(animTransformTime);
         SMBanimator.Play("Escape");
+    }
+
+    IEnumerator StunAnim()
+    {
+        yield return new WaitForSeconds(0.5f);
+        SMBanimator.Play("Stun");
     }
     void SightCast()
     {
@@ -177,6 +186,10 @@ public class JUB_VampireBehavior : MonoBehaviour
 
             case 4:
                 animToPlay = "Chauvesouris_transformation";
+                break;
+
+            case 5:
+                animToPlay = "Vampire_idle_stun";
                 break;
         }
         if (anim == 0)

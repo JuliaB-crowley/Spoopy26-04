@@ -11,8 +11,9 @@ public class VampireSMB_Stun : StateMachineBehaviour
     {
         Debug.LogWarning("is flashed");
         timeSinceStun = 0;
-        vampire.destinationSetter.target = null;
+        vampire.destinationSetter.target = vampire.transform;
         vampire.destinationSetter.enabled = vampire.pathfinder.enabled = false;
+        vampire.SetAnimation(5);
     }
 
     // OnStateUpdate is called on each Update frame between OnStateEnter and OnStateExit callbacks
@@ -26,7 +27,7 @@ public class VampireSMB_Stun : StateMachineBehaviour
             vampire.hasBeenStunned = false;
             animator.Play("Escape");
         }
-        vampire.SetAnimation(2);
+
     }
 
     // OnStateExit is called when a transition ends and the state machine finishes evaluating this state

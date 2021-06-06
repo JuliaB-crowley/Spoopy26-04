@@ -34,6 +34,7 @@ public class RPP_FusiblesScript : MonoBehaviour
                 Debug.Log("the fusebox works");
                 puzzleMaster.puzzlesSolved++;
                 puzzleSolved = true;
+                FindObjectOfType<AudioManager>().Play("EnigmeVrai");
             }       
     }
 
@@ -102,10 +103,12 @@ public class RPP_FusiblesScript : MonoBehaviour
         if(!puzzleMaster.hasBlueKey && !puzzleMaster.hasYellowKey && !puzzleMaster.hasGreenKey && !puzzleMaster.hasVioletKey)
         {
             RemoveFuses();
+            FindObjectOfType<AudioManager>().Play("PowerDown");
         }
         else
         {
             AddFuses();
+            FindObjectOfType<AudioManager>().Play("PowerUp");
         }
     }
 
