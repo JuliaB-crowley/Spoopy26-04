@@ -9,11 +9,14 @@ public class JUB_PushableBehavior : MonoBehaviour
     public bool pushable, pushed, playedPushObject = false;
     public Transform playerTransform;
     public GameObject pushableObject;
+    public ParticleSystem pushingParticles;
     // Start is called before the first frame update
     void Start()
     {
         playerTransform = GameObject.FindGameObjectWithTag("Player").GetComponent<Transform>();
         pushableObject = this.gameObject;
+
+        pushingParticles.Stop();
     }
 
     // Update is called once per frame
@@ -30,12 +33,15 @@ public class JUB_PushableBehavior : MonoBehaviour
         if (pushed == true)
         {
             pushableObject.transform.SetParent(playerTransform);
+            pushingParticles.Play();
             objectCollider.enabled = false;
         }
 
         if (pushed == false)
         {
             pushableObject.transform.SetParent(null);
+            pushingParticles.Pause();
+            pushingParticles.Clear();
             objectCollider.enabled = true;
         }
     }
