@@ -9,6 +9,7 @@ public class RPP_IndividualStep : MonoBehaviour
     public bool isCorrectStep; // Ce bool détermine si cette dalle est correcte, comme ça j'ai pas besoin de faire un script pour chaque type de dalle
     [SerializeField] RPP_StepPuzzleMaster puzzleMaster; // Réference au puzzle master
     [SerializeField] SpriteRenderer stepSprite; // Je modifie le material juste pour avoir du feedback de test, pas besoin de le maintenir
+    [SerializeField] Sprite stepNormal, stepActive, stepWrong, stepCorrect;
 
     private void Start()
     {
@@ -20,20 +21,19 @@ public class RPP_IndividualStep : MonoBehaviour
         //Change la couleur des Steps pour donner du feedback
         if (puzzleMaster.playerHasSucceeded)
         {
-            //Debug.Log("steps are green");
-            stepSprite.color = Color.green;
+            stepSprite.sprite = stepCorrect;
         }
         else if (puzzleMaster.playerHasFailed)
         {
-            stepSprite.color = Color.red;
+            stepSprite.sprite = stepWrong;
         }
         else if (hasBeenStepped)
         {
-            stepSprite.color = Color.gray;
+            stepSprite.sprite = stepActive;
         }
         else
         {
-            stepSprite.color = Color.white;
+            stepSprite.sprite = stepNormal;
         }
     }
 

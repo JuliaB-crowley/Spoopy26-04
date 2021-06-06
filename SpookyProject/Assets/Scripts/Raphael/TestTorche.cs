@@ -7,7 +7,7 @@ public class TestTorche : MonoBehaviour
 {
     public bool isLit = false, hasBeenBurned = false; //Bool qui détermine si la torche est active ou pas
     public SpriteRenderer spriteRenderer; //Sprite Renderer de la torche
-    public Sprite litTorch, unlitTorch; //Possibles Sprites que la torche peux avoir
+    [SerializeField] GameObject flameObject;
     [SerializeField] RPP_SubPuzzleManager torchesManager; //Script qui gère les puzzles des torches
     public bool isPartOfAPuzzle = false, hasBeenUsed = false;
 
@@ -23,11 +23,11 @@ public class TestTorche : MonoBehaviour
 
         if (!isLit)
         {
-            spriteRenderer.sprite = unlitTorch;
+            flameObject.SetActive(false);
         }
         else
         {
-            spriteRenderer.sprite = litTorch;
+            flameObject.SetActive(true);
         }
     }
     void Update()
@@ -42,7 +42,7 @@ public class TestTorche : MonoBehaviour
     void LitTorch()
     {
         isLit = true;
-        spriteRenderer.sprite = litTorch;
+        flameObject.SetActive(true);
         if (!isPartOfAPuzzle)
         {
             torchesManager.successesAchieved++;
@@ -52,7 +52,7 @@ public class TestTorche : MonoBehaviour
     //Cette méthode ne doit pas être utilisé si la torche peut être bougée
     public void UnlitTorch()
     {
-        spriteRenderer.sprite = unlitTorch;
+        flameObject.SetActive(false);
         isLit = false;
         hasBeenBurned = false;
     }
