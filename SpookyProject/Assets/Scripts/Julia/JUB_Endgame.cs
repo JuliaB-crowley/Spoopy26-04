@@ -21,13 +21,5 @@ public class JUB_Endgame : MonoBehaviour
         }
     }
 
-    public void Menu()
-    {
-        SceneManager.LoadScene("Main");
-    }
 
-    public void Quit()
-    {
-        Application.Quit();
-    }
 }

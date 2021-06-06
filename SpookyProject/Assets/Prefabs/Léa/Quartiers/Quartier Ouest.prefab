@@ -540,6 +540,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   interactible: 0
   interacted: 0
+  canBeShown: 1
   player: {fileID: 0}
   maeveScript: {fileID: 0}
 --- !u!114 &2094452443936542830
@@ -9071,6 +9072,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   interactible: 0
   interacted: 0
+  canBeShown: 1
   player: {fileID: 0}
   maeveScript: {fileID: 0}
 --- !u!114 &3019468260586810677
@@ -9112,6 +9114,7 @@ MonoBehaviour:
   needPzMnE: 0
   needPzMnF: 0
   needPzMnG: 0
+  needPzMnH: 0
   dependsOnFusebox: 0
 --- !u!1 &3019468260707488135
 GameObject:
@@ -9187,6 +9190,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   interactible: 0
   interacted: 0
+  canBeShown: 1
   player: {fileID: 0}
   maeveScript: {fileID: 0}
 --- !u!114 &3019468260707488133
@@ -9228,6 +9232,7 @@ MonoBehaviour:
   needPzMnE: 0
   needPzMnF: 0
   needPzMnG: 0
+  needPzMnH: 0
   dependsOnFusebox: 0
 --- !u!1 &3019468260792011478
 GameObject:
@@ -9303,6 +9308,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   interactible: 0
   interacted: 0
+  canBeShown: 1
   player: {fileID: 0}
   maeveScript: {fileID: 0}
 --- !u!114 &3019468260792011476
@@ -9344,6 +9350,7 @@ MonoBehaviour:
   needPzMnE: 0
   needPzMnF: 0
   needPzMnG: 0
+  needPzMnH: 0
   dependsOnFusebox: 0
 --- !u!1 &3019468261404822784
 GameObject:
@@ -11742,7 +11749,6 @@ MonoBehaviour:
   stepsRequired: 4
   currentSteps: 0
   correctSteps: 0
-  playesIsPresent: 0
   playerHasFailed: 0
   playerHasSucceeded: 0
   puzzleHasBeenCompleted: 0
@@ -11754,6 +11760,8 @@ MonoBehaviour:
   needPzMnE: 0
   needPzMnF: 0
   needPzMnG: 0
+  needPzMnH: 0
+  steps: []
 --- !u!1 &4804232767184963441
 GameObject:
   m_ObjectHideFlags: 0
@@ -12097,6 +12105,7 @@ MonoBehaviour:
   needPzMnE: 0
   needPzMnF: 0
   needPzMnG: 0
+  needPzMnH: 0
 --- !u!1 &6570368904638813029
 GameObject:
   m_ObjectHideFlags: 0
@@ -12250,6 +12259,7 @@ MonoBehaviour:
   unlitTorch: {fileID: 21300000, guid: 7796f0cdd664cd442b43eaf4f417042f, type: 3}
   torchesManager: {fileID: 0}
   isPartOfAPuzzle: 0
+  hasBeenUsed: 0
   flashManager: {fileID: 0}
 --- !u!114 &6570368904638813028
 MonoBehaviour:
@@ -12435,6 +12445,7 @@ MonoBehaviour:
   unlitTorch: {fileID: 21300000, guid: 7796f0cdd664cd442b43eaf4f417042f, type: 3}
   torchesManager: {fileID: 0}
   isPartOfAPuzzle: 0
+  hasBeenUsed: 0
   flashManager: {fileID: 0}
 --- !u!114 &6570368905296466192
 MonoBehaviour:
@@ -12604,6 +12615,7 @@ MonoBehaviour:
   unlitTorch: {fileID: 21300000, guid: 7796f0cdd664cd442b43eaf4f417042f, type: 3}
   torchesManager: {fileID: 0}
   isPartOfAPuzzle: 0
+  hasBeenUsed: 0
   flashManager: {fileID: 0}
 --- !u!114 &6570368905873627054
 MonoBehaviour:
@@ -12789,6 +12801,7 @@ MonoBehaviour:
   unlitTorch: {fileID: 21300000, guid: 7796f0cdd664cd442b43eaf4f417042f, type: 3}
   torchesManager: {fileID: 0}
   isPartOfAPuzzle: 0
+  hasBeenUsed: 0
   flashManager: {fileID: 0}
 --- !u!114 &6570368906121446677
 MonoBehaviour:
@@ -12805,6 +12818,88 @@ MonoBehaviour:
   burned: 0
   flashed: 0
   flashTime: 1
+--- !u!1 &7594706228532786187
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 7805122971209833578}
+  - component: {fileID: 8063049182119921642}
+  m_Layer: 0
+  m_Name: RueSprite
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &7805122971209833578
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7594706228532786187}
+  m_LocalRotation: {x: 0.7071068, y: 0, z: 0, w: 0.7071068}
+  m_LocalPosition: {x: 0.0301, y: 0, z: 0.0903}
+  m_LocalScale: {x: 9.938632, y: 9.810704, z: 1}
+  m_Children: []
+  m_Father: {fileID: 8064919920911400824}
+  m_RootOrder: 7
+  m_LocalEulerAnglesHint: {x: 90, y: 0, z: 0}
+--- !u!212 &8063049182119921642
+SpriteRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7594706228532786187}
+  m_Enabled: 1
+  m_CastShadows: 0
+  m_ReceiveShadows: 0
+  m_DynamicOccludee: 1
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 0
+  m_RayTraceProcedural: 0
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 2100000, guid: a97c105638bdf8b4a8650670310a4cd3, type: 2}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 0
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_Sprite: {fileID: 21300000, guid: 2c93eca9593126f499b011a77cd3c516, type: 3}
+  m_Color: {r: 0.3584906, g: 0.3534176, b: 0.3534176, a: 1}
+  m_FlipX: 0
+  m_FlipY: 0
+  m_DrawMode: 0
+  m_Size: {x: 1, y: 1}
+  m_AdaptiveModeThreshold: 0.5
+  m_SpriteTileMode: 0
+  m_WasSpriteAssigned: 1
+  m_MaskInteraction: 0
+  m_SpriteSortPoint: 0
 --- !u!1 &7967890482114500769
 GameObject:
   m_ObjectHideFlags: 0
@@ -12879,6 +12974,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   interactible: 0
   interacted: 0
+  canBeShown: 1
   player: {fileID: 0}
   maeveScript: {fileID: 0}
 --- !u!114 &7967890482114500771
@@ -12920,6 +13016,7 @@ MonoBehaviour:
   needPzMnE: 0
   needPzMnF: 0
   needPzMnG: 0
+  needPzMnH: 0
   dependsOnFusebox: 1
 --- !u!1 &7967890482973803466
 GameObject:
@@ -12995,6 +13092,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   interactible: 0
   interacted: 0
+  canBeShown: 1
   player: {fileID: 0}
   maeveScript: {fileID: 0}
 --- !u!114 &7967890482973803464
@@ -13036,6 +13134,7 @@ MonoBehaviour:
   needPzMnE: 0
   needPzMnF: 0
   needPzMnG: 0
+  needPzMnH: 0
   dependsOnFusebox: 0
 --- !u!1 &7967890483568722972
 GameObject:
@@ -14614,9 +14713,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8064919920911400824}
-  - component: {fileID: 8064919920911400831}
-  - component: {fileID: 8064919920911400830}
-  - component: {fileID: 8064919920911400829}
   m_Layer: 0
   m_Name: Rue (3)
   m_TagString: Untagged
@@ -14642,72 +14738,10 @@ Transform:
   - {fileID: 2925287790625570103}
   - {fileID: 2094452443936542828}
   - {fileID: 5579934263620193855}
+  - {fileID: 7805122971209833578}
   m_Father: {fileID: 3609181119066421835}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: -90, y: 0, z: 0}
---- !u!33 &8064919920911400831
-MeshFilter:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8064919920911400828}
-  m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
---- !u!23 &8064919920911400830
-MeshRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8064919920911400828}
-  m_Enabled: 1
-  m_CastShadows: 1
-  m_ReceiveShadows: 1
-  m_DynamicOccludee: 1
-  m_MotionVectors: 1
-  m_LightProbeUsage: 1
-  m_ReflectionProbeUsage: 1
-  m_RayTracingMode: 2
-  m_RayTraceProcedural: 0
-  m_RenderingLayerMask: 1
-  m_RendererPriority: 0
-  m_Materials:
-  - {fileID: 2100000, guid: 31321ba15b8f8eb4c954353edc038b1d, type: 2}
-  m_StaticBatchInfo:
-    firstSubMesh: 0
-    subMeshCount: 0
-  m_StaticBatchRoot: {fileID: 0}
-  m_ProbeAnchor: {fileID: 0}
-  m_LightProbeVolumeOverride: {fileID: 0}
-  m_ScaleInLightmap: 1
-  m_ReceiveGI: 1
-  m_PreserveUVs: 0
-  m_IgnoreNormalsForChartDetection: 0
-  m_ImportantGI: 0
-  m_StitchLightmapSeams: 1
-  m_SelectedEditorRenderState: 3
-  m_MinimumChartSize: 4
-  m_AutoUVMaxDistance: 0.5
-  m_AutoUVMaxAngle: 89
-  m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
-  m_SortingOrder: 0
-  m_AdditionalVertexStreams: {fileID: 0}
---- !u!64 &8064919920911400829
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8064919920911400828}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 4
-  m_Convex: 0
-  m_CookingOptions: 30
-  m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!1 &8064919921015253242
 GameObject:
   m_ObjectHideFlags: 0
@@ -17584,6 +17618,7 @@ MonoBehaviour:
   needPzMnE: 0
   needPzMnF: 0
   needPzMnG: 0
+  needPzMnH: 0
 --- !u!1001 &1206733154708633961
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -18315,14 +18350,14 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 03ce9b00c557d824dbb24fc7c01471ce, type: 3}
---- !u!4 &2644030690171484919 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 876458481052584439, guid: 03ce9b00c557d824dbb24fc7c01471ce, type: 3}
-  m_PrefabInstance: {fileID: 2925287790614835968}
-  m_PrefabAsset: {fileID: 0}
 --- !u!4 &7677406239943608438 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4761173365980838774, guid: 03ce9b00c557d824dbb24fc7c01471ce, type: 3}
+  m_PrefabInstance: {fileID: 2925287790614835968}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &2644030690171484919 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 876458481052584439, guid: 03ce9b00c557d824dbb24fc7c01471ce, type: 3}
   m_PrefabInstance: {fileID: 2925287790614835968}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &2925287790655409779

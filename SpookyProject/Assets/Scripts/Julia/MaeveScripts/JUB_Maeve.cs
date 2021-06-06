@@ -143,7 +143,7 @@ namespace character
             { 
                 heartsDisplay.sprite = heartSprites[currentLife - 1];
             }
-            
+            shaderFlame.SetActive(false); 
             Anim();
         }
 
@@ -430,7 +430,7 @@ namespace character
             {
                 FindObjectOfType<AudioManager>().Play("AttaqueForte");
             }
-            Debug.LogError(quickAttack.atkDamage);
+
             StartCoroutine(Hit(attackProfile));
         }
         IEnumerator Hit(JUB_Combat.AttackProfile attackProfile)
@@ -1066,7 +1066,7 @@ namespace character
 
             }
             //Debug.LogWarning(animationIndex);
-            //animationIndex = 0;
+            animationIndex = 0;
 
             
                 

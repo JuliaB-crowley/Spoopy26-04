@@ -326,7 +326,7 @@ MonoBehaviour:
   batPrefab: {fileID: 1854680120657952879, guid: a2329f07a33e6d646b5550b200df8fa3, type: 3}
   buildupTime: 0.4
   recoveryTime: 0.8
-  stunTime: 1
+  stunTime: 1.5
   flashManager: {fileID: 0}
   hasBeenStunned: 0
   graphicAnimator: {fileID: 4186699327776834930}
