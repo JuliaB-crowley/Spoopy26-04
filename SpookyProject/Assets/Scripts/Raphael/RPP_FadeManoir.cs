@@ -6,25 +6,27 @@ public class RPP_FadeManoir : MonoBehaviour
 {
     [SerializeField] SpriteRenderer manoirSprite;
     public bool playerIsBehind = false;
-    public Color tmp;
+    public float alpha = 1f; //1 is opaque, 0 is transparent.
     void Start()
     {
         manoirSprite = GetComponent<SpriteRenderer>();
-        tmp = manoirSprite.color;
-        manoirSprite.color = tmp;
     }
 
     void Update()
     {
-        if(!playerIsBehind && tmp.a <=255)
+        if(!playerIsBehind  && alpha <= 1)
         {
-            Debug.Log("The house is reappearing");
-            tmp.a = 255;
+            Color currColor = manoirSprite.color;
+            currColor.a = alpha;
+            manoirSprite.color = currColor;
+            alpha += 0.02f;
         }
-        else if(playerIsBehind && tmp.a >= 40)
+        else if(playerIsBehind && alpha >= 0.3f)
         {
-            Debug.Log("The house is fading");
-            tmp.a = 40;
+            Color currColor = manoirSprite.color;
+            currColor.a = alpha;
+            manoirSprite.color = currColor;
+            alpha -= 0.02f;
         }
     }
 
