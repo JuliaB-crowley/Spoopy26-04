@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 1562226557933794363}
   - component: {fileID: 1562226557933794362}
   m_Layer: 0
-  m_Name: Clef Violette
+  m_Name: Clef Violette A
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -74,7 +74,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 4ffb202a703f6b746bd938e8769aa3a3, type: 3}
+  m_Sprite: {fileID: 7526595147371301982, guid: c899d55312d17d442a58da0baa1785e4, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -98,18 +98,18 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: -0.025474548}
+  m_Offset: {x: -0.08967066, y: -0.008659363}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1.08, y: 1}
+    oldSize: {x: 1.078125, y: 1.6251006}
     newSize: {x: 1.08, y: 1}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1, y: 0.6433563}
+  m_Size: {x: 0.7130537, y: 1.2688141}
   m_EdgeRadius: 0
 --- !u!50 &1562226557933794363
 Rigidbody2D:
@@ -150,3 +150,11 @@ MonoBehaviour:
   isBlueKey: 0
   isGreenKey: 0
   isVioletKey: 1
+  needPzMnA: 1
+  needPzMnB: 0
+  needPzMnC: 0
+  needPzMnD: 0
+  needPzMnE: 0
+  needPzMnF: 0
+  needPzMnG: 0
+  needPzMnH: 0
