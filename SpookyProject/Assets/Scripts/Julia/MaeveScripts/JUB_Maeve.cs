@@ -16,6 +16,7 @@ namespace character
     public enum DirectionObject { North, Est, South, West}
     public class JUB_Maeve : MonoBehaviour
     {
+
         //collisions
         public JUB_MaeveCollisionDetector left, right, top, bottom;
         public bool collisionLeft, collisionRight, collisionTop, collisionBottom;
@@ -85,6 +86,8 @@ namespace character
         // Start is called before the first frame update
         void Start()
         {
+            DontDestroyOnLoad(this.gameObject);
+
             deathParticles.Stop();
 
             rigidBody = GetComponent<Rigidbody2D>();
