@@ -3836,7 +3836,7 @@
 }
 
 {
-    "m_SGVersion": 2,
+    "m_SGVersion": 3,
     "m_Type": "UnityEditor.ShaderGraph.Internal.ColorShaderProperty",
     "m_ObjectId": "6eff51dfa6e56980bbe11133fb2909b8",
     "m_Guid": {
@@ -5283,15 +5283,15 @@
     "m_Value": 0.0,
     "m_SerializableColorKeys": [
         {
-            "x": 3.0940372943878176,
-            "y": 1.0696885585784913,
-            "z": 0.0,
+            "x": 1.0,
+            "y": 1.0,
+            "z": 1.0,
             "w": 0.0
         },
         {
-            "x": 3.0940370559692385,
-            "y": 2.1018505096435549,
-            "z": 0.0,
+            "x": 1.0,
+            "y": 1.0,
+            "z": 1.0,
             "w": 1.0
         }
     ],
