@@ -15,7 +15,12 @@ public class RPP_SuccessZone : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if(collision.CompareTag("Player") && !hasBeenUsed)
+        if(collision.CompareTag("Player") && !hasBeenUsed && !needPzMnB)
+        {
+            puzzleMaster.puzzlesSolved++;
+            hasBeenUsed = true;
+        }
+        else if(collision.CompareTag("Player") && !hasBeenUsed && needPzMnB && puzzleMaster.puzzlesSolved <= 1)
         {
             puzzleMaster.puzzlesSolved++;
             hasBeenUsed = true;

@@ -1654,7 +1654,7 @@ MonoBehaviour:
   collisionTop: 0
   collisionBottom: 0
   speed: 5
-  rollSpeed: 8
+  rollSpeed: 10
   rollDuration: 0.2
   rollRecover: 0.05
   crouchSpeed: 3
@@ -1731,6 +1731,7 @@ MonoBehaviour:
   heartsDisplay: {fileID: 1427925466}
   isInDialogue: 0
   hasBeenLit: 0
+  isInRespawn: 0
   animationIndex: 0
   maeveAnimator: {fileID: 2588054932057960255}
   deathCanvas: {fileID: 603992811953839225}
@@ -1790,7 +1791,7 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 16384
   burnRange: 1
-  flashRange: 3.5
+  flashRange: 2
   flashTime: 1.5
   flashAnim: 0.4
   flashWasObtained: 1
