@@ -88,7 +88,8 @@ namespace character
         {
             DontDestroyOnLoad(this.gameObject);
 
-            deathParticles.Stop();
+            deathParticles.Pause();
+            deathParticles.Clear();
 
             rigidBody = GetComponent<Rigidbody2D>();
             mainCam = GameObject.FindGameObjectWithTag("MainCamera");
