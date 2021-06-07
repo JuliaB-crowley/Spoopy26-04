@@ -47,6 +47,7 @@ public class TestTorche : MonoBehaviour
         {
             torchesManager.successesAchieved++;
         }
+        FindObjectOfType<AudioManager>().Play("Torche");
     }
 
     //Cette méthode ne doit pas être utilisé si la torche peut être bougée
