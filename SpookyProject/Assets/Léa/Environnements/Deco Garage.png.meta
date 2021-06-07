@@ -4,7 +4,7 @@ TextureImporter:
   internalIDToNameTable:
   - first:
       213: 8753212482831762525
-    second: Deco Garage_0
+    second: BBQ
   - first:
       213: 1211098014156704101
     second: Deco Garage_1
@@ -25,10 +25,10 @@ TextureImporter:
     second: Deco Garage_6
   - first:
       213: 8621819691339506689
-    second: Deco Garage_7
+    second: Deco Crypte_1
   - first:
       213: 2456391850406094695
-    second: Deco Garage_8
+    second: Deco Crypte_2
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -118,7 +118,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Deco Garage_0
+      name: BBQ
       rect:
         serializedVersion: 2
         x: 1593
@@ -265,7 +265,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Deco Garage_7
+      name: Deco Crypte_1
       rect:
         serializedVersion: 2
         x: 1528
@@ -273,7 +273,7 @@ TextureImporter:
         width: 457
         height: 387
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -286,7 +286,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Deco Garage_8
+      name: Deco Crypte_2
       rect:
         serializedVersion: 2
         x: 2062
@@ -294,7 +294,7 @@ TextureImporter:
         width: 362
         height: 1125
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
