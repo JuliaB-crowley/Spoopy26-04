@@ -46,6 +46,7 @@ public class RPP_BoutonScript : MonoBehaviour
     IEnumerator ActivateButton()
     {
         spriteRenderer.color = Color.white;
+        FindObjectOfType<AudioManager>().Play("Bouton");
         hasBeenFlashed = true;
         buttonsManager.buttonsActive++;
         yield return new WaitForSeconds(flashManager.flashTime);
@@ -66,6 +67,7 @@ public class RPP_BoutonScript : MonoBehaviour
 
     public void PermanentlyActivateButton()
     {
+        FindObjectOfType<AudioManager>().Play("Bouton");
         spriteRenderer.color = Color.white;
         hasBeenFlashed = true;
         if (needAPuzzleMaster)

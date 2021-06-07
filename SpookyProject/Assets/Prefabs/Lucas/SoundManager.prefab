@@ -62,7 +62,7 @@ MonoBehaviour:
     source: {fileID: 0}
   - name: Flash
     clip: {fileID: 8300000, guid: c47bf4531ae794f418939db7e840a9a6, type: 3}
-    volume: 0.502
+    volume: 0.5
     pitch: 1
     source: {fileID: 0}
   - name: MortJoueur
@@ -72,12 +72,12 @@ MonoBehaviour:
     source: {fileID: 0}
   - name: ThemeBoss
     clip: {fileID: 8300000, guid: 7399b4dd731c81746976d2eee0e18d82, type: 3}
-    volume: 1
+    volume: 0.5
     pitch: 1
     source: {fileID: 0}
   - name: MainTheme
     clip: {fileID: 8300000, guid: 948ba8edde54c934b8037fcc2c5dabc5, type: 3}
-    volume: 1
+    volume: 0.75
     pitch: 1
     source: {fileID: 0}
   - name: OpenMenu
@@ -132,7 +132,7 @@ MonoBehaviour:
     source: {fileID: 0}
   - name: Pics
     clip: {fileID: 8300000, guid: d40eef7b60d4bc142bd4856126f1c033, type: 3}
-    volume: 1
+    volume: 0.5
     pitch: 1
     source: {fileID: 0}
   - name: MortBoss
@@ -142,17 +142,17 @@ MonoBehaviour:
     source: {fileID: 0}
   - name: BurnTail
     clip: {fileID: 8300000, guid: 8d71fa861553e824aa5e064ebd70f8b7, type: 3}
-    volume: 1
+    volume: 0.75
     pitch: 1
     source: {fileID: 0}
   - name: ChargeDiablotin
     clip: {fileID: 8300000, guid: fd71a557be9ba4848900c6be02928008, type: 3}
-    volume: 1
+    volume: 0.75
     pitch: 1
     source: {fileID: 0}
   - name: CoupsDiablotin
     clip: {fileID: 8300000, guid: 301dba8db2df7b842bba7ffcd8dffbd3, type: 3}
-    volume: 1
+    volume: 0.75
     pitch: 1
     source: {fileID: 0}
   - name: BatVampire
