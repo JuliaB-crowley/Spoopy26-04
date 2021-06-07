@@ -5,17 +5,12 @@ using UnityEngine.SceneManagement;
 
 public class JUB_Endgame : MonoBehaviour
 {
-    public GameObject victoryCanvas;
-    // Start is called before the first frame update
-    void Start()
-    {
-        victoryCanvas.SetActive(false);
-    }
+    public JUB_BossBehavior boss;
 
     // Update is called once per frame
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.CompareTag("Player"))
+        if (collision.CompareTag("Player") && boss.isDead)
         {
             SceneManager.LoadScene("Outro");
         }
