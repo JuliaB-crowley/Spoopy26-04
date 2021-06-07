@@ -1615,7 +1615,7 @@ MonoBehaviour:
   collisionTop: 0
   collisionBottom: 0
   speed: 5
-  rollSpeed: 6
+  rollSpeed: 8
   rollDuration: 0.2
   rollRecover: 0.05
   crouchSpeed: 3
