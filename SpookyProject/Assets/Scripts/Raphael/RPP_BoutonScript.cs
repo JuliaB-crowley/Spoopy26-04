@@ -6,7 +6,6 @@ public class RPP_BoutonScript : MonoBehaviour
 {
     [SerializeField] SpriteRenderer spriteRenderer; // Je modifie le sprite pour avoir du feedback visuel  
     [SerializeField] JUB_FlashManager flashManager; //flash manager à mettre sur layer flashable
-    [SerializeField] Sprite boutonActivé, boutonDésactivé; //différents sprites du bouton
     [SerializeField] RPP_ButtonPuzzleMaster buttonsManager;
 
     public bool hasBeenFlashed = false, needAPuzzleMaster = true;
@@ -19,7 +18,7 @@ public class RPP_BoutonScript : MonoBehaviour
         }
         spriteRenderer =GetComponent<SpriteRenderer>();
         flashManager = GetComponentInChildren<JUB_FlashManager>();
-        spriteRenderer.sprite = boutonDésactivé;
+        spriteRenderer.color = Color.red;
     }
 
     void Update()
@@ -32,7 +31,7 @@ public class RPP_BoutonScript : MonoBehaviour
             }
             if (buttonsManager.puzzleSolved)
             {
-                spriteRenderer.sprite = boutonActivé;
+                spriteRenderer.color = Color.white;
             }
         }
         else
@@ -46,18 +45,18 @@ public class RPP_BoutonScript : MonoBehaviour
 
     IEnumerator ActivateButton()
     {
-        spriteRenderer.sprite = boutonActivé;
+        spriteRenderer.color = Color.white;
         hasBeenFlashed = true;
         buttonsManager.buttonsActive++;
         yield return new WaitForSeconds(flashManager.flashTime);
-        spriteRenderer.sprite = boutonDésactivé;
+        spriteRenderer.color = Color.red;
         hasBeenFlashed = false;
         buttonsManager.buttonsActive--;
     }
 
     public void ResetButton()
     {
-        spriteRenderer.sprite = boutonDésactivé;
+        spriteRenderer.color = Color.red;
         hasBeenFlashed = false;
         if (needAPuzzleMaster)
         {
@@ -67,7 +66,7 @@ public class RPP_BoutonScript : MonoBehaviour
 
     public void PermanentlyActivateButton()
     {
-        spriteRenderer.sprite = boutonActivé;
+        spriteRenderer.color = Color.white;
         hasBeenFlashed = true;
         if (needAPuzzleMaster)
         {

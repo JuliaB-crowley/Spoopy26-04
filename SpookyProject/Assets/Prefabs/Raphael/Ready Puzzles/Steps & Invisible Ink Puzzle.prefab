@@ -28,8 +28,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3260687283771678150}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -2.1, y: 2.1, z: 0}
-  m_LocalScale: {x: 2, y: 2, z: 0.1}
+  m_LocalPosition: {x: -2.17, y: 2.76, z: 0}
+  m_LocalScale: {x: 1.2, y: 1.2, z: 0.1}
   m_Children: []
   m_Father: {fileID: 3260687284870383069}
   m_RootOrder: 8
@@ -74,7 +74,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 2c93eca9593126f499b011a77cd3c516, type: 3}
+  m_Sprite: {fileID: -2393339087404569178, guid: d9ad60f4e98f5b546852bf597a8ee630, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -102,14 +102,14 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1, y: 1}
+    oldSize: {x: 1.875, y: 1.7031636}
     newSize: {x: 1, y: 1}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.5, y: 0.5}
+  m_Size: {x: 0.75, y: 0.75}
   m_EdgeRadius: 0
 --- !u!50 &3260687283771678169
 Rigidbody2D:
@@ -148,6 +148,10 @@ MonoBehaviour:
   isCorrectStep: 0
   puzzleMaster: {fileID: 3260687284870383066}
   stepSprite: {fileID: 0}
+  stepNormal: {fileID: -2393339087404569178, guid: d9ad60f4e98f5b546852bf597a8ee630, type: 3}
+  stepActive: {fileID: 7908476490579327990, guid: d9ad60f4e98f5b546852bf597a8ee630, type: 3}
+  stepWrong: {fileID: -4936555640351594808, guid: f37ffadaab7e4fd4c9d94eac13623e60, type: 3}
+  stepCorrect: {fileID: -1033760506404617586, guid: f37ffadaab7e4fd4c9d94eac13623e60, type: 3}
 --- !u!1 &3260687284120118913
 GameObject:
   m_ObjectHideFlags: 0
@@ -176,8 +180,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3260687284120118913}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 2.1, y: -2.1, z: 0}
-  m_LocalScale: {x: 2, y: 2, z: 0.1}
+  m_LocalPosition: {x: 2.0299997, y: -1.34, z: 0}
+  m_LocalScale: {x: 1.2, y: 1.2, z: 0.1}
   m_Children: []
   m_Father: {fileID: 3260687284870383069}
   m_RootOrder: 5
@@ -222,7 +226,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 2c93eca9593126f499b011a77cd3c516, type: 3}
+  m_Sprite: {fileID: -2393339087404569178, guid: d9ad60f4e98f5b546852bf597a8ee630, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -250,14 +254,14 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1, y: 1}
+    oldSize: {x: 1.875, y: 1.7031636}
     newSize: {x: 1, y: 1}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.5, y: 0.5}
+  m_Size: {x: 0.75, y: 0.75}
   m_EdgeRadius: 0
 --- !u!50 &3260687284120118916
 Rigidbody2D:
@@ -296,6 +300,10 @@ MonoBehaviour:
   isCorrectStep: 1
   puzzleMaster: {fileID: 3260687284870383066}
   stepSprite: {fileID: 0}
+  stepNormal: {fileID: -2393339087404569178, guid: d9ad60f4e98f5b546852bf597a8ee630, type: 3}
+  stepActive: {fileID: 7908476490579327990, guid: d9ad60f4e98f5b546852bf597a8ee630, type: 3}
+  stepWrong: {fileID: -4936555640351594808, guid: f37ffadaab7e4fd4c9d94eac13623e60, type: 3}
+  stepCorrect: {fileID: -1033760506404617586, guid: f37ffadaab7e4fd4c9d94eac13623e60, type: 3}
 --- !u!1 &3260687284327597903
 GameObject:
   m_ObjectHideFlags: 0
@@ -324,8 +332,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3260687284327597903}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 2, y: 2, z: 0.1}
+  m_LocalPosition: {x: -0.07000017, y: 0.69000244, z: 0}
+  m_LocalScale: {x: 1.2, y: 1.2, z: 0.1}
   m_Children: []
   m_Father: {fileID: 3260687284870383069}
   m_RootOrder: 0
@@ -370,7 +378,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 2c93eca9593126f499b011a77cd3c516, type: 3}
+  m_Sprite: {fileID: -2393339087404569178, guid: d9ad60f4e98f5b546852bf597a8ee630, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -398,14 +406,14 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1, y: 1}
+    oldSize: {x: 1.875, y: 1.7031636}
     newSize: {x: 1, y: 1}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.5, y: 0.5}
+  m_Size: {x: 0.75, y: 0.75}
   m_EdgeRadius: 0
 --- !u!50 &3260687284327597890
 Rigidbody2D:
@@ -444,6 +452,10 @@ MonoBehaviour:
   isCorrectStep: 1
   puzzleMaster: {fileID: 3260687284870383066}
   stepSprite: {fileID: 0}
+  stepNormal: {fileID: -2393339087404569178, guid: d9ad60f4e98f5b546852bf597a8ee630, type: 3}
+  stepActive: {fileID: 7908476490579327990, guid: d9ad60f4e98f5b546852bf597a8ee630, type: 3}
+  stepWrong: {fileID: -4936555640351594808, guid: f37ffadaab7e4fd4c9d94eac13623e60, type: 3}
+  stepCorrect: {fileID: -1033760506404617586, guid: f37ffadaab7e4fd4c9d94eac13623e60, type: 3}
 --- !u!1 &3260687284820156334
 GameObject:
   m_ObjectHideFlags: 0
@@ -472,8 +484,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3260687284820156334}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: -2.1, z: 0}
-  m_LocalScale: {x: 2, y: 2, z: 0.1}
+  m_LocalPosition: {x: -0.07000017, y: -1.3400016, z: 0}
+  m_LocalScale: {x: 1.2, y: 1.2, z: 0.1}
   m_Children: []
   m_Father: {fileID: 3260687284870383069}
   m_RootOrder: 4
@@ -518,7 +530,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 2c93eca9593126f499b011a77cd3c516, type: 3}
+  m_Sprite: {fileID: -2393339087404569178, guid: d9ad60f4e98f5b546852bf597a8ee630, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -546,14 +558,14 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1, y: 1}
+    oldSize: {x: 1.875, y: 1.7031636}
     newSize: {x: 1, y: 1}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.5, y: 0.5}
+  m_Size: {x: 0.75, y: 0.75}
   m_EdgeRadius: 0
 --- !u!50 &3260687284820156321
 Rigidbody2D:
@@ -592,6 +604,10 @@ MonoBehaviour:
   isCorrectStep: 0
   puzzleMaster: {fileID: 3260687284870383066}
   stepSprite: {fileID: 0}
+  stepNormal: {fileID: -2393339087404569178, guid: d9ad60f4e98f5b546852bf597a8ee630, type: 3}
+  stepActive: {fileID: 7908476490579327990, guid: d9ad60f4e98f5b546852bf597a8ee630, type: 3}
+  stepWrong: {fileID: -4936555640351594808, guid: f37ffadaab7e4fd4c9d94eac13623e60, type: 3}
+  stepCorrect: {fileID: -1033760506404617586, guid: f37ffadaab7e4fd4c9d94eac13623e60, type: 3}
 --- !u!1 &3260687284870383065
 GameObject:
   m_ObjectHideFlags: 0
@@ -653,7 +669,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: -0.049327016, y: 0.73285484}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -664,7 +680,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 6.4, y: 6.4}
+  m_Size: {x: 6.4986534, y: 6.1745033}
   m_EdgeRadius: 0
 --- !u!50 &3260687284870383067
 Rigidbody2D:
@@ -713,6 +729,7 @@ MonoBehaviour:
   needPzMnE: 0
   needPzMnF: 0
   needPzMnG: 0
+  needPzMnH: 0
   steps:
   - {fileID: 3260687284327597889}
   - {fileID: 3260687285678060192}
@@ -751,8 +768,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3260687284969966639}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -2.1, y: -2.1, z: 0}
-  m_LocalScale: {x: 2, y: 2, z: 0.1}
+  m_LocalPosition: {x: -2.17, y: -1.3400016, z: 0}
+  m_LocalScale: {x: 1.2, y: 1.2, z: 0.1}
   m_Children: []
   m_Father: {fileID: 3260687284870383069}
   m_RootOrder: 6
@@ -797,7 +814,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 2c93eca9593126f499b011a77cd3c516, type: 3}
+  m_Sprite: {fileID: -2393339087404569178, guid: d9ad60f4e98f5b546852bf597a8ee630, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -825,14 +842,14 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1, y: 1}
+    oldSize: {x: 1.875, y: 1.7031636}
     newSize: {x: 1, y: 1}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.5, y: 0.5}
+  m_Size: {x: 0.75, y: 0.75}
   m_EdgeRadius: 0
 --- !u!50 &3260687284969966626
 Rigidbody2D:
@@ -871,6 +888,10 @@ MonoBehaviour:
   isCorrectStep: 0
   puzzleMaster: {fileID: 3260687284870383066}
   stepSprite: {fileID: 0}
+  stepNormal: {fileID: -2393339087404569178, guid: d9ad60f4e98f5b546852bf597a8ee630, type: 3}
+  stepActive: {fileID: 7908476490579327990, guid: d9ad60f4e98f5b546852bf597a8ee630, type: 3}
+  stepWrong: {fileID: -4936555640351594808, guid: f37ffadaab7e4fd4c9d94eac13623e60, type: 3}
+  stepCorrect: {fileID: -1033760506404617586, guid: f37ffadaab7e4fd4c9d94eac13623e60, type: 3}
 --- !u!1 &3260687285375777595
 GameObject:
   m_ObjectHideFlags: 0
@@ -899,8 +920,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3260687285375777595}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 2.1, z: 0}
-  m_LocalScale: {x: 2, y: 2, z: 0.1}
+  m_LocalPosition: {x: -0.07000017, y: 2.7600036, z: 0}
+  m_LocalScale: {x: 1.2, y: 1.2, z: 0.1}
   m_Children: []
   m_Father: {fileID: 3260687284870383069}
   m_RootOrder: 3
@@ -945,7 +966,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 2c93eca9593126f499b011a77cd3c516, type: 3}
+  m_Sprite: {fileID: -2393339087404569178, guid: d9ad60f4e98f5b546852bf597a8ee630, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -973,14 +994,14 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1, y: 1}
+    oldSize: {x: 1.875, y: 1.7031636}
     newSize: {x: 1, y: 1}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.5, y: 0.5}
+  m_Size: {x: 0.75, y: 0.75}
   m_EdgeRadius: 0
 --- !u!50 &3260687285375777598
 Rigidbody2D:
@@ -1019,6 +1040,10 @@ MonoBehaviour:
   isCorrectStep: 1
   puzzleMaster: {fileID: 3260687284870383066}
   stepSprite: {fileID: 0}
+  stepNormal: {fileID: -2393339087404569178, guid: d9ad60f4e98f5b546852bf597a8ee630, type: 3}
+  stepActive: {fileID: 7908476490579327990, guid: d9ad60f4e98f5b546852bf597a8ee630, type: 3}
+  stepWrong: {fileID: -4936555640351594808, guid: f37ffadaab7e4fd4c9d94eac13623e60, type: 3}
+  stepCorrect: {fileID: -1033760506404617586, guid: f37ffadaab7e4fd4c9d94eac13623e60, type: 3}
 --- !u!1 &3260687285505062919
 GameObject:
   m_ObjectHideFlags: 0
@@ -1047,8 +1072,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3260687285505062919}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -2.1, y: 0, z: 0}
-  m_LocalScale: {x: 2, y: 2, z: 0.1}
+  m_LocalPosition: {x: -2.17, y: 0.69000244, z: 0}
+  m_LocalScale: {x: 1.2, y: 1.2, z: 0.1}
   m_Children: []
   m_Father: {fileID: 3260687284870383069}
   m_RootOrder: 2
@@ -1093,7 +1118,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 2c93eca9593126f499b011a77cd3c516, type: 3}
+  m_Sprite: {fileID: -2393339087404569178, guid: d9ad60f4e98f5b546852bf597a8ee630, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -1121,14 +1146,14 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1, y: 1}
+    oldSize: {x: 1.875, y: 1.7031636}
     newSize: {x: 1, y: 1}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.5, y: 0.5}
+  m_Size: {x: 0.75, y: 0.75}
   m_EdgeRadius: 0
 --- !u!50 &3260687285505062938
 Rigidbody2D:
@@ -1167,6 +1192,10 @@ MonoBehaviour:
   isCorrectStep: 0
   puzzleMaster: {fileID: 3260687284870383066}
   stepSprite: {fileID: 0}
+  stepNormal: {fileID: -2393339087404569178, guid: d9ad60f4e98f5b546852bf597a8ee630, type: 3}
+  stepActive: {fileID: 7908476490579327990, guid: d9ad60f4e98f5b546852bf597a8ee630, type: 3}
+  stepWrong: {fileID: -4936555640351594808, guid: f37ffadaab7e4fd4c9d94eac13623e60, type: 3}
+  stepCorrect: {fileID: -1033760506404617586, guid: f37ffadaab7e4fd4c9d94eac13623e60, type: 3}
 --- !u!1 &3260687285626619980
 GameObject:
   m_ObjectHideFlags: 0
@@ -1195,8 +1224,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3260687285626619980}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 2.1, y: 2.1, z: 0}
-  m_LocalScale: {x: 2, y: 2, z: 0.1}
+  m_LocalPosition: {x: 2.0299997, y: 2.7600036, z: 0}
+  m_LocalScale: {x: 1.2, y: 1.2, z: 0.1}
   m_Children: []
   m_Father: {fileID: 3260687284870383069}
   m_RootOrder: 7
@@ -1241,7 +1270,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 2c93eca9593126f499b011a77cd3c516, type: 3}
+  m_Sprite: {fileID: -2393339087404569178, guid: d9ad60f4e98f5b546852bf597a8ee630, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -1269,14 +1298,14 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1, y: 1}
+    oldSize: {x: 1.875, y: 1.7031636}
     newSize: {x: 1, y: 1}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.5, y: 0.5}
+  m_Size: {x: 0.75, y: 0.75}
   m_EdgeRadius: 0
 --- !u!50 &3260687285626619983
 Rigidbody2D:
@@ -1315,6 +1344,10 @@ MonoBehaviour:
   isCorrectStep: 0
   puzzleMaster: {fileID: 3260687284870383066}
   stepSprite: {fileID: 0}
+  stepNormal: {fileID: -2393339087404569178, guid: d9ad60f4e98f5b546852bf597a8ee630, type: 3}
+  stepActive: {fileID: 7908476490579327990, guid: d9ad60f4e98f5b546852bf597a8ee630, type: 3}
+  stepWrong: {fileID: -4936555640351594808, guid: f37ffadaab7e4fd4c9d94eac13623e60, type: 3}
+  stepCorrect: {fileID: -1033760506404617586, guid: f37ffadaab7e4fd4c9d94eac13623e60, type: 3}
 --- !u!1 &3260687285678060206
 GameObject:
   m_ObjectHideFlags: 0
@@ -1343,8 +1376,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3260687285678060206}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 2.1, y: 0, z: 0}
-  m_LocalScale: {x: 2, y: 2, z: 0.1}
+  m_LocalPosition: {x: 2.0299997, y: 0.69000244, z: 0}
+  m_LocalScale: {x: 1.2, y: 1.2, z: 0.1}
   m_Children: []
   m_Father: {fileID: 3260687284870383069}
   m_RootOrder: 1
@@ -1389,7 +1422,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 2c93eca9593126f499b011a77cd3c516, type: 3}
+  m_Sprite: {fileID: -2393339087404569178, guid: d9ad60f4e98f5b546852bf597a8ee630, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -1417,14 +1450,14 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1, y: 1}
+    oldSize: {x: 1.875, y: 1.7031636}
     newSize: {x: 1, y: 1}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.5, y: 0.5}
+  m_Size: {x: 0.75, y: 0.75}
   m_EdgeRadius: 0
 --- !u!50 &3260687285678060193
 Rigidbody2D:
@@ -1463,6 +1496,10 @@ MonoBehaviour:
   isCorrectStep: 1
   puzzleMaster: {fileID: 3260687284870383066}
   stepSprite: {fileID: 0}
+  stepNormal: {fileID: -2393339087404569178, guid: d9ad60f4e98f5b546852bf597a8ee630, type: 3}
+  stepActive: {fileID: 7908476490579327990, guid: d9ad60f4e98f5b546852bf597a8ee630, type: 3}
+  stepWrong: {fileID: -4936555640351594808, guid: f37ffadaab7e4fd4c9d94eac13623e60, type: 3}
+  stepCorrect: {fileID: -1033760506404617586, guid: f37ffadaab7e4fd4c9d94eac13623e60, type: 3}
 --- !u!1001 &6636483465657218977
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1476,11 +1513,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2505163721138196455, guid: abb2aa64a9c60ef45a5b32c709640081, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0.07000001
+      value: -0.1
       objectReference: {fileID: 0}
     - target: {fileID: 2505163721138196455, guid: abb2aa64a9c60ef45a5b32c709640081, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 2.1000004
+      value: 2.93
       objectReference: {fileID: 0}
     - target: {fileID: 2505163721138196455, guid: abb2aa64a9c60ef45a5b32c709640081, type: 3}
       propertyPath: m_LocalPosition.z
@@ -1538,11 +1575,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2505163721138196455, guid: abb2aa64a9c60ef45a5b32c709640081, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0.07000001
+      value: -0.099999994
       objectReference: {fileID: 0}
     - target: {fileID: 2505163721138196455, guid: abb2aa64a9c60ef45a5b32c709640081, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.44000053
+      value: 1.2700024
       objectReference: {fileID: 0}
     - target: {fileID: 2505163721138196455, guid: abb2aa64a9c60ef45a5b32c709640081, type: 3}
       propertyPath: m_LocalPosition.z
@@ -1600,11 +1637,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2505163721138196455, guid: abb2aa64a9c60ef45a5b32c709640081, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 1.62
+      value: 1.45
       objectReference: {fileID: 0}
     - target: {fileID: 2505163721138196455, guid: abb2aa64a9c60ef45a5b32c709640081, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.069999695
+      value: 0.9000015
       objectReference: {fileID: 0}
     - target: {fileID: 2505163721138196455, guid: abb2aa64a9c60ef45a5b32c709640081, type: 3}
       propertyPath: m_LocalPosition.z
@@ -1662,11 +1699,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2505163721138196455, guid: abb2aa64a9c60ef45a5b32c709640081, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 1.99
+      value: 1.82
       objectReference: {fileID: 0}
     - target: {fileID: 2505163721138196455, guid: abb2aa64a9c60ef45a5b32c709640081, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.45000076
+      value: 0.38000107
       objectReference: {fileID: 0}
     - target: {fileID: 2505163721138196455, guid: abb2aa64a9c60ef45a5b32c709640081, type: 3}
       propertyPath: m_LocalPosition.z
@@ -1724,11 +1761,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2505163721138196455, guid: abb2aa64a9c60ef45a5b32c709640081, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0.48
+      value: 0.31
       objectReference: {fileID: 0}
     - target: {fileID: 2505163721138196455, guid: abb2aa64a9c60ef45a5b32c709640081, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.069999695
+      value: 0.9000015
       objectReference: {fileID: 0}
     - target: {fileID: 2505163721138196455, guid: abb2aa64a9c60ef45a5b32c709640081, type: 3}
       propertyPath: m_LocalPosition.z
@@ -1786,11 +1823,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2505163721138196455, guid: abb2aa64a9c60ef45a5b32c709640081, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 1.99
+      value: 1.82
       objectReference: {fileID: 0}
     - target: {fileID: 2505163721138196455, guid: abb2aa64a9c60ef45a5b32c709640081, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -2.040001
+      value: -1.2099991
       objectReference: {fileID: 0}
     - target: {fileID: 2505163721138196455, guid: abb2aa64a9c60ef45a5b32c709640081, type: 3}
       propertyPath: m_LocalPosition.z

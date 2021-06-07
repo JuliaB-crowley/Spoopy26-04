@@ -9,7 +9,7 @@ public class RPP_DoorScript : MonoBehaviour
     public int minPuzzlesSolved;
     [SerializeField] RPP_GeneralPuzzleMaster puzzleMaster;
     [SerializeField] RPP_FusiblesScript fusiblesScript;
-    public SpriteRenderer doorSprite;
+    public SpriteRenderer doorSprite, lockSprite;
     public Sprite doorOpen, doorLocked, blueDoor, yellowDoor, greenDoor, violetDoor, brokenDoor, openOneSide;
     [SerializeField] bool needBlueKey, needYellowKey, needGreenKey, needVioletKey, doorIsBroken, opensOneSide, needPzMnA = true, needPzMnB, needPzMnC, needPzMnD, needPzMnE, needPzMnF, needPzMnG, needPzMnH, dependsOnFusebox  = false;
 
@@ -21,11 +21,10 @@ public class RPP_DoorScript : MonoBehaviour
         {
             doorManager.canBeShown = true;
         }
-        doorSprite = GetComponentInChildren<SpriteRenderer>();
 
         if (dependsOnFusebox)
         {
-            doorSprite.sprite = doorLocked;
+            lockSprite.sprite = doorLocked;
             fusiblesScript.linkedToADoor = true;
         }
         else
@@ -47,10 +46,13 @@ public class RPP_DoorScript : MonoBehaviour
                 if(fusiblesScript.fusesAcquired >= fusiblesScript.totalFusesRequired)
                 {
                     doorObject.SetActive(false);
+                    doorSprite.enabled = false;
+                    lockSprite.enabled = false;
                 }
                 else
                 {
-                    doorSprite.sprite = doorLocked;
+                    doorSprite.enabled = true;
+                    lockSprite.enabled = true;
                     doorObject.SetActive(true);
                 }
             }
@@ -59,6 +61,8 @@ public class RPP_DoorScript : MonoBehaviour
                 if (minPuzzlesSolved <= puzzleMaster.puzzlesSolved && !opensOneSide)
                 {
                     doorObject.SetActive(false);
+                    doorSprite.enabled = false;
+                    lockSprite.enabled = false;
                 }
                 else if(minPuzzlesSolved <= puzzleMaster.puzzlesSolved && opensOneSide)
                 {
@@ -69,13 +73,14 @@ public class RPP_DoorScript : MonoBehaviour
                     else
                     {
                         doorObject.SetActive(false);
-                        //DestructionOfDoorManager();
+                        doorSprite.enabled = false;
+                        lockSprite.enabled = false;
                     }
                 }
                 else
                 {
                     doorObject.SetActive(true);
-                    doorSprite.sprite = doorLocked;
+                    lockSprite.sprite = doorLocked;
                     //Debug.Log("The player has to solve a puzzle");
                 }
             }
@@ -90,6 +95,8 @@ public class RPP_DoorScript : MonoBehaviour
                     else
                     {
                         doorObject.SetActive(false);
+                        doorSprite.enabled = false;
+                        lockSprite.enabled = false;
                     }
                 }
 
@@ -102,6 +109,8 @@ public class RPP_DoorScript : MonoBehaviour
                     else
                     {
                         doorObject.SetActive(false);
+                        doorSprite.enabled = false;
+                        lockSprite.enabled = false;
                     }
                 }
 
@@ -114,6 +123,8 @@ public class RPP_DoorScript : MonoBehaviour
                     else
                     {
                         doorObject.SetActive(false);
+                        doorSprite.enabled = false;
+                        lockSprite.enabled = false;
                     }
 
                 }
@@ -127,6 +138,8 @@ public class RPP_DoorScript : MonoBehaviour
                     else
                     {
                         doorObject.SetActive(false);
+                        doorSprite.enabled = false;
+                        lockSprite.enabled = false;
                     }
                 }
             }
@@ -137,13 +150,6 @@ public class RPP_DoorScript : MonoBehaviour
         }
     }
 
-    void DestructionOfDoorManager()
-    {
-        if (!doorManager.interactible)
-        {
-            Destroy(doorManager);
-        }
-    }
     void PuzzleManagerCheck()
     {
         if (needPzMnA)
@@ -184,27 +190,27 @@ public class RPP_DoorScript : MonoBehaviour
     {
         if (needBlueKey)
         {
-            doorSprite.sprite = blueDoor;
+            lockSprite.sprite = blueDoor;
         }
         else if (needYellowKey)
         {
-            doorSprite.sprite = yellowDoor;
+            lockSprite.sprite = yellowDoor;
         }
         else if (needGreenKey)
         {
-            doorSprite.sprite = greenDoor;
+            lockSprite.sprite = greenDoor;
         }
         else if (needVioletKey)
         {
-            doorSprite.sprite = violetDoor;
+            lockSprite.sprite = violetDoor;
         }
         else if (doorIsBroken)
         {
-            doorSprite.sprite = brokenDoor;
+            lockSprite.sprite = brokenDoor;
         }
         if (opensOneSide)
         {
-            doorSprite.sprite = openOneSide;
+            lockSprite.sprite = openOneSide;
         }
     }
 }
