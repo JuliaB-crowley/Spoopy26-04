@@ -14,7 +14,6 @@ public class ImpSMB_Sprint : StateMachineBehaviour
 
         FindObjectOfType<AudioManager>().Play("ChargeDiablotin");
 
-        Debug.LogWarning("was called");
 
         imp.pathfinder.maxSpeed = imp.sprintSpeed;
 
