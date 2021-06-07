@@ -17,6 +17,7 @@ public class SkeletonSMB_Attack : StateMachineBehaviour
 
         skeleton.SetAnimation(2);
         FindObjectOfType<AudioManager>().Play("ToupieSquelette");
+        skeleton.attaqueParticles.Play();
     }
 
     // OnStateUpdate is called on each Update frame between OnStateEnter and OnStateExit callbacks
@@ -68,10 +69,11 @@ public class SkeletonSMB_Attack : StateMachineBehaviour
     }
 
     // OnStateExit is called when a transition ends and the state machine finishes evaluating this state
-    //override public void OnStateExit(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
-    //{
-    //    
-    //}
+    override public void OnStateExit(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
+    {
+        skeleton.attaqueParticles.Pause();
+        skeleton.attaqueParticles.Clear();
+    }
 
     // OnStateMove is called right after Animator.OnAnimatorMove()
     //override public void OnStateMove(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
