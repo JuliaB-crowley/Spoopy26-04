@@ -57,7 +57,7 @@ MonoBehaviour:
     source: {fileID: 0}
   - name: CoupsJoueur
     clip: {fileID: 8300000, guid: 0ac98eb0bc1ef734895ebc34daa4de77, type: 3}
-    volume: 1
+    volume: 0.5
     pitch: 1
     source: {fileID: 0}
   - name: Flash
@@ -132,7 +132,7 @@ MonoBehaviour:
     source: {fileID: 0}
   - name: Pics
     clip: {fileID: 8300000, guid: d40eef7b60d4bc142bd4856126f1c033, type: 3}
-    volume: 0.5
+    volume: 0.3
     pitch: 1
     source: {fileID: 0}
   - name: MortBoss
