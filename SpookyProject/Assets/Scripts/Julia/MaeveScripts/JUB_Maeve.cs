@@ -79,6 +79,7 @@ namespace character
         public GameObject paquetBonbons, shaderFlame;
         Vector3 paquetOriginalScale;
         public GameObject lightNorth, lightEast, lightWest, lightSouth;
+        Color originalColor;
 
         //attack profile
         public float quickDamage = 1, heavyDamage = 3;
@@ -110,6 +111,8 @@ namespace character
             lightEast.SetActive(false);
             lightSouth.SetActive(false);
             lightWest.SetActive(false);
+
+            originalColor = this.rendererMaeve.material.color;
 
             controller.MainController.Roll.performed += ctx => Roll();  
             controller.MainController.Crouch.performed += ctx => Crouch();
@@ -497,7 +500,7 @@ namespace character
 
         IEnumerator CameraShake(float duration, float magnitude)
         {
-            Vector2 originalPos = mainCam.transform.localPosition;
+            Vector3 originalPos = mainCam.transform.localPosition;
 
             float elapsed = 0f;
 
@@ -505,7 +508,7 @@ namespace character
             {
                 float x = UnityEngine.Random.Range(-1f, 1f) * magnitude;
                 float y = UnityEngine.Random.Range(-1f, 1f) * magnitude;
-                mainCam.transform.localPosition = new Vector2(x, y);
+                mainCam.transform.localPosition = new Vector3(x, y, originalPos.z);
 
                 elapsed += Time.deltaTime;
 
@@ -736,7 +739,7 @@ namespace character
 
         IEnumerator RedFrameCoroutine()
         {
-            Color originalColor = this.rendererMaeve.material.color;
+            
             this.rendererMaeve.material.color = Color.Lerp(rendererMaeve.material.color, Color.red, 0.8f);
             yield return new WaitForSeconds(timeRed);
             this.rendererMaeve.material.color = originalColor;
@@ -781,7 +784,7 @@ namespace character
         {
             deathCanvas.SetActive(false);
             this.gameObject.transform.position = actualCheckpoint.position;
-            
+            this.rendererMaeve.material.color = originalColor;
             Heal(maxLife);
             Immunity(immunityTime);
             isInRespawn = false;
