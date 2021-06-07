@@ -1,34 +1,46 @@
 fileFormatVersion: 2
-guid: e22b38f71d2375040900fb2990021ec9
+guid: 3e7ce2c0d02f7d34b9473df3973ad18c
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 8753212482831762525
-    second: BBQ
+      213: -4086734223871808853
+    second: Derniers props_0
   - first:
-      213: 1211098014156704101
-    second: Deco Garage_1
+      213: -403473505105055308
+    second: Derniers props_1
   - first:
-      213: 6970578976862863278
-    second: Deco Garage_2
+      213: 8578862074848505259
+    second: Derniers props_2
   - first:
-      213: 4952662359247875207
-    second: Deco Garage_3
+      213: 9080044834501693120
+    second: Derniers props_3
   - first:
-      213: 5397252439099766258
-    second: Deco Garage_4
+      213: 3107516210575478712
+    second: Panneau Sens Interdit
   - first:
-      213: -7911247850639184222
-    second: Deco Garage_5
+      213: 4514378437091730180
+    second: Derniers props_5
   - first:
-      213: -8307773262781729899
-    second: Deco Garage_6
+      213: -7556095270531954147
+    second: Derniers props_6
   - first:
-      213: 8621819691339506689
-    second: Deco Crypte_1
+      213: -5269262034092874916
+    second: Derniers props_7
   - first:
-      213: 2456391850406094695
-    second: Deco Crypte_2
+      213: 7579223718779958592
+    second: Derniers props_8
+  - first:
+      213: -6243157458244997075
+    second: Derniers props_9
+  - first:
+      213: 7477086992232545299
+    second: Derniers props_10
+  - first:
+      213: -8960858047510014128
+    second: Derniers props_11
+  - first:
+      213: 5803522755357697384
+    second: Mur Crypte
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -118,190 +130,274 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: BBQ
+      name: Derniers props_0
       rect:
         serializedVersion: 2
-        x: 1593
-        y: 775
-        width: 245
-        height: 296
+        x: 1344
+        y: 947
+        width: 507
+        height: 542
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: d54c3ba6068a97970800000000000000
-      internalID: 8753212482831762525
+      spriteID: baa60b630e00947c0800000000000000
+      internalID: -4086734223871808853
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Deco Garage_1
+      name: Derniers props_1
       rect:
         serializedVersion: 2
-        x: 1215
-        y: 715
-        width: 291
-        height: 251
+        x: 1860
+        y: 948
+        width: 492
+        height: 544
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 569cdf92a3faec010800000000000000
-      internalID: 1211098014156704101
+      spriteID: 4b17eeb1cf2966af0800000000000000
+      internalID: -403473505105055308
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Deco Garage_2
+      name: Derniers props_2
       rect:
         serializedVersion: 2
-        x: 908
-        y: 672
-        width: 293
-        height: 191
+        x: 2103
+        y: 713
+        width: 132
+        height: 162
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: eaf77b2d5a87cb060800000000000000
-      internalID: 6970578976862863278
+      spriteID: bad6a64ba9d3e0770800000000000000
+      internalID: 8578862074848505259
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Deco Garage_3
+      name: Derniers props_3
       rect:
         serializedVersion: 2
-        x: 1075
-        y: 577
-        width: 218
-        height: 97
+        x: 2235
+        y: 645
+        width: 158
+        height: 175
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 78cea67ec246bb440800000000000000
-      internalID: 4952662359247875207
+      spriteID: 0ce08193bacc20e70800000000000000
+      internalID: 9080044834501693120
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Deco Garage_4
+      name: Panneau Sens Interdit
       rect:
         serializedVersion: 2
-        x: 641
-        y: 207
-        width: 274
-        height: 374
+        x: 2081
+        y: 380
+        width: 110
+        height: 268
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 2f5f6ab5f74e6ea40800000000000000
-      internalID: 5397252439099766258
+      spriteID: 8bf8e19778d102b20800000000000000
+      internalID: 3107516210575478712
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Deco Garage_5
+      name: Derniers props_5
       rect:
         serializedVersion: 2
-        x: 269
-        y: 497
-        width: 384
-        height: 446
+        x: 2251
+        y: 35
+        width: 91
+        height: 154
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 2ae2494def9953290800000000000000
-      internalID: -7911247850639184222
+      spriteID: 4032984354b46ae30800000000000000
+      internalID: 4514378437091730180
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Deco Garage_6
+      name: Derniers props_6
       rect:
         serializedVersion: 2
-        x: 452
-        y: 998
-        width: 678
-        height: 228
+        x: 2079
+        y: 124
+        width: 147
+        height: 116
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 5933865eb3cd4bc80800000000000000
-      internalID: -8307773262781729899
+      spriteID: d1a0fe6a26b532790800000000000000
+      internalID: -7556095270531954147
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Deco Crypte_1
+      name: Derniers props_7
       rect:
         serializedVersion: 2
-        x: 1528
-        y: 335
-        width: 457
-        height: 387
+        x: 2000
+        y: 22
+        width: 96
+        height: 128
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 10462c3345bd6a770800000000000000
-      internalID: 8621819691339506689
+      spriteID: c5321750912dfd6b0800000000000000
+      internalID: -5269262034092874916
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Deco Crypte_2
+      name: Derniers props_8
       rect:
         serializedVersion: 2
-        x: 2062
-        y: 224
-        width: 362
-        height: 1125
+        x: 1712
+        y: 149
+        width: 325
+        height: 298
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 767ae989f5bd61220800000000000000
-      internalID: 2456391850406094695
+      spriteID: 0453817d0dfce2960800000000000000
+      internalID: 7579223718779958592
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Derniers props_9
+      rect:
+        serializedVersion: 2
+        x: 1747
+        y: 468
+        width: 307
+        height: 247
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d20f9709e59db59a0800000000000000
+      internalID: -6243157458244997075
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Derniers props_10
+      rect:
+        serializedVersion: 2
+        x: 1467
+        y: 143
+        width: 210
+        height: 132
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 31cf6be0103f3c760800000000000000
+      internalID: 7477086992232545299
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Derniers props_11
+      rect:
+        serializedVersion: 2
+        x: 1056
+        y: 40
+        width: 372
+        height: 317
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 057177b1513a4a380800000000000000
+      internalID: -8960858047510014128
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mur Crypte
+      rect:
+        serializedVersion: 2
+        x: 1458
+        y: 277
+        width: 137
+        height: 650
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 865edf692314a8050800000000000000
+      internalID: 5803522755357697384
       vertices: []
       indices: 
       edges: []
@@ -309,7 +405,7 @@ TextureImporter:
     outline: []
     physicsShape: []
     bones: []
-    spriteID: e6736bd493213e0419d657e04cb6c27d
+    spriteID: 48b15c2feb9ee71488ff5e25c0a46d5f
     internalID: 0
     vertices: []
     indices: 
