@@ -295,7 +295,7 @@ namespace character
             {
                 dust.Play();
             }
-            if(!isFlashing)
+            if(!isFlashing && !isInDialogue)
             {
                 rigidBody.velocity = currentSpeed;
 
