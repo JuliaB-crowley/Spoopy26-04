@@ -289,6 +289,7 @@ MonoBehaviour:
   - Entrer dans le manoir
   - "Trouver la sorci\xE8re pour s'enfuir"
   - Vaincre Kit Cat
+  - Passer le portail
   questBookText: {fileID: 4277342107428785635}
   dialogueManager: {fileID: 0}
   firstKeyPartObtained: 0
@@ -576,6 +577,41 @@ MonoBehaviour:
     - {fileID: 5764316097204582594, guid: f00eae344ff330e47976338116231146, type: 3}
     - {fileID: -1898398621692303480, guid: f00eae344ff330e47976338116231146, type: 3}
     - {fileID: 3920095182416337971, guid: f00eae344ff330e47976338116231146, type: 3}
+    - {fileID: -1898398621692303480, guid: f00eae344ff330e47976338116231146, type: 3}
+    - {fileID: 5764316097204582594, guid: f00eae344ff330e47976338116231146, type: 3}
+  EndDialogue:
+    sentences:
+    - "Kit Cat ! Arr\xEAte ! \xE7a suffit comme \xE7a !"
+    - "A\xEFe\u2026 qu\u2019est-ce que t\u2019en as \xE0 faire ? Tu vas me laisser
+      tout seul de toute fa\xE7on\u2026"
+    - "Arr\xEAte de pleurnicher ! Je ne te laisserai jamais seul ! Peu importe si
+      tu me donnes des pouvoirs ou pas."
+    - "\u2026 Alors, tu vas rester ici ? Avec moi ?"
+    - "Je veux rester avec toi, mais pas ici. \xE7a te dirait de venir avec moi ?\r"
+    - "\u2026 ?!"
+    - "Je sais que \xE7a doit \xEAtre g\xE9nial de pouvoir tout contr\xF4ler autour
+      de toi, mais \xE0 quoi \xE7a peut bien servir si tu es tout seul ?\r"
+    - "\u2026 Mais\u2026 si je pars de ce monde, je ne pourrais plus parler\u2026"
+    - "Ah. C\u2019est vrai que c\u2019est emb\xEAtant\u2026 mais je ne pense pas
+      que tu aies besoin de pouvoir parler pour me traiter de fain\xE9ante, non ?"
+    - "Ah\u2026 ahaha\u2026 HAHAHAHAHA !"
+    - "HIHIHIHIHIHI\u2026"
+    - "\u2026"
+    - "\u2026 Bon, on y va ?"
+    - "\u2026 Oui, allons-y."
+    npcFaces:
+    - {fileID: -1898398621692303480, guid: f00eae344ff330e47976338116231146, type: 3}
+    - {fileID: 5764316097204582594, guid: f00eae344ff330e47976338116231146, type: 3}
+    - {fileID: -1898398621692303480, guid: f00eae344ff330e47976338116231146, type: 3}
+    - {fileID: 5764316097204582594, guid: f00eae344ff330e47976338116231146, type: 3}
+    - {fileID: -1898398621692303480, guid: f00eae344ff330e47976338116231146, type: 3}
+    - {fileID: 5764316097204582594, guid: f00eae344ff330e47976338116231146, type: 3}
+    - {fileID: -1898398621692303480, guid: f00eae344ff330e47976338116231146, type: 3}
+    - {fileID: 5764316097204582594, guid: f00eae344ff330e47976338116231146, type: 3}
+    - {fileID: -1898398621692303480, guid: f00eae344ff330e47976338116231146, type: 3}
+    - {fileID: 5764316097204582594, guid: f00eae344ff330e47976338116231146, type: 3}
+    - {fileID: -1898398621692303480, guid: f00eae344ff330e47976338116231146, type: 3}
+    - {fileID: 5764316097204582594, guid: f00eae344ff330e47976338116231146, type: 3}
     - {fileID: -1898398621692303480, guid: f00eae344ff330e47976338116231146, type: 3}
     - {fileID: 5764316097204582594, guid: f00eae344ff330e47976338116231146, type: 3}
 --- !u!1 &603992811953839225
@@ -1615,7 +1651,7 @@ MonoBehaviour:
   collisionTop: 0
   collisionBottom: 0
   speed: 5
-  rollSpeed: 6
+  rollSpeed: 8
   rollDuration: 0.2
   rollRecover: 0.05
   crouchSpeed: 3

@@ -112,7 +112,7 @@ public class JUB_BossStartScript : MonoBehaviour
         resizeCanvas.localScale = Vector3.zero;
         FindObjectOfType<JUB_BossBehavior>().StartFight();
         dialogueManager.controller.Enable();
-        this.enabled = false;
+        Destroy(this);
     }
 
     private void OnTriggerEnter2D(Collider2D collision)

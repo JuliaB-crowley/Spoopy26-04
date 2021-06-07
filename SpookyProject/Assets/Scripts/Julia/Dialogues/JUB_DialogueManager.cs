@@ -78,8 +78,8 @@ public class JUB_DialogueManager : MonoBehaviour
         {
             string sentence = sentences.Dequeue();
             Sprite sprite = imageNPC.Dequeue();
-            StartCoroutine(TypeSentence(sentence));
             isReading = true;
+            StartCoroutine(TypeSentence(sentence));
             actualPhrase = sentence;
             faceImage.sprite = sprite;
             Debug.LogWarning(sentence);

@@ -295,7 +295,7 @@ namespace character
             {
                 dust.Play();
             }
-            if(!isFlashing)
+            if(!isFlashing && !isInDialogue)
             {
                 rigidBody.velocity = currentSpeed;
 
@@ -765,7 +765,8 @@ namespace character
         IEnumerator DeathCoroutine()
         {
             yield return new WaitForSeconds(deathAnimDuration);
-            deathParticles.Stop();
+            deathParticles.Pause();
+            deathParticles.Clear();
             deathCanvas.SetActive(true);
            
         }

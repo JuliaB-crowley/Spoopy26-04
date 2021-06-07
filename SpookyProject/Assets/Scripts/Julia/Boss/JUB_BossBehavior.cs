@@ -48,6 +48,7 @@ public class JUB_BossBehavior : MonoBehaviour
     public bool isInAttack, isBurned, isBlinking;
 
     public JUB_Dialogue endDialogue;
+    public bool isDead;
 
     // Start is called before the first frame update
     void Start()
@@ -70,7 +71,7 @@ public class JUB_BossBehavior : MonoBehaviour
         {
             if (bossHitNumber == 0)
             {
-                if (!isInAttack && !isFlashed)
+                if (!isInAttack && !isFlashed && !isDead)
                 {
                     SetAnimation(0);
                 }
@@ -101,6 +102,11 @@ public class JUB_BossBehavior : MonoBehaviour
                 SetAnimation(3);
             }
         }
+
+        if(isDead)
+        {
+            SetAnimation(8);
+        }
     }
 
     public void TakeDamage()
@@ -119,6 +125,7 @@ public class JUB_BossBehavior : MonoBehaviour
             }
             if (bossHitNumber >= 3)
             {
+                maeve.Heal(maeve.maxLife);
                 EndBattle();
             }
 
@@ -136,7 +143,9 @@ public class JUB_BossBehavior : MonoBehaviour
     void EndBattle()
     {
         FindObjectOfType<AudioManager>().Play("MortBoss");
+        GameObject.FindGameObjectWithTag("DialogueManager").GetComponent<JUB_DialogueManager>().StopAllCoroutines();
         isInCombat = false;
+        isDead = true;
         SetAnimation(-1);
         StartCoroutine(EndBattleCoroutine());
         //Time.timeScale = 0f;
@@ -146,10 +155,11 @@ public class JUB_BossBehavior : MonoBehaviour
     IEnumerator EndBattleCoroutine()
     {
         yield return new WaitForSeconds(deathAnimationTime);
-        Time.timeScale = 0f;
-        SetAnimation(7);
+        SetAnimation(8);
         obstacleCollider.enabled = false;
-        GameObject.FindGameObjectWithTag("DialogueManager").GetComponent<JUB_DialogueManager>().StartDialogue(endDialogue);
+        pawCollider.enabled = false;
+        pawAttackZone.enabled = false;
+        //GameObject.FindGameObjectWithTag("DialogueManager").GetComponent<JUB_DialogueManager>().StartDialogue(endDialogue);
 
     }
 
@@ -205,7 +215,7 @@ public class JUB_BossBehavior : MonoBehaviour
 
     public void StartFight()
     {
-        if (isInCombat == false)
+        if (isInCombat == false && !isDead)
         {
             StartCoroutine(StartFightCoroutine());
             SetAnimation(-2);
@@ -268,6 +278,10 @@ public class JUB_BossBehavior : MonoBehaviour
 
             case 7:
                 graphicAnimator.Play("boss_idle_laydown");
+                break;
+
+            case 8:
+                graphicAnimator.Play("boss_deathIdle");
                 break;
         }
     }
