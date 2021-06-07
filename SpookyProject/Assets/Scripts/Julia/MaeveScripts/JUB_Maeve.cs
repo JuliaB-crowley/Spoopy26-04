@@ -122,7 +122,7 @@ namespace character
             Inputs();
             InteractSphere();
             PushableSphere();
-            if (!isInKnockback)
+            if (!isInKnockback && !isInDialogue)
             {
                 Move();
 
