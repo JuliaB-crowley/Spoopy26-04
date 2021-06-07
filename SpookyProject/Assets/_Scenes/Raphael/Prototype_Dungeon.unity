@@ -57822,6 +57822,10 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 108081846713818927, guid: 97b75943697df174691ea9f390108190, type: 3}
+      propertyPath: openOneSide
+      value: 
+      objectReference: {fileID: 3107516210575478712, guid: 3e7ce2c0d02f7d34b9473df3973ad18c, type: 3}
+    - target: {fileID: 108081846713818927, guid: 97b75943697df174691ea9f390108190, type: 3}
       propertyPath: opensOneSide
       value: 1
       objectReference: {fileID: 0}
