@@ -404,6 +404,14 @@
                     "expectedControlType": "Button",
                     "processors": "",
                     "interactions": ""
+                },
+                {
+                    "name": "TPHome",
+                    "type": "Button",
+                    "id": "520688a3-94ce-4835-882e-83965e900678",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": ""
                 }
             ],
             "bindings": [
@@ -481,6 +489,17 @@
                     "processors": "",
                     "groups": "",
                     "action": "Boss",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "97fcd95d-423d-411b-a95e-e9d365ad7007",
+                    "path": "<Keyboard>/h",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "TPHome",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }

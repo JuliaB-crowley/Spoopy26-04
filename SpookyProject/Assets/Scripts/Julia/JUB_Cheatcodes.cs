@@ -21,6 +21,7 @@ public class JUB_Cheatcodes : MonoBehaviour
         controller.Menu.MoneyPlus.performed += ctx => MoreMoney();
         controller.Menu.Donjon.performed += ctx => GoDonjon();
         controller.Menu.Boss.performed += ctx => GoBoss();
+        controller.Menu.TPHome.performed += ctx => Home();
 
         maeve = GetComponent<JUB_Maeve>();
     }
@@ -42,6 +43,11 @@ public class JUB_Cheatcodes : MonoBehaviour
 
     void GoBoss()
     {
-        SceneManager.LoadScene(nomSceneDonjon);
+        SceneManager.LoadScene(nomSceneBoss);
+    }
+
+    void Home()
+    {
+        maeve.transform.position = maeve.actualCheckpoint.position;
     }
 }

@@ -417,6 +417,14 @@ public class @Controller : IInputActionCollection, IDisposable
                     ""expectedControlType"": ""Button"",
                     ""processors"": """",
                     ""interactions"": """"
+                },
+                {
+                    ""name"": ""TPHome"",
+                    ""type"": ""Button"",
+                    ""id"": ""520688a3-94ce-4835-882e-83965e900678"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """"
                 }
             ],
             ""bindings"": [
@@ -496,6 +504,17 @@ public class @Controller : IInputActionCollection, IDisposable
                     ""action"": ""Boss"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""97fcd95d-423d-411b-a95e-e9d365ad7007"",
+                    ""path"": ""<Keyboard>/h"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""TPHome"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
                 }
             ]
         }
@@ -522,6 +541,7 @@ public class @Controller : IInputActionCollection, IDisposable
         m_Menu_MoneyPlus = m_Menu.FindAction("MoneyPlus", throwIfNotFound: true);
         m_Menu_Donjon = m_Menu.FindAction("Donjon", throwIfNotFound: true);
         m_Menu_Boss = m_Menu.FindAction("Boss", throwIfNotFound: true);
+        m_Menu_TPHome = m_Menu.FindAction("TPHome", throwIfNotFound: true);
     }
 
     public void Dispose()
@@ -682,6 +702,7 @@ public class @Controller : IInputActionCollection, IDisposable
     private readonly InputAction m_Menu_MoneyPlus;
     private readonly InputAction m_Menu_Donjon;
     private readonly InputAction m_Menu_Boss;
+    private readonly InputAction m_Menu_TPHome;
     public struct MenuActions
     {
         private @Controller m_Wrapper;
@@ -692,6 +713,7 @@ public class @Controller : IInputActionCollection, IDisposable
         public InputAction @MoneyPlus => m_Wrapper.m_Menu_MoneyPlus;
         public InputAction @Donjon => m_Wrapper.m_Menu_Donjon;
         public InputAction @Boss => m_Wrapper.m_Menu_Boss;
+        public InputAction @TPHome => m_Wrapper.m_Menu_TPHome;
         public InputActionMap Get() { return m_Wrapper.m_Menu; }
         public void Enable() { Get().Enable(); }
         public void Disable() { Get().Disable(); }
@@ -719,6 +741,9 @@ public class @Controller : IInputActionCollection, IDisposable
                 @Boss.started -= m_Wrapper.m_MenuActionsCallbackInterface.OnBoss;
                 @Boss.performed -= m_Wrapper.m_MenuActionsCallbackInterface.OnBoss;
                 @Boss.canceled -= m_Wrapper.m_MenuActionsCallbackInterface.OnBoss;
+                @TPHome.started -= m_Wrapper.m_MenuActionsCallbackInterface.OnTPHome;
+                @TPHome.performed -= m_Wrapper.m_MenuActionsCallbackInterface.OnTPHome;
+                @TPHome.canceled -= m_Wrapper.m_MenuActionsCallbackInterface.OnTPHome;
             }
             m_Wrapper.m_MenuActionsCallbackInterface = instance;
             if (instance != null)
@@ -741,6 +766,9 @@ public class @Controller : IInputActionCollection, IDisposable
                 @Boss.started += instance.OnBoss;
                 @Boss.performed += instance.OnBoss;
                 @Boss.canceled += instance.OnBoss;
+                @TPHome.started += instance.OnTPHome;
+                @TPHome.performed += instance.OnTPHome;
+                @TPHome.canceled += instance.OnTPHome;
             }
         }
     }
@@ -766,5 +794,6 @@ public class @Controller : IInputActionCollection, IDisposable
         void OnMoneyPlus(InputAction.CallbackContext context);
         void OnDonjon(InputAction.CallbackContext context);
         void OnBoss(InputAction.CallbackContext context);
+        void OnTPHome(InputAction.CallbackContext context);
     }
 }
