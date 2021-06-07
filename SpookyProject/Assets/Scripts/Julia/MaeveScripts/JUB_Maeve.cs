@@ -88,7 +88,8 @@ namespace character
         {
             DontDestroyOnLoad(this.gameObject);
 
-            deathParticles.Stop();
+            deathParticles.Pause();
+            deathParticles.Clear();
 
             rigidBody = GetComponent<Rigidbody2D>();
             mainCam = GameObject.FindGameObjectWithTag("MainCamera");
@@ -122,7 +123,7 @@ namespace character
             Inputs();
             InteractSphere();
             PushableSphere();
-            if (!isInKnockback)
+            if (!isInKnockback && !isInDialogue)
             {
                 Move();
 

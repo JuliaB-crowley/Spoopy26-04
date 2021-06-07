@@ -24,6 +24,7 @@ public class JUB_BreakableBehavior : MonoBehaviour
             if (possibleLoots.Count > 0)
             {
                 Debug.Log("a vase has been destroyed");
+                GetComponentInChildren<SpriteRenderer>().enabled = false;
                 int index = Random.Range(0, possibleLoots.Count - 1);
                 Instantiate(possibleLoots[index], transform.position, Quaternion.identity);
             }
@@ -34,6 +35,7 @@ public class JUB_BreakableBehavior : MonoBehaviour
             if (possibleLoots.Count > 0 && invisibleScript.isVisible)
             {
                 Debug.Log("an invisible vase has been destroyed");
+                GetComponent<SpriteRenderer>().enabled = false;
                 int index = Random.Range(0, possibleLoots.Count - 1);
                 Instantiate(possibleLoots[index], transform.position, Quaternion.identity);
                 StartCoroutine(DestroyCoroutine());

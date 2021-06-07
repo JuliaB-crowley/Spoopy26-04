@@ -104,7 +104,7 @@ public class SettingsScript : MonoBehaviour
             FindObjectOfType<AudioManager>().Play("CloseMenu");
             PauseMenu.SetActive(false);
         }
-        else if (Credits.activeSelf == true)
+        else if (SceneManager.GetActiveScene().buildIndex == 0 && Credits.activeSelf == true)
         {
             FindObjectOfType<AudioManager>().Play("CloseMenu");
             Credits.SetActive(false);
@@ -116,7 +116,7 @@ public class SettingsScript : MonoBehaviour
             OptionMenu.SetActive(true);
             Credits_Options.SetActive(false);
         }
-        else if ( Controles.activeSelf == true)
+        else if (Controles.activeSelf == true)
         {
             FindObjectOfType<AudioManager>().Play("CloseMenu");
             OptionMenu.SetActive(true);
