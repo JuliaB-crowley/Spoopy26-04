@@ -765,7 +765,8 @@ namespace character
         IEnumerator DeathCoroutine()
         {
             yield return new WaitForSeconds(deathAnimDuration);
-            deathParticles.Stop();
+            deathParticles.Pause();
+            deathParticles.Play();
             deathCanvas.SetActive(true);
            
         }
