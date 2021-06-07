@@ -766,7 +766,7 @@ namespace character
         {
             yield return new WaitForSeconds(deathAnimDuration);
             deathParticles.Pause();
-            deathParticles.Play();
+            deathParticles.Clear();
             deathCanvas.SetActive(true);
            
         }
