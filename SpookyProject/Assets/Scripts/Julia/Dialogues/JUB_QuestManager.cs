@@ -18,7 +18,8 @@ public class JUB_QuestManager : MonoBehaviour
     public JUB_Dialogue QuartierEst;
     public JUB_Dialogue RentrerChezMoi;
     public JUB_Dialogue Gardien;
-    bool introSaid, mamieSaid, portailSaid, firstSaid, secondKeySaid, quartierEstSaid, rentrerSaid, gardienSaid;
+    public JUB_Dialogue EndDialogue;
+    bool introSaid, mamieSaid, portailSaid, firstSaid, secondKeySaid, quartierEstSaid, rentrerSaid, gardienSaid, endSaid;
     // Start is called before the first frame update
     void Start()
     {

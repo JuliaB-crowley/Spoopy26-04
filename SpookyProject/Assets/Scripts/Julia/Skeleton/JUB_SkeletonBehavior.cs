@@ -44,6 +44,7 @@ public class JUB_SkeletonBehavior : MonoBehaviour
 
     //anim
     public Animator graphicAnimator;
+    public ParticleSystem attaqueParticles;
 
     // Start is called before the first frame update
     void Start()
@@ -63,6 +64,9 @@ public class JUB_SkeletonBehavior : MonoBehaviour
         SMBanimator.GetBehaviour<SkeletonSMB_DestructionBody>().skeleton = this;
 
         thresholdLife = ennemyDamage.maxHealth - bodyHealth;
+
+        attaqueParticles.Pause();
+        attaqueParticles.Clear();
     }
 
     // Update is called once per frame

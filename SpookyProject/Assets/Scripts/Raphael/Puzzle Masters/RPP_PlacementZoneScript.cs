@@ -6,10 +6,38 @@ public class RPP_PlacementZoneScript : MonoBehaviour
 {
     [SerializeField] RPP_SubPuzzleManager placementManager;
     [SerializeField] Transform[] successfulPositions;
+    [SerializeField] GameObject treeObject;
+    [SerializeField] GameObject[] flames;
     int currentPositionValue = 0;
+    bool treeHasBurned = false;
     void Start()
     {
         placementManager = GetComponentInParent<RPP_SubPuzzleManager>();
+        foreach(GameObject item in flames)
+        {
+            item.SetActive(false);
+        }
+    }
+
+    private void Update()
+    {
+        if(placementManager.successesAchieved >= placementManager.totalSuccessesRequired && !treeHasBurned)
+        {
+            StartCoroutine(BurningTree());
+        }
+    }
+
+    IEnumerator BurningTree()
+    {
+        treeHasBurned = true;
+        foreach (GameObject item in flames)
+        {
+            item.SetActive(true);
+            FindObjectOfType<AudioManager>().Play("Torche");
+        }
+        yield return new WaitForSeconds(1f);
+
+        Destroy(treeObject);
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
