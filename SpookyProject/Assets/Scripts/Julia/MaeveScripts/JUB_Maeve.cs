@@ -66,7 +66,7 @@ namespace character
         public Image heartsDisplay;
 
         //dialogue
-        public bool isInDialogue;
+        public bool isInDialogue, hasBeenLit, isInRespawn;
 
         //anim
         public int animationIndex; //-1 mort, 0 idle, 1 course, 2 attaque, 3 flash, 4 roulade, 5 accroupi, 6 déplacement objet, 7 accroupi iddle, 8 immunité
@@ -78,6 +78,7 @@ namespace character
         public ParticleSystem deathParticles, dust;
         public GameObject paquetBonbons, shaderFlame;
         Vector3 paquetOriginalScale;
+        public GameObject lightNorth, lightEast, lightWest, lightSouth;
 
         //attack profile
         public float quickDamage = 1, heavyDamage = 3;
@@ -105,6 +106,10 @@ namespace character
             currentLife = maxLife;
             deathCanvas.SetActive(false);
 
+            lightNorth.SetActive(false);
+            lightEast.SetActive(false);
+            lightSouth.SetActive(false);
+            lightWest.SetActive(false);
 
             controller.MainController.Roll.performed += ctx => Roll();  
             controller.MainController.Crouch.performed += ctx => Crouch();
@@ -685,7 +690,7 @@ namespace character
                 currentLife -= damages;
                 //son dégâts
                 FindObjectOfType<AudioManager>().Play("CoupsJoueur");
-                if (currentLife <= 0)
+                if (currentLife <= 0 && !isInRespawn)
                 {
                     currentLife = 0;
                     Die();
@@ -755,6 +760,7 @@ namespace character
 
         void Die()
         {
+            isInRespawn = true;
             deathParticles.Play();
             //son de mort
             FindObjectOfType<AudioManager>().Play("MortJoueur");
@@ -775,14 +781,16 @@ namespace character
         {
             deathCanvas.SetActive(false);
             this.gameObject.transform.position = actualCheckpoint.position;
+            
             Heal(maxLife);
             Immunity(immunityTime);
+            isInRespawn = false;
         }
 
         public void Quit()
         {
             deathCanvas.SetActive(false);
-            Destroy(this.gameObject);
+            //Destroy(this.gameObject);
             Application.Quit();
         }
 
@@ -846,6 +854,10 @@ namespace character
             else
             {
                 shaderFlame.SetActive(false);
+                lightNorth.SetActive(false);
+                lightEast.SetActive(false);
+                lightSouth.SetActive(false);
+                lightWest.SetActive(false);
             }
             if (isInRoll)
             {
@@ -954,18 +966,22 @@ namespace character
                 //flash
                 case 103:
                     maeveAnimator.Play("Maeve_burn_back");
+                    StartCoroutine(LightsOn(animationIndex));
                     break;
 
                 case 203:
                     maeveAnimator.Play("Maeve_burn_right");
+                    StartCoroutine(LightsOn(animationIndex));
                     break;
 
                 case 303:
                     maeveAnimator.Play("Maeve_burn_front");
+                    StartCoroutine(LightsOn(animationIndex));
                     break;
 
                 case 403:
                     maeveAnimator.Play("Maeve_burn_left");
+                    StartCoroutine(LightsOn(animationIndex));
                     break;
 
                 //roulade
@@ -1074,8 +1090,45 @@ namespace character
             //Debug.LogWarning(animationIndex);
             animationIndex = 0;
 
-            
-                
+
+
+
+
+        }
+
+        IEnumerator LightsOn(int dir)
+        {
+            yield return new WaitForSeconds(0.25f);
+            if (!hasBeenLit)
+            {
+                hasBeenLit = true;
+                switch (dir)
+                {
+                    case 103:
+                        lightNorth.SetActive(true);
+                        break;
+
+                    case 203:
+                        lightEast.SetActive(true);
+                        break;
+
+                    case 303:
+                        lightSouth.SetActive(true);
+                        break;
+
+                    case 403:
+                        lightWest.SetActive(true);
+                        break;
+                }
+            }
+            yield return new WaitForSeconds(0.5f);
+
+            lightNorth.SetActive(false);
+            lightEast.SetActive(false);
+            lightSouth.SetActive(false);
+            lightWest.SetActive(false);
+
+            hasBeenLit = false;
         }
     }
 }

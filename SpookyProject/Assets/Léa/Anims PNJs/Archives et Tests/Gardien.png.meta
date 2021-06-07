@@ -1,0 +1,321 @@
+fileFormatVersion: 2
+guid: a5bec5490e2e4ca4cbdbf0a4e64d89b0
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -2902247422746666468
+    second: spritesheet (1)_0
+  - first:
+      213: 5181494874574896048
+    second: Gardien_0
+  - first:
+      213: 3153443729546637515
+    second: Gardien_1
+  - first:
+      213: 2732982052827044960
+    second: Gardien_2
+  - first:
+      213: -7779875374407090730
+    second: Gardien_3
+  - first:
+      213: 4460205686207847862
+    second: Gardien_4
+  - first:
+      213: -980847105776949852
+    second: Gardien_5
+  - first:
+      213: 4394738647986194786
+    second: Gardien_6
+  - first:
+      213: -663968538613731467
+    second: Gardien_7
+  - first:
+      213: 3012677710599147421
+    second: Gardien_7
+  - first:
+      213: 3409647956016752711
+    second: Gardien_9
+  - first:
+      213: 6013482680096593823
+    second: Gardien_8
+  - first:
+      213: 8236810702219752277
+    second: Gardien_11
+  - first:
+      213: -2311903930158056626
+    second: Gardien_12
+  - first:
+      213: 5973995245674110104
+    second: Gardien_13
+  externalObjects: {}
+  serializedVersion: 11
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: -1
+    mipBias: -100
+    wrapU: 1
+    wrapV: 1
+    wrapW: -1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 64
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Gardien_1
+      rect:
+        serializedVersion: 2
+        x: 129
+        y: 0
+        width: 726
+        height: 1080
+      alignment: 9
+      pivot: {x: 0.5629891, y: 0.3453706}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bc07fc64d5843cb20800000000000000
+      internalID: 3153443729546637515
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Gardien_2
+      rect:
+        serializedVersion: 2
+        x: 1021
+        y: 0
+        width: 726
+        height: 1080
+      alignment: 9
+      pivot: {x: 0.5184472, y: 0.34531912}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 06c164472b08de520800000000000000
+      internalID: 2732982052827044960
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Gardien_3
+      rect:
+        serializedVersion: 2
+        x: 1910
+        y: 0
+        width: 726
+        height: 1080
+      alignment: 9
+      pivot: {x: 0.4826704, y: 0.34214652}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6ddf7a70194580490800000000000000
+      internalID: -7779875374407090730
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Gardien_4
+      rect:
+        serializedVersion: 2
+        x: 2758
+        y: 0
+        width: 726
+        height: 1080
+      alignment: 9
+      pivot: {x: 0.50788414, y: 0.34530735}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6bd989fb075d5ed30800000000000000
+      internalID: 4460205686207847862
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Gardien_5
+      rect:
+        serializedVersion: 2
+        x: 3607
+        y: 0
+        width: 726
+        height: 1080
+      alignment: 9
+      pivot: {x: 0.5271611, y: 0.3453677}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4a5e13901c45362f0800000000000000
+      internalID: -980847105776949852
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Gardien_6
+      rect:
+        serializedVersion: 2
+        x: 4481
+        y: 0
+        width: 726
+        height: 1080
+      alignment: 9
+      pivot: {x: 0.5119131, y: 0.34219822}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 269c5e9148f3dfc30800000000000000
+      internalID: 4394738647986194786
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Gardien_7
+      rect:
+        serializedVersion: 2
+        x: 5346
+        y: 0
+        width: 726
+        height: 1080
+      alignment: 9
+      pivot: {x: 0.50921077, y: 0.3453684}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d9fcffa7a6e2fc920800000000000000
+      internalID: 3012677710599147421
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Gardien_8
+      rect:
+        serializedVersion: 2
+        x: 6206
+        y: 0
+        width: 698
+        height: 1080
+      alignment: 9
+      pivot: {x: 0.53385997, y: 0.34537977}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f971f1203ae247350800000000000000
+      internalID: 6013482680096593823
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 21f2966589063ee45beaf404193b276c
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
