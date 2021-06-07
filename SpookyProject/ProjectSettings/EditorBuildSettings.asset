@@ -26,4 +26,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/_Scenes/Julia/BossRoom.unity
     guid: 9f7beb64ac7f7f74f9f9a5647e60fde3
+  - enabled: 1
+    path: Assets/_Scenes/Julia/Outro.unity
+    guid: 38c9b91d0cdb1344f9b4d594ca9c0284
   m_configObjects: {}
