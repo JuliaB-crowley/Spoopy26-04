@@ -4,16 +4,16 @@ TextureImporter:
   internalIDToNameTable:
   - first:
       213: -6680100403314346665
-    second: MamieCitrouille_SpriteSheet_8
+    second: MamieCitrouille_SpriteSheet_0
   - first:
       213: 1192215324003265661
-    second: MamieCitrouille_SpriteSheet_8
+    second: MamieCitrouille_SpriteSheet_0
   - first:
       213: -6338384298577119512
-    second: MamieCitrouille_SpriteSheet_2
+    second: MamieCitrouille_SpriteSheet_3
   - first:
       213: -1254224260582177379
-    second: MamieCitrouille_SpriteSheet_2
+    second: MamieCitrouille_SpriteSheet_3
   - first:
       213: 1459783303499209074
     second: MamieCitrouille_SpriteSheet_4
@@ -115,15 +115,15 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: MamieCitrouille_SpriteSheet_1
+      name: MamieCitrouille_SpriteSheet_0
       rect:
         serializedVersion: 2
-        x: 41
-        y: 161
-        width: 392
-        height: 686
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+        x: 0
+        y: 0
+        width: 590
+        height: 1080
+      alignment: 9
+      pivot: {x: 0.40284273, y: 0.49256247}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -136,15 +136,15 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: MamieCitrouille_SpriteSheet_8
+      name: MamieCitrouille_SpriteSheet_1
       rect:
         serializedVersion: 2
-        x: 629
-        y: 161
-        width: 406
-        height: 686
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+        x: 590
+        y: 0
+        width: 590
+        height: 1080
+      alignment: 9
+      pivot: {x: 0.39909998, y: 0.49323076}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -157,15 +157,15 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: MamieCitrouille_SpriteSheet_3
+      name: MamieCitrouille_SpriteSheet_2
       rect:
         serializedVersion: 2
-        x: 1217
-        y: 161
-        width: 415
-        height: 686
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+        x: 1180
+        y: 0
+        width: 590
+        height: 1080
+      alignment: 9
+      pivot: {x: 0.40117165, y: 0.4928014}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -178,15 +178,15 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: MamieCitrouille_SpriteSheet_2
+      name: MamieCitrouille_SpriteSheet_3
       rect:
         serializedVersion: 2
-        x: 1809
-        y: 161
-        width: 399
-        height: 686
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+        x: 1770
+        y: 0
+        width: 590
+        height: 1080
+      alignment: 9
+      pivot: {x: 0.40199533, y: 0.49370122}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -202,12 +202,12 @@ TextureImporter:
       name: MamieCitrouille_SpriteSheet_4
       rect:
         serializedVersion: 2
-        x: 2399
-        y: 161
-        width: 408
-        height: 686
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+        x: 2360
+        y: 0
+        width: 590
+        height: 1080
+      alignment: 9
+      pivot: {x: 0.39952454, y: 0.4928014}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -223,12 +223,12 @@ TextureImporter:
       name: MamieCitrouille_SpriteSheet_6
       rect:
         serializedVersion: 2
-        x: 3581
-        y: 161
-        width: 395
-        height: 686
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+        x: 3540
+        y: 0
+        width: 590
+        height: 1080
+      alignment: 9
+      pivot: {x: 0.4028188, y: 0.4928014}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -244,12 +244,12 @@ TextureImporter:
       name: MamieCitrouille_SpriteSheet_5
       rect:
         serializedVersion: 2
-        x: 2989
-        y: 161
-        width: 406
-        height: 686
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+        x: 2954
+        y: 0
+        width: 590
+        height: 1080
+      alignment: 9
+      pivot: {x: 0.39128873, y: 0.49325132}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -265,12 +265,12 @@ TextureImporter:
       name: MamieCitrouille_SpriteSheet_7
       rect:
         serializedVersion: 2
-        x: 4169
-        y: 161
-        width: 406
-        height: 686
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+        x: 4126
+        y: 0
+        width: 590
+        height: 1080
+      alignment: 9
+      pivot: {x: 0.40601164, y: 0.49343255}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
