@@ -76,13 +76,5 @@ public class JUB_QuestManager : MonoBehaviour
             gardienSaid = true;
             dialogueManager.StartDialogue(Gardien);
         }
-        if(ItemID == 11 && !endSaid)
-        {
-
-                endSaid = true;
-                dialogueManager.StartDialogue(EndDialogue);
-            
-
-        }
     }
 }
